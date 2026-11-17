@@ -1,0 +1,7102 @@
+[
+ {
+  "id": "m1_001",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo rectángulo tiene catetos de 3 cm y 4 cm. ¿Cuánto mide su hipotenusa?",
+  "alternativas": [
+   "6",
+   "7",
+   "5",
+   "1"
+  ],
+  "correcta": 2,
+  "explicacion": "h² = 3² + 4² = 25, entonces h = 5 cm."
+ },
+ {
+  "id": "m1_002",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un colegio de 120 estudiantes, el 60% practica natación. ¿Cuántos estudiantes NO practican natación?",
+  "alternativas": [
+   "60",
+   "72",
+   "48",
+   "192"
+  ],
+  "correcta": 2,
+  "explicacion": "60% de 120 = 72 practican; los demás son 120 − 72 = 48."
+ },
+ {
+  "id": "m1_003",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo, dos ángulos interiores miden 40° y 45°. ¿Cuánto mide el tercer ángulo?",
+  "alternativas": [
+   "85°",
+   "140°",
+   "50°",
+   "95°"
+  ],
+  "correcta": 3,
+  "explicacion": "Los ángulos interiores suman 180°: 180° − 40° − 45° = 95°."
+ },
+ {
+  "id": "m1_004",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿cuántas unidades más tiene \"Lunes\" que \"Viernes\"?",
+  "alternativas": [
+   "100",
+   "60",
+   "80",
+   "20"
+  ],
+  "correcta": 1,
+  "explicacion": "80 − 20 = 60.",
+  "imagen": "assets/images/m1/m1_img_006.png"
+ },
+ {
+  "id": "m1_005",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuánto mide cada ángulo interior de un dodecágono regular?",
+  "alternativas": [
+   "163°",
+   "153°",
+   "30°",
+   "150°"
+  ],
+  "correcta": 3,
+  "explicacion": "Cada ángulo = (n − 2)·180°/n = 1800°/12 = 150°."
+ },
+ {
+  "id": "m1_006",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un mapa con escala 1:250.000, dos ciudades están separadas por 12 cm. ¿Cuál es la distancia real entre ellas?",
+  "alternativas": [
+   "3.000 km",
+   "30 km",
+   "300 km",
+   "24 km"
+  ],
+  "correcta": 1,
+  "explicacion": "12 cm · 250.000 = 3.000.000 cm = 30 km."
+ },
+ {
+  "id": "m1_007",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene base 13 cm y altura 4 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "17 cm²",
+   "13 cm²",
+   "52 cm²",
+   "26 cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "A = base · altura / 2 = 13·4/2 = 26 cm²."
+ },
+ {
+  "id": "m1_008",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "En la secuencia 11, 18, 25, 32, … ¿cuál es el término que ocupa la posición 8?",
+  "alternativas": [
+   "60",
+   "67",
+   "88",
+   "56"
+  ],
+  "correcta": 0,
+  "explicacion": "Término n = a₁ + (n−1)·d = 11 + 7·7 = 60."
+ },
+ {
+  "id": "m1_009",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un rectángulo tiene ancho x cm y largo (x + 9) cm. Si su perímetro es 70 cm, ¿cuánto mide el ancho?",
+  "alternativas": [
+   "15",
+   "17",
+   "13",
+   "22"
+  ],
+  "correcta": 2,
+  "explicacion": "2·(x + x + 9) = 70, entonces 4x + 18 = 70 y x = 13."
+ },
+ {
+  "id": "m1_010",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 7x − 7, ¿cuál es el valor de f(−1)?",
+  "alternativas": [
+   "14",
+   "−14",
+   "−1",
+   "−56"
+  ],
+  "correcta": 1,
+  "explicacion": "Se reemplaza x por −1: f(−1) = −14."
+ },
+ {
+  "id": "m1_011",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una urna tiene 11 bolitas: 4 rojas, 3 azules y el resto verdes. Se saca una bolita, se anota su color y se devuelve a la urna; luego se saca otra. ¿Cuál es la probabilidad de que la primera sea roja y la segunda azul?",
+  "alternativas": [
+   "6/55",
+   "12/121",
+   "7/11",
+   "16/121"
+  ],
+  "correcta": 1,
+  "explicacion": "Los eventos son independientes: 4/11 · 3/11 = 12/121."
+ },
+ {
+  "id": "m1_012",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo rectángulo tiene catetos de 6 cm y 8 cm. ¿Cuánto mide su hipotenusa?",
+  "alternativas": [
+   "10",
+   "24",
+   "14",
+   "2"
+  ],
+  "correcta": 0,
+  "explicacion": "h² = 6² + 8² = 100, entonces h = 10 cm."
+ },
+ {
+  "id": "m1_013",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Se depositan $1.200.000 con un interés simple de 5% anual durante 4 años. ¿Cuánto interés se obtiene en total?",
+  "alternativas": [
+   "$1.440.000",
+   "$60.000",
+   "$24.000.000",
+   "$240.000"
+  ],
+  "correcta": 3,
+  "explicacion": "Interés = capital · tasa · tiempo = $1.200.000 · 5/100 · 4 = $240.000."
+ },
+ {
+  "id": "m1_014",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "En la secuencia 4, 10, 16, 22, … ¿cuál es el término que ocupa la posición 17?",
+  "alternativas": [
+   "68",
+   "100",
+   "102",
+   "106"
+  ],
+  "correcta": 1,
+  "explicacion": "Término n = a₁ + (n−1)·d = 4 + 16·6 = 100."
+ },
+ {
+  "id": "m1_015",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura es un semicírculo cuyo radio (en rojo) mide lo indicado. ¿Cuál es su área?",
+  "alternativas": [
+   "8π cm²",
+   "16π cm²",
+   "32π cm²",
+   "64π cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "Área = πr²/2 = π·64/2 = 32π cm².",
+  "imagen": "assets/images/m1/m1_img_088.png"
+ },
+ {
+  "id": "m1_016",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las edades de un grupo son 30, 45, 46, 59, 6, 31, 45, 32, 55. ¿Cuál es el rango de los datos?",
+  "alternativas": [
+   "65",
+   "6",
+   "59",
+   "53"
+  ],
+  "correcta": 3,
+  "explicacion": "Rango = mayor − menor = 59 − 6 = 53."
+ },
+ {
+  "id": "m1_017",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (3⁵ · 3²) : 3⁵?",
+  "alternativas": [
+   "3³",
+   "3¹²",
+   "3⁵",
+   "3²"
+  ],
+  "correcta": 3,
+  "explicacion": "Se suman los exponentes al multiplicar y se restan al dividir: 5+2−5 = 2."
+ },
+ {
+  "id": "m1_018",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 5x + 8 = 3?",
+  "alternativas": [
+   "11",
+   "−1",
+   "2",
+   "−5"
+  ],
+  "correcta": 1,
+  "explicacion": "5x = 3 − 8 = −5, entonces x = −1."
+ },
+ {
+  "id": "m1_019",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo, dos ángulos interiores miden 75° y 65°. ¿Cuánto mide el tercer ángulo?",
+  "alternativas": [
+   "105°",
+   "15°",
+   "40°",
+   "140°"
+  ],
+  "correcta": 2,
+  "explicacion": "Los ángulos interiores suman 180°: 180° − 75° − 65° = 40°."
+ },
+ {
+  "id": "m1_020",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la pendiente de la recta que pasa por los puntos (2, 3) y (5, 15)?",
+  "alternativas": [
+   "3",
+   "−4",
+   "12",
+   "4"
+  ],
+  "correcta": 3,
+  "explicacion": "m = (y₂ − y₁)/(x₂ − x₁) = 12/3 = 4."
+ },
+ {
+  "id": "m1_021",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la factorización de x² + 8x + 12?",
+  "alternativas": [
+   "(x − 2)(x − 6)",
+   "(x + 8)(x + 1)",
+   "(x + 2)(x + 6)",
+   "(x + 12)(x + 1)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se buscan dos números que sumen 8 y multipliquen 12: 2 y 6."
+ },
+ {
+  "id": "m1_022",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Diego resolvió correctamente 70 de 280 ejercicios. ¿Qué porcentaje de los ejercicios resolvió correctamente?",
+  "alternativas": [
+   "25%",
+   "400%",
+   "70%",
+   "75%"
+  ],
+  "correcta": 0,
+  "explicacion": "70/280 = 25/100, es decir 25%."
+ },
+ {
+  "id": "m1_023",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "En la secuencia 12, 16, 20, 24, … ¿cuál es el término que ocupa la posición 9?",
+  "alternativas": [
+   "36",
+   "44",
+   "108",
+   "48"
+  ],
+  "correcta": 1,
+  "explicacion": "Término n = a₁ + (n−1)·d = 12 + 8·4 = 44."
+ },
+ {
+  "id": "m1_024",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 7x − 13 = −34?",
+  "alternativas": [
+   "−7",
+   "−21",
+   "−3",
+   "−47"
+  ],
+  "correcta": 2,
+  "explicacion": "7x = −34 + 13 = −21, entonces x = −3."
+ },
+ {
+  "id": "m1_025",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de 1/6 + 1/2?",
+  "alternativas": [
+   "1/6",
+   "2/3",
+   "1/12",
+   "1/4"
+  ],
+  "correcta": 1,
+  "explicacion": "Se busca un denominador común y se opera: el resultado es 2/3."
+ },
+ {
+  "id": "m1_026",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es el promedio de los datos 5, 2, 5, 2, 5, 18, 7, 12?",
+  "alternativas": [
+   "18",
+   "5",
+   "8",
+   "7"
+  ],
+  "correcta": 3,
+  "explicacion": "Suma = 56; promedio = 56/8 = 7."
+ },
+ {
+  "id": "m1_027",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿cuál es el total de unidades sumando todas las categorías?",
+  "alternativas": [
+   "265",
+   "310",
+   "425",
+   "305"
+  ],
+  "correcta": 3,
+  "explicacion": "Se suman todas las barras: 45 + 85 + 70 + 65 + 40 = 305.",
+  "imagen": "assets/images/m1/m1_img_011.png"
+ },
+ {
+  "id": "m1_028",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Observa el gráfico. ¿Cuál es la categoría con el valor más alto?",
+  "alternativas": [
+   "Martes",
+   "Lunes",
+   "Miércoles",
+   "Jueves"
+  ],
+  "correcta": 0,
+  "explicacion": "La barra más alta es Martes, con 85.",
+  "imagen": "assets/images/m1/m1_img_008.png"
+ },
+ {
+  "id": "m1_029",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (10⁵ · 10²) : 10²?",
+  "alternativas": [
+   "10⁶",
+   "10⁸",
+   "10⁵",
+   "10⁹"
+  ],
+  "correcta": 2,
+  "explicacion": "Se suman los exponentes al multiplicar y se restan al dividir: 5+2−2 = 5."
+ },
+ {
+  "id": "m1_030",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de (−2) × 4 + 18?",
+  "alternativas": [
+   "10",
+   "26",
+   "11",
+   "−10"
+  ],
+  "correcta": 0,
+  "explicacion": "Se aplican las reglas de los signos: menos por menos es más; más por menos es menos."
+ },
+ {
+  "id": "m1_031",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Fernanda y Felipe reparten $10.500 en la razón 2:3. ¿Cuánto recibe quien recibe más?",
+  "alternativas": [
+   "$10.300",
+   "$5.250",
+   "$6.300",
+   "$4.200"
+  ],
+  "correcta": 2,
+  "explicacion": "Cada parte vale $10.500/5 = $2.100. El mayor recibe 3 partes: $6.300."
+ },
+ {
+  "id": "m1_032",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Tomás tiene el cuádruple de la edad de Valentina. Juntos suman 90 años. ¿Qué edad tiene Valentina?",
+  "alternativas": [
+   "72",
+   "86",
+   "45",
+   "18"
+  ],
+  "correcta": 3,
+  "explicacion": "x + 4x = 90, entonces 5x = 90 y x = 18."
+ },
+ {
+  "id": "m1_033",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto medio del segmento con extremos (−7, 8) y (−15, 12)?",
+  "alternativas": [
+   "(10, −11)",
+   "(−22, 20)",
+   "(−8, 4)",
+   "(−11, 10)"
+  ],
+  "correcta": 3,
+  "explicacion": "Se promedian las coordenadas: ((−7 + (−15))/2, (8 + (12))/2) = (−11, 10)."
+ },
+ {
+  "id": "m1_034",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿cuántas unidades más tiene \"Función 4\" que \"Función 2\"?",
+  "alternativas": [
+   "40",
+   "30",
+   "10",
+   "70"
+  ],
+  "correcta": 2,
+  "explicacion": "40 − 30 = 10.",
+  "imagen": "assets/images/m1/m1_img_001.png"
+ },
+ {
+  "id": "m1_035",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Catalina tiene 4 poleras, 5 pantalones y 3 pares de zapatillas. ¿Cuántas combinaciones distintas de tenida puede armar con una de cada prenda?",
+  "alternativas": [
+   "12",
+   "60",
+   "23",
+   "20"
+  ],
+  "correcta": 1,
+  "explicacion": "Principio multiplicativo: se multiplican las opciones de cada etapa."
+ },
+ {
+  "id": "m1_036",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que sea de \"Hombres\"?",
+  "alternativas": [
+   "5/72",
+   "2/9",
+   "5/32",
+   "4/9"
+  ],
+  "correcta": 3,
+  "explicacion": "Casos favorables 32; casos totales 72. P = 4/9.",
+  "imagen": "assets/images/m1/m1_img_097.png"
+ },
+ {
+  "id": "m1_037",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el desarrollo de (x + 4)²?",
+  "alternativas": [
+   "x² + 16",
+   "x² + 8x + 8",
+   "x² + 4x + 16",
+   "x² + 8x + 16"
+  ],
+  "correcta": 3,
+  "explicacion": "(x + 4)² = x² + 2·4·x + 4²."
+ },
+ {
+  "id": "m1_038",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el mayor número entero x que cumple 4x − 1 < 24?",
+  "alternativas": [
+   "6",
+   "8",
+   "5",
+   "7"
+  ],
+  "correcta": 0,
+  "explicacion": "4x < 25, entonces x < 6,25. El mayor entero es 6."
+ },
+ {
+  "id": "m1_039",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en cuántas unidades cambió el valor entre Febrero y Mayo? (valor final − valor inicial)",
+  "alternativas": [
+   "67",
+   "45",
+   "56",
+   "48"
+  ],
+  "correcta": 1,
+  "explicacion": "56 − 11 = 45.",
+  "imagen": "assets/images/m1/m1_img_028.png"
+ },
+ {
+  "id": "m1_040",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la mediana de los datos 4, 7, 7, 12, 10, 22, 7?",
+  "alternativas": [
+   "7",
+   "9,86",
+   "4",
+   "22"
+  ],
+  "correcta": 0,
+  "explicacion": "Ordenados: 4, 7, 7, 7, 10, 12, 22. La mediana es 7."
+ },
+ {
+  "id": "m1_041",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un bus recorre 180 km en 4 horas a velocidad constante. ¿Cuál es su velocidad en km/h?",
+  "alternativas": [
+   "176",
+   "45",
+   "720",
+   "184"
+  ],
+  "correcta": 1,
+  "explicacion": "Velocidad = distancia / tiempo = 180/4 = 45 km/h."
+ },
+ {
+  "id": "m1_042",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo rectángulo tiene catetos de 8 cm y 15 cm. ¿Cuánto mide su hipotenusa?",
+  "alternativas": [
+   "7",
+   "17",
+   "60",
+   "23"
+  ],
+  "correcta": 1,
+  "explicacion": "h² = 8² + 15² = 289, entonces h = 17 cm."
+ },
+ {
+  "id": "m1_043",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y (2x + 108)°, ¿cuánto mide x?",
+  "alternativas": [
+   "60°",
+   "34°",
+   "24°",
+   "108°"
+  ],
+  "correcta": 2,
+  "explicacion": "x + 2x + 108 = 180 → 3x = 72 → x = 24°."
+ },
+ {
+  "id": "m1_044",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿cuántas unidades más tiene \"Carla\" que \"Juan\"?",
+  "alternativas": [
+   "15",
+   "70",
+   "155",
+   "85"
+  ],
+  "correcta": 0,
+  "explicacion": "85 − 70 = 15.",
+  "imagen": "assets/images/m1/m1_img_009.png"
+ },
+ {
+  "id": "m1_045",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x + y = 22 y x − y = 8, ¿cuál es el valor de x?",
+  "alternativas": [
+   "22",
+   "8",
+   "7",
+   "15"
+  ],
+  "correcta": 3,
+  "explicacion": "Sumando las ecuaciones: 2x = 30, x = 15; luego y = 22 − 15 = 7."
+ },
+ {
+  "id": "m1_046",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "5 obreros construyen un muro en 24 días trabajando al mismo ritmo. ¿En cuántos días lo construirían 24 obreros?",
+  "alternativas": [
+   "5",
+   "7",
+   "115",
+   "43"
+  ],
+  "correcta": 0,
+  "explicacion": "Es proporcionalidad inversa: 5·24 = 24·x, entonces x = 5."
+ },
+ {
+  "id": "m1_047",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = x² − 2x − 1, ¿cuál es el valor de f(−3)?",
+  "alternativas": [
+   "14",
+   "24",
+   "2",
+   "−14"
+  ],
+  "correcta": 0,
+  "explicacion": "Se reemplaza x por −3: f(−3) = 14."
+ },
+ {
+  "id": "m1_048",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿cuál es el total de unidades sumando todas las categorías?",
+  "alternativas": [
+   "325",
+   "330",
+   "305",
+   "570"
+  ],
+  "correcta": 0,
+  "explicacion": "Se suman todas las barras: 40 + 95 + 55 + 30 + 20 + 85 = 325.",
+  "imagen": "assets/images/m1/m1_img_005.png"
+ },
+ {
+  "id": "m1_049",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un mapa con escala 1:200.000, dos ciudades están separadas por 12 cm. ¿Cuál es la distancia real entre ellas?",
+  "alternativas": [
+   "2.400 km",
+   "24 km",
+   "24,5 km",
+   "240 km"
+  ],
+  "correcta": 1,
+  "explicacion": "12 cm · 200.000 = 2.400.000 cm = 24 km."
+ },
+ {
+  "id": "m1_050",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las edades de un grupo son 46, 52, 36, 12, 38, 16, 41. ¿Cuál es el rango de los datos?",
+  "alternativas": [
+   "64",
+   "40",
+   "12",
+   "52"
+  ],
+  "correcta": 1,
+  "explicacion": "Rango = mayor − menor = 52 − 12 = 40."
+ },
+ {
+  "id": "m1_051",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de 8/12 − 3/6?",
+  "alternativas": [
+   "1/3",
+   "11/72",
+   "11/18",
+   "1/6"
+  ],
+  "correcta": 3,
+  "explicacion": "Se busca un denominador común y se opera: el resultado es 1/6."
+ },
+ {
+  "id": "m1_052",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el mínimo común múltiplo de 28 y 35?",
+  "alternativas": [
+   "63",
+   "980",
+   "7",
+   "140"
+  ],
+  "correcta": 3,
+  "explicacion": "Descomponiendo 28 y 35: m.c.m. = 140."
+ },
+ {
+  "id": "m1_053",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Matías tiene 4 poleras, 6 pantalones y 5 pares de zapatillas. ¿Cuántas combinaciones distintas de tenida puede armar con una de cada prenda?",
+  "alternativas": [
+   "24",
+   "120",
+   "15",
+   "29"
+  ],
+  "correcta": 1,
+  "explicacion": "Principio multiplicativo: se multiplican las opciones de cada etapa."
+ },
+ {
+  "id": "m1_054",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x + y = 18 y x − y = 10, ¿cuál es el valor de y?",
+  "alternativas": [
+   "14",
+   "10",
+   "18",
+   "4"
+  ],
+  "correcta": 3,
+  "explicacion": "Sumando las ecuaciones: 2x = 28, x = 14; luego y = 18 − 14 = 4."
+ },
+ {
+  "id": "m1_055",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Se depositan $1.700.000 con un interés simple de 2% anual durante 2 años. ¿Cuánto interés se obtiene en total?",
+  "alternativas": [
+   "$34.000",
+   "$1.768.000",
+   "$6.800.000",
+   "$68.000"
+  ],
+  "correcta": 3,
+  "explicacion": "Interés = capital · tasa · tiempo = $1.700.000 · 2/100 · 2 = $68.000."
+ },
+ {
+  "id": "m1_056",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Martina y Tomás reparten $16.100 en la razón 2:5. ¿Cuánto recibe quien recibe más?",
+  "alternativas": [
+   "$8.050",
+   "$4.600",
+   "$11.500",
+   "$15.900"
+  ],
+  "correcta": 2,
+  "explicacion": "Cada parte vale $16.100/7 = $2.300. El mayor recibe 5 partes: $11.500."
+ },
+ {
+  "id": "m1_057",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿cuántas unidades más tiene \"Función 1\" que \"Función 5\"?",
+  "alternativas": [
+   "100",
+   "30",
+   "35",
+   "65"
+  ],
+  "correcta": 1,
+  "explicacion": "65 − 35 = 30.",
+  "imagen": "assets/images/m1/m1_img_014.png"
+ },
+ {
+  "id": "m1_058",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Catalina resolvió correctamente 22 de 220 ejercicios. ¿Qué porcentaje de los ejercicios resolvió correctamente?",
+  "alternativas": [
+   "22%",
+   "90%",
+   "10%",
+   "1.000%"
+  ],
+  "correcta": 2,
+  "explicacion": "22/220 = 10/100, es decir 10%."
+ },
+ {
+  "id": "m1_059",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿De cuántas maneras distintas se pueden ordenar 4 personas en una fila?",
+  "alternativas": [
+   "24",
+   "12",
+   "6",
+   "16"
+  ],
+  "correcta": 0,
+  "explicacion": "Se calcula 4! = 24."
+ },
+ {
+  "id": "m1_060",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un cubo tiene arista de 6 cm. ¿Cuál es su volumen?",
+  "alternativas": [
+   "18 cm³",
+   "216 cm³",
+   "222 cm³",
+   "36 cm³"
+  ],
+  "correcta": 1,
+  "explicacion": "V = a³ = 6³ = 216 cm³."
+ },
+ {
+  "id": "m1_061",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura es un semicírculo cuyo radio (en rojo) mide lo indicado. ¿Cuál es su área?",
+  "alternativas": [
+   "12π cm²",
+   "36π cm²",
+   "144π cm²",
+   "72π cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "Área = πr²/2 = π·144/2 = 72π cm².",
+  "imagen": "assets/images/m1/m1_img_090.png"
+ },
+ {
+  "id": "m1_062",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el máximo común divisor de 24 y 40?",
+  "alternativas": [
+   "8",
+   "960",
+   "64",
+   "120"
+  ],
+  "correcta": 0,
+  "explicacion": "Los divisores comunes de 24 y 40 llegan hasta 8."
+ },
+ {
+  "id": "m1_063",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Felipe tiene el doble de la edad de Joaquín. Juntos suman 21 años. ¿Qué edad tiene Joaquín?",
+  "alternativas": [
+   "19",
+   "10",
+   "14",
+   "7"
+  ],
+  "correcta": 3,
+  "explicacion": "x + 2x = 21, entonces 3x = 21 y x = 7."
+ },
+ {
+  "id": "m1_064",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en qué mes se registró el valor más alto?",
+  "alternativas": [
+   "Marzo",
+   "Enero",
+   "Abril",
+   "Febrero"
+  ],
+  "correcta": 3,
+  "explicacion": "El punto más alto corresponde a Febrero (72).",
+  "imagen": "assets/images/m1/m1_img_023.png"
+ },
+ {
+  "id": "m1_065",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El promedio de 4 números es 18. Si se agrega un número más, el promedio sube a 21. ¿Qué número se agregó?",
+  "alternativas": [
+   "15",
+   "21",
+   "36",
+   "33"
+  ],
+  "correcta": 3,
+  "explicacion": "Suma inicial 72; suma final 105; el número agregado es la diferencia: 33."
+ },
+ {
+  "id": "m1_066",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El triángulo de la figura es rectángulo. ¿Cuánto mide x en centímetros?",
+  "alternativas": [
+   "25",
+   "17",
+   "84",
+   "31"
+  ],
+  "correcta": 0,
+  "explicacion": "x² = 7² + 24² = 625, entonces x = 25.",
+  "imagen": "assets/images/m1/m1_img_078.png"
+ },
+ {
+  "id": "m1_067",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El triángulo de la figura es rectángulo. ¿Cuánto mide x en centímetros?",
+  "alternativas": [
+   "127",
+   "32",
+   "2",
+   "8"
+  ],
+  "correcta": 3,
+  "explicacion": "x² = 17² − 15² = 64, entonces x = 8.",
+  "imagen": "assets/images/m1/m1_img_076.png"
+ },
+ {
+  "id": "m1_068",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Se depositan $1.500.000 con un interés simple de 6% anual durante 4 años. ¿Cuánto interés se obtiene en total?",
+  "alternativas": [
+   "$36.000.000",
+   "$360.000",
+   "$1.860.000",
+   "$90.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Interés = capital · tasa · tiempo = $1.500.000 · 6/100 · 4 = $360.000."
+ },
+ {
+  "id": "m1_069",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El triángulo de la figura es rectángulo. ¿Cuánto mide x en centímetros?",
+  "alternativas": [
+   "49",
+   "7",
+   "300",
+   "1"
+  ],
+  "correcta": 1,
+  "explicacion": "x² = 25² − 24² = 49, entonces x = 7.",
+  "imagen": "assets/images/m1/m1_img_073.png"
+ },
+ {
+  "id": "m1_070",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Javiera compra un artículo que cuesta $57.000 y tiene un 20% de descuento. ¿Cuánto paga?",
+  "alternativas": [
+   "$56.980",
+   "$11.400",
+   "$68.400",
+   "$45.600"
+  ],
+  "correcta": 3,
+  "explicacion": "Paga el 80% del precio: $57.000 · 80/100 = $45.600."
+ },
+ {
+  "id": "m1_071",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un rectángulo tiene ancho x cm y largo (x + 7) cm. Si su perímetro es 38 cm, ¿cuánto mide el ancho?",
+  "alternativas": [
+   "13",
+   "9",
+   "6",
+   "7"
+  ],
+  "correcta": 2,
+  "explicacion": "2·(x + x + 7) = 38, entonces 4x + 14 = 38 y x = 6."
+ },
+ {
+  "id": "m1_072",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un mapa con escala 1:500.000, dos ciudades están separadas por 11 cm. ¿Cuál es la distancia real entre ellas?",
+  "alternativas": [
+   "550 km",
+   "55 km",
+   "5.500 km",
+   "22 km"
+  ],
+  "correcta": 1,
+  "explicacion": "11 cm · 500.000 = 5.500.000 cm = 55 km."
+ },
+ {
+  "id": "m1_073",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El círculo de la figura tiene el radio (en rojo) indicado. ¿Cuál es su área?",
+  "alternativas": [
+   "4π cm²",
+   "2π cm²",
+   "8π cm²",
+   "16π cm²"
+  ],
+  "correcta": 0,
+  "explicacion": "A = πr² = π·2² = 4π cm².",
+  "imagen": "assets/images/m1/m1_img_087.png"
+ },
+ {
+  "id": "m1_074",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo rectángulo tiene catetos de 15 cm y 36 cm. ¿Cuánto mide su hipotenusa?",
+  "alternativas": [
+   "21",
+   "39",
+   "51",
+   "270"
+  ],
+  "correcta": 1,
+  "explicacion": "h² = 15² + 36² = 1521, entonces h = 39 cm."
+ },
+ {
+  "id": "m1_075",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un estudiante llegue atrasado es 30%. ¿Cuál es la probabilidad de que un estudiante NO llegue atrasado?",
+  "alternativas": [
+   "30%",
+   "70%",
+   "50%",
+   "130%"
+  ],
+  "correcta": 1,
+  "explicacion": "Eventos complementarios suman 100%: 100% − 30% = 70%."
+ },
+ {
+  "id": "m1_076",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Valentina compra un artículo que cuesta $45.000 y tiene un 25% de descuento. ¿Cuánto paga?",
+  "alternativas": [
+   "$44.975",
+   "$33.750",
+   "$11.250",
+   "$56.250"
+  ],
+  "correcta": 1,
+  "explicacion": "Paga el 75% del precio: $45.000 · 75/100 = $33.750."
+ },
+ {
+  "id": "m1_077",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es el promedio de los datos 6, 15, 5, 4, 5?",
+  "alternativas": [
+   "5",
+   "7",
+   "15",
+   "8"
+  ],
+  "correcta": 1,
+  "explicacion": "Suma = 35; promedio = 35/5 = 7."
+ },
+ {
+  "id": "m1_078",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿qué porcentaje representan en conjunto \"Rojo\" y \"Azul\"?",
+  "alternativas": [
+   "5%",
+   "55%",
+   "50%",
+   "45%"
+  ],
+  "correcta": 3,
+  "explicacion": "20% + 25% = 45%.",
+  "imagen": "assets/images/m1/m1_img_042.png"
+ },
+ {
+  "id": "m1_079",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el mayor número entero x que cumple 3x − 7 < 46?",
+  "alternativas": [
+   "18",
+   "16",
+   "17",
+   "19"
+  ],
+  "correcta": 2,
+  "explicacion": "3x < 53, entonces x < 17,67. El mayor entero es 17."
+ },
+ {
+  "id": "m1_080",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la moda de los datos 5, 2, 5, 5, 21, 23, 19?",
+  "alternativas": [
+   "21",
+   "5",
+   "19",
+   "2"
+  ],
+  "correcta": 1,
+  "explicacion": "La moda es el dato que más se repite: 5."
+ },
+ {
+  "id": "m1_081",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta que tiene pendiente 1 y corta al eje y en el punto (0, 3)?",
+  "alternativas": [
+   "y = 3x + 1",
+   "y = x − 3",
+   "y = −x + 3",
+   "y = x + 3"
+  ],
+  "correcta": 3,
+  "explicacion": "Forma y = mx + n, con m la pendiente y n el valor donde corta al eje y."
+ },
+ {
+  "id": "m1_082",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico pasa por los dos puntos marcados. ¿Cuál es su pendiente?",
+  "alternativas": [
+   "4",
+   "3",
+   "−3",
+   "−2"
+  ],
+  "correcta": 2,
+  "explicacion": "m = (-2 − 1)/(2 − 1) = -3.",
+  "imagen": "assets/images/m1/m1_img_060.png"
+ },
+ {
+  "id": "m1_083",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El promedio de 4 números es 26. Si se agrega un número más, el promedio sube a 27. ¿Qué número se agregó?",
+  "alternativas": [
+   "27",
+   "5",
+   "52",
+   "31"
+  ],
+  "correcta": 3,
+  "explicacion": "Suma inicial 104; suma final 135; el número agregado es la diferencia: 31."
+ },
+ {
+  "id": "m1_084",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "En la secuencia 12, 18, 24, 30, … ¿cuál es el término que ocupa la posición 13?",
+  "alternativas": [
+   "90",
+   "78",
+   "156",
+   "84"
+  ],
+  "correcta": 3,
+  "explicacion": "Término n = a₁ + (n−1)·d = 12 + 12·6 = 84."
+ },
+ {
+  "id": "m1_085",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es el promedio de los datos 5, 7, 6, 8, 14, 11, 19, 2?",
+  "alternativas": [
+   "19",
+   "9",
+   "8",
+   "10"
+  ],
+  "correcta": 1,
+  "explicacion": "Suma = 72; promedio = 72/8 = 9."
+ },
+ {
+  "id": "m1_086",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x + y = 3 y x − y = 1, ¿cuál es el valor de y?",
+  "alternativas": [
+   "3",
+   "1",
+   "2",
+   "4"
+  ],
+  "correcta": 1,
+  "explicacion": "Sumando las ecuaciones: 2x = 4, x = 2; luego y = 3 − 2 = 1."
+ },
+ {
+  "id": "m1_087",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuánto mide cada ángulo interior de un pentágono regular?",
+  "alternativas": [
+   "111°",
+   "72°",
+   "108°",
+   "135°"
+  ],
+  "correcta": 2,
+  "explicacion": "Cada ángulo = (n − 2)·180°/n = 540°/5 = 108°."
+ },
+ {
+  "id": "m1_088",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Al trasladar el punto (7, 6) según el vector (3, 4), ¿cuáles son las nuevas coordenadas?",
+  "alternativas": [
+   "(10, 2)",
+   "(4, 10)",
+   "(4, 2)",
+   "(10, 10)"
+  ],
+  "correcta": 3,
+  "explicacion": "Se suman las componentes: (7+(3), 6+(4)) = (10, 10)."
+ },
+ {
+  "id": "m1_089",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en cuántas unidades cambió el valor entre Marzo y Junio? (valor final − valor inicial)",
+  "alternativas": [
+   "76",
+   "11",
+   "34",
+   "−8"
+  ],
+  "correcta": 3,
+  "explicacion": "34 − 42 = −8.",
+  "imagen": "assets/images/m1/m1_img_026.png"
+ },
+ {
+  "id": "m1_090",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un mapa con escala 1:50.000, dos ciudades están separadas por 21 cm. ¿Cuál es la distancia real entre ellas?",
+  "alternativas": [
+   "42 km",
+   "10,5 km",
+   "1.050 km",
+   "105 km"
+  ],
+  "correcta": 1,
+  "explicacion": "21 cm · 50.000 = 1.050.000 cm = 10,5 km."
+ },
+ {
+  "id": "m1_091",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que pertenezca a \"Mujeres\" y a \"Francés\"?",
+  "alternativas": [
+   "19/37",
+   "27/55",
+   "19/55",
+   "19/27"
+  ],
+  "correcta": 2,
+  "explicacion": "Casos favorables 19; casos totales 55. P = 19/55.",
+  "imagen": "assets/images/m1/m1_img_096.png"
+ },
+ {
+  "id": "m1_092",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene perímetro 58 cm y uno de sus lados mide 17 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "29",
+   "58",
+   "204",
+   "493"
+  ],
+  "correcta": 2,
+  "explicacion": "El otro lado mide 29 − 17 = 12 cm. Área = 17·12 = 204 cm²."
+ },
+ {
+  "id": "m1_093",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (5³ · 5⁷) : 5¹?",
+  "alternativas": [
+   "5¹⁰",
+   "5⁹",
+   "5¹¹",
+   "5²⁰"
+  ],
+  "correcta": 1,
+  "explicacion": "Se suman los exponentes al multiplicar y se restan al dividir: 3+7−1 = 9."
+ },
+ {
+  "id": "m1_094",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuánto suman los ángulos interiores de un octágono?",
+  "alternativas": [
+   "360°",
+   "1.440°",
+   "1.080°",
+   "1.260°"
+  ],
+  "correcta": 2,
+  "explicacion": "Suma = (n − 2)·180° = 6·180° = 1080°."
+ },
+ {
+  "id": "m1_095",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una bolsa tiene 9 fichas rojas, 8 azules y 7 verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea roja?",
+  "alternativas": [
+   "1/3",
+   "3/5",
+   "5/8",
+   "3/8"
+  ],
+  "correcta": 3,
+  "explicacion": "Casos favorables 9, casos totales 24: P = 3/8."
+ },
+ {
+  "id": "m1_096",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El promedio de 4 números es 12. Si se agrega un número más, el promedio sube a 14. ¿Qué número se agregó?",
+  "alternativas": [
+   "22",
+   "14",
+   "10",
+   "24"
+  ],
+  "correcta": 0,
+  "explicacion": "Suma inicial 48; suma final 70; el número agregado es la diferencia: 22."
+ },
+ {
+  "id": "m1_097",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Una escalera de 25 m apoyada en una pared llega a una altura de 7 m. ¿A qué distancia de la pared está la base de la escalera?",
+  "alternativas": [
+   "32",
+   "24",
+   "18",
+   "14"
+  ],
+  "correcta": 1,
+  "explicacion": "24² = 25² − 7² → 24 m."
+ },
+ {
+  "id": "m1_098",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Felipe tiene el triple de la edad de Martina. Juntos suman 56 años. ¿Qué edad tiene Martina?",
+  "alternativas": [
+   "42",
+   "28",
+   "53",
+   "14"
+  ],
+  "correcta": 3,
+  "explicacion": "x + 3x = 56, entonces 4x = 56 y x = 14."
+ },
+ {
+  "id": "m1_099",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la moda de los datos 12, 18, 28, 5, 5, 5, 8?",
+  "alternativas": [
+   "12",
+   "5",
+   "18",
+   "8"
+  ],
+  "correcta": 1,
+  "explicacion": "La moda es el dato que más se repite: 5."
+ },
+ {
+  "id": "m1_100",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Se depositan $700.000 con un interés simple de 3% anual durante 5 años. ¿Cuánto interés se obtiene en total?",
+  "alternativas": [
+   "$10.500.000",
+   "$105.000",
+   "$21.000",
+   "$805.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Interés = capital · tasa · tiempo = $700.000 · 3/100 · 5 = $105.000."
+ },
+ {
+  "id": "m1_101",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Una circunferencia tiene radio 12 cm. ¿Cuál es su perímetro?",
+  "alternativas": [
+   "12π cm",
+   "24π cm",
+   "144π cm",
+   "48π cm"
+  ],
+  "correcta": 1,
+  "explicacion": "P = 2πr = 2π·12 = 24π cm."
+ },
+ {
+  "id": "m1_102",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En la encuesta participaron 60 personas. Según el gráfico, ¿cuántas personas eligieron \"Bus\"?",
+  "alternativas": [
+   "15",
+   "30",
+   "45",
+   "25"
+  ],
+  "correcta": 0,
+  "explicacion": "25% de 60 = 15.",
+  "imagen": "assets/images/m1/m1_img_033.png"
+ },
+ {
+  "id": "m1_103",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo, dos ángulos interiores miden 75° y 70°. ¿Cuánto mide el tercer ángulo?",
+  "alternativas": [
+   "15°",
+   "35°",
+   "105°",
+   "145°"
+  ],
+  "correcta": 1,
+  "explicacion": "Los ángulos interiores suman 180°: 180° − 75° − 70° = 35°."
+ },
+ {
+  "id": "m1_104",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene perímetro 38 cm y uno de sus lados mide 13 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "38",
+   "78",
+   "247",
+   "19"
+  ],
+  "correcta": 1,
+  "explicacion": "El otro lado mide 19 − 13 = 6 cm. Área = 13·6 = 78 cm²."
+ },
+ {
+  "id": "m1_105",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para llegar de A a B hay 4 caminos y para llegar de B a C hay 3 caminos. ¿De cuántas maneras distintas se puede ir de A a C pasando por B?",
+  "alternativas": [
+   "64",
+   "7",
+   "11",
+   "12"
+  ],
+  "correcta": 3,
+  "explicacion": "Principio multiplicativo: se multiplican las opciones de cada etapa."
+ },
+ {
+  "id": "m1_106",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "12 obreros construyen un muro en 10 días trabajando al mismo ritmo. ¿En cuántos días lo construirían 6 obreros?",
+  "alternativas": [
+   "4",
+   "5",
+   "16",
+   "20"
+  ],
+  "correcta": 3,
+  "explicacion": "Es proporcionalidad inversa: 12·10 = 6·x, entonces x = 20."
+ },
+ {
+  "id": "m1_107",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un colegio de 180 estudiantes, el 15% practica natación. ¿Cuántos estudiantes NO practican natación?",
+  "alternativas": [
+   "153",
+   "27",
+   "207",
+   "165"
+  ],
+  "correcta": 0,
+  "explicacion": "15% de 180 = 27 practican; los demás son 180 − 27 = 153."
+ },
+ {
+  "id": "m1_108",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es el promedio de los datos 19, 13, 21, 10, 12?",
+  "alternativas": [
+   "18",
+   "21",
+   "13",
+   "15"
+  ],
+  "correcta": 3,
+  "explicacion": "Suma = 75; promedio = 75/5 = 15."
+ },
+ {
+  "id": "m1_109",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico tiene ecuación y = −3x + 3. ¿Cuánto vale y cuando x = −4?",
+  "alternativas": [
+   "−15",
+   "15",
+   "−7",
+   "−9"
+  ],
+  "correcta": 1,
+  "explicacion": "y = -3·(-4) + (3) = 15.",
+  "imagen": "assets/images/m1/m1_img_065.png"
+ },
+ {
+  "id": "m1_110",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una bolsa tiene 5 fichas rojas, 6 azules y 5 verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea verde?",
+  "alternativas": [
+   "5/11",
+   "1/3",
+   "5/16",
+   "11/16"
+  ],
+  "correcta": 2,
+  "explicacion": "Casos favorables 5, casos totales 16: P = 5/16."
+ },
+ {
+  "id": "m1_111",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de −2 − (−3) × 15?",
+  "alternativas": [
+   "−47",
+   "−43",
+   "43",
+   "44"
+  ],
+  "correcta": 2,
+  "explicacion": "Se aplican las reglas de los signos: menos por menos es más; más por menos es menos."
+ },
+ {
+  "id": "m1_112",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Si 2 kg de naranjas cuestan $800, ¿cuánto cuestan 9 kg de naranjas?",
+  "alternativas": [
+   "$4.100",
+   "$3.600",
+   "$1.700",
+   "$4.400"
+  ],
+  "correcta": 1,
+  "explicacion": "1 kg cuesta $400; entonces 9 kg cuestan $3.600."
+ },
+ {
+  "id": "m1_113",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la factorización de x² + 13x + 40?",
+  "alternativas": [
+   "(x + 13)(x + 1)",
+   "(x − 5)(x − 8)",
+   "(x + 5)(x + 8)",
+   "(x + 40)(x + 1)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se buscan dos números que sumen 13 y multipliquen 40: 5 y 8."
+ },
+ {
+  "id": "m1_114",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un rectángulo tiene ancho x cm y largo (x + 1) cm. Si su perímetro es 78 cm, ¿cuánto mide el ancho?",
+  "alternativas": [
+   "19",
+   "20",
+   "38",
+   "18"
+  ],
+  "correcta": 0,
+  "explicacion": "2·(x + x + 1) = 78, entonces 4x + 2 = 78 y x = 19."
+ },
+ {
+  "id": "m1_115",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un colegio de 240 estudiantes, el 60% practica fútbol. ¿Cuántos estudiantes NO practican fútbol?",
+  "alternativas": [
+   "384",
+   "96",
+   "180",
+   "144"
+  ],
+  "correcta": 1,
+  "explicacion": "60% de 240 = 144 practican; los demás son 240 − 144 = 96."
+ },
+ {
+  "id": "m1_116",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "En una tienda hay 410 productos y el 90% está en oferta. ¿Cuántos productos están en oferta?",
+  "alternativas": [
+   "738",
+   "3.690",
+   "369",
+   "41"
+  ],
+  "correcta": 2,
+  "explicacion": "90% de 410 = 90/100 · 410 = 369."
+ },
+ {
+  "id": "m1_117",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un bus recorre 288 km en 4 horas a velocidad constante. ¿Cuál es su velocidad en km/h?",
+  "alternativas": [
+   "1.152",
+   "72",
+   "284",
+   "292"
+  ],
+  "correcta": 1,
+  "explicacion": "Velocidad = distancia / tiempo = 288/4 = 72 km/h."
+ },
+ {
+  "id": "m1_118",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El círculo de la figura tiene el radio (en rojo) indicado. ¿Cuál es su área?",
+  "alternativas": [
+   "200π cm²",
+   "10π cm²",
+   "20π cm²",
+   "100π cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "A = πr² = π·10² = 100π cm².",
+  "imagen": "assets/images/m1/m1_img_086.png"
+ },
+ {
+  "id": "m1_119",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un rectángulo tiene ancho x cm y largo (x + 4) cm. Si su perímetro es 56 cm, ¿cuánto mide el ancho?",
+  "alternativas": [
+   "16",
+   "12",
+   "14",
+   "13"
+  ],
+  "correcta": 1,
+  "explicacion": "2·(x + x + 4) = 56, entonces 4x + 8 = 56 y x = 12."
+ },
+ {
+  "id": "m1_120",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un bus recorre 200 km en 4 horas a velocidad constante. ¿Cuál es su velocidad en km/h?",
+  "alternativas": [
+   "800",
+   "196",
+   "204",
+   "50"
+  ],
+  "correcta": 3,
+  "explicacion": "Velocidad = distancia / tiempo = 200/4 = 50 km/h."
+ },
+ {
+  "id": "m1_121",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que sea de \"Mujeres\"?",
+  "alternativas": [
+   "1/16",
+   "13/32",
+   "9/64",
+   "2/13"
+  ],
+  "correcta": 1,
+  "explicacion": "Casos favorables 26; casos totales 64. P = 13/32.",
+  "imagen": "assets/images/m1/m1_img_100.png"
+ },
+ {
+  "id": "m1_122",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un rectángulo tiene ancho x cm y largo (x + 3) cm. Si su perímetro es 26 cm, ¿cuánto mide el ancho?",
+  "alternativas": [
+   "6",
+   "5",
+   "8",
+   "10"
+  ],
+  "correcta": 1,
+  "explicacion": "2·(x + x + 3) = 26, entonces 4x + 6 = 26 y x = 5."
+ },
+ {
+  "id": "m1_123",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un estudiante llegue atrasado es 25%. ¿Cuál es la probabilidad de que un estudiante NO llegue atrasado?",
+  "alternativas": [
+   "50%",
+   "75%",
+   "125%",
+   "25%"
+  ],
+  "correcta": 1,
+  "explicacion": "Eventos complementarios suman 100%: 100% − 25% = 75%."
+ },
+ {
+  "id": "m1_124",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y (2x + 96)°, ¿cuánto mide x?",
+  "alternativas": [
+   "38°",
+   "60°",
+   "28°",
+   "96°"
+  ],
+  "correcta": 2,
+  "explicacion": "x + 2x + 96 = 180 → 3x = 84 → x = 28°."
+ },
+ {
+  "id": "m1_125",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y (3x + 28)°, ¿cuánto mide x?",
+  "alternativas": [
+   "45°",
+   "38°",
+   "28°",
+   "48°"
+  ],
+  "correcta": 1,
+  "explicacion": "x + 3x + 28 = 180 → 4x = 152 → x = 38°."
+ },
+ {
+  "id": "m1_126",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la mediana de los datos 6, 29, 18, 5, 9?",
+  "alternativas": [
+   "13,4",
+   "9",
+   "29",
+   "5"
+  ],
+  "correcta": 1,
+  "explicacion": "Ordenados: 5, 6, 9, 18, 29. La mediana es 9."
+ },
+ {
+  "id": "m1_127",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que pertenezca a \"Hombres\" y a \"Fútbol\"?",
+  "alternativas": [
+   "38/81",
+   "3/19",
+   "2/7",
+   "2/27"
+  ],
+  "correcta": 3,
+  "explicacion": "Casos favorables 6; casos totales 81. P = 2/27.",
+  "imagen": "assets/images/m1/m1_img_091.png"
+ },
+ {
+  "id": "m1_128",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto simétrico de (2, −7) respecto del eje y?",
+  "alternativas": [
+   "(−7, 2)",
+   "(−2, −7)",
+   "(2, 7)",
+   "(−2, 7)"
+  ],
+  "correcta": 1,
+  "explicacion": "Al reflejar respecto del eje y cambia el signo de la coordenada x."
+ },
+ {
+  "id": "m1_129",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una bolsa tiene 8 fichas rojas, 8 azules y 5 verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea verde?",
+  "alternativas": [
+   "5/16",
+   "1/3",
+   "5/21",
+   "16/21"
+  ],
+  "correcta": 2,
+  "explicacion": "Casos favorables 5, casos totales 21: P = 5/21."
+ },
+ {
+  "id": "m1_130",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico pasa por los dos puntos marcados. ¿Cuál es su pendiente?",
+  "alternativas": [
+   "3",
+   "4",
+   "1",
+   "−3"
+  ],
+  "correcta": 0,
+  "explicacion": "m = (7 − -2)/(2 − -1) = 3.",
+  "imagen": "assets/images/m1/m1_img_058.png"
+ },
+ {
+  "id": "m1_131",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = x² − 4x − 2, ¿cuál es el valor de f(−1)?",
+  "alternativas": [
+   "−3",
+   "23",
+   "−5",
+   "3"
+  ],
+  "correcta": 3,
+  "explicacion": "Se reemplaza x por −1: f(−1) = 3."
+ },
+ {
+  "id": "m1_132",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 4x + 3, ¿cuál es el valor de f(4)?",
+  "alternativas": [
+   "19",
+   "−19",
+   "11",
+   "28"
+  ],
+  "correcta": 0,
+  "explicacion": "Se reemplaza x por 4: f(4) = 19."
+ },
+ {
+  "id": "m1_133",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un bus recorre 120 km en 2 horas a velocidad constante. ¿Cuál es su velocidad en km/h?",
+  "alternativas": [
+   "240",
+   "60",
+   "122",
+   "118"
+  ],
+  "correcta": 1,
+  "explicacion": "Velocidad = distancia / tiempo = 120/2 = 60 km/h."
+ },
+ {
+  "id": "m1_134",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico pasa por los dos puntos marcados. ¿Cuál es su pendiente?",
+  "alternativas": [
+   "−4",
+   "−1",
+   "2",
+   "−2"
+  ],
+  "correcta": 3,
+  "explicacion": "m = (-8 − 2)/(2 − -3) = -2.",
+  "imagen": "assets/images/m1/m1_img_057.png"
+ },
+ {
+  "id": "m1_135",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x + y = 20 y x − y = 10, ¿cuál es el valor de x?",
+  "alternativas": [
+   "15",
+   "20",
+   "10",
+   "5"
+  ],
+  "correcta": 0,
+  "explicacion": "Sumando las ecuaciones: 2x = 30, x = 15; luego y = 20 − 15 = 5."
+ },
+ {
+  "id": "m1_136",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el máximo común divisor de 9 y 21?",
+  "alternativas": [
+   "30",
+   "63",
+   "3",
+   "189"
+  ],
+  "correcta": 2,
+  "explicacion": "Los divisores comunes de 9 y 21 llegan hasta 3."
+ },
+ {
+  "id": "m1_137",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el mayor número entero x que cumple 3x − 8 < 21?",
+  "alternativas": [
+   "8",
+   "9",
+   "11",
+   "10"
+  ],
+  "correcta": 1,
+  "explicacion": "3x < 29, entonces x < 9,67. El mayor entero es 9."
+ },
+ {
+  "id": "m1_138",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta que tiene pendiente −3 y corta al eje y en el punto (0, −7)?",
+  "alternativas": [
+   "y = 3x − 7",
+   "y = −7x − 3",
+   "y = −3x + 7",
+   "y = −3x − 7"
+  ],
+  "correcta": 3,
+  "explicacion": "Forma y = mx + n, con m la pendiente y n el valor donde corta al eje y."
+ },
+ {
+  "id": "m1_139",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x + y = 23 y x − y = 7, ¿cuál es el valor de y?",
+  "alternativas": [
+   "8",
+   "7",
+   "23",
+   "15"
+  ],
+  "correcta": 0,
+  "explicacion": "Sumando las ecuaciones: 2x = 30, x = 15; luego y = 23 − 15 = 8."
+ },
+ {
+  "id": "m1_140",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico tiene ecuación y = x + 2. ¿Cuánto vale y cuando x = −4?",
+  "alternativas": [
+   "6",
+   "2",
+   "−3",
+   "−2"
+  ],
+  "correcta": 3,
+  "explicacion": "y = 1·(-4) + (2) = -2.",
+  "imagen": "assets/images/m1/m1_img_063.png"
+ },
+ {
+  "id": "m1_141",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Observa el gráfico. ¿Cuál es la categoría con el valor más bajo?",
+  "alternativas": [
+   "Función 2",
+   "Función 3",
+   "Función 4",
+   "Función 1"
+  ],
+  "correcta": 0,
+  "explicacion": "La barra más baja es Función 2, con 30.",
+  "imagen": "assets/images/m1/m1_img_015.png"
+ },
+ {
+  "id": "m1_142",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si se encuestó a 160 personas, ¿cuántas más eligieron \"Hamburguesa\" que \"Ensalada\"?",
+  "alternativas": [
+   "104",
+   "8",
+   "5",
+   "56"
+  ],
+  "correcta": 1,
+  "explicacion": "(35% − 30%) de 160 = 8.",
+  "imagen": "assets/images/m1/m1_img_032.png"
+ },
+ {
+  "id": "m1_143",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un bus recorre 360 km en 4 horas a velocidad constante. ¿Cuál es su velocidad en km/h?",
+  "alternativas": [
+   "356",
+   "90",
+   "1.440",
+   "364"
+  ],
+  "correcta": 1,
+  "explicacion": "Velocidad = distancia / tiempo = 360/4 = 90 km/h."
+ },
+ {
+  "id": "m1_144",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Observa el gráfico. ¿Cuál es la categoría con el valor más alto?",
+  "alternativas": [
+   "Luis",
+   "Juan",
+   "Pedro",
+   "Carla"
+  ],
+  "correcta": 3,
+  "explicacion": "La barra más alta es Carla, con 95.",
+  "imagen": "assets/images/m1/m1_img_007.png"
+ },
+ {
+  "id": "m1_145",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en qué mes se registró el valor más alto?",
+  "alternativas": [
+   "Enero",
+   "Febrero",
+   "Marzo",
+   "Junio"
+  ],
+  "correcta": 3,
+  "explicacion": "El punto más alto corresponde a Junio (64).",
+  "imagen": "assets/images/m1/m1_img_020.png"
+ },
+ {
+  "id": "m1_146",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "y es directamente proporcional a x. Si y = 21 cuando x = 7, ¿cuánto vale y cuando x = 11?",
+  "alternativas": [
+   "42",
+   "33",
+   "14",
+   "25"
+  ],
+  "correcta": 1,
+  "explicacion": "La constante es y/x = 3; entonces y = 3·11 = 33."
+ },
+ {
+  "id": "m1_147",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la moda de los datos 3, 21, 21, 16, 18, 16, 10, 16?",
+  "alternativas": [
+   "18",
+   "16",
+   "3",
+   "10"
+  ],
+  "correcta": 1,
+  "explicacion": "La moda es el dato que más se repite: 16."
+ },
+ {
+  "id": "m1_148",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el desarrollo de (x − 9)²?",
+  "alternativas": [
+   "x² − 18x + 81",
+   "x² − 9x + 81",
+   "x² + 18x + 81",
+   "x² − 81"
+  ],
+  "correcta": 0,
+  "explicacion": "(x − 9)² = x² − 2·9·x + 9²."
+ },
+ {
+  "id": "m1_149",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Camila y Diego reparten $11.000 en la razón 1:4. ¿Cuánto recibe quien recibe más?",
+  "alternativas": [
+   "$10.900",
+   "$8.800",
+   "$5.500",
+   "$2.200"
+  ],
+  "correcta": 1,
+  "explicacion": "Cada parte vale $11.000/5 = $2.200. El mayor recibe 4 partes: $8.800."
+ },
+ {
+  "id": "m1_150",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la factorización de x² + 12x + 32?",
+  "alternativas": [
+   "(x + 12)(x + 1)",
+   "(x + 4)(x + 8)",
+   "(x − 4)(x − 8)",
+   "(x + 32)(x + 1)"
+  ],
+  "correcta": 1,
+  "explicacion": "Se buscan dos números que sumen 12 y multipliquen 32: 4 y 8."
+ },
+ {
+  "id": "m1_151",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Una circunferencia tiene radio 9 cm. ¿Cuál es su perímetro?",
+  "alternativas": [
+   "18π cm",
+   "36π cm",
+   "9π cm",
+   "81π cm"
+  ],
+  "correcta": 0,
+  "explicacion": "P = 2πr = 2π·9 = 18π cm."
+ },
+ {
+  "id": "m1_152",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta que tiene pendiente −1 y corta al eje y en el punto (0, −8)?",
+  "alternativas": [
+   "y = −x + 8",
+   "y = −x − 8",
+   "y = x − 8",
+   "y = −8x − 1"
+  ],
+  "correcta": 1,
+  "explicacion": "Forma y = mx + n, con m la pendiente y n el valor donde corta al eje y."
+ },
+ {
+  "id": "m1_153",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un círculo tiene radio 8 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "128π cm²",
+   "64π cm²",
+   "8π cm²",
+   "16π cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "A = πr² = π·8² = 64π cm²."
+ },
+ {
+  "id": "m1_154",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la moda?",
+  "alternativas": [
+   "4",
+   "5",
+   "6",
+   "1"
+  ],
+  "correcta": 2,
+  "explicacion": "La mayor frecuencia es 9, que corresponde al valor 6.",
+  "imagen": "assets/images/m1/m1_img_053.png"
+ },
+ {
+  "id": "m1_155",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la factorización de x² − 49?",
+  "alternativas": [
+   "(x − 14)(x + 14)",
+   "(x − 7)(x + 7)",
+   "(x − 7)²",
+   "(x + 7)²"
+  ],
+  "correcta": 1,
+  "explicacion": "Es una diferencia de cuadrados: x² − 7² = (x − 7)(x + 7)."
+ },
+ {
+  "id": "m1_156",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta representada en el gráfico?",
+  "alternativas": [
+   "y = −2x − 1",
+   "y = 2x − 1",
+   "y = 2x + 1",
+   "y = −x + 2"
+  ],
+  "correcta": 1,
+  "explicacion": "Pendiente 2; corta al eje y en -1: y = 2x − 1.",
+  "imagen": "assets/images/m1/m1_img_068.png"
+ },
+ {
+  "id": "m1_157",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico pasa por los dos puntos marcados. ¿Cuál es su pendiente?",
+  "alternativas": [
+   "3",
+   "4",
+   "2",
+   "−3"
+  ],
+  "correcta": 0,
+  "explicacion": "m = (3 − -3)/(2 − 0) = 3.",
+  "imagen": "assets/images/m1/m1_img_070.png"
+ },
+ {
+  "id": "m1_158",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "y es directamente proporcional a x. Si y = 42 cuando x = 7, ¿cuánto vale y cuando x = 20?",
+  "alternativas": [
+   "26",
+   "55",
+   "84",
+   "120"
+  ],
+  "correcta": 3,
+  "explicacion": "La constante es y/x = 6; entonces y = 6·20 = 120."
+ },
+ {
+  "id": "m1_159",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la moda de los datos 3, 4, 3, 23, 3, 5, 19?",
+  "alternativas": [
+   "19",
+   "4",
+   "3",
+   "5"
+  ],
+  "correcta": 2,
+  "explicacion": "La moda es el dato que más se repite: 3."
+ },
+ {
+  "id": "m1_160",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la moda?",
+  "alternativas": [
+   "9",
+   "2",
+   "5",
+   "1"
+  ],
+  "correcta": 3,
+  "explicacion": "La mayor frecuencia es 10, que corresponde al valor 1.",
+  "imagen": "assets/images/m1/m1_img_045.png"
+ },
+ {
+  "id": "m1_161",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es el promedio de los datos 20, 4, 13, 11, 17?",
+  "alternativas": [
+   "20",
+   "16",
+   "13",
+   "14"
+  ],
+  "correcta": 2,
+  "explicacion": "Suma = 65; promedio = 65/5 = 13."
+ },
+ {
+  "id": "m1_162",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto medio del segmento con extremos (2, 8) y (−10, 6)?",
+  "alternativas": [
+   "(−4, 7)",
+   "(−12, −2)",
+   "(−8, 14)",
+   "(7, −4)"
+  ],
+  "correcta": 0,
+  "explicacion": "Se promedian las coordenadas: ((2 + (−10))/2, (8 + (6))/2) = (−4, 7)."
+ },
+ {
+  "id": "m1_163",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo rectángulo tiene catetos de 7 cm y 24 cm. ¿Cuánto mide su hipotenusa?",
+  "alternativas": [
+   "84",
+   "25",
+   "31",
+   "17"
+  ],
+  "correcta": 1,
+  "explicacion": "h² = 7² + 24² = 625, entonces h = 25 cm."
+ },
+ {
+  "id": "m1_164",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la factorización de x² − 100?",
+  "alternativas": [
+   "(x − 20)(x + 20)",
+   "(x + 10)²",
+   "(x − 10)²",
+   "(x − 10)(x + 10)"
+  ],
+  "correcta": 3,
+  "explicacion": "Es una diferencia de cuadrados: x² − 10² = (x − 10)(x + 10)."
+ },
+ {
+  "id": "m1_165",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Diego compra un artículo que cuesta $16.000 y tiene un 30% de descuento. ¿Cuánto paga?",
+  "alternativas": [
+   "$4.800",
+   "$20.800",
+   "$15.970",
+   "$11.200"
+  ],
+  "correcta": 3,
+  "explicacion": "Paga el 70% del precio: $16.000 · 70/100 = $11.200."
+ },
+ {
+  "id": "m1_166",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta que tiene pendiente 5 y corta al eje y en el punto (0, 1)?",
+  "alternativas": [
+   "y = 5x − 1",
+   "y = x + 5",
+   "y = 5x + 1",
+   "y = −5x + 1"
+  ],
+  "correcta": 2,
+  "explicacion": "Forma y = mx + n, con m la pendiente y n el valor donde corta al eje y."
+ },
+ {
+  "id": "m1_167",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es el promedio?",
+  "alternativas": [
+   "6,7",
+   "7",
+   "9",
+   "6,2"
+  ],
+  "correcta": 3,
+  "explicacion": "Suma de (valor · frecuencia) = 186; total de datos = 30; promedio = 6,2.",
+  "imagen": "assets/images/m1/m1_img_048.png"
+ },
+ {
+  "id": "m1_168",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en qué mes se registró el valor más alto?",
+  "alternativas": [
+   "Enero",
+   "Mayo",
+   "Marzo",
+   "Febrero"
+  ],
+  "correcta": 1,
+  "explicacion": "El punto más alto corresponde a Mayo (73).",
+  "imagen": "assets/images/m1/m1_img_021.png"
+ },
+ {
+  "id": "m1_169",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene perímetro 46 cm y uno de sus lados mide 19 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "437",
+   "23",
+   "76",
+   "46"
+  ],
+  "correcta": 2,
+  "explicacion": "El otro lado mide 23 − 19 = 4 cm. Área = 19·4 = 76 cm²."
+ },
+ {
+  "id": "m1_170",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (5⁵ · 5⁶) : 5⁵?",
+  "alternativas": [
+   "5⁶",
+   "5¹⁶",
+   "5²⁵",
+   "5⁷"
+  ],
+  "correcta": 0,
+  "explicacion": "Se suman los exponentes al multiplicar y se restan al dividir: 5+6−5 = 6."
+ },
+ {
+  "id": "m1_171",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un mapa con escala 1:100.000, dos ciudades están separadas por 21 cm. ¿Cuál es la distancia real entre ellas?",
+  "alternativas": [
+   "21 km",
+   "2.100 km",
+   "42 km",
+   "210 km"
+  ],
+  "correcta": 0,
+  "explicacion": "21 cm · 100.000 = 2.100.000 cm = 21 km."
+ },
+ {
+  "id": "m1_172",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo, dos ángulos interiores miden 50° y 55°. ¿Cuánto mide el tercer ángulo?",
+  "alternativas": [
+   "40°",
+   "130°",
+   "75°",
+   "105°"
+  ],
+  "correcta": 2,
+  "explicacion": "Los ángulos interiores suman 180°: 180° − 50° − 55° = 75°."
+ },
+ {
+  "id": "m1_173",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la factorización de x² − 64?",
+  "alternativas": [
+   "(x − 16)(x + 16)",
+   "(x − 8)²",
+   "(x − 8)(x + 8)",
+   "(x + 8)²"
+  ],
+  "correcta": 2,
+  "explicacion": "Es una diferencia de cuadrados: x² − 8² = (x − 8)(x + 8)."
+ },
+ {
+  "id": "m1_174",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las edades de un grupo son 37, 57, 17, 41, 50, 37, 48. ¿Cuál es el rango de los datos?",
+  "alternativas": [
+   "40",
+   "57",
+   "17",
+   "74"
+  ],
+  "correcta": 0,
+  "explicacion": "Rango = mayor − menor = 57 − 17 = 40."
+ },
+ {
+  "id": "m1_175",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la moda de los datos 10, 1, 21, 25, 10, 22, 10?",
+  "alternativas": [
+   "22",
+   "1",
+   "21",
+   "10"
+  ],
+  "correcta": 3,
+  "explicacion": "La moda es el dato que más se repite: 10."
+ },
+ {
+  "id": "m1_176",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la mediana de los datos 2, 22, 16, 6, 8?",
+  "alternativas": [
+   "8",
+   "22",
+   "2",
+   "10,8"
+  ],
+  "correcta": 0,
+  "explicacion": "Ordenados: 2, 6, 8, 16, 22. La mediana es 8."
+ },
+ {
+  "id": "m1_177",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si se encuestó a 240 personas, ¿cuántas más eligieron \"A pie\" que \"Bus\"?",
+  "alternativas": [
+   "15",
+   "36",
+   "60",
+   "84"
+  ],
+  "correcta": 1,
+  "explicacion": "(25% − 10%) de 240 = 36.",
+  "imagen": "assets/images/m1/m1_img_031.png"
+ },
+ {
+  "id": "m1_178",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de 1/3 + 2/12?",
+  "alternativas": [
+   "1/2",
+   "1/18",
+   "1/12",
+   "1/5"
+  ],
+  "correcta": 0,
+  "explicacion": "Se busca un denominador común y se opera: el resultado es 1/2."
+ },
+ {
+  "id": "m1_179",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta que tiene pendiente −2 y corta al eje y en el punto (0, 7)?",
+  "alternativas": [
+   "y = 7x − 2",
+   "y = 2x + 7",
+   "y = −2x − 7",
+   "y = −2x + 7"
+  ],
+  "correcta": 3,
+  "explicacion": "Forma y = mx + n, con m la pendiente y n el valor donde corta al eje y."
+ },
+ {
+  "id": "m1_180",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una bolsa tiene 9 fichas rojas, 8 azules y 7 verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea verde?",
+  "alternativas": [
+   "7/17",
+   "1/3",
+   "17/24",
+   "7/24"
+  ],
+  "correcta": 3,
+  "explicacion": "Casos favorables 7, casos totales 24: P = 7/24."
+ },
+ {
+  "id": "m1_181",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El promedio de 5 números es 13. Si se agrega un número más, el promedio sube a 16. ¿Qué número se agregó?",
+  "alternativas": [
+   "26",
+   "16",
+   "18",
+   "31"
+  ],
+  "correcta": 3,
+  "explicacion": "Suma inicial 65; suma final 96; el número agregado es la diferencia: 31."
+ },
+ {
+  "id": "m1_182",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Una escalera de 39 m apoyada en una pared llega a una altura de 15 m. ¿A qué distancia de la pared está la base de la escalera?",
+  "alternativas": [
+   "36",
+   "30",
+   "54",
+   "24"
+  ],
+  "correcta": 0,
+  "explicacion": "36² = 39² − 15² → 36 m."
+ },
+ {
+  "id": "m1_183",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en qué mes se registró el valor más alto?",
+  "alternativas": [
+   "Mayo",
+   "Marzo",
+   "Febrero",
+   "Enero"
+  ],
+  "correcta": 0,
+  "explicacion": "El punto más alto corresponde a Mayo (46).",
+  "imagen": "assets/images/m1/m1_img_025.png"
+ },
+ {
+  "id": "m1_184",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el desarrollo de (x + 6)(x − 6)?",
+  "alternativas": [
+   "x² − 12x",
+   "x² − 6",
+   "x² − 36",
+   "x² + 36"
+  ],
+  "correcta": 2,
+  "explicacion": "Es suma por diferencia: x² − 6² = x² − 36."
+ },
+ {
+  "id": "m1_185",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto medio del segmento con extremos (4, 6) y (4, −4)?",
+  "alternativas": [
+   "(4, 1)",
+   "(1, 4)",
+   "(8, 2)",
+   "(0, −10)"
+  ],
+  "correcta": 0,
+  "explicacion": "Se promedian las coordenadas: ((4 + (4))/2, (6 + (−4))/2) = (4, 1)."
+ },
+ {
+  "id": "m1_186",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la pendiente de la recta que pasa por los puntos (1, 0) y (4, −9)?",
+  "alternativas": [
+   "−3",
+   "−9",
+   "3",
+   "−0,33"
+  ],
+  "correcta": 0,
+  "explicacion": "m = (y₂ − y₁)/(x₂ − x₁) = −9/3 = −3."
+ },
+ {
+  "id": "m1_187",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Joaquín resolvió correctamente 140 de 280 ejercicios. ¿Qué porcentaje de los ejercicios resolvió correctamente?",
+  "alternativas": [
+   "200%",
+   "50%",
+   "140%",
+   "55%"
+  ],
+  "correcta": 1,
+  "explicacion": "140/280 = 50/100, es decir 50%."
+ },
+ {
+  "id": "m1_188",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el mínimo común múltiplo de 10 y 12?",
+  "alternativas": [
+   "60",
+   "120",
+   "22",
+   "2"
+  ],
+  "correcta": 0,
+  "explicacion": "Descomponiendo 10 y 12: m.c.m. = 60."
+ },
+ {
+  "id": "m1_189",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Ignacio tiene cinco veces de la edad de Camila. Juntos suman 54 años. ¿Qué edad tiene Camila?",
+  "alternativas": [
+   "27",
+   "9",
+   "45",
+   "49"
+  ],
+  "correcta": 1,
+  "explicacion": "x + 5x = 54, entonces 6x = 54 y x = 9."
+ },
+ {
+  "id": "m1_190",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la pendiente de la recta que pasa por los puntos (2, 2) y (4, 8)?",
+  "alternativas": [
+   "6",
+   "3",
+   "−3",
+   "2"
+  ],
+  "correcta": 1,
+  "explicacion": "m = (y₂ − y₁)/(x₂ − x₁) = 6/2 = 3."
+ },
+ {
+  "id": "m1_191",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una bolsa tiene 8 fichas rojas, 7 azules y 2 verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea roja?",
+  "alternativas": [
+   "1/3",
+   "9/17",
+   "8/17",
+   "8/9"
+  ],
+  "correcta": 2,
+  "explicacion": "Casos favorables 8, casos totales 17: P = 8/17."
+ },
+ {
+  "id": "m1_192",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto medio del segmento con extremos (−1, 3) y (9, −3)?",
+  "alternativas": [
+   "(8, 0)",
+   "(0, 4)",
+   "(10, −6)",
+   "(4, 0)"
+  ],
+  "correcta": 3,
+  "explicacion": "Se promedian las coordenadas: ((−1 + (9))/2, (3 + (−3))/2) = (4, 0)."
+ },
+ {
+  "id": "m1_193",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Joaquín tiene el cuádruple de la edad de Valentina. Juntos suman 70 años. ¿Qué edad tiene Valentina?",
+  "alternativas": [
+   "35",
+   "14",
+   "56",
+   "66"
+  ],
+  "correcta": 1,
+  "explicacion": "x + 4x = 70, entonces 5x = 70 y x = 14."
+ },
+ {
+  "id": "m1_194",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en cuántas unidades cambió el valor entre Marzo y Agosto? (valor final − valor inicial)",
+  "alternativas": [
+   "28",
+   "31",
+   "56",
+   "84"
+  ],
+  "correcta": 0,
+  "explicacion": "56 − 28 = 28.",
+  "imagen": "assets/images/m1/m1_img_017.png"
+ },
+ {
+  "id": "m1_195",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un rectángulo tiene ancho x cm y largo (x + 4) cm. Si su perímetro es 20 cm, ¿cuánto mide el ancho?",
+  "alternativas": [
+   "5",
+   "4",
+   "3",
+   "7"
+  ],
+  "correcta": 2,
+  "explicacion": "2·(x + x + 4) = 20, entonces 4x + 8 = 20 y x = 3."
+ },
+ {
+  "id": "m1_196",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "12 obreros construyen un muro en 10 días trabajando al mismo ritmo. ¿En cuántos días lo construirían 15 obreros?",
+  "alternativas": [
+   "12",
+   "7",
+   "8",
+   "13"
+  ],
+  "correcta": 2,
+  "explicacion": "Es proporcionalidad inversa: 12·10 = 15·x, entonces x = 8."
+ },
+ {
+  "id": "m1_197",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico tiene ecuación y = −x + 4. ¿Cuánto vale y cuando x = −2?",
+  "alternativas": [
+   "6",
+   "−6",
+   "2",
+   "−3"
+  ],
+  "correcta": 0,
+  "explicacion": "y = -1·(-2) + (4) = 6.",
+  "imagen": "assets/images/m1/m1_img_061.png"
+ },
+ {
+  "id": "m1_198",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 4 × 8 − 28 ÷ 4?",
+  "alternativas": [
+   "24",
+   "26",
+   "25",
+   "1"
+  ],
+  "correcta": 2,
+  "explicacion": "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −."
+ },
+ {
+  "id": "m1_199",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para llegar de A a B hay 4 caminos y para llegar de B a C hay 5 caminos. ¿De cuántas maneras distintas se puede ir de A a C pasando por B?",
+  "alternativas": [
+   "19",
+   "24",
+   "9",
+   "20"
+  ],
+  "correcta": 3,
+  "explicacion": "Principio multiplicativo: se multiplican las opciones de cada etapa."
+ },
+ {
+  "id": "m1_200",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "En una tienda hay 1.040 productos y el 30% está en oferta. ¿Cuántos productos están en oferta?",
+  "alternativas": [
+   "728",
+   "624",
+   "3.120",
+   "312"
+  ],
+  "correcta": 3,
+  "explicacion": "30% de 1.040 = 30/100 · 1.040 = 312."
+ },
+ {
+  "id": "m1_201",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que sea de \"Mujeres\"?",
+  "alternativas": [
+   "42/89",
+   "11/21",
+   "22/89",
+   "45/89"
+  ],
+  "correcta": 0,
+  "explicacion": "Casos favorables 42; casos totales 89. P = 42/89.",
+  "imagen": "assets/images/m1/m1_img_094.png"
+ },
+ {
+  "id": "m1_202",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El triángulo de la figura es rectángulo. ¿Cuánto mide x en centímetros?",
+  "alternativas": [
+   "2",
+   "40",
+   "18",
+   "6"
+  ],
+  "correcta": 3,
+  "explicacion": "x² = 10² − 8² = 36, entonces x = 6.",
+  "imagen": "assets/images/m1/m1_img_075.png"
+ },
+ {
+  "id": "m1_203",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y (3x + 136)°, ¿cuánto mide x?",
+  "alternativas": [
+   "45°",
+   "21°",
+   "136°",
+   "11°"
+  ],
+  "correcta": 3,
+  "explicacion": "x + 3x + 136 = 180 → 4x = 44 → x = 11°."
+ },
+ {
+  "id": "m1_204",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene base 18 cm y altura 10 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "180 cm²",
+   "28 cm²",
+   "90 cm²",
+   "45 cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "A = base · altura / 2 = 18·10/2 = 90 cm²."
+ },
+ {
+  "id": "m1_205",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Vicente y Ignacio reparten $9.500 en la razón 2:3. ¿Cuánto recibe quien recibe más?",
+  "alternativas": [
+   "$5.700",
+   "$9.300",
+   "$3.800",
+   "$4.750"
+  ],
+  "correcta": 0,
+  "explicacion": "Cada parte vale $9.500/5 = $1.900. El mayor recibe 3 partes: $5.700."
+ },
+ {
+  "id": "m1_206",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un producto aumenta su precio en 10% y luego baja 20%. Respecto al precio original, el precio final varió en:",
+  "alternativas": [
+   "−10%",
+   "+10%",
+   "+30%",
+   "−12%"
+  ],
+  "correcta": 3,
+  "explicacion": "Factor final: 1,1 × 0,8 = 0,88, es decir −12%."
+ },
+ {
+  "id": "m1_207",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un estudiante llegue atrasado es 70%. ¿Cuál es la probabilidad de que un estudiante NO llegue atrasado?",
+  "alternativas": [
+   "50%",
+   "170%",
+   "70%",
+   "30%"
+  ],
+  "correcta": 3,
+  "explicacion": "Eventos complementarios suman 100%: 100% − 70% = 30%."
+ },
+ {
+  "id": "m1_208",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Si 4 kg de tomates cuestan $10.000, ¿cuánto cuestan 9 kg de tomates?",
+  "alternativas": [
+   "$23.000",
+   "$22.500",
+   "$10.900",
+   "$32.500"
+  ],
+  "correcta": 1,
+  "explicacion": "1 kg cuesta $2.500; entonces 9 kg cuestan $22.500."
+ },
+ {
+  "id": "m1_209",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura está formada solo por ángulos rectos. ¿Cuál es su área?",
+  "alternativas": [
+   "46 cm²",
+   "128 cm²",
+   "130 cm²",
+   "98 cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "Rectángulo grande 13·10 = 130, menos el recorte 8·4 = 32: 98 cm².",
+  "imagen": "assets/images/m1/m1_img_079.png"
+ },
+ {
+  "id": "m1_210",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la distancia entre los puntos (−4, −5) y (−13, 7)?",
+  "alternativas": [
+   "54",
+   "21",
+   "15",
+   "3"
+  ],
+  "correcta": 2,
+  "explicacion": "d = √(9² + 12²) = √225 = 15."
+ },
+ {
+  "id": "m1_211",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Antonia resolvió correctamente 240 de 300 ejercicios. ¿Qué porcentaje de los ejercicios resolvió correctamente?",
+  "alternativas": [
+   "20%",
+   "80%",
+   "125%",
+   "240%"
+  ],
+  "correcta": 1,
+  "explicacion": "240/300 = 80/100, es decir 80%."
+ },
+ {
+  "id": "m1_212",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de 3/12 + 2/4?",
+  "alternativas": [
+   "5/48",
+   "3/4",
+   "1/8",
+   "5/16"
+  ],
+  "correcta": 1,
+  "explicacion": "Se busca un denominador común y se opera: el resultado es 3/4."
+ },
+ {
+  "id": "m1_213",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la mediana de los datos 4, 18, 7, 29, 24, 9, 9, 29?",
+  "alternativas": [
+   "13,5",
+   "29",
+   "16,12",
+   "4"
+  ],
+  "correcta": 0,
+  "explicacion": "Ordenados: 4, 7, 9, 9, 18, 24, 29, 29. La mediana es 13,5."
+ },
+ {
+  "id": "m1_214",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Ignacio compra un artículo que cuesta $47.000 y tiene un 20% de descuento. ¿Cuánto paga?",
+  "alternativas": [
+   "$56.400",
+   "$46.980",
+   "$9.400",
+   "$37.600"
+  ],
+  "correcta": 3,
+  "explicacion": "Paga el 80% del precio: $47.000 · 80/100 = $37.600."
+ },
+ {
+  "id": "m1_215",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la moda de los datos 16, 4, 22, 3, 3, 3, 29?",
+  "alternativas": [
+   "4",
+   "16",
+   "22",
+   "3"
+  ],
+  "correcta": 3,
+  "explicacion": "La moda es el dato que más se repite: 3."
+ },
+ {
+  "id": "m1_216",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la mediana?",
+  "alternativas": [
+   "10",
+   "6",
+   "6,5",
+   "4"
+  ],
+  "correcta": 1,
+  "explicacion": "Hay 28 datos; ordenados, la mediana es 6.",
+  "imagen": "assets/images/m1/m1_img_054.png"
+ },
+ {
+  "id": "m1_217",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que pertenezca a \"Mujeres\" y a \"Música\"?",
+  "alternativas": [
+   "24/127",
+   "69/127",
+   "24/49",
+   "8/23"
+  ],
+  "correcta": 0,
+  "explicacion": "Casos favorables 24; casos totales 127. P = 24/127.",
+  "imagen": "assets/images/m1/m1_img_098.png"
+ },
+ {
+  "id": "m1_218",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El valor de un artículo sube 40% y después se rebaja 25%. En comparación con el valor inicial, el valor final es:",
+  "alternativas": [
+   "−15%",
+   "+65%",
+   "+5%",
+   "+15%"
+  ],
+  "correcta": 2,
+  "explicacion": "Factor final: 1,4 × 0,75 = 1,05, es decir +5%."
+ },
+ {
+  "id": "m1_219",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una urna tiene 15 bolitas: 5 rojas, 6 azules y el resto verdes. Se saca una bolita, se anota su color y se devuelve a la urna; luego se saca otra. ¿Cuál es la probabilidad de que la primera sea roja y la segunda azul?",
+  "alternativas": [
+   "11/15",
+   "2/15",
+   "1/9",
+   "1/7"
+  ],
+  "correcta": 1,
+  "explicacion": "Los eventos son independientes: 5/15 · 6/15 = 2/15."
+ },
+ {
+  "id": "m1_220",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿qué porcentaje representan en conjunto \"Bicicleta\" y \"Auto\"?",
+  "alternativas": [
+   "55%",
+   "30%",
+   "40%",
+   "50%"
+  ],
+  "correcta": 3,
+  "explicacion": "40% + 10% = 50%.",
+  "imagen": "assets/images/m1/m1_img_043.png"
+ },
+ {
+  "id": "m1_221",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "y es directamente proporcional a x. Si y = 18 cuando x = 2, ¿cuánto vale y cuando x = 10?",
+  "alternativas": [
+   "26",
+   "36",
+   "90",
+   "19"
+  ],
+  "correcta": 2,
+  "explicacion": "La constante es y/x = 9; entonces y = 9·10 = 90."
+ },
+ {
+  "id": "m1_222",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo, dos ángulos interiores miden 55° y 25°. ¿Cuánto mide el tercer ángulo?",
+  "alternativas": [
+   "100°",
+   "35°",
+   "125°",
+   "80°"
+  ],
+  "correcta": 0,
+  "explicacion": "Los ángulos interiores suman 180°: 180° − 55° − 25° = 100°."
+ },
+ {
+  "id": "m1_223",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un producto salga defectuoso es 5%. ¿Cuál es la probabilidad de que un producto NO salga defectuoso?",
+  "alternativas": [
+   "5%",
+   "105%",
+   "50%",
+   "95%"
+  ],
+  "correcta": 3,
+  "explicacion": "Eventos complementarios suman 100%: 100% − 5% = 95%."
+ },
+ {
+  "id": "m1_224",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene base 14 cm y altura 18 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "63 cm²",
+   "252 cm²",
+   "126 cm²",
+   "32 cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "A = base · altura / 2 = 14·18/2 = 126 cm²."
+ },
+ {
+  "id": "m1_225",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la factorización de x² + 8x + 7?",
+  "alternativas": [
+   "(x − 1)(x − 7)",
+   "(x + 8)(x + 1)",
+   "(x + 1)(x + 7)",
+   "(x + 7)(x + 1)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se buscan dos números que sumen 8 y multipliquen 7: 1 y 7."
+ },
+ {
+  "id": "m1_226",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un poste de 5 m proyecta una sombra de 4 m. En el mismo instante, un árbol proyecta una sombra de 16 m. ¿Cuál es la altura del árbol?",
+  "alternativas": [
+   "80 m",
+   "21 m",
+   "17 m",
+   "20 m"
+  ],
+  "correcta": 3,
+  "explicacion": "Por semejanza: 5/4 = x/16, entonces x = 20 m."
+ },
+ {
+  "id": "m1_227",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Isidora compra un artículo que cuesta $82.000 y tiene un 20% de descuento. ¿Cuánto paga?",
+  "alternativas": [
+   "$81.980",
+   "$65.600",
+   "$16.400",
+   "$98.400"
+  ],
+  "correcta": 1,
+  "explicacion": "Paga el 80% del precio: $82.000 · 80/100 = $65.600."
+ },
+ {
+  "id": "m1_228",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es el promedio de los datos 13, 4, 12, 10, 4, 5?",
+  "alternativas": [
+   "9",
+   "13",
+   "8",
+   "10"
+  ],
+  "correcta": 2,
+  "explicacion": "Suma = 48; promedio = 48/6 = 8."
+ },
+ {
+  "id": "m1_229",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 4 × 4 − 24 ÷ 4?",
+  "alternativas": [
+   "10",
+   "9",
+   "11",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −."
+ },
+ {
+  "id": "m1_230",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuánto mide cada ángulo interior de un hexágono regular?",
+  "alternativas": [
+   "120°",
+   "60°",
+   "144°",
+   "123°"
+  ],
+  "correcta": 0,
+  "explicacion": "Cada ángulo = (n − 2)·180°/n = 720°/6 = 120°."
+ },
+ {
+  "id": "m1_231",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo, dos ángulos interiores miden 70° y 50°. ¿Cuánto mide el tercer ángulo?",
+  "alternativas": [
+   "120°",
+   "60°",
+   "20°",
+   "110°"
+  ],
+  "correcta": 1,
+  "explicacion": "Los ángulos interiores suman 180°: 180° − 70° − 50° = 60°."
+ },
+ {
+  "id": "m1_232",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un colegio de 300 estudiantes, el 35% practica fútbol. ¿Cuántos estudiantes NO practican fútbol?",
+  "alternativas": [
+   "265",
+   "105",
+   "195",
+   "405"
+  ],
+  "correcta": 2,
+  "explicacion": "35% de 300 = 105 practican; los demás son 300 − 105 = 195."
+ },
+ {
+  "id": "m1_233",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Se depositan $200.000 con un interés simple de 5% anual durante 3 años. ¿Cuánto interés se obtiene en total?",
+  "alternativas": [
+   "$230.000",
+   "$3.000.000",
+   "$10.000",
+   "$30.000"
+  ],
+  "correcta": 3,
+  "explicacion": "Interés = capital · tasa · tiempo = $200.000 · 5/100 · 3 = $30.000."
+ },
+ {
+  "id": "m1_234",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un curso de 100 personas participa en una encuesta y el 12% responde que sí. ¿Cuántas personas responden que sí?",
+  "alternativas": [
+   "12",
+   "120",
+   "24",
+   "88"
+  ],
+  "correcta": 0,
+  "explicacion": "12% de 100 = 12/100 · 100 = 12."
+ },
+ {
+  "id": "m1_235",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la pendiente de la recta que pasa por los puntos (0, 4) y (2, 12)?",
+  "alternativas": [
+   "2",
+   "8",
+   "−4",
+   "4"
+  ],
+  "correcta": 3,
+  "explicacion": "m = (y₂ − y₁)/(x₂ − x₁) = 8/2 = 4."
+ },
+ {
+  "id": "m1_236",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una urna tiene 13 bolitas: 4 rojas, 5 azules y el resto verdes. Se saca una bolita, se anota su color y se devuelve a la urna; luego se saca otra. ¿Cuál es la probabilidad de que la primera sea roja y la segunda azul?",
+  "alternativas": [
+   "20/169",
+   "9/13",
+   "5/39",
+   "16/169"
+  ],
+  "correcta": 0,
+  "explicacion": "Los eventos son independientes: 4/13 · 5/13 = 20/169."
+ },
+ {
+  "id": "m1_237",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el mayor número entero x que cumple 3x + 5 < 16?",
+  "alternativas": [
+   "5",
+   "2",
+   "3",
+   "4"
+  ],
+  "correcta": 2,
+  "explicacion": "3x < 11, entonces x < 3,67. El mayor entero es 3."
+ },
+ {
+  "id": "m1_238",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un curso de 920 personas participa en una encuesta y el 45% responde que sí. ¿Cuántas personas responden que sí?",
+  "alternativas": [
+   "506",
+   "414",
+   "4.140",
+   "828"
+  ],
+  "correcta": 1,
+  "explicacion": "45% de 920 = 45/100 · 920 = 414."
+ },
+ {
+  "id": "m1_239",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿De cuántas maneras distintas se pueden ordenar 6 personas en una fila?",
+  "alternativas": [
+   "30",
+   "36",
+   "720",
+   "120"
+  ],
+  "correcta": 2,
+  "explicacion": "Se calcula 6! = 720."
+ },
+ {
+  "id": "m1_240",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la distancia entre los puntos (0, −3) y (8, −9)?",
+  "alternativas": [
+   "24",
+   "2",
+   "10",
+   "14"
+  ],
+  "correcta": 2,
+  "explicacion": "d = √(8² + 6²) = √100 = 10."
+ },
+ {
+  "id": "m1_241",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la mediana?",
+  "alternativas": [
+   "3",
+   "6",
+   "9",
+   "6,5"
+  ],
+  "correcta": 1,
+  "explicacion": "Hay 36 datos; ordenados, la mediana es 6.",
+  "imagen": "assets/images/m1/m1_img_047.png"
+ },
+ {
+  "id": "m1_242",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto simétrico de (−4, −7) respecto del origen?",
+  "alternativas": [
+   "(−4, 7)",
+   "(4, −7)",
+   "(−7, −4)",
+   "(4, 7)"
+  ],
+  "correcta": 3,
+  "explicacion": "Al reflejar respecto del origen cambian los signos de ambas coordenadas."
+ },
+ {
+  "id": "m1_243",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Observa el gráfico. ¿Cuál es la categoría con el valor más alto?",
+  "alternativas": [
+   "Función 4",
+   "Función 3",
+   "Función 1",
+   "Función 2"
+  ],
+  "correcta": 0,
+  "explicacion": "La barra más alta es Función 4, con 85.",
+  "imagen": "assets/images/m1/m1_img_012.png"
+ },
+ {
+  "id": "m1_244",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un equipo gane el partido es 45%. ¿Cuál es la probabilidad de que un equipo NO gane el partido?",
+  "alternativas": [
+   "50%",
+   "55%",
+   "145%",
+   "45%"
+  ],
+  "correcta": 1,
+  "explicacion": "Eventos complementarios suman 100%: 100% − 45% = 55%."
+ },
+ {
+  "id": "m1_245",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = x² − 1x − 8, ¿cuál es el valor de f(3)?",
+  "alternativas": [
+   "−2",
+   "−4",
+   "4",
+   "2"
+  ],
+  "correcta": 0,
+  "explicacion": "Se reemplaza x por 3: f(3) = −2."
+ },
+ {
+  "id": "m1_246",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "y es directamente proporcional a x. Si y = 35 cuando x = 5, ¿cuánto vale y cuando x = 10?",
+  "alternativas": [
+   "17",
+   "40",
+   "70",
+   "77"
+  ],
+  "correcta": 2,
+  "explicacion": "La constante es y/x = 7; entonces y = 7·10 = 70."
+ },
+ {
+  "id": "m1_247",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuánto mide cada ángulo interior de un eneágono regular?",
+  "alternativas": [
+   "140°",
+   "40°",
+   "143°",
+   "157°"
+  ],
+  "correcta": 0,
+  "explicacion": "Cada ángulo = (n − 2)·180°/n = 1260°/9 = 140°."
+ },
+ {
+  "id": "m1_248",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En la encuesta participaron 40 personas. Según el gráfico, ¿cuántas personas eligieron \"Básquetbol\"?",
+  "alternativas": [
+   "15",
+   "6",
+   "12",
+   "34"
+  ],
+  "correcta": 1,
+  "explicacion": "15% de 40 = 6.",
+  "imagen": "assets/images/m1/m1_img_040.png"
+ },
+ {
+  "id": "m1_249",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿entre qué meses consecutivos hubo el mayor aumento?",
+  "alternativas": [
+   "Entre Abril y Mayo",
+   "Entre Marzo y Abril",
+   "Entre Mayo y Junio",
+   "Entre Febrero y Marzo"
+  ],
+  "correcta": 0,
+  "explicacion": "El mayor aumento fue de 37 unidades, entre Abril y Mayo.",
+  "imagen": "assets/images/m1/m1_img_019.png"
+ },
+ {
+  "id": "m1_250",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Observa el gráfico. ¿Cuál es la categoría con el valor más bajo?",
+  "alternativas": [
+   "Carla",
+   "Juan",
+   "Pedro",
+   "Luis"
+  ],
+  "correcta": 0,
+  "explicacion": "La barra más baja es Carla, con 25.",
+  "imagen": "assets/images/m1/m1_img_003.png"
+ },
+ {
+  "id": "m1_251",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene perímetro 38 cm y uno de sus lados mide 9 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "38",
+   "19",
+   "171",
+   "90"
+  ],
+  "correcta": 3,
+  "explicacion": "El otro lado mide 19 − 9 = 10 cm. Área = 9·10 = 90 cm²."
+ },
+ {
+  "id": "m1_252",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una urna tiene 10 bolitas: 3 rojas, 3 azules y el resto verdes. Se saca una bolita, se anota su color y se devuelve a la urna; luego se saca otra. ¿Cuál es la probabilidad de que la primera sea roja y la segunda azul?",
+  "alternativas": [
+   "3/5",
+   "1/10",
+   "3/20",
+   "9/100"
+  ],
+  "correcta": 3,
+  "explicacion": "Los eventos son independientes: 3/10 · 3/10 = 9/100."
+ },
+ {
+  "id": "m1_253",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un poste de 6 m proyecta una sombra de 2 m. En el mismo instante, un árbol proyecta una sombra de 16 m. ¿Cuál es la altura del árbol?",
+  "alternativas": [
+   "20 m",
+   "48 m",
+   "22 m",
+   "96 m"
+  ],
+  "correcta": 1,
+  "explicacion": "Por semejanza: 6/2 = x/16, entonces x = 48 m."
+ },
+ {
+  "id": "m1_254",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un cilindro tiene radio 8 cm y altura 11 cm. ¿Cuál es su volumen?",
+  "alternativas": [
+   "176π cm³",
+   "88π cm³",
+   "704π cm³",
+   "64π cm³"
+  ],
+  "correcta": 2,
+  "explicacion": "V = πr²h = π·64·11 = 704π cm³."
+ },
+ {
+  "id": "m1_255",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un colegio de 380 estudiantes, el 45% practica natación. ¿Cuántos estudiantes NO practican natación?",
+  "alternativas": [
+   "209",
+   "551",
+   "335",
+   "171"
+  ],
+  "correcta": 0,
+  "explicacion": "45% de 380 = 171 practican; los demás son 380 − 171 = 209."
+ },
+ {
+  "id": "m1_256",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un poste de 4 m proyecta una sombra de 1 m. En el mismo instante, un árbol proyecta una sombra de 9 m. ¿Cuál es la altura del árbol?",
+  "alternativas": [
+   "13 m",
+   "37 m",
+   "36 m",
+   "12 m"
+  ],
+  "correcta": 2,
+  "explicacion": "Por semejanza: 4/1 = x/9, entonces x = 36 m."
+ },
+ {
+  "id": "m1_257",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto medio del segmento con extremos (−7, 8) y (5, 8)?",
+  "alternativas": [
+   "(8, −1)",
+   "(−2, 16)",
+   "(−1, 8)",
+   "(12, 0)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se promedian las coordenadas: ((−7 + (5))/2, (8 + (8))/2) = (−1, 8)."
+ },
+ {
+  "id": "m1_258",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un poste de 4 m proyecta una sombra de 3 m. En el mismo instante, un árbol proyecta una sombra de 21 m. ¿Cuál es la altura del árbol?",
+  "alternativas": [
+   "28 m",
+   "25 m",
+   "22 m",
+   "84 m"
+  ],
+  "correcta": 0,
+  "explicacion": "Por semejanza: 4/3 = x/21, entonces x = 28 m."
+ },
+ {
+  "id": "m1_259",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El triángulo de la figura es rectángulo. ¿Cuánto mide x en centímetros?",
+  "alternativas": [
+   "14",
+   "2",
+   "10",
+   "24"
+  ],
+  "correcta": 2,
+  "explicacion": "x² = 6² + 8² = 100, entonces x = 10.",
+  "imagen": "assets/images/m1/m1_img_077.png"
+ },
+ {
+  "id": "m1_260",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "En la secuencia 11, 15, 19, 23, … ¿cuál es el término que ocupa la posición 8?",
+  "alternativas": [
+   "32",
+   "39",
+   "88",
+   "43"
+  ],
+  "correcta": 1,
+  "explicacion": "Término n = a₁ + (n−1)·d = 11 + 7·4 = 39."
+ },
+ {
+  "id": "m1_261",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que sea de \"Hombres\"?",
+  "alternativas": [
+   "17/27",
+   "25/108",
+   "25/68",
+   "5/18"
+  ],
+  "correcta": 0,
+  "explicacion": "Casos favorables 68; casos totales 108. P = 17/27.",
+  "imagen": "assets/images/m1/m1_img_095.png"
+ },
+ {
+  "id": "m1_262",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 7 × 8 − 30 ÷ 6?",
+  "alternativas": [
+   "50",
+   "−124",
+   "51",
+   "52"
+  ],
+  "correcta": 2,
+  "explicacion": "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −."
+ },
+ {
+  "id": "m1_263",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la pendiente de la recta que pasa por los puntos (5, 2) y (10, 27)?",
+  "alternativas": [
+   "5",
+   "0,2",
+   "−5",
+   "25"
+  ],
+  "correcta": 0,
+  "explicacion": "m = (y₂ − y₁)/(x₂ − x₁) = 25/5 = 5."
+ },
+ {
+  "id": "m1_264",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura está formada solo por ángulos rectos. ¿Cuál es su área?",
+  "alternativas": [
+   "121 cm²",
+   "103 cm²",
+   "44 cm²",
+   "143 cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "Rectángulo grande 11·11 = 121, menos el recorte 3·6 = 18: 103 cm².",
+  "imagen": "assets/images/m1/m1_img_084.png"
+ },
+ {
+  "id": "m1_265",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En la encuesta participaron 60 personas. Según el gráfico, ¿cuántas personas eligieron \"Empanada\"?",
+  "alternativas": [
+   "15",
+   "18",
+   "9",
+   "51"
+  ],
+  "correcta": 2,
+  "explicacion": "15% de 60 = 9.",
+  "imagen": "assets/images/m1/m1_img_038.png"
+ },
+ {
+  "id": "m1_266",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Al trasladar el punto (3, −8) según el vector (2, 2), ¿cuáles son las nuevas coordenadas?",
+  "alternativas": [
+   "(5, −10)",
+   "(1, −10)",
+   "(5, −6)",
+   "(1, −6)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se suman las componentes: (3+(2), -8+(2)) = (5, −6)."
+ },
+ {
+  "id": "m1_267",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta que tiene pendiente −2 y corta al eje y en el punto (0, 3)?",
+  "alternativas": [
+   "y = −2x − 3",
+   "y = 2x + 3",
+   "y = −2x + 3",
+   "y = 3x − 2"
+  ],
+  "correcta": 2,
+  "explicacion": "Forma y = mx + n, con m la pendiente y n el valor donde corta al eje y."
+ },
+ {
+  "id": "m1_268",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un mapa con escala 1:200.000, dos ciudades están separadas por 17 cm. ¿Cuál es la distancia real entre ellas?",
+  "alternativas": [
+   "3.400 km",
+   "34 km",
+   "340 km",
+   "34,5 km"
+  ],
+  "correcta": 1,
+  "explicacion": "17 cm · 200.000 = 3.400.000 cm = 34 km."
+ },
+ {
+  "id": "m1_269",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 5x − 5 = −25?",
+  "alternativas": [
+   "−20",
+   "−6",
+   "−4",
+   "−30"
+  ],
+  "correcta": 2,
+  "explicacion": "5x = −25 + 5 = −20, entonces x = −4."
+ },
+ {
+  "id": "m1_270",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de 1/6 + 3/4?",
+  "alternativas": [
+   "2/5",
+   "1/6",
+   "1/8",
+   "11/12"
+  ],
+  "correcta": 3,
+  "explicacion": "Se busca un denominador común y se opera: el resultado es 11/12."
+ },
+ {
+  "id": "m1_271",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "En la secuencia 10, 12, 14, 16, … ¿cuál es el término que ocupa la posición 16?",
+  "alternativas": [
+   "42",
+   "32",
+   "40",
+   "160"
+  ],
+  "correcta": 2,
+  "explicacion": "Término n = a₁ + (n−1)·d = 10 + 15·2 = 40."
+ },
+ {
+  "id": "m1_272",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la mediana?",
+  "alternativas": [
+   "2",
+   "6",
+   "9",
+   "4,5"
+  ],
+  "correcta": 1,
+  "explicacion": "Hay 28 datos; ordenados, la mediana es 6.",
+  "imagen": "assets/images/m1/m1_img_051.png"
+ },
+ {
+  "id": "m1_273",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la mediana?",
+  "alternativas": [
+   "6,77",
+   "6",
+   "7",
+   "5"
+  ],
+  "correcta": 1,
+  "explicacion": "Hay 30 datos; ordenados, la mediana es 6.",
+  "imagen": "assets/images/m1/m1_img_049.png"
+ },
+ {
+  "id": "m1_274",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un colegio de 100 estudiantes, el 15% practica fútbol. ¿Cuántos estudiantes NO practican fútbol?",
+  "alternativas": [
+   "88",
+   "85",
+   "115",
+   "15"
+  ],
+  "correcta": 1,
+  "explicacion": "15% de 100 = 15 practican; los demás son 100 − 15 = 85."
+ },
+ {
+  "id": "m1_275",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El triángulo de la figura es rectángulo. ¿Cuánto mide x en centímetros?",
+  "alternativas": [
+   "3",
+   "75",
+   "15",
+   "702"
+  ],
+  "correcta": 2,
+  "explicacion": "x² = 39² − 36² = 225, entonces x = 15.",
+  "imagen": "assets/images/m1/m1_img_074.png"
+ },
+ {
+  "id": "m1_276",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el desarrollo de (x + 2)²?",
+  "alternativas": [
+   "x² + 4x + 4",
+   "x² − 4x + 4",
+   "x² + 4",
+   "x² + 2x + 4"
+  ],
+  "correcta": 0,
+  "explicacion": "(x + 2)² = x² + 2·2·x + 2²."
+ },
+ {
+  "id": "m1_277",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿entre qué meses consecutivos hubo el mayor aumento?",
+  "alternativas": [
+   "Entre Enero y Febrero",
+   "Entre Abril y Mayo",
+   "Entre Marzo y Abril",
+   "Entre Febrero y Marzo"
+  ],
+  "correcta": 2,
+  "explicacion": "El mayor aumento fue de 33 unidades, entre Marzo y Abril.",
+  "imagen": "assets/images/m1/m1_img_018.png"
+ },
+ {
+  "id": "m1_278",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es el promedio de los datos 5, 13, 14, 15, 2, 5?",
+  "alternativas": [
+   "15",
+   "13",
+   "10",
+   "9"
+  ],
+  "correcta": 3,
+  "explicacion": "Suma = 54; promedio = 54/6 = 9."
+ },
+ {
+  "id": "m1_279",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la pendiente de la recta que pasa por los puntos (−5, 4) y (−3, 10)?",
+  "alternativas": [
+   "2",
+   "−3",
+   "3",
+   "6"
+  ],
+  "correcta": 2,
+  "explicacion": "m = (y₂ − y₁)/(x₂ − x₁) = 6/2 = 3."
+ },
+ {
+  "id": "m1_280",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuánto mide cada ángulo interior de un decágono regular?",
+  "alternativas": [
+   "160°",
+   "147°",
+   "36°",
+   "144°"
+  ],
+  "correcta": 3,
+  "explicacion": "Cada ángulo = (n − 2)·180°/n = 1440°/10 = 144°."
+ },
+ {
+  "id": "m1_281",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la distancia entre los puntos (−1, −3) y (4, 9)?",
+  "alternativas": [
+   "17",
+   "13",
+   "7",
+   "30"
+  ],
+  "correcta": 1,
+  "explicacion": "d = √(5² + 12²) = √169 = 13."
+ },
+ {
+  "id": "m1_282",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El promedio de 6 números es 12. Si se agrega un número más, el promedio sube a 13. ¿Qué número se agregó?",
+  "alternativas": [
+   "19",
+   "7",
+   "13",
+   "24"
+  ],
+  "correcta": 0,
+  "explicacion": "Suma inicial 72; suma final 91; el número agregado es la diferencia: 19."
+ },
+ {
+  "id": "m1_283",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que sea de \"Mujeres\"?",
+  "alternativas": [
+   "23/86",
+   "13/43",
+   "3/13",
+   "3/43"
+  ],
+  "correcta": 1,
+  "explicacion": "Casos favorables 26; casos totales 86. P = 13/43.",
+  "imagen": "assets/images/m1/m1_img_099.png"
+ },
+ {
+  "id": "m1_284",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "8 obreros construyen un muro en 15 días trabajando al mismo ritmo. ¿En cuántos días lo construirían 24 obreros?",
+  "alternativas": [
+   "5",
+   "45",
+   "7",
+   "31"
+  ],
+  "correcta": 0,
+  "explicacion": "Es proporcionalidad inversa: 8·15 = 24·x, entonces x = 5."
+ },
+ {
+  "id": "m1_285",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el 10% de 1.440?",
+  "alternativas": [
+   "1.440",
+   "288",
+   "1.296",
+   "144"
+  ],
+  "correcta": 3,
+  "explicacion": "10% de 1.440 = 10/100 · 1.440 = 144."
+ },
+ {
+  "id": "m1_286",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un bus recorre 200 km en 5 horas a velocidad constante. ¿Cuál es su velocidad en km/h?",
+  "alternativas": [
+   "195",
+   "1.000",
+   "40",
+   "205"
+  ],
+  "correcta": 2,
+  "explicacion": "Velocidad = distancia / tiempo = 200/5 = 40 km/h."
+ },
+ {
+  "id": "m1_287",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el máximo común divisor de 12 y 16?",
+  "alternativas": [
+   "4",
+   "48",
+   "192",
+   "28"
+  ],
+  "correcta": 0,
+  "explicacion": "Los divisores comunes de 12 y 16 llegan hasta 4."
+ },
+ {
+  "id": "m1_288",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la distancia entre los puntos (0, −5) y (4, −2)?",
+  "alternativas": [
+   "7",
+   "6",
+   "5",
+   "1"
+  ],
+  "correcta": 2,
+  "explicacion": "d = √(4² + 3²) = √25 = 5."
+ },
+ {
+  "id": "m1_289",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿qué porcentaje representan en conjunto \"Amarillo\" y \"Verde\"?",
+  "alternativas": [
+   "55%",
+   "60%",
+   "50%",
+   "10%"
+  ],
+  "correcta": 2,
+  "explicacion": "20% + 30% = 50%.",
+  "imagen": "assets/images/m1/m1_img_034.png"
+ },
+ {
+  "id": "m1_290",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Camila y Matías reparten $6.000 en la razón 1:2. ¿Cuánto recibe quien recibe más?",
+  "alternativas": [
+   "$4.000",
+   "$2.000",
+   "$3.000",
+   "$5.900"
+  ],
+  "correcta": 0,
+  "explicacion": "Cada parte vale $6.000/3 = $2.000. El mayor recibe 2 partes: $4.000."
+ },
+ {
+  "id": "m1_291",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Ignacio tiene el doble de la edad de Matías. Juntos suman 33 años. ¿Qué edad tiene Matías?",
+  "alternativas": [
+   "22",
+   "31",
+   "16",
+   "11"
+  ],
+  "correcta": 3,
+  "explicacion": "x + 2x = 33, entonces 3x = 33 y x = 11."
+ },
+ {
+  "id": "m1_292",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico pasa por los dos puntos marcados. ¿Cuál es su pendiente?",
+  "alternativas": [
+   "1",
+   "0",
+   "−1",
+   "4"
+  ],
+  "correcta": 2,
+  "explicacion": "m = (2 − 4)/(2 − 0) = -1.",
+  "imagen": "assets/images/m1/m1_img_069.png"
+ },
+ {
+  "id": "m1_293",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x + y = 22 y x − y = 6, ¿cuál es el valor de y?",
+  "alternativas": [
+   "6",
+   "8",
+   "22",
+   "14"
+  ],
+  "correcta": 1,
+  "explicacion": "Sumando las ecuaciones: 2x = 28, x = 14; luego y = 22 − 14 = 8."
+ },
+ {
+  "id": "m1_294",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de (−2) × 4 + 7?",
+  "alternativas": [
+   "15",
+   "1",
+   "−1",
+   "0"
+  ],
+  "correcta": 2,
+  "explicacion": "Se aplican las reglas de los signos: menos por menos es más; más por menos es menos."
+ },
+ {
+  "id": "m1_295",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un mapa con escala 1:25.000, dos ciudades están separadas por 6 cm. ¿Cuál es la distancia real entre ellas?",
+  "alternativas": [
+   "1,5 km",
+   "150 km",
+   "15 km",
+   "12 km"
+  ],
+  "correcta": 0,
+  "explicacion": "6 cm · 25.000 = 150.000 cm = 1,5 km."
+ },
+ {
+  "id": "m1_296",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un bus recorre 90 km en 2 horas a velocidad constante. ¿Cuál es su velocidad en km/h?",
+  "alternativas": [
+   "92",
+   "88",
+   "45",
+   "180"
+  ],
+  "correcta": 2,
+  "explicacion": "Velocidad = distancia / tiempo = 90/2 = 45 km/h."
+ },
+ {
+  "id": "m1_297",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un círculo tiene radio 5 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "50π cm²",
+   "5π cm²",
+   "25π cm²",
+   "10π cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "A = πr² = π·5² = 25π cm²."
+ },
+ {
+  "id": "m1_298",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la distancia entre los puntos (2, −4) y (−6, −10)?",
+  "alternativas": [
+   "24",
+   "10",
+   "14",
+   "2"
+  ],
+  "correcta": 1,
+  "explicacion": "d = √(8² + 6²) = √100 = 10."
+ },
+ {
+  "id": "m1_299",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x + y = 14 y x − y = 4, ¿cuál es el valor de y?",
+  "alternativas": [
+   "5",
+   "14",
+   "4",
+   "9"
+  ],
+  "correcta": 0,
+  "explicacion": "Sumando las ecuaciones: 2x = 18, x = 9; luego y = 14 − 9 = 5."
+ },
+ {
+  "id": "m1_300",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el desarrollo de (x − 3)²?",
+  "alternativas": [
+   "x² − 9",
+   "x² − 6x + 9",
+   "x² + 6x + 9",
+   "x² − 3x + 9"
+  ],
+  "correcta": 1,
+  "explicacion": "(x − 3)² = x² − 2·3·x + 3²."
+ },
+ {
+  "id": "m1_301",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Ignacio y Valentina reparten $5.500 en la razón 2:3. ¿Cuánto recibe quien recibe más?",
+  "alternativas": [
+   "$5.300",
+   "$2.200",
+   "$2.750",
+   "$3.300"
+  ],
+  "correcta": 3,
+  "explicacion": "Cada parte vale $5.500/5 = $1.100. El mayor recibe 3 partes: $3.300."
+ },
+ {
+  "id": "m1_302",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En la encuesta participaron 200 personas. Según el gráfico, ¿cuántas personas eligieron \"Ensalada\"?",
+  "alternativas": [
+   "180",
+   "110",
+   "90",
+   "45"
+  ],
+  "correcta": 2,
+  "explicacion": "45% de 200 = 90.",
+  "imagen": "assets/images/m1/m1_img_035.png"
+ },
+ {
+  "id": "m1_303",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = x² − 2x − 8, ¿cuál es el valor de f(2)?",
+  "alternativas": [
+   "−8",
+   "0",
+   "8",
+   "−6"
+  ],
+  "correcta": 0,
+  "explicacion": "Se reemplaza x por 2: f(2) = −8."
+ },
+ {
+  "id": "m1_304",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en qué mes se registró el valor más alto?",
+  "alternativas": [
+   "Febrero",
+   "Mayo",
+   "Marzo",
+   "Abril"
+  ],
+  "correcta": 3,
+  "explicacion": "El punto más alto corresponde a Abril (76).",
+  "imagen": "assets/images/m1/m1_img_029.png"
+ },
+ {
+  "id": "m1_305",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Se depositan $600.000 con un interés simple de 3% anual durante 4 años. ¿Cuánto interés se obtiene en total?",
+  "alternativas": [
+   "$18.000",
+   "$7.200.000",
+   "$72.000",
+   "$672.000"
+  ],
+  "correcta": 2,
+  "explicacion": "Interés = capital · tasa · tiempo = $600.000 · 3/100 · 4 = $72.000."
+ },
+ {
+  "id": "m1_306",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una urna tiene 10 bolitas: 3 rojas, 5 azules y el resto verdes. Se saca una bolita, se anota su color y se devuelve a la urna; luego se saca otra. ¿Cuál es la probabilidad de que la primera sea roja y la segunda azul?",
+  "alternativas": [
+   "1/6",
+   "4/5",
+   "3/20",
+   "9/100"
+  ],
+  "correcta": 2,
+  "explicacion": "Los eventos son independientes: 3/10 · 5/10 = 3/20."
+ },
+ {
+  "id": "m1_307",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿cuántas unidades más tiene \"Ajedrez\" que \"Pintura\"?",
+  "alternativas": [
+   "50",
+   "65",
+   "115",
+   "15"
+  ],
+  "correcta": 3,
+  "explicacion": "65 − 50 = 15.",
+  "imagen": "assets/images/m1/m1_img_013.png"
+ },
+ {
+  "id": "m1_308",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Observa el gráfico. ¿Cuál es la categoría con el valor más bajo?",
+  "alternativas": [
+   "Miércoles",
+   "Lunes",
+   "Jueves",
+   "Martes"
+  ],
+  "correcta": 2,
+  "explicacion": "La barra más baja es Jueves, con 20.",
+  "imagen": "assets/images/m1/m1_img_002.png"
+ },
+ {
+  "id": "m1_309",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura está formada solo por ángulos rectos. ¿Cuál es su área?",
+  "alternativas": [
+   "240 cm²",
+   "372 cm²",
+   "62 cm²",
+   "228 cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "Rectángulo grande 16·15 = 240, menos el recorte 4·3 = 12: 228 cm².",
+  "imagen": "assets/images/m1/m1_img_081.png"
+ },
+ {
+  "id": "m1_310",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene perímetro 36 cm y uno de sus lados mide 11 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "36",
+   "198",
+   "77",
+   "18"
+  ],
+  "correcta": 2,
+  "explicacion": "El otro lado mide 18 − 11 = 7 cm. Área = 11·7 = 77 cm²."
+ },
+ {
+  "id": "m1_311",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene base 6 cm y altura 4 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "10 cm²",
+   "24 cm²",
+   "12 cm²",
+   "6 cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "A = base · altura / 2 = 6·4/2 = 12 cm²."
+ },
+ {
+  "id": "m1_312",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "4 obreros construyen un muro en 30 días trabajando al mismo ritmo. ¿En cuántos días lo construirían 8 obreros?",
+  "alternativas": [
+   "34",
+   "26",
+   "15",
+   "60"
+  ],
+  "correcta": 2,
+  "explicacion": "Es proporcionalidad inversa: 4·30 = 8·x, entonces x = 15."
+ },
+ {
+  "id": "m1_313",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Observa el gráfico. ¿Cuál es la categoría con el valor más alto?",
+  "alternativas": [
+   "Luis",
+   "Rosa",
+   "Carla",
+   "Pedro"
+  ],
+  "correcta": 1,
+  "explicacion": "La barra más alta es Rosa, con 95.",
+  "imagen": "assets/images/m1/m1_img_010.png"
+ },
+ {
+  "id": "m1_314",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico pasa por los dos puntos marcados. ¿Cuál es su pendiente?",
+  "alternativas": [
+   "−4",
+   "−3",
+   "3",
+   "−2"
+  ],
+  "correcta": 1,
+  "explicacion": "m = (-8 − 1)/(2 − -1) = -3.",
+  "imagen": "assets/images/m1/m1_img_062.png"
+ },
+ {
+  "id": "m1_315",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la pendiente de la recta que pasa por los puntos (0, −1) y (2, 7)?",
+  "alternativas": [
+   "4",
+   "8",
+   "2",
+   "−4"
+  ],
+  "correcta": 0,
+  "explicacion": "m = (y₂ − y₁)/(x₂ − x₁) = 8/2 = 4."
+ },
+ {
+  "id": "m1_316",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "y es directamente proporcional a x. Si y = 20 cuando x = 4, ¿cuánto vale y cuando x = 18?",
+  "alternativas": [
+   "23",
+   "34",
+   "40",
+   "90"
+  ],
+  "correcta": 3,
+  "explicacion": "La constante es y/x = 5; entonces y = 5·18 = 90."
+ },
+ {
+  "id": "m1_317",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "y es directamente proporcional a x. Si y = 12 cuando x = 4, ¿cuánto vale y cuando x = 17?",
+  "alternativas": [
+   "51",
+   "24",
+   "25",
+   "20"
+  ],
+  "correcta": 0,
+  "explicacion": "La constante es y/x = 3; entonces y = 3·17 = 51."
+ },
+ {
+  "id": "m1_318",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si se encuestó a 60 personas, ¿cuántas más eligieron \"Tenis\" que \"Básquetbol\"?",
+  "alternativas": [
+   "30",
+   "18",
+   "21",
+   "24"
+  ],
+  "correcta": 1,
+  "explicacion": "(40% − 10%) de 60 = 18.",
+  "imagen": "assets/images/m1/m1_img_037.png"
+ },
+ {
+  "id": "m1_319",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Sofía resolvió correctamente 255 de 340 ejercicios. ¿Qué porcentaje de los ejercicios resolvió correctamente?",
+  "alternativas": [
+   "133%",
+   "25%",
+   "255%",
+   "75%"
+  ],
+  "correcta": 3,
+  "explicacion": "255/340 = 75/100, es decir 75%."
+ },
+ {
+  "id": "m1_320",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico tiene ecuación y = −2x − 2. ¿Cuánto vale y cuando x = 2?",
+  "alternativas": [
+   "0",
+   "2",
+   "−6",
+   "6"
+  ],
+  "correcta": 2,
+  "explicacion": "y = -2·(2) + (-2) = -6.",
+  "imagen": "assets/images/m1/m1_img_067.png"
+ },
+ {
+  "id": "m1_321",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Si 3 kg de manzanas cuestan $5.400, ¿cuánto cuestan 8 kg de manzanas?",
+  "alternativas": [
+   "$14.400",
+   "$6.200",
+   "$14.900",
+   "$19.800"
+  ],
+  "correcta": 0,
+  "explicacion": "1 kg cuesta $1.800; entonces 8 kg cuestan $14.400."
+ },
+ {
+  "id": "m1_322",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y (2x + 129)°, ¿cuánto mide x?",
+  "alternativas": [
+   "17°",
+   "60°",
+   "27°",
+   "129°"
+  ],
+  "correcta": 0,
+  "explicacion": "x + 2x + 129 = 180 → 3x = 51 → x = 17°."
+ },
+ {
+  "id": "m1_323",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Observa el gráfico. ¿Cuál es la categoría con el valor más alto?",
+  "alternativas": [
+   "Plátanos",
+   "Peras",
+   "Manzanas",
+   "Uvas"
+  ],
+  "correcta": 2,
+  "explicacion": "La barra más alta es Manzanas, con 90.",
+  "imagen": "assets/images/m1/m1_img_016.png"
+ },
+ {
+  "id": "m1_324",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Si 2 kg de papas cuestan $1.600, ¿cuánto cuestan 9 kg de papas?",
+  "alternativas": [
+   "$8.800",
+   "$7.700",
+   "$2.500",
+   "$7.200"
+  ],
+  "correcta": 3,
+  "explicacion": "1 kg cuesta $800; entonces 9 kg cuestan $7.200."
+ },
+ {
+  "id": "m1_325",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una urna tiene 7 bolitas: 2 rojas, 4 azules y el resto verdes. Se saca una bolita, se anota su color y se devuelve a la urna; luego se saca otra. ¿Cuál es la probabilidad de que la primera sea roja y la segunda azul?",
+  "alternativas": [
+   "8/49",
+   "4/49",
+   "4/21",
+   "6/7"
+  ],
+  "correcta": 0,
+  "explicacion": "Los eventos son independientes: 2/7 · 4/7 = 8/49."
+ },
+ {
+  "id": "m1_326",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que sea de \"Hombres\"?",
+  "alternativas": [
+   "47/92",
+   "10/23",
+   "6/23",
+   "24/47"
+  ],
+  "correcta": 0,
+  "explicacion": "Casos favorables 47; casos totales 92. P = 47/92.",
+  "imagen": "assets/images/m1/m1_img_093.png"
+ },
+ {
+  "id": "m1_327",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en qué mes se registró el valor más alto?",
+  "alternativas": [
+   "Mayo",
+   "Junio",
+   "Abril",
+   "Julio"
+  ],
+  "correcta": 0,
+  "explicacion": "El punto más alto corresponde a Mayo (69).",
+  "imagen": "assets/images/m1/m1_img_027.png"
+ },
+ {
+  "id": "m1_328",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico tiene ecuación y = −3x + 1. ¿Cuánto vale y cuando x = 4?",
+  "alternativas": [
+   "13",
+   "1",
+   "11",
+   "−11"
+  ],
+  "correcta": 3,
+  "explicacion": "y = -3·(4) + (1) = -11.",
+  "imagen": "assets/images/m1/m1_img_066.png"
+ },
+ {
+  "id": "m1_329",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que llueva mañana es 45%. ¿Cuál es la probabilidad de que no llueva mañana?",
+  "alternativas": [
+   "45%",
+   "55%",
+   "145%",
+   "50%"
+  ],
+  "correcta": 1,
+  "explicacion": "Eventos complementarios suman 100%: 100% − 45% = 55%."
+ },
+ {
+  "id": "m1_330",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una urna tiene 13 bolitas: 6 rojas, 5 azules y el resto verdes. Se saca una bolita, se anota su color y se devuelve a la urna; luego se saca otra. ¿Cuál es la probabilidad de que la primera sea roja y la segunda azul?",
+  "alternativas": [
+   "30/169",
+   "5/26",
+   "11/13",
+   "36/169"
+  ],
+  "correcta": 0,
+  "explicacion": "Los eventos son independientes: 6/13 · 5/13 = 30/169."
+ },
+ {
+  "id": "m1_331",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un rectángulo tiene ancho x cm y largo (x + 2) cm. Si su perímetro es 64 cm, ¿cuánto mide el ancho?",
+  "alternativas": [
+   "30",
+   "15",
+   "17",
+   "16"
+  ],
+  "correcta": 1,
+  "explicacion": "2·(x + x + 2) = 64, entonces 4x + 4 = 64 y x = 15."
+ },
+ {
+  "id": "m1_332",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene base 15 cm y altura 10 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "150 cm²",
+   "75 cm²",
+   "25 cm²",
+   "37 cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "A = base · altura / 2 = 15·10/2 = 75 cm²."
+ },
+ {
+  "id": "m1_333",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Ignacio compra un artículo que cuesta $81.000 y tiene un 15% de descuento. ¿Cuánto paga?",
+  "alternativas": [
+   "$12.150",
+   "$80.985",
+   "$68.850",
+   "$93.150"
+  ],
+  "correcta": 2,
+  "explicacion": "Paga el 85% del precio: $81.000 · 85/100 = $68.850."
+ },
+ {
+  "id": "m1_334",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Si 5 kg de paltas cuestan $12.500, ¿cuánto cuestan 12 kg de paltas?",
+  "alternativas": [
+   "$42.500",
+   "$13.700",
+   "$30.500",
+   "$30.000"
+  ],
+  "correcta": 3,
+  "explicacion": "1 kg cuesta $2.500; entonces 12 kg cuestan $30.000."
+ },
+ {
+  "id": "m1_335",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de −4 − (−8) × 16?",
+  "alternativas": [
+   "−124",
+   "−132",
+   "125",
+   "124"
+  ],
+  "correcta": 3,
+  "explicacion": "Se aplican las reglas de los signos: menos por menos es más; más por menos es menos."
+ },
+ {
+  "id": "m1_336",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según la tabla, si se elige una persona al azar, ¿cuál es la probabilidad de que sea de \"Mujeres\"?",
+  "alternativas": [
+   "22/45",
+   "5/9",
+   "29/81",
+   "22/81"
+  ],
+  "correcta": 1,
+  "explicacion": "Casos favorables 45; casos totales 81. P = 5/9.",
+  "imagen": "assets/images/m1/m1_img_092.png"
+ },
+ {
+  "id": "m1_337",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El valor de un artículo sube 40% y después se rebaja 10%. En comparación con el valor inicial, el valor final es:",
+  "alternativas": [
+   "+26%",
+   "+30%",
+   "+50%",
+   "−30%"
+  ],
+  "correcta": 0,
+  "explicacion": "Factor final: 1,4 × 0,9 = 1,26, es decir +26%."
+ },
+ {
+  "id": "m1_338",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 8x + 18 = 58?",
+  "alternativas": [
+   "9",
+   "40",
+   "5",
+   "76"
+  ],
+  "correcta": 2,
+  "explicacion": "8x = 58 − 18 = 40, entonces x = 5."
+ },
+ {
+  "id": "m1_339",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de 3/4 + 1/12?",
+  "alternativas": [
+   "1/16",
+   "1/4",
+   "5/6",
+   "1/12"
+  ],
+  "correcta": 2,
+  "explicacion": "Se busca un denominador común y se opera: el resultado es 5/6."
+ },
+ {
+  "id": "m1_340",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una bolsa tiene 2 fichas rojas, 6 azules y 8 verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea verde?",
+  "alternativas": [
+   "1",
+   "1/2",
+   "1/3",
+   "8/17"
+  ],
+  "correcta": 1,
+  "explicacion": "Casos favorables 8, casos totales 16: P = 1/2."
+ },
+ {
+  "id": "m1_341",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 2x − 12 = −14?",
+  "alternativas": [
+   "−26",
+   "−1",
+   "−13",
+   "−2"
+  ],
+  "correcta": 1,
+  "explicacion": "2x = −14 + 12 = −2, entonces x = −1."
+ },
+ {
+  "id": "m1_342",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en qué mes se registró el valor más alto?",
+  "alternativas": [
+   "Abril",
+   "Mayo",
+   "Julio",
+   "Marzo"
+  ],
+  "correcta": 2,
+  "explicacion": "El punto más alto corresponde a Julio (41).",
+  "imagen": "assets/images/m1/m1_img_030.png"
+ },
+ {
+  "id": "m1_343",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Al trasladar el punto (−5, 2) según el vector (−1, −6), ¿cuáles son las nuevas coordenadas?",
+  "alternativas": [
+   "(−4, −4)",
+   "(−6, −4)",
+   "(−4, 8)",
+   "(−6, 8)"
+  ],
+  "correcta": 1,
+  "explicacion": "Se suman las componentes: (-5+(-1), 2+(-6)) = (−6, −4)."
+ },
+ {
+  "id": "m1_344",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Benjamín compra un artículo que cuesta $63.000 y tiene un 15% de descuento. ¿Cuánto paga?",
+  "alternativas": [
+   "$72.450",
+   "$9.450",
+   "$62.985",
+   "$53.550"
+  ],
+  "correcta": 3,
+  "explicacion": "Paga el 85% del precio: $63.000 · 85/100 = $53.550."
+ },
+ {
+  "id": "m1_345",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para llegar de A a B hay 5 caminos y para llegar de B a C hay 5 caminos. ¿De cuántas maneras distintas se puede ir de A a C pasando por B?",
+  "alternativas": [
+   "30",
+   "24",
+   "10",
+   "25"
+  ],
+  "correcta": 3,
+  "explicacion": "Principio multiplicativo: se multiplican las opciones de cada etapa."
+ },
+ {
+  "id": "m1_346",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un cubo tiene arista de 2 cm. ¿Cuál es su volumen?",
+  "alternativas": [
+   "6 cm³",
+   "4 cm³",
+   "8 cm³",
+   "24 cm³"
+  ],
+  "correcta": 2,
+  "explicacion": "V = a³ = 2³ = 8 cm³."
+ },
+ {
+  "id": "m1_347",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un círculo tiene radio 6 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "6π cm²",
+   "36π cm²",
+   "72π cm²",
+   "12π cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "A = πr² = π·6² = 36π cm²."
+ },
+ {
+  "id": "m1_348",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un curso de 480 personas participa en una encuesta y el 5% responde que sí. ¿Cuántas personas responden que sí?",
+  "alternativas": [
+   "240",
+   "24",
+   "48",
+   "456"
+  ],
+  "correcta": 1,
+  "explicacion": "5% de 480 = 5/100 · 480 = 24."
+ },
+ {
+  "id": "m1_349",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El valor de un artículo sube 20% y después se rebaja 20%. En comparación con el valor inicial, el valor final es:",
+  "alternativas": [
+   "+40%",
+   "0%",
+   "+1%",
+   "−4%"
+  ],
+  "correcta": 3,
+  "explicacion": "Factor final: 1,2 × 0,8 = 0,96, es decir −4%."
+ },
+ {
+  "id": "m1_350",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuánto suman los ángulos interiores de un pentágono?",
+  "alternativas": [
+   "540°",
+   "720°",
+   "360°",
+   "900°"
+  ],
+  "correcta": 0,
+  "explicacion": "Suma = (n − 2)·180° = 3·180° = 540°."
+ },
+ {
+  "id": "m1_351",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un mapa con escala 1:250.000, dos ciudades están separadas por 30 cm. ¿Cuál es la distancia real entre ellas?",
+  "alternativas": [
+   "7.500 km",
+   "60 km",
+   "75 km",
+   "750 km"
+  ],
+  "correcta": 2,
+  "explicacion": "30 cm · 250.000 = 7.500.000 cm = 75 km."
+ },
+ {
+  "id": "m1_352",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una bolsa tiene 7 fichas rojas, 2 azules y 5 verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea roja?",
+  "alternativas": [
+   "7/15",
+   "1",
+   "1/3",
+   "1/2"
+  ],
+  "correcta": 3,
+  "explicacion": "Casos favorables 7, casos totales 14: P = 1/2."
+ },
+ {
+  "id": "m1_353",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "En la secuencia 4, 11, 18, 25, … ¿cuál es el término que ocupa la posición 9?",
+  "alternativas": [
+   "36",
+   "67",
+   "63",
+   "60"
+  ],
+  "correcta": 3,
+  "explicacion": "Término n = a₁ + (n−1)·d = 4 + 8·7 = 60."
+ },
+ {
+  "id": "m1_354",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Valentina compra un artículo que cuesta $49.000 y tiene un 15% de descuento. ¿Cuánto paga?",
+  "alternativas": [
+   "$48.985",
+   "$41.650",
+   "$7.350",
+   "$56.350"
+  ],
+  "correcta": 1,
+  "explicacion": "Paga el 85% del precio: $49.000 · 85/100 = $41.650."
+ },
+ {
+  "id": "m1_355",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿cuál es el total de unidades sumando todas las categorías?",
+  "alternativas": [
+   "400",
+   "310",
+   "265",
+   "315"
+  ],
+  "correcta": 1,
+  "explicacion": "Se suman todas las barras: 85 + 45 + 80 + 100 = 310.",
+  "imagen": "assets/images/m1/m1_img_004.png"
+ },
+ {
+  "id": "m1_356",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto simétrico de (−3, −6) respecto del origen?",
+  "alternativas": [
+   "(3, −6)",
+   "(−6, −3)",
+   "(3, 6)",
+   "(−3, 6)"
+  ],
+  "correcta": 2,
+  "explicacion": "Al reflejar respecto del origen cambian los signos de ambas coordenadas."
+ },
+ {
+  "id": "m1_357",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Una circunferencia tiene radio 13 cm. ¿Cuál es su perímetro?",
+  "alternativas": [
+   "26π cm",
+   "169π cm",
+   "52π cm",
+   "13π cm"
+  ],
+  "correcta": 0,
+  "explicacion": "P = 2πr = 2π·13 = 26π cm."
+ },
+ {
+  "id": "m1_358",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "y es directamente proporcional a x. Si y = 16 cuando x = 2, ¿cuánto vale y cuando x = 10?",
+  "alternativas": [
+   "80",
+   "24",
+   "32",
+   "18"
+  ],
+  "correcta": 0,
+  "explicacion": "La constante es y/x = 8; entonces y = 8·10 = 80."
+ },
+ {
+  "id": "m1_359",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un poste de 5 m proyecta una sombra de 2 m. En el mismo instante, un árbol proyecta una sombra de 4 m. ¿Cuál es la altura del árbol?",
+  "alternativas": [
+   "20 m",
+   "7 m",
+   "9 m",
+   "10 m"
+  ],
+  "correcta": 3,
+  "explicacion": "Por semejanza: 5/2 = x/4, entonces x = 10 m."
+ },
+ {
+  "id": "m1_360",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de (−8) × 5 + 2?",
+  "alternativas": [
+   "42",
+   "38",
+   "−38",
+   "−37"
+  ],
+  "correcta": 2,
+  "explicacion": "Se aplican las reglas de los signos: menos por menos es más; más por menos es menos."
+ },
+ {
+  "id": "m1_361",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto simétrico de (6, −4) respecto del origen?",
+  "alternativas": [
+   "(−4, 6)",
+   "(6, 4)",
+   "(−6, 4)",
+   "(−6, −4)"
+  ],
+  "correcta": 2,
+  "explicacion": "Al reflejar respecto del origen cambian los signos de ambas coordenadas."
+ },
+ {
+  "id": "m1_362",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de (−4) × 4 + 19?",
+  "alternativas": [
+   "4",
+   "35",
+   "3",
+   "−3"
+  ],
+  "correcta": 2,
+  "explicacion": "Se aplican las reglas de los signos: menos por menos es más; más por menos es menos."
+ },
+ {
+  "id": "m1_363",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿qué porcentaje representan en conjunto \"Atletismo\" y \"Tenis\"?",
+  "alternativas": [
+   "65%",
+   "25%",
+   "15%",
+   "35%"
+  ],
+  "correcta": 3,
+  "explicacion": "10% + 25% = 35%.",
+  "imagen": "assets/images/m1/m1_img_044.png"
+ },
+ {
+  "id": "m1_364",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la distancia entre los puntos (−1, −2) y (4, 10)?",
+  "alternativas": [
+   "13",
+   "17",
+   "7",
+   "30"
+  ],
+  "correcta": 0,
+  "explicacion": "d = √(5² + 12²) = √169 = 13."
+ },
+ {
+  "id": "m1_365",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "10 obreros construyen un muro en 18 días trabajando al mismo ritmo. ¿En cuántos días lo construirían 3 obreros?",
+  "alternativas": [
+   "11",
+   "5",
+   "25",
+   "60"
+  ],
+  "correcta": 3,
+  "explicacion": "Es proporcionalidad inversa: 10·18 = 3·x, entonces x = 60."
+ },
+ {
+  "id": "m1_366",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 5x + 16 = −4?",
+  "alternativas": [
+   "−20",
+   "2",
+   "−4",
+   "12"
+  ],
+  "correcta": 2,
+  "explicacion": "5x = −4 − 16 = −20, entonces x = −4."
+ },
+ {
+  "id": "m1_367",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el 90% de 1.230?",
+  "alternativas": [
+   "11.070",
+   "123",
+   "2.214",
+   "1.107"
+  ],
+  "correcta": 3,
+  "explicacion": "90% de 1.230 = 90/100 · 1.230 = 1.107."
+ },
+ {
+  "id": "m1_368",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El triángulo de la figura es rectángulo. ¿Cuánto mide x en centímetros?",
+  "alternativas": [
+   "2",
+   "10",
+   "24",
+   "14"
+  ],
+  "correcta": 1,
+  "explicacion": "x² = 6² + 8² = 100, entonces x = 10.",
+  "imagen": "assets/images/m1/m1_img_072.png"
+ },
+ {
+  "id": "m1_369",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿qué porcentaje representan en conjunto \"Hamburguesa\" y \"Pizza\"?",
+  "alternativas": [
+   "40%",
+   "60%",
+   "37%",
+   "10%"
+  ],
+  "correcta": 0,
+  "explicacion": "25% + 15% = 40%.",
+  "imagen": "assets/images/m1/m1_img_039.png"
+ },
+ {
+  "id": "m1_370",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Catalina tiene 2 poleras, 4 pantalones y 5 pares de zapatillas. ¿Cuántas combinaciones distintas de tenida puede armar con una de cada prenda?",
+  "alternativas": [
+   "8",
+   "13",
+   "40",
+   "11"
+  ],
+  "correcta": 2,
+  "explicacion": "Principio multiplicativo: se multiplican las opciones de cada etapa."
+ },
+ {
+  "id": "m1_371",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Una escalera de 34 m apoyada en una pared llega a una altura de 16 m. ¿A qué distancia de la pared está la base de la escalera?",
+  "alternativas": [
+   "50",
+   "32",
+   "30",
+   "18"
+  ],
+  "correcta": 2,
+  "explicacion": "30² = 34² − 16² → 30 m."
+ },
+ {
+  "id": "m1_372",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las edades de un grupo son 8, 14, 15, 6, 57, 5, 8, 20, 35. ¿Cuál es el rango de los datos?",
+  "alternativas": [
+   "57",
+   "5",
+   "62",
+   "52"
+  ],
+  "correcta": 3,
+  "explicacion": "Rango = mayor − menor = 57 − 5 = 52."
+ },
+ {
+  "id": "m1_373",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta que tiene pendiente −4 y corta al eje y en el punto (0, −3)?",
+  "alternativas": [
+   "y = −4x + 3",
+   "y = −4x − 3",
+   "y = 4x − 3",
+   "y = −3x − 4"
+  ],
+  "correcta": 1,
+  "explicacion": "Forma y = mx + n, con m la pendiente y n el valor donde corta al eje y."
+ },
+ {
+  "id": "m1_374",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la distancia entre los puntos (−4, −1) y (−13, 11)?",
+  "alternativas": [
+   "3",
+   "54",
+   "21",
+   "15"
+  ],
+  "correcta": 3,
+  "explicacion": "d = √(9² + 12²) = √225 = 15."
+ },
+ {
+  "id": "m1_375",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta que tiene pendiente 3 y corta al eje y en el punto (0, −1)?",
+  "alternativas": [
+   "y = −3x − 1",
+   "y = −x + 3",
+   "y = 3x + 1",
+   "y = 3x − 1"
+  ],
+  "correcta": 3,
+  "explicacion": "Forma y = mx + n, con m la pendiente y n el valor donde corta al eje y."
+ },
+ {
+  "id": "m1_376",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la mediana?",
+  "alternativas": [
+   "6,65",
+   "4",
+   "10",
+   "6"
+  ],
+  "correcta": 3,
+  "explicacion": "Hay 40 datos; ordenados, la mediana es 6.",
+  "imagen": "assets/images/m1/m1_img_056.png"
+ },
+ {
+  "id": "m1_377",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un producto aumenta su precio en 25% y luego baja 50%. Respecto al precio original, el precio final varió en:",
+  "alternativas": [
+   "−37,5%",
+   "+25%",
+   "+75%",
+   "−25%"
+  ],
+  "correcta": 0,
+  "explicacion": "Factor final: 1,25 × 0,5 = 0,62, es decir −37,5%."
+ },
+ {
+  "id": "m1_378",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un poste de 5 m proyecta una sombra de 4 m. En el mismo instante, un árbol proyecta una sombra de 36 m. ¿Cuál es la altura del árbol?",
+  "alternativas": [
+   "37 m",
+   "45 m",
+   "180 m",
+   "41 m"
+  ],
+  "correcta": 1,
+  "explicacion": "Por semejanza: 5/4 = x/36, entonces x = 45 m."
+ },
+ {
+  "id": "m1_379",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuánto suman los ángulos interiores de un dodecágono?",
+  "alternativas": [
+   "360°",
+   "1.980°",
+   "1.800°",
+   "2.160°"
+  ],
+  "correcta": 2,
+  "explicacion": "Suma = (n − 2)·180° = 10·180° = 1800°."
+ },
+ {
+  "id": "m1_380",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura está formada solo por ángulos rectos. ¿Cuál es su área?",
+  "alternativas": [
+   "44 cm²",
+   "129 cm²",
+   "117 cm²",
+   "99 cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "Rectángulo grande 13·9 = 117, menos el recorte 3·6 = 18: 99 cm².",
+  "imagen": "assets/images/m1/m1_img_080.png"
+ },
+ {
+  "id": "m1_381",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 8 × 7 − 12 ÷ 6?",
+  "alternativas": [
+   "54",
+   "55",
+   "53",
+   "−16"
+  ],
+  "correcta": 0,
+  "explicacion": "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −."
+ },
+ {
+  "id": "m1_382",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la mediana de los datos 28, 29, 6, 20, 30, 10, 21, 22?",
+  "alternativas": [
+   "21,5",
+   "6",
+   "30",
+   "20,75"
+  ],
+  "correcta": 0,
+  "explicacion": "Ordenados: 6, 10, 20, 21, 22, 28, 29, 30. La mediana es 21,5."
+ },
+ {
+  "id": "m1_383",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto simétrico de (8, −2) respecto del eje x?",
+  "alternativas": [
+   "(−8, 2)",
+   "(−8, −2)",
+   "(−2, 8)",
+   "(8, 2)"
+  ],
+  "correcta": 3,
+  "explicacion": "Al reflejar respecto del eje x cambia el signo de la coordenada y."
+ },
+ {
+  "id": "m1_384",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un cilindro tiene radio 8 cm y altura 4 cm. ¿Cuál es su volumen?",
+  "alternativas": [
+   "64π cm³",
+   "32π cm³",
+   "256π cm³",
+   "512π cm³"
+  ],
+  "correcta": 2,
+  "explicacion": "V = πr²h = π·64·4 = 256π cm³."
+ },
+ {
+  "id": "m1_385",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto medio del segmento con extremos (−1, 8) y (−5, 8)?",
+  "alternativas": [
+   "(8, −3)",
+   "(−3, 8)",
+   "(−4, 0)",
+   "(−6, 16)"
+  ],
+  "correcta": 1,
+  "explicacion": "Se promedian las coordenadas: ((−1 + (−5))/2, (8 + (8))/2) = (−3, 8)."
+ },
+ {
+  "id": "m1_386",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Al trasladar el punto (4, −7) según el vector (3, 3), ¿cuáles son las nuevas coordenadas?",
+  "alternativas": [
+   "(7, −4)",
+   "(1, −10)",
+   "(7, −10)",
+   "(1, −4)"
+  ],
+  "correcta": 0,
+  "explicacion": "Se suman las componentes: (4+(3), -7+(3)) = (7, −4)."
+ },
+ {
+  "id": "m1_387",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Felipe tiene el triple de la edad de Antonia. Juntos suman 60 años. ¿Qué edad tiene Antonia?",
+  "alternativas": [
+   "57",
+   "15",
+   "45",
+   "30"
+  ],
+  "correcta": 1,
+  "explicacion": "x + 3x = 60, entonces 4x = 60 y x = 15."
+ },
+ {
+  "id": "m1_388",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El triángulo de la figura es rectángulo. ¿Cuánto mide x en centímetros?",
+  "alternativas": [
+   "7",
+   "13",
+   "30",
+   "17"
+  ],
+  "correcta": 1,
+  "explicacion": "x² = 5² + 12² = 169, entonces x = 13.",
+  "imagen": "assets/images/m1/m1_img_071.png"
+ },
+ {
+  "id": "m1_389",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la mediana de los datos 20, 27, 8, 18, 21, 6?",
+  "alternativas": [
+   "19",
+   "16,67",
+   "6",
+   "27"
+  ],
+  "correcta": 0,
+  "explicacion": "Ordenados: 6, 8, 18, 20, 21, 27. La mediana es 19."
+ },
+ {
+  "id": "m1_390",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 8 + 2 × 6 − 6?",
+  "alternativas": [
+   "15",
+   "54",
+   "14",
+   "13"
+  ],
+  "correcta": 2,
+  "explicacion": "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −."
+ },
+ {
+  "id": "m1_391",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un cilindro tiene radio 2 cm y altura 6 cm. ¿Cuál es su volumen?",
+  "alternativas": [
+   "48π cm³",
+   "24π cm³",
+   "12π cm³",
+   "4π cm³"
+  ],
+  "correcta": 1,
+  "explicacion": "V = πr²h = π·4·6 = 24π cm³."
+ },
+ {
+  "id": "m1_392",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 9x − 15 = −69?",
+  "alternativas": [
+   "−54",
+   "−10",
+   "−84",
+   "−6"
+  ],
+  "correcta": 3,
+  "explicacion": "9x = −69 + 15 = −54, entonces x = −6."
+ },
+ {
+  "id": "m1_393",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un poste de 5 m proyecta una sombra de 1 m. En el mismo instante, un árbol proyecta una sombra de 2 m. ¿Cuál es la altura del árbol?",
+  "alternativas": [
+   "6 m",
+   "11 m",
+   "10 m",
+   "7 m"
+  ],
+  "correcta": 2,
+  "explicacion": "Por semejanza: 5/1 = x/2, entonces x = 10 m."
+ },
+ {
+  "id": "m1_394",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y (2x + 60)°, ¿cuánto mide x?",
+  "alternativas": [
+   "50°",
+   "60°",
+   "45°",
+   "40°"
+  ],
+  "correcta": 3,
+  "explicacion": "x + 2x + 60 = 180 → 3x = 120 → x = 40°."
+ },
+ {
+  "id": "m1_395",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En la encuesta participaron 300 personas. Según el gráfico, ¿cuántas personas eligieron \"Bicicleta\"?",
+  "alternativas": [
+   "210",
+   "90",
+   "30",
+   "180"
+  ],
+  "correcta": 1,
+  "explicacion": "30% de 300 = 90.",
+  "imagen": "assets/images/m1/m1_img_036.png"
+ },
+ {
+  "id": "m1_396",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un rectángulo tiene ancho x cm y largo (x + 6) cm. Si su perímetro es 84 cm, ¿cuánto mide el ancho?",
+  "alternativas": [
+   "21",
+   "18",
+   "24",
+   "19"
+  ],
+  "correcta": 1,
+  "explicacion": "2·(x + x + 6) = 84, entonces 4x + 12 = 84 y x = 18."
+ },
+ {
+  "id": "m1_397",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un producto aumenta su precio en 40% y luego baja 20%. Respecto al precio original, el precio final varió en:",
+  "alternativas": [
+   "−20%",
+   "+12%",
+   "+60%",
+   "+20%"
+  ],
+  "correcta": 1,
+  "explicacion": "Factor final: 1,4 × 0,8 = 1,12, es decir +12%."
+ },
+ {
+  "id": "m1_398",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿en qué mes se registró el valor más alto?",
+  "alternativas": [
+   "Marzo",
+   "Abril",
+   "Mayo",
+   "Junio"
+  ],
+  "correcta": 1,
+  "explicacion": "El punto más alto corresponde a Abril (59).",
+  "imagen": "assets/images/m1/m1_img_022.png"
+ },
+ {
+  "id": "m1_399",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El promedio de 6 números es 27. Si se agrega un número más, el promedio sube a 28. ¿Qué número se agregó?",
+  "alternativas": [
+   "7",
+   "54",
+   "34",
+   "28"
+  ],
+  "correcta": 2,
+  "explicacion": "Suma inicial 162; suma final 196; el número agregado es la diferencia: 34."
+ },
+ {
+  "id": "m1_400",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura está formada solo por ángulos rectos. ¿Cuál es su área?",
+  "alternativas": [
+   "67 cm²",
+   "38 cm²",
+   "88 cm²",
+   "87 cm²"
+  ],
+  "correcta": 0,
+  "explicacion": "Rectángulo grande 8·11 = 88, menos el recorte 3·7 = 21: 67 cm².",
+  "imagen": "assets/images/m1/m1_img_083.png"
+ },
+ {
+  "id": "m1_401",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es el promedio de los datos 6, 14, 22, 19, 4, 6, 20, 5?",
+  "alternativas": [
+   "14",
+   "22",
+   "12",
+   "13"
+  ],
+  "correcta": 2,
+  "explicacion": "Suma = 96; promedio = 96/8 = 12."
+ },
+ {
+  "id": "m1_402",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (6 + 4) × 9 − 2?",
+  "alternativas": [
+   "88",
+   "87",
+   "40",
+   "89"
+  ],
+  "correcta": 0,
+  "explicacion": "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −."
+ },
+ {
+  "id": "m1_403",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y (x + 126)°, ¿cuánto mide x?",
+  "alternativas": [
+   "90°",
+   "27°",
+   "37°",
+   "126°"
+  ],
+  "correcta": 1,
+  "explicacion": "x + x + 126 = 180 → 2x = 54 → x = 27°."
+ },
+ {
+  "id": "m1_404",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el mínimo común múltiplo de 18 y 30?",
+  "alternativas": [
+   "540",
+   "48",
+   "6",
+   "90"
+  ],
+  "correcta": 3,
+  "explicacion": "Descomponiendo 18 y 30: m.c.m. = 90."
+ },
+ {
+  "id": "m1_405",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = x² − 3x + 0, ¿cuál es el valor de f(−2)?",
+  "alternativas": [
+   "10",
+   "−10",
+   "25",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "Se reemplaza x por −2: f(−2) = 10."
+ },
+ {
+  "id": "m1_406",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que llueva mañana es 20%. ¿Cuál es la probabilidad de que no llueva mañana?",
+  "alternativas": [
+   "20%",
+   "50%",
+   "80%",
+   "120%"
+  ],
+  "correcta": 2,
+  "explicacion": "Eventos complementarios suman 100%: 100% − 20% = 80%."
+ },
+ {
+  "id": "m1_407",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el mayor número entero x que cumple 4x − 4 < 16?",
+  "alternativas": [
+   "3",
+   "6",
+   "5",
+   "4"
+  ],
+  "correcta": 3,
+  "explicacion": "4x < 20, entonces x < 5. El mayor entero es 4."
+ },
+ {
+  "id": "m1_408",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el desarrollo de (x + 9)²?",
+  "alternativas": [
+   "x² + 9x + 81",
+   "x² + 81",
+   "x² + 18x + 81",
+   "x² + 18x + 18"
+  ],
+  "correcta": 2,
+  "explicacion": "(x + 9)² = x² + 2·9·x + 9²."
+ },
+ {
+  "id": "m1_409",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene perímetro 46 cm y uno de sus lados mide 13 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "130",
+   "299",
+   "23",
+   "46"
+  ],
+  "correcta": 0,
+  "explicacion": "El otro lado mide 23 − 13 = 10 cm. Área = 13·10 = 130 cm²."
+ },
+ {
+  "id": "m1_410",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un cilindro tiene radio 7 cm y altura 9 cm. ¿Cuál es su volumen?",
+  "alternativas": [
+   "63π cm³",
+   "49π cm³",
+   "441π cm³",
+   "126π cm³"
+  ],
+  "correcta": 2,
+  "explicacion": "V = πr²h = π·49·9 = 441π cm³."
+ },
+ {
+  "id": "m1_411",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el desarrollo de (x + 8)(x − 8)?",
+  "alternativas": [
+   "x² − 16x",
+   "x² − 8",
+   "x² − 64",
+   "x² + 64"
+  ],
+  "correcta": 2,
+  "explicacion": "Es suma por diferencia: x² − 8² = x² − 64."
+ },
+ {
+  "id": "m1_412",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un cubo tiene arista de 3 cm. ¿Cuál es su volumen?",
+  "alternativas": [
+   "30 cm³",
+   "9 cm³",
+   "27 cm³",
+   "54 cm³"
+  ],
+  "correcta": 2,
+  "explicacion": "V = a³ = 3³ = 27 cm³."
+ },
+ {
+  "id": "m1_413",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿De cuántas maneras distintas se pueden ordenar 5 personas en una fila?",
+  "alternativas": [
+   "20",
+   "24",
+   "25",
+   "120"
+  ],
+  "correcta": 3,
+  "explicacion": "Se calcula 5! = 120."
+ },
+ {
+  "id": "m1_414",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "y es directamente proporcional a x. Si y = 35 cuando x = 5, ¿cuánto vale y cuando x = 13?",
+  "alternativas": [
+   "91",
+   "20",
+   "43",
+   "70"
+  ],
+  "correcta": 0,
+  "explicacion": "La constante es y/x = 7; entonces y = 7·13 = 91."
+ },
+ {
+  "id": "m1_415",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "En la secuencia 6, 10, 14, 18, … ¿cuál es el término que ocupa la posición 12?",
+  "alternativas": [
+   "50",
+   "48",
+   "72",
+   "54"
+  ],
+  "correcta": 0,
+  "explicacion": "Término n = a₁ + (n−1)·d = 6 + 11·4 = 50."
+ },
+ {
+  "id": "m1_416",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x + y = 14 y x − y = 4, ¿cuál es el valor de x?",
+  "alternativas": [
+   "5",
+   "4",
+   "14",
+   "9"
+  ],
+  "correcta": 3,
+  "explicacion": "Sumando las ecuaciones: 2x = 18, x = 9; luego y = 14 − 9 = 5."
+ },
+ {
+  "id": "m1_417",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene perímetro 30 cm y uno de sus lados mide 7 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "30",
+   "56",
+   "105",
+   "15"
+  ],
+  "correcta": 1,
+  "explicacion": "El otro lado mide 15 − 7 = 8 cm. Área = 7·8 = 56 cm²."
+ },
+ {
+  "id": "m1_418",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la mediana?",
+  "alternativas": [
+   "3,52",
+   "6",
+   "3",
+   "2"
+  ],
+  "correcta": 2,
+  "explicacion": "Hay 25 datos; ordenados, la mediana es 3.",
+  "imagen": "assets/images/m1/m1_img_052.png"
+ },
+ {
+  "id": "m1_419",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un bus recorre 160 km en 2 horas a velocidad constante. ¿Cuál es su velocidad en km/h?",
+  "alternativas": [
+   "158",
+   "320",
+   "80",
+   "162"
+  ],
+  "correcta": 2,
+  "explicacion": "Velocidad = distancia / tiempo = 160/2 = 80 km/h."
+ },
+ {
+  "id": "m1_420",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto simétrico de (−5, 7) respecto del eje x?",
+  "alternativas": [
+   "(−5, −7)",
+   "(7, −5)",
+   "(5, 7)",
+   "(5, −7)"
+  ],
+  "correcta": 0,
+  "explicacion": "Al reflejar respecto del eje x cambia el signo de la coordenada y."
+ },
+ {
+  "id": "m1_421",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "El círculo de la figura tiene el radio (en rojo) indicado. ¿Cuál es su área?",
+  "alternativas": [
+   "4π cm²",
+   "8π cm²",
+   "2π cm²",
+   "16π cm²"
+  ],
+  "correcta": 0,
+  "explicacion": "A = πr² = π·2² = 4π cm².",
+  "imagen": "assets/images/m1/m1_img_085.png"
+ },
+ {
+  "id": "m1_422",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Al trasladar el punto (−2, 3) según el vector (−2, 6), ¿cuáles son las nuevas coordenadas?",
+  "alternativas": [
+   "(0, −3)",
+   "(0, 9)",
+   "(−4, 9)",
+   "(−4, −3)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se suman las componentes: (-2+(-2), 3+(6)) = (−4, 9)."
+ },
+ {
+  "id": "m1_423",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un curso de 1.220 personas participa en una encuesta y el 15% responde que sí. ¿Cuántas personas responden que sí?",
+  "alternativas": [
+   "183",
+   "1.037",
+   "366",
+   "1.830"
+  ],
+  "correcta": 0,
+  "explicacion": "15% de 1.220 = 15/100 · 1.220 = 183."
+ },
+ {
+  "id": "m1_424",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la mediana de los datos 20, 14, 12, 5, 16, 12?",
+  "alternativas": [
+   "20",
+   "13,17",
+   "13",
+   "5"
+  ],
+  "correcta": 2,
+  "explicacion": "Ordenados: 5, 12, 12, 14, 16, 20. La mediana es 13."
+ },
+ {
+  "id": "m1_425",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un producto aumenta su precio en 40% y luego baja 25%. Respecto al precio original, el precio final varió en:",
+  "alternativas": [
+   "+5%",
+   "+65%",
+   "−15%",
+   "+15%"
+  ],
+  "correcta": 0,
+  "explicacion": "Factor final: 1,4 × 0,75 = 1,05, es decir +5%."
+ },
+ {
+  "id": "m1_426",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene base 24 cm y altura 6 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "36 cm²",
+   "30 cm²",
+   "144 cm²",
+   "72 cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "A = base · altura / 2 = 24·6/2 = 72 cm²."
+ },
+ {
+  "id": "m1_427",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la ecuación de la recta representada en el gráfico?",
+  "alternativas": [
+   "y = 2x + 2",
+   "y = 2x − 2",
+   "y = −2x + 2",
+   "y = −2x − 2"
+  ],
+  "correcta": 2,
+  "explicacion": "Pendiente -2; corta al eje y en 2: y = −2x + 2.",
+  "imagen": "assets/images/m1/m1_img_059.png"
+ },
+ {
+  "id": "m1_428",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Se depositan $1.700.000 con un interés simple de 2% anual durante 3 años. ¿Cuánto interés se obtiene en total?",
+  "alternativas": [
+   "$102.000",
+   "$10.200.000",
+   "$1.802.000",
+   "$34.000"
+  ],
+  "correcta": 0,
+  "explicacion": "Interés = capital · tasa · tiempo = $1.700.000 · 2/100 · 3 = $102.000."
+ },
+ {
+  "id": "m1_429",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Si 6 kg de naranjas cuestan $9.000, ¿cuánto cuestan 11 kg de naranjas?",
+  "alternativas": [
+   "$10.100",
+   "$25.500",
+   "$17.000",
+   "$16.500"
+  ],
+  "correcta": 3,
+  "explicacion": "1 kg cuesta $1.500; entonces 11 kg cuestan $16.500."
+ },
+ {
+  "id": "m1_430",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Javiera tiene el doble de la edad de Catalina. Juntos suman 12 años. ¿Qué edad tiene Catalina?",
+  "alternativas": [
+   "10",
+   "4",
+   "6",
+   "8"
+  ],
+  "correcta": 1,
+  "explicacion": "x + 2x = 12, entonces 3x = 12 y x = 4."
+ },
+ {
+  "id": "m1_431",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El promedio de 6 números es 11. Si se agrega un número más, el promedio sube a 14. ¿Qué número se agregó?",
+  "alternativas": [
+   "32",
+   "14",
+   "22",
+   "21"
+  ],
+  "correcta": 0,
+  "explicacion": "Suma inicial 66; suma final 98; el número agregado es la diferencia: 32."
+ },
+ {
+  "id": "m1_432",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el máximo común divisor de 16 y 24?",
+  "alternativas": [
+   "48",
+   "8",
+   "384",
+   "40"
+  ],
+  "correcta": 1,
+  "explicacion": "Los divisores comunes de 16 y 24 llegan hasta 8."
+ },
+ {
+  "id": "m1_433",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y (3x + 108)°, ¿cuánto mide x?",
+  "alternativas": [
+   "45°",
+   "18°",
+   "108°",
+   "28°"
+  ],
+  "correcta": 1,
+  "explicacion": "x + 3x + 108 = 180 → 4x = 72 → x = 18°."
+ },
+ {
+  "id": "m1_434",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de 2/8 + 1/5?",
+  "alternativas": [
+   "1/20",
+   "9/20",
+   "3/13",
+   "3/40"
+  ],
+  "correcta": 1,
+  "explicacion": "Se busca un denominador común y se opera: el resultado es 9/20."
+ },
+ {
+  "id": "m1_435",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (3³ · 3⁷) : 3³?",
+  "alternativas": [
+   "3⁷",
+   "3¹⁸",
+   "3⁸",
+   "3¹³"
+  ],
+  "correcta": 0,
+  "explicacion": "Se suman los exponentes al multiplicar y se restan al dividir: 3+7−3 = 7."
+ },
+ {
+  "id": "m1_436",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene base 8 cm y altura 6 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "12 cm²",
+   "48 cm²",
+   "24 cm²",
+   "14 cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "A = base · altura / 2 = 8·6/2 = 24 cm²."
+ },
+ {
+  "id": "m1_437",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Ignacio tiene 2 poleras, 3 pantalones y 3 pares de zapatillas. ¿Cuántas combinaciones distintas de tenida puede armar con una de cada prenda?",
+  "alternativas": [
+   "8",
+   "6",
+   "18",
+   "9"
+  ],
+  "correcta": 2,
+  "explicacion": "Principio multiplicativo: se multiplican las opciones de cada etapa."
+ },
+ {
+  "id": "m1_438",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo, dos ángulos interiores miden 40° y 65°. ¿Cuánto mide el tercer ángulo?",
+  "alternativas": [
+   "140°",
+   "50°",
+   "105°",
+   "75°"
+  ],
+  "correcta": 3,
+  "explicacion": "Los ángulos interiores suman 180°: 180° − 40° − 65° = 75°."
+ },
+ {
+  "id": "m1_439",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la pendiente de la recta que pasa por los puntos (−5, 0) y (−3, 4)?",
+  "alternativas": [
+   "2",
+   "4",
+   "0,5",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "m = (y₂ − y₁)/(x₂ − x₁) = 4/2 = 2."
+ },
+ {
+  "id": "m1_440",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto medio del segmento con extremos (2, −5) y (−10, −17)?",
+  "alternativas": [
+   "(−8, −22)",
+   "(−12, −12)",
+   "(−11, −4)",
+   "(−4, −11)"
+  ],
+  "correcta": 3,
+  "explicacion": "Se promedian las coordenadas: ((2 + (−10))/2, (−5 + (−17))/2) = (−4, −11)."
+ },
+ {
+  "id": "m1_441",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un poste de 6 m proyecta una sombra de 2 m. En el mismo instante, un árbol proyecta una sombra de 14 m. ¿Cuál es la altura del árbol?",
+  "alternativas": [
+   "20 m",
+   "84 m",
+   "18 m",
+   "42 m"
+  ],
+  "correcta": 3,
+  "explicacion": "Por semejanza: 6/2 = x/14, entonces x = 42 m."
+ },
+ {
+  "id": "m1_442",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un producto salga defectuoso es 25%. ¿Cuál es la probabilidad de que un producto NO salga defectuoso?",
+  "alternativas": [
+   "75%",
+   "25%",
+   "50%",
+   "125%"
+  ],
+  "correcta": 0,
+  "explicacion": "Eventos complementarios suman 100%: 100% − 25% = 75%."
+ },
+ {
+  "id": "m1_443",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el desarrollo de (x + 8)²?",
+  "alternativas": [
+   "x² + 16x + 16",
+   "x² + 64",
+   "x² + 8x + 64",
+   "x² + 16x + 64"
+  ],
+  "correcta": 3,
+  "explicacion": "(x + 8)² = x² + 2·8·x + 8²."
+ },
+ {
+  "id": "m1_444",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la moda?",
+  "alternativas": [
+   "1",
+   "8",
+   "2",
+   "3"
+  ],
+  "correcta": 1,
+  "explicacion": "La mayor frecuencia es 11, que corresponde al valor 8.",
+  "imagen": "assets/images/m1/m1_img_050.png"
+ },
+ {
+  "id": "m1_445",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "5 obreros construyen un muro en 24 días trabajando al mismo ritmo. ¿En cuántos días lo construirían 12 obreros?",
+  "alternativas": [
+   "10",
+   "17",
+   "57",
+   "31"
+  ],
+  "correcta": 0,
+  "explicacion": "Es proporcionalidad inversa: 5·24 = 12·x, entonces x = 10."
+ },
+ {
+  "id": "m1_446",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿entre qué meses consecutivos hubo el mayor aumento?",
+  "alternativas": [
+   "Entre Marzo y Abril",
+   "Entre Abril y Mayo",
+   "Entre Mayo y Junio",
+   "Entre Febrero y Marzo"
+  ],
+  "correcta": 3,
+  "explicacion": "El mayor aumento fue de 41 unidades, entre Febrero y Marzo.",
+  "imagen": "assets/images/m1/m1_img_024.png"
+ },
+ {
+  "id": "m1_447",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Sofía y Fernanda reparten $3.300 en la razón 1:2. ¿Cuánto recibe quien recibe más?",
+  "alternativas": [
+   "$1.100",
+   "$1.650",
+   "$2.200",
+   "$3.200"
+  ],
+  "correcta": 2,
+  "explicacion": "Cada parte vale $3.300/3 = $1.100. El mayor recibe 2 partes: $2.200."
+ },
+ {
+  "id": "m1_448",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto medio del segmento con extremos (−3, 0) y (7, 6)?",
+  "alternativas": [
+   "(3, 2)",
+   "(4, 6)",
+   "(2, 3)",
+   "(10, 6)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se promedian las coordenadas: ((−3 + (7))/2, (0 + (6))/2) = (2, 3)."
+ },
+ {
+  "id": "m1_449",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una bolsa tiene 6 fichas rojas, 5 azules y 1 verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea verde?",
+  "alternativas": [
+   "1/12",
+   "1/3",
+   "1/11",
+   "11/12"
+  ],
+  "correcta": 0,
+  "explicacion": "Casos favorables 1, casos totales 12: P = 1/12."
+ },
+ {
+  "id": "m1_450",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo, dos ángulos interiores miden 45° y 45°. ¿Cuánto mide el tercer ángulo?",
+  "alternativas": [
+   "90°",
+   "45°",
+   "270°",
+   "135°"
+  ],
+  "correcta": 0,
+  "explicacion": "Los ángulos interiores suman 180°: 180° − 45° − 45° = 90°."
+ },
+ {
+  "id": "m1_451",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto simétrico de (−3, −4) respecto del eje x?",
+  "alternativas": [
+   "(3, −4)",
+   "(−4, −3)",
+   "(3, 4)",
+   "(−3, 4)"
+  ],
+  "correcta": 3,
+  "explicacion": "Al reflejar respecto del eje x cambia el signo de la coordenada y."
+ },
+ {
+  "id": "m1_452",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Martina y Camila reparten $9.000 en la razón 3:7. ¿Cuánto recibe quien recibe más?",
+  "alternativas": [
+   "$6.300",
+   "$8.700",
+   "$4.500",
+   "$2.700"
+  ],
+  "correcta": 0,
+  "explicacion": "Cada parte vale $9.000/10 = $900. El mayor recibe 7 partes: $6.300."
+ },
+ {
+  "id": "m1_453",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la mediana?",
+  "alternativas": [
+   "2",
+   "5",
+   "5,5",
+   "9"
+  ],
+  "correcta": 1,
+  "explicacion": "Hay 17 datos; ordenados, la mediana es 5.",
+  "imagen": "assets/images/m1/m1_img_046.png"
+ },
+ {
+  "id": "m1_454",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿De cuántas maneras distintas se pueden ordenar 7 personas en una fila?",
+  "alternativas": [
+   "720",
+   "42",
+   "49",
+   "5.040"
+  ],
+  "correcta": 3,
+  "explicacion": "Se calcula 7! = 5040."
+ },
+ {
+  "id": "m1_455",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 4x + 11, ¿cuál es el valor de f(4)?",
+  "alternativas": [
+   "27",
+   "19",
+   "60",
+   "−27"
+  ],
+  "correcta": 0,
+  "explicacion": "Se reemplaza x por 4: f(4) = 27."
+ },
+ {
+  "id": "m1_456",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el mayor número entero x que cumple 7x + 5 < 19?",
+  "alternativas": [
+   "3",
+   "1",
+   "0",
+   "2"
+  ],
+  "correcta": 1,
+  "explicacion": "7x < 14, entonces x < 2. El mayor entero es 1."
+ },
+ {
+  "id": "m1_457",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (3² · 3⁶) : 3³?",
+  "alternativas": [
+   "3⁵",
+   "3¹¹",
+   "3⁶",
+   "3⁹"
+  ],
+  "correcta": 0,
+  "explicacion": "Se suman los exponentes al multiplicar y se restan al dividir: 2+6−3 = 5."
+ },
+ {
+  "id": "m1_458",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La tabla muestra la distribución de un conjunto de datos. ¿Cuál es la moda?",
+  "alternativas": [
+   "7",
+   "9",
+   "6",
+   "4"
+  ],
+  "correcta": 1,
+  "explicacion": "La mayor frecuencia es 11, que corresponde al valor 9.",
+  "imagen": "assets/images/m1/m1_img_055.png"
+ },
+ {
+  "id": "m1_459",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Valentina resolvió correctamente 24 de 40 ejercicios. ¿Qué porcentaje de los ejercicios resolvió correctamente?",
+  "alternativas": [
+   "24%",
+   "40%",
+   "60%",
+   "166%"
+  ],
+  "correcta": 2,
+  "explicacion": "24/40 = 60/100, es decir 60%."
+ },
+ {
+  "id": "m1_460",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 4x + 11 = 67?",
+  "alternativas": [
+   "78",
+   "56",
+   "14",
+   "19"
+  ],
+  "correcta": 2,
+  "explicacion": "4x = 67 − 11 = 56, entonces x = 14."
+ },
+ {
+  "id": "m1_461",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la distancia entre los puntos (−2, −3) y (2, −6)?",
+  "alternativas": [
+   "7",
+   "6",
+   "1",
+   "5"
+  ],
+  "correcta": 3,
+  "explicacion": "d = √(4² + 3²) = √25 = 5."
+ },
+ {
+  "id": "m1_462",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un colegio de 100 estudiantes, el 20% practica natación. ¿Cuántos estudiantes NO practican natación?",
+  "alternativas": [
+   "80",
+   "20",
+   "120",
+   "85"
+  ],
+  "correcta": 0,
+  "explicacion": "20% de 100 = 20 practican; los demás son 100 − 20 = 80."
+ },
+ {
+  "id": "m1_463",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las edades de un grupo son 43, 4, 59, 55, 41, 54, 9. ¿Cuál es el rango de los datos?",
+  "alternativas": [
+   "4",
+   "63",
+   "59",
+   "55"
+  ],
+  "correcta": 3,
+  "explicacion": "Rango = mayor − menor = 59 − 4 = 55."
+ },
+ {
+  "id": "m1_464",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Vicente resolvió correctamente 60 de 300 ejercicios. ¿Qué porcentaje de los ejercicios resolvió correctamente?",
+  "alternativas": [
+   "500%",
+   "80%",
+   "20%",
+   "60%"
+  ],
+  "correcta": 2,
+  "explicacion": "60/300 = 20/100, es decir 20%."
+ },
+ {
+  "id": "m1_465",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Según el gráfico, ¿qué porcentaje representan en conjunto \"Negro\" y \"Azul\"?",
+  "alternativas": [
+   "85%",
+   "20%",
+   "15%",
+   "5%"
+  ],
+  "correcta": 2,
+  "explicacion": "5% + 10% = 15%.",
+  "imagen": "assets/images/m1/m1_img_041.png"
+ },
+ {
+  "id": "m1_466",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un círculo tiene radio 2 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "8π cm²",
+   "16π cm²",
+   "4π cm²",
+   "2π cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "A = πr² = π·2² = 4π cm²."
+ },
+ {
+  "id": "m1_467",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la mediana de los datos 9, 21, 6, 1, 7, 27, 30?",
+  "alternativas": [
+   "9",
+   "1",
+   "30",
+   "14,43"
+  ],
+  "correcta": 0,
+  "explicacion": "Ordenados: 1, 6, 7, 9, 21, 27, 30. La mediana es 9."
+ },
+ {
+  "id": "m1_468",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "10 obreros construyen un muro en 18 días trabajando al mismo ritmo. ¿En cuántos días lo construirían 18 obreros?",
+  "alternativas": [
+   "26",
+   "12",
+   "32",
+   "10"
+  ],
+  "correcta": 3,
+  "explicacion": "Es proporcionalidad inversa: 10·18 = 18·x, entonces x = 10."
+ },
+ {
+  "id": "m1_469",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Se depositan $600.000 con un interés simple de 4% anual durante 5 años. ¿Cuánto interés se obtiene en total?",
+  "alternativas": [
+   "$24.000",
+   "$720.000",
+   "$120.000",
+   "$12.000.000"
+  ],
+  "correcta": 2,
+  "explicacion": "Interés = capital · tasa · tiempo = $600.000 · 4/100 · 5 = $120.000."
+ },
+ {
+  "id": "m1_470",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la moda de los datos 2, 6, 2, 2, 6, 28, 19, 29?",
+  "alternativas": [
+   "6",
+   "28",
+   "2",
+   "19"
+  ],
+  "correcta": 2,
+  "explicacion": "La moda es el dato que más se repite: 2."
+ },
+ {
+  "id": "m1_471",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las edades de un grupo son 11, 19, 40, 57, 35, 34. ¿Cuál es el rango de los datos?",
+  "alternativas": [
+   "57",
+   "68",
+   "11",
+   "46"
+  ],
+  "correcta": 3,
+  "explicacion": "Rango = mayor − menor = 57 − 11 = 46."
+ },
+ {
+  "id": "m1_472",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Si 6 kg de manzanas cuestan $9.000, ¿cuánto cuestan 11 kg de manzanas?",
+  "alternativas": [
+   "$10.100",
+   "$25.500",
+   "$17.000",
+   "$16.500"
+  ],
+  "correcta": 3,
+  "explicacion": "1 kg cuesta $1.500; entonces 11 kg cuestan $16.500."
+ },
+ {
+  "id": "m1_473",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Al trasladar el punto (7, −4) según el vector (3, −5), ¿cuáles son las nuevas coordenadas?",
+  "alternativas": [
+   "(4, −9)",
+   "(4, 1)",
+   "(10, 1)",
+   "(10, −9)"
+  ],
+  "correcta": 3,
+  "explicacion": "Se suman las componentes: (7+(3), -4+(-5)) = (10, −9)."
+ },
+ {
+  "id": "m1_474",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Al trasladar el punto (5, 8) según el vector (1, −3), ¿cuáles son las nuevas coordenadas?",
+  "alternativas": [
+   "(6, 5)",
+   "(6, 11)",
+   "(4, 5)",
+   "(4, 11)"
+  ],
+  "correcta": 0,
+  "explicacion": "Se suman las componentes: (5+(1), 8+(-3)) = (6, 5)."
+ },
+ {
+  "id": "m1_475",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "¿Cuáles son las coordenadas del punto simétrico de (5, −8) respecto del origen?",
+  "alternativas": [
+   "(5, 8)",
+   "(−8, 5)",
+   "(−5, −8)",
+   "(−5, 8)"
+  ],
+  "correcta": 3,
+  "explicacion": "Al reflejar respecto del origen cambian los signos de ambas coordenadas."
+ },
+ {
+  "id": "m1_476",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de −5 − (−6) × 13?",
+  "alternativas": [
+   "74",
+   "−73",
+   "73",
+   "−83"
+  ],
+  "correcta": 2,
+  "explicacion": "Se aplican las reglas de los signos: menos por menos es más; más por menos es menos."
+ },
+ {
+  "id": "m1_477",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un círculo tiene radio 11 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "11π cm²",
+   "242π cm²",
+   "22π cm²",
+   "121π cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "A = πr² = π·11² = 121π cm²."
+ },
+ {
+  "id": "m1_478",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el máximo común divisor de 14 y 35?",
+  "alternativas": [
+   "490",
+   "70",
+   "49",
+   "7"
+  ],
+  "correcta": 3,
+  "explicacion": "Los divisores comunes de 14 y 35 llegan hasta 7."
+ },
+ {
+  "id": "m1_479",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 3 × 7 − 21 ÷ 3?",
+  "alternativas": [
+   "14",
+   "13",
+   "15",
+   "0"
+  ],
+  "correcta": 0,
+  "explicacion": "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −."
+ },
+ {
+  "id": "m1_480",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene perímetro 48 cm y uno de sus lados mide 15 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "135",
+   "24",
+   "360",
+   "48"
+  ],
+  "correcta": 0,
+  "explicacion": "El otro lado mide 24 − 15 = 9 cm. Área = 15·9 = 135 cm²."
+ },
+ {
+  "id": "m1_481",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "El promedio de 4 números es 30. Si se agrega un número más, el promedio sube a 31. ¿Qué número se agregó?",
+  "alternativas": [
+   "35",
+   "31",
+   "5",
+   "60"
+  ],
+  "correcta": 0,
+  "explicacion": "Suma inicial 120; suma final 155; el número agregado es la diferencia: 35."
+ },
+ {
+  "id": "m1_482",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el mayor número entero x que cumple 5x + 6 < 39?",
+  "alternativas": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "correcta": 1,
+  "explicacion": "5x < 33, entonces x < 6,6. El mayor entero es 6."
+ },
+ {
+  "id": "m1_483",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Si 2 kg de manzanas cuestan $3.000, ¿cuánto cuestan 9 kg de manzanas?",
+  "alternativas": [
+   "$13.500",
+   "$16.500",
+   "$14.000",
+   "$3.900"
+  ],
+  "correcta": 0,
+  "explicacion": "1 kg cuesta $1.500; entonces 9 kg cuestan $13.500."
+ },
+ {
+  "id": "m1_484",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el mayor número entero x que cumple 4x + 0 < 36?",
+  "alternativas": [
+   "9",
+   "8",
+   "10",
+   "7"
+  ],
+  "correcta": 1,
+  "explicacion": "4x < 36, entonces x < 9. El mayor entero es 8."
+ },
+ {
+  "id": "m1_485",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (10⁴ · 10⁶) : 10⁶?",
+  "alternativas": [
+   "10¹⁸",
+   "10¹⁶",
+   "10⁵",
+   "10⁴"
+  ],
+  "correcta": 3,
+  "explicacion": "Se suman los exponentes al multiplicar y se restan al dividir: 4+6−6 = 4."
+ },
+ {
+  "id": "m1_486",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene base 16 cm y altura 16 cm. ¿Cuál es su área?",
+  "alternativas": [
+   "128 cm²",
+   "256 cm²",
+   "64 cm²",
+   "32 cm²"
+  ],
+  "correcta": 0,
+  "explicacion": "A = base · altura / 2 = 16·16/2 = 128 cm²."
+ },
+ {
+  "id": "m1_487",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Matías resolvió correctamente 48 de 240 ejercicios. ¿Qué porcentaje de los ejercicios resolvió correctamente?",
+  "alternativas": [
+   "20%",
+   "48%",
+   "500%",
+   "80%"
+  ],
+  "correcta": 0,
+  "explicacion": "48/240 = 20/100, es decir 20%."
+ },
+ {
+  "id": "m1_488",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "Un producto aumenta su precio en 20% y luego baja 20%. Respecto al precio original, el precio final varió en:",
+  "alternativas": [
+   "+40%",
+   "−4%",
+   "0%",
+   "+1%"
+  ],
+  "correcta": 1,
+  "explicacion": "Factor final: 1,2 × 0,8 = 0,96, es decir −4%."
+ },
+ {
+  "id": "m1_489",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la factorización de x² − 4?",
+  "alternativas": [
+   "(x − 4)(x + 4)",
+   "(x − 2)(x + 2)",
+   "(x − 2)²",
+   "(x + 2)²"
+  ],
+  "correcta": 1,
+  "explicacion": "Es una diferencia de cuadrados: x² − 2² = (x − 2)(x + 2)."
+ },
+ {
+  "id": "m1_490",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las edades de un grupo son 22, 25, 8, 7, 38, 43. ¿Cuál es el rango de los datos?",
+  "alternativas": [
+   "36",
+   "7",
+   "43",
+   "50"
+  ],
+  "correcta": 0,
+  "explicacion": "Rango = mayor − menor = 43 − 7 = 36."
+ },
+ {
+  "id": "m1_491",
+  "prueba": "m1",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la moda de los datos 17, 17, 26, 12, 4, 28, 12, 17?",
+  "alternativas": [
+   "26",
+   "17",
+   "4",
+   "12"
+  ],
+  "correcta": 1,
+  "explicacion": "La moda es el dato que más se repite: 17."
+ },
+ {
+  "id": "m1_492",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura es un semicírculo cuyo radio (en rojo) mide lo indicado. ¿Cuál es su área?",
+  "alternativas": [
+   "36π cm²",
+   "12π cm²",
+   "72π cm²",
+   "144π cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "Área = πr²/2 = π·144/2 = 72π cm².",
+  "imagen": "assets/images/m1/m1_img_089.png"
+ },
+ {
+  "id": "m1_493",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de 1/4 + 2/8?",
+  "alternativas": [
+   "1/16",
+   "3/32",
+   "1/4",
+   "1/2"
+  ],
+  "correcta": 3,
+  "explicacion": "Se busca un denominador común y se opera: el resultado es 1/2."
+ },
+ {
+  "id": "m1_494",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de (−4) × 5 + 19?",
+  "alternativas": [
+   "0",
+   "1",
+   "39",
+   "−1"
+  ],
+  "correcta": 3,
+  "explicacion": "Se aplican las reglas de los signos: menos por menos es más; más por menos es menos."
+ },
+ {
+  "id": "m1_495",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (4 + 4) × 3 − 3?",
+  "alternativas": [
+   "22",
+   "20",
+   "21",
+   "13"
+  ],
+  "correcta": 2,
+  "explicacion": "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −."
+ },
+ {
+  "id": "m1_496",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Al trasladar el punto (−3, −7) según el vector (−5, 4), ¿cuáles son las nuevas coordenadas?",
+  "alternativas": [
+   "(−8, −11)",
+   "(2, −11)",
+   "(−8, −3)",
+   "(2, −3)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se suman las componentes: (-3+(-5), -7+(4)) = (−8, −3)."
+ },
+ {
+  "id": "m1_497",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "La figura está formada solo por ángulos rectos. ¿Cuál es su área?",
+  "alternativas": [
+   "181 cm²",
+   "125 cm²",
+   "48 cm²",
+   "143 cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "Rectángulo grande 11·13 = 143, menos el recorte 3·6 = 18: 125 cm².",
+  "imagen": "assets/images/m1/m1_img_082.png"
+ },
+ {
+  "id": "m1_498",
+  "prueba": "m1",
+  "eje": "Geometría",
+  "enunciado": "Un cubo tiene arista de 4 cm. ¿Cuál es su volumen?",
+  "alternativas": [
+   "96 cm³",
+   "12 cm³",
+   "64 cm³",
+   "16 cm³"
+  ],
+  "correcta": 2,
+  "explicacion": "V = a³ = 4³ = 64 cm³."
+ },
+ {
+  "id": "m1_499",
+  "prueba": "m1",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La recta del gráfico pasa por los dos puntos marcados. ¿Cuál es su pendiente?",
+  "alternativas": [
+   "0",
+   "3",
+   "−1",
+   "1"
+  ],
+  "correcta": 2,
+  "explicacion": "m = (2 − 6)/(1 − -3) = -1.",
+  "imagen": "assets/images/m1/m1_img_064.png"
+ },
+ {
+  "id": "m1_500",
+  "prueba": "m1",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de (3³ · 3³) : 3²?",
+  "alternativas": [
+   "3⁷",
+   "3⁵",
+   "3⁸",
+   "3⁴"
+  ],
+  "correcta": 3,
+  "explicacion": "Se suman los exponentes al multiplicar y se restan al dividir: 3+3−2 = 4."
+ }
+]

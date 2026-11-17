@@ -12,10 +12,30 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
 - Historial de ensayos.
 
 ## Preguntas
-Están en `assets/questions/questions.json`. Para cambiarlas o agregar más, solo se edita ese archivo.
-Cada pregunta tiene: `id`, `prueba` (lectora, m1, m2, ciencias, historia), `enunciado`,
-`alternativas`, `correcta` (posición de la correcta, empezando en 0), `eje` (opcional) y `explicacion`.
-Las alternativas se mezclan al azar en cada ensayo.
+Meta: **500 preguntas por prueba, 100 de ellas con imagen o gráfico**. En cada ensayo
+(práctica o simulacro) se eligen preguntas al azar y se mezclan sus alternativas.
+
+| Prueba | Preguntas | Con gráfico |
+|---|---|---|
+| Matemática M1 | 500 | 100 |
+| Matemática M2 | 3 | 0 |
+| Ciencias | 3 | 0 |
+| Historia | 1 | 0 |
+| Competencia Lectora | 0 | 0 |
+
+Hay un archivo por prueba en `assets/questions/` (`m1.json`, `m2.json`, `ciencias.json`,
+`historia.json`, `lectora.json`). Las imágenes van en `assets/images/<prueba>/`.
+Cada pregunta tiene: `id`, `prueba`, `enunciado`, `alternativas`, `correcta`
+(posición de la correcta, empezando en 0), `eje` (opcional), `explicacion` e `imagen` (opcional).
+
+### M1 generada con programa
+`tools/generar_m1.py` crea las 500 preguntas de M1 y sus 100 gráficos. Cada respuesta
+correcta la calcula el programa y cada gráfico se dibuja con los mismos datos de la pregunta.
+Para volver a generarlas (necesita Python y matplotlib):
+```
+python3 tools/generar_m1.py
+```
+Igual conviene que un profesor revise una muestra antes de publicar.
 
 **Importante:** no se debe usar contenido del DEMRE (sus documentos son "sin fines comerciales").
 

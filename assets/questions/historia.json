@@ -1,0 +1,15 @@
+[
+  {
+    "id": "historia_001",
+    "prueba": "historia",
+    "enunciado": "El proceso de transición a la democracia en Chile a fines de los años 80 se caracterizó principalmente por:",
+    "alternativas": [
+      "Negociación política y plebiscito de 1988",
+      "Revolución armada",
+      "Intervención extranjera directa",
+      "Colapso económico total"
+    ],
+    "correcta": 0,
+    "explicacion": "La transición se dio por acuerdos políticos y el triunfo del No en el plebiscito de 1988."
+  }
+]

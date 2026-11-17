@@ -1,0 +1,41 @@
+[
+  {
+    "id": "m2_001",
+    "prueba": "m2",
+    "enunciado": "La ecuación x² − 5x + 6 = 0 tiene raíces:",
+    "alternativas": [
+      "2 y 3",
+      "1 y 6",
+      "−2 y −3",
+      "5 y 6"
+    ],
+    "correcta": 0,
+    "explicacion": "Se factoriza como (x − 2)(x − 3) = 0, por lo que las raíces son 2 y 3."
+  },
+  {
+    "id": "m2_002",
+    "prueba": "m2",
+    "enunciado": "El vértice de la parábola y = 2x² − 8x + 5 es:",
+    "alternativas": [
+      "(2, −3)",
+      "(2, 3)",
+      "(−2, −3)",
+      "(4, −3)"
+    ],
+    "correcta": 0,
+    "explicacion": "x = −b / 2a = 8 / 4 = 2. Luego y = 2·4 − 16 + 5 = −3."
+  },
+  {
+    "id": "m2_003",
+    "prueba": "m2",
+    "enunciado": "En un triángulo rectángulo, sen(30°) = 1/2. Si el cateto opuesto a ese ángulo mide 6 cm, la hipotenusa mide:",
+    "alternativas": [
+      "12 cm",
+      "10 cm",
+      "8 cm",
+      "6√3 cm"
+    ],
+    "correcta": 0,
+    "explicacion": "sen = opuesto / hipotenusa, entonces 1/2 = 6 / h y h = 12 cm."
+  }
+]

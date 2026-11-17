@@ -11,5 +11,6 @@ const String fullAccessProductId = 'acceso_completo_paes';
 /// Precio que se muestra si la tienda aún no entrega el precio real.
 const String fallbackPriceLabel = r'$4.000 CLP';
 
-/// Ruta del archivo con las preguntas. Se puede reemplazar sin tocar el código.
-const String questionsAssetPath = 'assets/questions/questions.json';
+/// Carpeta con las preguntas: un archivo por prueba (por ejemplo `m1.json`).
+/// Se pueden reemplazar o ampliar sin tocar el código.
+const String questionsAssetDir = 'assets/questions';

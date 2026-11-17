@@ -8,6 +8,7 @@ import '../../domain/prueba.dart';
 import '../../domain/quiz_item.dart';
 import '../../domain/score_calculator.dart';
 import '../providers.dart';
+import '../widgets/question_image.dart';
 import 'explanation_screen.dart';
 import 'paywall_screen.dart';
 import 'results_screen.dart';
@@ -240,7 +241,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       item.question.enunciado,
                       style: theme.textTheme.titleMedium,
                     ),
-                    const SizedBox(height: 16),
+                    QuestionImage(path: item.question.imagen),
+                    const SizedBox(height: 4),
                     for (var i = 0; i < item.options.length; i++)
                       _OptionTile(
                         letter: String.fromCharCode(65 + i),

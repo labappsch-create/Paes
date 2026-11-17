@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ciencias_001",
+    "prueba": "ciencias",
+    "enunciado": "En un circuito en serie con dos resistencias de 4 Ω y 6 Ω y una batería de 10 V, la corriente total es:",
+    "alternativas": [
+      "1 A",
+      "0,5 A",
+      "2 A",
+      "1,67 A"
+    ],
+    "correcta": 0,
+    "explicacion": "La resistencia total es 10 Ω, entonces I = V / R = 10 / 10 = 1 A."
+  },
+  {
+    "id": "ciencias_002",
+    "prueba": "ciencias",
+    "enunciado": "El pH de una solución 0,01 M de HCl es aproximadamente:",
+    "alternativas": [
+      "1",
+      "2",
+      "3",
+      "12"
+    ],
+    "correcta": 1,
+    "explicacion": "El HCl es un ácido fuerte, por lo que [H+] ≈ 0,01 M y pH = 2."
+  },
+  {
+    "id": "ciencias_003",
+    "prueba": "ciencias",
+    "enunciado": "Durante la mitosis, la separación de las cromátidas hermanas ocurre en:",
+    "alternativas": [
+      "Profase",
+      "Metafase",
+      "Anafase",
+      "Telofase"
+    ],
+    "correcta": 2,
+    "explicacion": "En la anafase las cromátidas hermanas se separan y se dirigen hacia los polos de la célula."
+  }
+]
