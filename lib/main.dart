@@ -1,0 +1,38 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'presentation/providers.dart';
+import 'presentation/purchase_controller.dart';
+import 'presentation/screens/home_screen.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs = await SharedPreferences.getInstance();
+  runApp(
+    ProviderScope(
+      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+      child: const PaesApp(),
+    ),
+  );
+}
+
+class PaesApp extends ConsumerWidget {
+  const PaesApp({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    // Se activa desde el inicio para recibir compras pendientes o restauradas.
+    ref.watch(purchaseProvider);
+
+    return MaterialApp(
+      title: 'PAES App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1565C0)),
+      ),
+      home: const HomeScreen(),
+    );
+  }
+}

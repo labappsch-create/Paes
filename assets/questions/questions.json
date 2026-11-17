@@ -1,0 +1,100 @@
+[
+  {
+    "id": "historia_001",
+    "prueba": "historia",
+    "enunciado": "El proceso de transición a la democracia en Chile a fines de los años 80 se caracterizó principalmente por:",
+    "alternativas": [
+      "Negociación política y plebiscito de 1988",
+      "Revolución armada",
+      "Intervención extranjera directa",
+      "Colapso económico total"
+    ],
+    "correcta": 0,
+    "explicacion": "La transición se dio por acuerdos políticos y el triunfo del No en el plebiscito de 1988."
+  },
+  {
+    "id": "ciencias_001",
+    "prueba": "ciencias",
+    "enunciado": "En un circuito en serie con dos resistencias de 4 Ω y 6 Ω y una batería de 10 V, la corriente total es:",
+    "alternativas": ["1 A", "0,5 A", "2 A", "1,67 A"],
+    "correcta": 0,
+    "explicacion": "La resistencia total es 10 Ω, entonces I = V / R = 10 / 10 = 1 A."
+  },
+  {
+    "id": "ciencias_002",
+    "prueba": "ciencias",
+    "enunciado": "El pH de una solución 0,01 M de HCl es aproximadamente:",
+    "alternativas": ["1", "2", "3", "12"],
+    "correcta": 1,
+    "explicacion": "El HCl es un ácido fuerte, por lo que [H+] ≈ 0,01 M y pH = 2."
+  },
+  {
+    "id": "ciencias_003",
+    "prueba": "ciencias",
+    "enunciado": "Durante la mitosis, la separación de las cromátidas hermanas ocurre en:",
+    "alternativas": ["Profase", "Metafase", "Anafase", "Telofase"],
+    "correcta": 2,
+    "explicacion": "En la anafase las cromátidas hermanas se separan y se dirigen hacia los polos de la célula."
+  },
+  {
+    "id": "m1_001",
+    "prueba": "m1",
+    "enunciado": "Un producto aumenta 20% y luego baja 15%. El precio final respecto al original es:",
+    "alternativas": ["+2%", "+5%", "-2%", "igual"],
+    "correcta": 0,
+    "explicacion": "1,20 × 0,85 = 1,02, es decir, un aumento neto de 2%."
+  },
+  {
+    "id": "m1_002",
+    "prueba": "m1",
+    "enunciado": "Si 3/5 de un número es igual a 2/3 de 90, el número es:",
+    "alternativas": ["75", "90", "100", "108"],
+    "correcta": 2,
+    "explicacion": "2/3 de 90 es 60. Entonces 3/5 x = 60 y x = 100."
+  },
+  {
+    "id": "m1_003",
+    "prueba": "m1",
+    "enunciado": "La media de 5 números es 12. Si se agrega un sexto número y la nueva media es 13, el número agregado es:",
+    "alternativas": ["15", "18", "20", "22"],
+    "correcta": 1,
+    "explicacion": "La suma original es 60. La nueva suma es 6 × 13 = 78, por lo que el número agregado es 78 − 60 = 18."
+  },
+  {
+    "id": "m1_004",
+    "prueba": "m1",
+    "enunciado": "Un cilindro tiene radio 3 cm y altura 10 cm. Si se duplica el radio y se reduce la altura a la mitad, el volumen:",
+    "alternativas": [
+      "se duplica",
+      "se cuadruplica",
+      "queda igual",
+      "se reduce a la mitad"
+    ],
+    "correcta": 0,
+    "explicacion": "V = π·r²·h. El volumen original es π·9·10 = 90π. El nuevo es π·36·5 = 180π, el doble."
+  },
+  {
+    "id": "m2_001",
+    "prueba": "m2",
+    "enunciado": "La ecuación x² − 5x + 6 = 0 tiene raíces:",
+    "alternativas": ["2 y 3", "1 y 6", "−2 y −3", "5 y 6"],
+    "correcta": 0,
+    "explicacion": "Se factoriza como (x − 2)(x − 3) = 0, por lo que las raíces son 2 y 3."
+  },
+  {
+    "id": "m2_002",
+    "prueba": "m2",
+    "enunciado": "El vértice de la parábola y = 2x² − 8x + 5 es:",
+    "alternativas": ["(2, −3)", "(2, 3)", "(−2, −3)", "(4, −3)"],
+    "correcta": 0,
+    "explicacion": "x = −b / 2a = 8 / 4 = 2. Luego y = 2·4 − 16 + 5 = −3."
+  },
+  {
+    "id": "m2_003",
+    "prueba": "m2",
+    "enunciado": "En un triángulo rectángulo, sen(30°) = 1/2. Si el cateto opuesto a ese ángulo mide 6 cm, la hipotenusa mide:",
+    "alternativas": ["12 cm", "10 cm", "8 cm", "6√3 cm"],
+    "correcta": 0,
+    "explicacion": "sen = opuesto / hipotenusa, entonces 1/2 = 6 / h y h = 12 cm."
+  }
+]
