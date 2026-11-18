@@ -30,11 +30,8 @@ class PaesApp extends ConsumerWidget {
     return MaterialApp(
       title: appName,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        // Color neutro para la app; cada prueba tiene el suyo (prueba_style.dart).
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.neutral),
-      ),
+      // Colores del logo de Retopaes (prueba_style.dart).
+      theme: appTheme(),
       home: const HomeScreen(),
     );
   }

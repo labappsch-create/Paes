@@ -47,8 +47,8 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
   las 30. El simulacro gratis se marca como usado al tocar «Comenzar» (aunque no se termine),
   para que no se pueda repetir. Luego, pago único "Acceso Completo PAES" ($4.000 CLP).
 - Historial de ensayos.
-- **Colores por prueba** (`lib/presentation/prueba_style.dart`): la app usa un gris azulado neutro y
-  cada prueba tiene su color e ícono en su tarjeta, sus botones y la barra del ensayo: Lectora
+- **Colores** (`lib/presentation/prueba_style.dart`): la app usa los colores del logo (azul marino
+  en botones y textos destacados; naranjo como acento en bordes y avisos) y cada prueba tiene su color e ícono en su tarjeta, sus botones y la barra del ensayo: Lectora
   granate, M1 azul, M2 azul oscuro, Ciencias verde (Biología verde, Física naranjo, Química morado)
   e Historia café. Las respuestas correctas e incorrectas llevan ✓ y ✗, no solo color.
 

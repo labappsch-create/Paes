@@ -4,14 +4,19 @@ import '../domain/prueba.dart';
 
 /// Colores de la app, en un solo lugar.
 ///
-/// - La app en general usa un color neutro (gris azulado).
+/// - La app en general usa los colores del logo: azul marino y naranjo.
 /// - Cada prueba tiene su color, que se usa solo en lo que la identifica:
 ///   su tarjeta y botones en el inicio, y la barra de arriba durante el ensayo.
 /// - Todos los colores de prueba son lo bastante oscuros para que el texto
 ///   blanco sobre ellos se lea bien.
 abstract final class AppColors {
-  /// Color neutro de la app (inicio, historial, pago).
-  static const neutral = Color(0xFF455A64);
+  /// Colores del logo de Retopaes: azul marino (color principal de la app:
+  /// botones, barra y textos destacados) y naranjo (acentos: bordes, avisos).
+  static const azulLogo = Color(0xFF022658);
+  static const naranjoLogo = Color(0xFFFC5D07);
+
+  /// Color general de la app (inicio, historial, pago).
+  static const neutral = azulLogo;
 
   static const lectora = Color(0xFF8E1B2E); // rojo granate
   static const m1 = Color(0xFF1E6FD9); // azul
@@ -67,3 +72,23 @@ ThemeData pruebaTheme(ThemeData base, Color color) => base.copyWith(
     linearTrackColor: Colors.white24,
   ),
 );
+
+/// Tema general de la app con los colores del logo. El naranjo se usa solo como
+/// acento (bordes, íconos y fondos suaves), nunca como fondo de texto blanco,
+/// porque así no se leería bien.
+ThemeData appTheme() {
+  final base = ColorScheme.fromSeed(
+    seedColor: AppColors.azulLogo,
+    primary: AppColors.azulLogo,
+    tertiary: AppColors.naranjoLogo,
+  );
+  return ThemeData(
+    useMaterial3: true,
+    colorScheme: base.copyWith(
+      secondaryContainer: const Color(0xFFFFE6D9),
+      onSecondaryContainer: const Color(0xFF3A1600),
+      tertiaryContainer: const Color(0xFFFFE6D9),
+      onTertiaryContainer: const Color(0xFF3A1600),
+    ),
+  );
+}
