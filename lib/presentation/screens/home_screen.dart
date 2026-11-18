@@ -6,6 +6,7 @@ import 'package:material_ui/material_ui.dart';
 import '../../core/constants.dart';
 import '../../domain/ciencias_modulo.dart';
 import '../../domain/exam_attempt.dart';
+import '../../domain/lectora_session.dart';
 import '../../domain/prueba.dart';
 import '../../domain/question.dart';
 import '../../domain/quiz_item.dart';
@@ -216,7 +217,11 @@ class _PruebaCard extends StatelessWidget {
   }
 
   void _openQuiz(BuildContext context, QuizMode mode, int count) {
-    final items = buildSession(pool, count, random: Random());
+    final random = Random();
+    // En Lectora, las preguntas de un mismo texto van juntas, como en la prueba.
+    final items = prueba == Prueba.lectora
+        ? buildLectoraSession(pool, count, random: random)
+        : buildSession(pool, count, random: random);
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(prueba: prueba, mode: mode, items: items),

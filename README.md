@@ -9,6 +9,9 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
   En Ciencias se elige el módulo (Biología, Física, Química o Técnico Profesional), como en la
   prueba real: 54 preguntas del Módulo Común (18 por eje) y luego 26 del módulo elegido
   (en Técnico Profesional: 9 de Biología, 9 de Física y 8 de Química).
+- En **Competencia Lectora** (práctica y simulacro) las preguntas de un mismo texto van juntas,
+  en orden Localizar → Interpretar → Evaluar, con el aviso «Texto 2 · Preguntas 9 a 16». Cerca
+  de 1 de cada 7 preguntas es con imagen (en el simulacro de 65: 7 textos completos y 9 imágenes).
 - **Puntaje estimado** de 100 a 1000. Es una fórmula propia y aproximada, no usa tablas del DEMRE.
 - **Ver explicación**: abre una búsqueda en Google con la pregunta (necesita internet).
 - **30 preguntas gratis** en total. Luego, pago único "Acceso Completo PAES" ($4.000 CLP).

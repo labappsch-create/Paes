@@ -315,6 +315,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
   /// Texto sobre la pregunta: prueba, y en Ciencias la parte de la prueba y el eje.
   String _sectionLabel() {
+    final texto = _item.question.texto;
+    if (texto != null && texto.isNotEmpty) return _textoLabel(texto);
     final comun = widget.comunCount;
     if (comun == null) return widget.prueba.label;
     final parte = _index < comun ? 'Módulo Común' : 'Módulo ${widget.modulo}';
@@ -322,6 +324,33 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     return eje == null
         ? '${widget.prueba.label} · $parte'
         : '${widget.prueba.label} · $parte · $eje';
+  }
+
+  /// En Lectora: «Texto 2 · Preguntas 9 a 16», como en el cuadernillo real.
+  String _textoLabel(String texto) {
+    final items = widget.items;
+    var inicio = _index;
+    while (inicio > 0 && items[inicio - 1].question.texto == texto) {
+      inicio--;
+    }
+    var fin = _index;
+    while (fin < items.length - 1 && items[fin + 1].question.texto == texto) {
+      fin++;
+    }
+    // Número del texto: cuántos textos empiezan en esta posición o antes.
+    var numero = 0;
+    for (var i = 0; i <= inicio; i++) {
+      final t = items[i].question.texto;
+      final empieza =
+          t != null &&
+          t.isNotEmpty &&
+          (i == 0 || items[i - 1].question.texto != t);
+      if (empieza) numero++;
+    }
+    final preguntas = inicio == fin
+        ? 'Pregunta ${inicio + 1}'
+        : 'Preguntas ${inicio + 1} a ${fin + 1}';
+    return '${widget.prueba.label} · Texto $numero · $preguntas';
   }
 
   _OptionState _optionState(QuizItem item, int i) {
