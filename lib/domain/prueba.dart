@@ -21,6 +21,13 @@ enum Prueba {
   /// Tiempo del simulacro, en minutos.
   final int minutes;
 
+  /// Preguntas de experimentación: como en la prueba real, 5 preguntas de
+  /// cada simulacro no cuentan para el puntaje y no se sabe cuáles son.
+  static const experimentalQuestions = 5;
+
+  /// Preguntas del simulacro que cuentan para el puntaje (por ejemplo, 60 de 65).
+  int get scoredQuestions => simulacroQuestions - experimentalQuestions;
+
   static Prueba fromKey(String key) =>
       Prueba.values.firstWhere((p) => p.key == key);
 }

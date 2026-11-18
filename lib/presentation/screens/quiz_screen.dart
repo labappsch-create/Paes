@@ -260,8 +260,10 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       return;
     }
     // En práctica se corrige solo lo respondido.
-    // En simulacro, lo que quedó en blanco cuenta como no acertado.
-    final scored = _isPractice ? answered : widget.items;
+    // En simulacro, lo que quedó en blanco cuenta como no acertado, y las
+    // preguntas de experimentación no cuentan (como en la prueba real).
+    final reviewed = _isPractice ? answered : widget.items;
+    final scored = reviewed.where((i) => !i.experimental).toList();
     final correct = scored.where((i) => i.isCorrect).length;
     final attempt = ExamAttempt(
       date: DateTime.now(),
@@ -275,7 +277,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     ref.read(attemptsProvider.notifier).add(attempt);
     Navigator.of(context).pushReplacement(
       MaterialPageRoute<void>(
-        builder: (_) => ResultsScreen(attempt: attempt, items: scored),
+        builder: (_) => ResultsScreen(attempt: attempt, items: reviewed),
       ),
     );
   }

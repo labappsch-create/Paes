@@ -229,8 +229,7 @@ class _PruebaCard extends StatelessWidget {
     }
     final minutes = prueba.minutes;
     final detalle = modulo == null
-        ? 'La prueba oficial tiene ${prueba.simulacroQuestions} preguntas. '
-              'Este simulacro usa las que hay disponibles hoy.'
+        ? ''
         : 'Módulo ${modulo.label}: primero ${comunPorEje * cienciasEjes.length} '
               'preguntas del Módulo Común ($comunPorEje de Biología, '
               '$comunPorEje de Física y $comunPorEje de Química) y luego '
@@ -241,10 +240,16 @@ class _PruebaCard extends StatelessWidget {
     final ok = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
+        // Se puede desplazar si el texto no cabe en pantallas chicas.
+        scrollable: true,
         title: Text(modulo == null ? 'Simulacro' : 'Simulacro de Ciencias'),
         content: Text(
           'Tendrás $minutes minutos (tiempo oficial) para $total '
-          '${total == 1 ? 'pregunta' : 'preguntas'}.\n\n$detalle'
+          '${total == 1 ? 'pregunta' : 'preguntas'}.'
+          '${detalle.isEmpty ? '' : '\n\n$detalle'}'
+          '\n\nComo en la prueba real, ${Prueba.experimentalQuestions} preguntas '
+          'elegidas al azar son de experimentación y no cuentan para el '
+          'puntaje. Al final sabrás cuáles fueron.'
           '${esGratis ? '\n\nEste es tu simulacro gratis: tienes solo uno. '
                     'Se usará al tocar «Comenzar», aunque no lo termines.' : ''}',
         ),
@@ -269,7 +274,9 @@ class _PruebaCard extends StatelessWidget {
       _openQuiz(context, QuizMode.simulacro, count);
       return;
     }
-    final items = buildCienciasSimulacro(pool, modulo, random: Random());
+    final random = Random();
+    final items = buildCienciasSimulacro(pool, modulo, random: random);
+    markExperimental(items, Prueba.experimentalQuestions, random: random);
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(
@@ -289,6 +296,9 @@ class _PruebaCard extends StatelessWidget {
     final items = prueba == Prueba.lectora
         ? buildLectoraSession(pool, count, random: random)
         : buildSession(pool, count, random: random);
+    if (mode == QuizMode.simulacro) {
+      markExperimental(items, Prueba.experimentalQuestions, random: random);
+    }
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(prueba: prueba, mode: mode, items: items),

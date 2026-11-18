@@ -22,7 +22,12 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
 - En **Competencia Lectora** (práctica y simulacro) las preguntas de un mismo texto van juntas,
   en orden Localizar → Interpretar → Evaluar, con el aviso «Texto 2 · Preguntas 9 a 16». Cerca
   de 1 de cada 7 preguntas es con imagen (en el simulacro de 65: 7 textos completos y 9 imágenes).
-- **Puntaje estimado** de 100 a 1000. Es una fórmula propia y aproximada, no usa tablas del DEMRE.
+- **Puntaje estimado** de 100 a 1000, que imita la forma del puntaje real
+  (`lib/domain/score_calculator.dart`): 0 correctas = 100 y solo todas correctas = 1000; las
+  primeras y las últimas respuestas correctas valen más que las del medio (curva logística); las
+  malas no restan. Como en la prueba real, en cada simulacro 5 preguntas elegidas al azar son de
+  experimentación y no cuentan (por ejemplo, M1 cuenta 60 de 65); en los resultados se muestra
+  cuáles fueron. Es una fórmula propia: no usa las tablas del DEMRE.
 - **Ver explicación**: abre una búsqueda en Google con la pregunta (necesita internet).
 - **Gratis**: 30 preguntas de Práctica (en total, sumando todas las pruebas) y, además,
   **1 simulacro completo** de cualquier prueba. Las respuestas del simulacro no descuentan de

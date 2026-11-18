@@ -17,6 +17,11 @@ class ResultsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    // Números de las preguntas que no contaron para el puntaje.
+    final experimentales = [
+      for (var i = 0; i < items.length; i++)
+        if (items[i].experimental) i + 1,
+    ];
     return Theme(
       data: pruebaTheme(theme, attempt.prueba.color),
       child: Scaffold(
@@ -52,6 +57,16 @@ class ResultsScreen extends StatelessWidget {
                         style: theme.textTheme.titleMedium,
                       ),
                       const SizedBox(height: 8),
+                      if (experimentales.isNotEmpty) ...[
+                        Text(
+                          '${experimentales.length} preguntas de experimentación no '
+                          'contaron para el puntaje (como en la prueba real): '
+                          '${experimentales.join(', ')}.',
+                          style: theme.textTheme.bodyMedium,
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 8),
+                      ],
                       Text(
                         'Es una estimación propia y aproximada, no es el puntaje oficial.',
                         style: theme.textTheme.bodySmall,
@@ -116,6 +131,17 @@ class _ReviewTile extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 Text('Pregunta $number', style: theme.textTheme.titleSmall),
+                if (item.experimental) ...[
+                  const SizedBox(width: 8),
+                  Flexible(
+                    child: Text(
+                      '· No contó (experimentación)',
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: theme.colorScheme.outline,
+                      ),
+                    ),
+                  ),
+                ],
               ],
             ),
             const SizedBox(height: 8),

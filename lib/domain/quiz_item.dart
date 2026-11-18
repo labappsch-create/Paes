@@ -25,6 +25,10 @@ class QuizItem {
   /// Lugar (en pantalla) de la alternativa elegida. Null si no respondió.
   int? selected;
 
+  /// Pregunta de experimentación: se responde igual, pero no cuenta para el
+  /// puntaje. Solo se revela en los resultados.
+  bool experimental = false;
+
   /// Alternativas en el orden que se muestran.
   List<String> get options => [for (final i in order) question.alternativas[i]];
 
@@ -45,4 +49,18 @@ List<QuizItem> buildSession(
 }) {
   final chosen = List<Question>.of(pool)..shuffle(random);
   return [for (final q in chosen.take(count)) QuizItem.shuffled(q, random)];
+}
+
+/// Marca al azar [count] preguntas del simulacro como de experimentación,
+/// como en la prueba real. Si hay muy pocas preguntas, no marca ninguna.
+void markExperimental(
+  List<QuizItem> items,
+  int count, {
+  required Random random,
+}) {
+  if (items.length <= count) return;
+  final indices = List<int>.generate(items.length, (i) => i)..shuffle(random);
+  for (final i in indices.take(count)) {
+    items[i].experimental = true;
+  }
 }
