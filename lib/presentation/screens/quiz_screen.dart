@@ -10,6 +10,7 @@ import '../../domain/prueba.dart';
 import '../../domain/quiz_item.dart';
 import '../../domain/score_calculator.dart';
 import '../providers.dart';
+import '../prueba_style.dart';
 import '../widgets/question_image.dart';
 import '../widgets/reading_text.dart';
 import 'explanation_screen.dart';
@@ -319,137 +320,178 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     final isLast = _index == total - 1;
     final showFeedback = _isPractice && item.isAnswered;
 
+    final ejeColor = widget.prueba == Prueba.ciencias
+        ? cienciasEjeColor(item.question.eje)
+        : null;
+    final redClock = _remaining <= const Duration(minutes: _redClockMinutes);
+
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, _) {
         if (!didPop) _confirmExit();
       },
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Pregunta ${_index + 1} de $total'),
-          actions: [
-            if (!_isPractice)
-              Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: Center(
-                  child: Text(
-                    _formatRemaining(),
-                    semanticsLabel: 'Tiempo restante ${_formatRemaining()}',
-                    style:
-                        _remaining <= const Duration(minutes: _redClockMinutes)
-                        ? theme.textTheme.titleMedium?.copyWith(
-                            color: theme.colorScheme.error,
-                            fontWeight: FontWeight.bold,
-                          )
-                        : theme.textTheme.titleMedium,
+      // La barra de arriba toma el color de la prueba.
+      child: Theme(
+        data: pruebaTheme(theme, widget.prueba.color),
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text('Pregunta ${_index + 1} de $total'),
+            actions: [
+              if (!_isPractice)
+                Padding(
+                  padding: const EdgeInsets.only(right: 16),
+                  child: Center(
+                    // En los últimos minutos el reloj va en rojo sobre fondo blanco,
+                    // para que se note sobre cualquier color de barra.
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 2,
+                      ),
+                      decoration: redClock
+                          ? BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(6),
+                            )
+                          : null,
+                      child: Text(
+                        _formatRemaining(),
+                        semanticsLabel: 'Tiempo restante ${_formatRemaining()}',
+                        style: theme.textTheme.titleMedium?.copyWith(
+                          color: redClock
+                              ? theme.colorScheme.error
+                              : Colors.white,
+                          fontWeight: redClock ? FontWeight.bold : null,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-          ],
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(4),
-            child: LinearProgressIndicator(value: (_index + 1) / total),
+            ],
+            bottom: PreferredSize(
+              preferredSize: const Size.fromHeight(4),
+              child: LinearProgressIndicator(value: (_index + 1) / total),
+            ),
           ),
-        ),
-        body: SafeArea(
-          child: Column(
-            children: [
-              Expanded(
-                child: ListView(
-                  controller: _scroll,
-                  padding: const EdgeInsets.all(16),
-                  children: [
-                    Text(_sectionLabel(), style: theme.textTheme.labelLarge),
-                    const SizedBox(height: 8),
-                    ReadingText(
-                      key: ValueKey(item.question.id),
-                      text: item.question.texto,
-                    ),
-                    if (item.question.isSuficiencia) const _SuficienciaHelp(),
-                    Text(
-                      item.question.enunciado,
-                      style: theme.textTheme.titleMedium,
-                    ),
-                    QuestionImage(path: item.question.imagen),
-                    const SizedBox(height: 4),
-                    for (var i = 0; i < item.options.length; i++)
-                      _OptionTile(
-                        letter: String.fromCharCode(65 + i),
-                        text: item.options[i],
-                        state: _optionState(item, i),
-                        onTap: () => _select(i),
-                      ),
-                    if (showFeedback) ...[
-                      const SizedBox(height: 8),
-                      Text(
-                        item.isCorrect ? '¡Correcto!' : 'Incorrecto',
-                        style: theme.textTheme.titleMedium?.copyWith(
-                          color: item.isCorrect
-                              ? Colors.green
-                              : theme.colorScheme.error,
-                        ),
-                      ),
-                      if (item.question.explicacion.isNotEmpty)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 4),
-                          child: Text(item.question.explicacion),
-                        ),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: TextButton.icon(
-                          icon: const Icon(Icons.travel_explore),
-                          label: const Text('Ver explicación'),
-                          onPressed: () => Navigator.of(context).push(
-                            MaterialPageRoute<void>(
-                              builder: (_) => ExplanationScreen(
-                                enunciado: item.question.enunciado,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: _isPractice
-                    ? SizedBox(
-                        width: double.infinity,
-                        child: FilledButton(
-                          // En práctica, primero hay que responder.
-                          onPressed: item.isAnswered ? _next : null,
-                          child: Text(isLast ? 'Terminar' : 'Siguiente'),
-                        ),
-                      )
-                    : Row(
+          body: SafeArea(
+            child: Column(
+              children: [
+                Expanded(
+                  child: ListView(
+                    controller: _scroll,
+                    padding: const EdgeInsets.all(16),
+                    children: [
+                      Row(
                         children: [
-                          Expanded(
-                            child: OutlinedButton(
-                              onPressed: _index == 0
-                                  ? null
-                                  : () => _goTo(_index - 1),
-                              child: const Text('Anterior'),
+                          // Punto con el color de la prueba (o del eje, en Ciencias).
+                          Container(
+                            width: 10,
+                            height: 10,
+                            decoration: BoxDecoration(
+                              color: ejeColor ?? widget.prueba.color,
+                              shape: BoxShape.circle,
                             ),
                           ),
                           const SizedBox(width: 8),
-                          IconButton.outlined(
-                            tooltip: 'Ver todas las preguntas',
-                            icon: const Icon(Icons.grid_view),
-                            onPressed: _openMap,
-                          ),
-                          const SizedBox(width: 8),
                           Expanded(
-                            child: FilledButton(
-                              onPressed: _next,
-                              child: Text(isLast ? 'Entregar' : 'Siguiente'),
+                            child: Text(
+                              _sectionLabel(),
+                              style: theme.textTheme.labelLarge,
                             ),
                           ),
                         ],
                       ),
-              ),
-            ],
+                      const SizedBox(height: 8),
+                      ReadingText(
+                        key: ValueKey(item.question.id),
+                        text: item.question.texto,
+                      ),
+                      if (item.question.isSuficiencia) const _SuficienciaHelp(),
+                      Text(
+                        item.question.enunciado,
+                        style: theme.textTheme.titleMedium,
+                      ),
+                      QuestionImage(path: item.question.imagen),
+                      const SizedBox(height: 4),
+                      for (var i = 0; i < item.options.length; i++)
+                        _OptionTile(
+                          letter: String.fromCharCode(65 + i),
+                          text: item.options[i],
+                          state: _optionState(item, i),
+                          onTap: () => _select(i),
+                        ),
+                      if (showFeedback) ...[
+                        const SizedBox(height: 8),
+                        Text(
+                          item.isCorrect ? '¡Correcto!' : 'Incorrecto',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            color: item.isCorrect
+                                ? AppColors.correcto
+                                : theme.colorScheme.error,
+                          ),
+                        ),
+                        if (item.question.explicacion.isNotEmpty)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 4),
+                            child: Text(item.question.explicacion),
+                          ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: TextButton.icon(
+                            icon: const Icon(Icons.travel_explore),
+                            label: const Text('Ver explicación'),
+                            onPressed: () => Navigator.of(context).push(
+                              MaterialPageRoute<void>(
+                                builder: (_) => ExplanationScreen(
+                                  enunciado: item.question.enunciado,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: _isPractice
+                      ? SizedBox(
+                          width: double.infinity,
+                          child: FilledButton(
+                            // En práctica, primero hay que responder.
+                            onPressed: item.isAnswered ? _next : null,
+                            child: Text(isLast ? 'Terminar' : 'Siguiente'),
+                          ),
+                        )
+                      : Row(
+                          children: [
+                            Expanded(
+                              child: OutlinedButton(
+                                onPressed: _index == 0
+                                    ? null
+                                    : () => _goTo(_index - 1),
+                                child: const Text('Anterior'),
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            IconButton.outlined(
+                              tooltip: 'Ver todas las preguntas',
+                              icon: const Icon(Icons.grid_view),
+                              onPressed: _openMap,
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: FilledButton(
+                                onPressed: _next,
+                                child: Text(isLast ? 'Entregar' : 'Siguiente'),
+                              ),
+                            ),
+                          ],
+                        ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -527,14 +569,29 @@ class _OptionTile extends StatelessWidget {
     final Color? background = switch (state) {
       _OptionState.normal => null,
       _OptionState.selected => scheme.primaryContainer,
-      _OptionState.correct => Colors.green.withValues(alpha: 0.25),
+      _OptionState.correct => AppColors.correcto.withValues(alpha: 0.18),
       _OptionState.wrong => scheme.errorContainer,
+    };
+    // ✓ y ✗ además del color, para que se entienda sin distinguir colores.
+    final Widget? mark = switch (state) {
+      _OptionState.correct => const Icon(
+        Icons.check_circle,
+        color: AppColors.correcto,
+        semanticLabel: 'Correcta',
+      ),
+      _OptionState.wrong => Icon(
+        Icons.cancel,
+        color: scheme.error,
+        semanticLabel: 'Incorrecta',
+      ),
+      _ => null,
     };
     return Card(
       color: background,
       child: ListTile(
         leading: CircleAvatar(child: Text(letter)),
         title: Text(text),
+        trailing: mark,
         onTap: onTap,
       ),
     );

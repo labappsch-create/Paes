@@ -11,6 +11,7 @@ import '../../domain/prueba.dart';
 import '../../domain/question.dart';
 import '../../domain/quiz_item.dart';
 import '../providers.dart';
+import '../prueba_style.dart';
 import 'history_screen.dart';
 import 'paywall_screen.dart';
 import 'quiz_screen.dart';
@@ -121,41 +122,78 @@ class _PruebaCard extends StatelessWidget {
     final available = pool.length;
     final simulacroCount = min(prueba.simulacroQuestions, available);
 
+    final color = prueba.color;
     return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      clipBehavior: Clip.antiAlias,
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(prueba.label, style: theme.textTheme.titleLarge),
-            const SizedBox(height: 4),
-            Text(
-              available == 0
-                  ? 'Próximamente: aún no hay preguntas.'
-                  : '$available ${available == 1 ? 'pregunta disponible' : 'preguntas disponibles'}',
-              style: theme.textTheme.bodyMedium,
-            ),
-            const SizedBox(height: 12),
-            Row(
-              children: [
-                Expanded(
-                  child: FilledButton(
-                    onPressed: available == 0
-                        ? null
-                        : () => _startPractice(context),
-                    child: const Text('Práctica'),
-                  ),
+            // Franja con el color de la prueba.
+            Container(width: 8, color: color),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: color,
+                          foregroundColor: Colors.white,
+                          child: Icon(prueba.icon),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            prueba.label,
+                            style: theme.textTheme.titleLarge,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      available == 0
+                          ? 'Próximamente: aún no hay preguntas.'
+                          : '$available ${available == 1 ? 'pregunta disponible' : 'preguntas disponibles'}',
+                      style: theme.textTheme.bodyMedium,
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: FilledButton(
+                            style: FilledButton.styleFrom(
+                              backgroundColor: color,
+                              foregroundColor: Colors.white,
+                            ),
+                            onPressed: available == 0
+                                ? null
+                                : () => _startPractice(context),
+                            child: const Text('Práctica'),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              foregroundColor: color,
+                              side: BorderSide(color: color),
+                            ),
+                            onPressed: available == 0
+                                ? null
+                                : () =>
+                                      _startSimulacro(context, simulacroCount),
+                            child: const Text('Simulacro'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: OutlinedButton(
-                    onPressed: available == 0
-                        ? null
-                        : () => _startSimulacro(context, simulacroCount),
-                    child: const Text('Simulacro'),
-                  ),
-                ),
-              ],
+              ),
             ),
           ],
         ),
@@ -277,9 +315,22 @@ class _PruebaCard extends StatelessWidget {
               onPressed: () => Navigator.of(context).pop(m),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 6),
-                child: Text(
-                  m.label,
-                  style: Theme.of(context).textTheme.titleMedium,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 14,
+                      height: 14,
+                      decoration: BoxDecoration(
+                        color: cienciasEjeColor(m.eje) ?? AppColors.ciencias,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Text(
+                      m.label,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ],
                 ),
               ),
             ),

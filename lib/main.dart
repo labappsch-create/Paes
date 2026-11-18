@@ -3,6 +3,7 @@ import 'package:material_ui/material_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'presentation/providers.dart';
+import 'presentation/prueba_style.dart';
 import 'presentation/purchase_controller.dart';
 import 'presentation/screens/home_screen.dart';
 
@@ -30,7 +31,8 @@ class PaesApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1565C0)),
+        // Color neutro para la app; cada prueba tiene el suyo (prueba_style.dart).
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.neutral),
       ),
       home: const HomeScreen(),
     );

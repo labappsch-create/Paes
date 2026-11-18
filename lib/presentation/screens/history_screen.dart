@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
+import '../prueba_style.dart';
+
 import '../providers.dart';
 
 /// Lista de ensayos anteriores, del más reciente al más antiguo.
@@ -33,6 +35,11 @@ class HistoryScreen extends ConsumerWidget {
               itemBuilder: (context, i) {
                 final a = attempts[i];
                 return ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: a.prueba.color,
+                    foregroundColor: Colors.white,
+                    child: Icon(a.prueba.icon),
+                  ),
                   title: Text('${a.pruebaLabel} · ${a.mode.label}'),
                   subtitle: Text(
                     '${_formatDate(a.date)}\nAciertos: ${a.correct} de ${a.total}',

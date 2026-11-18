@@ -2,6 +2,7 @@ import 'package:material_ui/material_ui.dart';
 
 import '../../domain/exam_attempt.dart';
 import '../../domain/quiz_item.dart';
+import '../prueba_style.dart';
 import '../widgets/question_image.dart';
 import '../widgets/reading_text.dart';
 import 'explanation_screen.dart';
@@ -16,57 +17,63 @@ class ResultsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Resultados'),
-        automaticallyImplyLeading: false,
-      ),
-      body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.all(16),
-          children: [
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    Text(
-                      '${attempt.pruebaLabel} · ${attempt.mode.label}',
-                      style: theme.textTheme.titleMedium,
-                    ),
-                    const SizedBox(height: 12),
-                    Text(
-                      '${attempt.score}',
-                      style: theme.textTheme.displayMedium,
-                    ),
-                    Text('Puntaje estimado', style: theme.textTheme.titleSmall),
-                    const SizedBox(height: 12),
-                    Text(
-                      'Aciertos: ${attempt.correct} de ${attempt.total}',
-                      style: theme.textTheme.titleMedium,
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      'Es una estimación propia y aproximada, no es el puntaje oficial.',
-                      style: theme.textTheme.bodySmall,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
+    return Theme(
+      data: pruebaTheme(theme, attempt.prueba.color),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Resultados'),
+          automaticallyImplyLeading: false,
+        ),
+        body: SafeArea(
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      Text(
+                        '${attempt.pruebaLabel} · ${attempt.mode.label}',
+                        style: theme.textTheme.titleMedium,
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        '${attempt.score}',
+                        style: theme.textTheme.displayMedium,
+                      ),
+                      Text(
+                        'Puntaje estimado',
+                        style: theme.textTheme.titleSmall,
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        'Aciertos: ${attempt.correct} de ${attempt.total}',
+                        style: theme.textTheme.titleMedium,
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Es una estimación propia y aproximada, no es el puntaje oficial.',
+                        style: theme.textTheme.bodySmall,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(height: 16),
-            Text('Revisión', style: theme.textTheme.titleLarge),
-            const SizedBox(height: 8),
-            for (var i = 0; i < items.length; i++)
-              _ReviewTile(number: i + 1, item: items[i]),
-            const SizedBox(height: 16),
-            FilledButton(
-              onPressed: () =>
-                  Navigator.of(context).popUntil((route) => route.isFirst),
-              child: const Text('Volver al inicio'),
-            ),
-          ],
+              const SizedBox(height: 16),
+              Text('Revisión', style: theme.textTheme.titleLarge),
+              const SizedBox(height: 8),
+              for (var i = 0; i < items.length; i++)
+                _ReviewTile(number: i + 1, item: items[i]),
+              const SizedBox(height: 16),
+              FilledButton(
+                onPressed: () =>
+                    Navigator.of(context).popUntil((route) => route.isFirst),
+                child: const Text('Volver al inicio'),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -87,7 +94,7 @@ class _ReviewTile extends StatelessWidget {
     final color = !answered
         ? theme.colorScheme.outline
         : ok
-        ? Colors.green
+        ? AppColors.correcto
         : theme.colorScheme.error;
     final options = item.options;
 
