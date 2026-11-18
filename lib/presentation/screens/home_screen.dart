@@ -87,11 +87,20 @@ class _AccessBanner extends StatelessWidget {
       child: ListTile(
         leading: const Icon(Icons.lock_outline),
         title: Text(
-          'Preguntas gratis: te quedan ${access.freeLeft} de $freeQuestionLimit',
+          'Práctica gratis: te quedan ${access.freeLeft} de $freeQuestionLimit preguntas',
+        ),
+        subtitle: Text(
+          access.freeSimulacroUsed
+              ? 'Simulacro gratis: ya lo usaste'
+              : 'Simulacro gratis: tienes 1 disponible',
         ),
         trailing: TextButton(
           onPressed: () => Navigator.of(context).push(
-            MaterialPageRoute<bool>(builder: (_) => const PaywallScreen()),
+            MaterialPageRoute<bool>(
+              builder: (_) => const PaywallScreen(
+                message: 'Desbloquea todas las preguntas y simulacros',
+              ),
+            ),
           ),
           child: const Text('Desbloquear'),
         ),
@@ -161,6 +170,20 @@ class _PruebaCard extends StatelessWidget {
   }
 
   Future<void> _startSimulacro(BuildContext context, int count) async {
+    final container = ProviderScope.containerOf(context, listen: false);
+    var access = container.read(accessProvider);
+    if (!access.canStartSimulacro) {
+      final bought = await Navigator.of(context).push<bool>(
+        MaterialPageRoute<bool>(
+          builder: (_) =>
+              const PaywallScreen(message: 'Ya usaste tu simulacro gratis'),
+        ),
+      );
+      if (!context.mounted) return;
+      access = container.read(accessProvider);
+      if (bought != true && !access.canStartSimulacro) return;
+    }
+    final esGratis = access.freeSimulacroAvailable;
     CienciasModulo? modulo;
     if (prueba == Prueba.ciencias) {
       modulo = await _askModulo(context);
@@ -183,7 +206,9 @@ class _PruebaCard extends StatelessWidget {
         title: Text(modulo == null ? 'Simulacro' : 'Simulacro de Ciencias'),
         content: Text(
           'Tendrás $minutes minutos (tiempo oficial) para $total '
-          '${total == 1 ? 'pregunta' : 'preguntas'}.\n\n$detalle',
+          '${total == 1 ? 'pregunta' : 'preguntas'}.\n\n$detalle'
+          '${esGratis ? '\n\nEste es tu simulacro gratis: tienes solo uno. '
+                    'Se usará al tocar «Comenzar», aunque no lo termines.' : ''}',
         ),
         actions: [
           TextButton(
@@ -198,6 +223,10 @@ class _PruebaCard extends StatelessWidget {
       ),
     );
     if (ok != true || !context.mounted) return;
+    if (esGratis) {
+      await container.read(accessProvider.notifier).useFreeSimulacro();
+      if (!context.mounted) return;
+    }
     if (modulo == null) {
       _openQuiz(context, QuizMode.simulacro, count);
       return;

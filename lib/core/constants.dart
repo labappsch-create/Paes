@@ -1,7 +1,11 @@
 // Valores fijos de la aplicación.
 
-/// Cantidad total de preguntas gratis (suma de todas las pruebas).
+/// Preguntas gratis en Práctica (suma de todas las pruebas).
 const int freeQuestionLimit = 30;
+
+/// Además, se regala 1 simulacro completo (de cualquier prueba). Sus respuestas
+/// no descuentan de las preguntas gratis de Práctica.
+const int freeSimulacroLimit = 1;
 
 /// Identificador del producto en Google Play y App Store.
 /// Debe crearse con este mismo nombre como producto "no consumible"

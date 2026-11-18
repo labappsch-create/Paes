@@ -7,7 +7,10 @@ import '../purchase_controller.dart';
 
 /// Pantalla de pago. Se cierra devolviendo `true` si la compra se completó.
 class PaywallScreen extends ConsumerWidget {
-  const PaywallScreen({super.key});
+  const PaywallScreen({super.key, this.message});
+
+  /// Motivo que se muestra arriba. Si es null, se usa el de las preguntas gratis.
+  final String? message;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -32,7 +35,8 @@ class PaywallScreen extends ConsumerWidget {
               Icon(Icons.lock_open, size: 64, color: theme.colorScheme.primary),
               const SizedBox(height: 16),
               Text(
-                'Llegaste al límite de las $freeQuestionLimit preguntas gratis',
+                message ??
+                    'Llegaste al límite de las $freeQuestionLimit preguntas gratis',
                 style: theme.textTheme.headlineSmall,
                 textAlign: TextAlign.center,
               ),

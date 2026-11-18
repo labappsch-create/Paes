@@ -129,6 +129,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
   /// Si ya se usaron las preguntas gratis, se pide el pago antes de empezar.
   Future<void> _checkAccessAtStart() async {
+    // El simulacro se autoriza al comenzarlo (compra o simulacro gratis).
+    if (!_isPractice) return;
     if (ref.read(accessProvider).canAnswer) return;
     final ok = await _ensureAccess();
     if (!mounted) return;
@@ -159,7 +161,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     if (isFirstAnswer && !await _accessOrFinish()) return;
     if (!mounted || _finished) return;
     setState(() => item.selected = displayIndex);
-    if (isFirstAnswer) {
+    // Solo la Práctica descuenta de las preguntas gratis.
+    if (isFirstAnswer && _isPractice) {
       ref.read(accessProvider.notifier).registerAnswer();
     }
     if (_isPractice) _scrollToFeedback();
@@ -169,6 +172,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   /// muestra la pantalla de pago; si no paga, se termina el ensayo con lo
   /// respondido hasta ahora y devuelve false.
   Future<bool> _accessOrFinish() async {
+    // En el simulacro no hay límite de preguntas: ya se autorizó al comenzar.
+    if (!_isPractice) return true;
     if (ref.read(accessProvider).canAnswer) return true;
     final ok = await _ensureAccess();
     if (!mounted) return false;

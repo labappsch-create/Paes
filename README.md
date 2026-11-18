@@ -24,7 +24,10 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
   de 1 de cada 7 preguntas es con imagen (en el simulacro de 65: 7 textos completos y 9 imágenes).
 - **Puntaje estimado** de 100 a 1000. Es una fórmula propia y aproximada, no usa tablas del DEMRE.
 - **Ver explicación**: abre una búsqueda en Google con la pregunta (necesita internet).
-- **30 preguntas gratis** en total. Luego, pago único "Acceso Completo PAES" ($4.000 CLP).
+- **Gratis**: 30 preguntas de Práctica (en total, sumando todas las pruebas) y, además,
+  **1 simulacro completo** de cualquier prueba. Las respuestas del simulacro no descuentan de
+  las 30. El simulacro gratis se marca como usado al tocar «Comenzar» (aunque no se termine),
+  para que no se pueda repetir. Luego, pago único "Acceso Completo PAES" ($4.000 CLP).
 - Historial de ensayos.
 
 ## Preguntas

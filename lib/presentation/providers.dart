@@ -24,16 +24,37 @@ final questionsProvider = FutureProvider<List<Question>>(
   (ref) => ref.watch(questionRepositoryProvider).loadAll(),
 );
 
-/// Estado de acceso: cuántas preguntas gratis se usaron y si ya compró.
+/// Estado de acceso: cuántas preguntas gratis de Práctica se usaron,
+/// si ya se usó el simulacro gratis y si ya compró.
 class AccessState {
-  const AccessState({required this.purchased, required this.answered});
+  const AccessState({
+    required this.purchased,
+    required this.answered,
+    this.freeSimulacroUsed = false,
+  });
 
   final bool purchased;
   final int answered;
+  final bool freeSimulacroUsed;
 
   bool get canAnswer => purchased || answered < freeQuestionLimit;
   int get freeLeft =>
       (freeQuestionLimit - answered).clamp(0, freeQuestionLimit);
+
+  /// El próximo simulacro sería el gratis (no ha comprado y aún no lo usa).
+  bool get freeSimulacroAvailable => !purchased && !freeSimulacroUsed;
+
+  bool get canStartSimulacro => purchased || !freeSimulacroUsed;
+
+  AccessState copyWith({
+    bool? purchased,
+    int? answered,
+    bool? freeSimulacroUsed,
+  }) => AccessState(
+    purchased: purchased ?? this.purchased,
+    answered: answered ?? this.answered,
+    freeSimulacroUsed: freeSimulacroUsed ?? this.freeSimulacroUsed,
+  );
 }
 
 class AccessController extends Notifier<AccessState> {
@@ -43,19 +64,28 @@ class AccessController extends Notifier<AccessState> {
     return AccessState(
       purchased: storage.isPurchased,
       answered: storage.answeredCount,
+      freeSimulacroUsed: storage.freeSimulacroUsed,
     );
   }
 
-  /// Suma una pregunta respondida al contador global (todas las pruebas).
+  /// Suma una pregunta de Práctica al contador global (todas las pruebas).
   Future<void> registerAnswer() async {
     if (state.purchased) return;
     final next = state.answered + 1;
-    state = AccessState(purchased: false, answered: next);
+    state = state.copyWith(answered: next);
     await ref.read(storageProvider).setAnsweredCount(next);
   }
 
+  /// Marca como usado el simulacro gratis. Se llama al comenzarlo, para que
+  /// no se pueda repetir saliendo antes de terminar.
+  Future<void> useFreeSimulacro() async {
+    if (state.purchased || state.freeSimulacroUsed) return;
+    state = state.copyWith(freeSimulacroUsed: true);
+    await ref.read(storageProvider).setFreeSimulacroUsed();
+  }
+
   Future<void> markPurchased() async {
-    state = AccessState(purchased: true, answered: state.answered);
+    state = state.copyWith(purchased: true);
     await ref.read(storageProvider).setPurchased(true);
   }
 }
