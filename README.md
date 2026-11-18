@@ -45,7 +45,7 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
 - **Gratis**: 30 preguntas de Práctica (en total, sumando todas las pruebas) y, además,
   **1 simulacro completo** de cualquier prueba. Las respuestas del simulacro no descuentan de
   las 30. El simulacro gratis se marca como usado al tocar «Comenzar» (aunque no se termine),
-  para que no se pueda repetir. Luego, pago único "Acceso Completo PAES" ($4.000 CLP).
+  para que no se pueda repetir. Luego, pago único "Acceso Completo Retopaes" ($4.000 CLP).
 - Historial de ensayos.
 - **Colores** (`lib/presentation/prueba_style.dart`): la app usa los colores del logo (azul marino
   en botones y textos destacados; naranjo como acento en bordes y avisos) y cada prueba tiene su color e ícono en su tarjeta, sus botones y la barra del ensayo: Lectora
@@ -125,7 +125,7 @@ Igual conviene que un profesor revise una muestra antes de publicar.
 - `lib/presentation`: pantallas y estado (Riverpod).
 
 ## Antes de publicar en las tiendas
-1. Crear el producto **no consumible** con ID `acceso_completo_paes` ("Acceso Completo PAES", $4.000 CLP)
+1. Crear el producto **no consumible** con ID `acceso_completo_retopaes` ("Acceso Completo Retopaes", $4.000 CLP)
    en Google Play Console y en App Store Connect.
 2. Cambiar el identificador de la app (`cl.paesapp.paes_app`) por el definitivo.
 3. Agregar muchas más preguntas, revisadas por un profesor.

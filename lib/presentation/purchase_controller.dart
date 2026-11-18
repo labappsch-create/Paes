@@ -39,7 +39,7 @@ class PurchaseUiState {
   }
 }
 
-/// Maneja la compra única "Acceso Completo PAES" (producto no consumible):
+/// Maneja la compra única "Acceso Completo Retopaes" (producto no consumible):
 /// consulta el producto, compra, restaura y guarda el resultado.
 class PurchaseController extends Notifier<PurchaseUiState> {
   final InAppPurchase _iap = InAppPurchase.instance;

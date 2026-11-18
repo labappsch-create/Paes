@@ -16,8 +16,8 @@ const int freeSimulacroLimit = 1;
 
 /// Identificador del producto en Google Play y App Store.
 /// Debe crearse con este mismo nombre como producto "no consumible"
-/// (compra única) llamado "Acceso Completo PAES".
-const String fullAccessProductId = 'acceso_completo_paes';
+/// (compra única) llamado "Acceso Completo Retopaes".
+const String fullAccessProductId = 'acceso_completo_retopaes';
 
 /// Precio que se muestra si la tienda aún no entrega el precio real.
 const String fallbackPriceLabel = r'$4.000 CLP';

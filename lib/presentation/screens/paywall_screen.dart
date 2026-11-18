@@ -27,7 +27,7 @@ class PaywallScreen extends ConsumerWidget {
     return PopScope(
       canPop: !purchase.loading,
       child: Scaffold(
-        appBar: AppBar(title: const Text('Acceso Completo PAES')),
+        appBar: AppBar(title: const Text('Acceso Completo Retopaes')),
         body: SafeArea(
           child: ListView(
             padding: const EdgeInsets.all(24),
