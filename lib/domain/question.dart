@@ -12,6 +12,7 @@ class Question {
     this.explicacion = '',
     this.imagen,
     this.texto,
+    this.area,
   });
 
   final String id;
@@ -34,6 +35,9 @@ class Question {
   /// Texto de lectura asociado (Competencia Lectora). Null si no tiene.
   final String? texto;
 
+  /// Área temática del temario oficial (por ejemplo «Mecánica»). Null si no tiene.
+  final String? area;
+
   factory Question.fromJson(Map<String, dynamic> json) {
     final alternativas = List<String>.from(json['alternativas'] as List);
     final correcta = json['correcta'] as int;
@@ -52,6 +56,7 @@ class Question {
       explicacion: (json['explicacion'] as String?) ?? '',
       imagen: json['imagen'] as String?,
       texto: json['texto'] as String?,
+      area: json['area'] as String?,
     );
   }
 }

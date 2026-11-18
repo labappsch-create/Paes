@@ -26,7 +26,8 @@ Meta: **500 preguntas por prueba, 100 de ellas con imagen o gráfico**. En cada 
 Hay un archivo por prueba en `assets/questions/` (`m1.json`, `m2.json`, `ciencias.json`,
 `historia.json`, `lectora.json`). Las imágenes van en `assets/images/<prueba>/`.
 Cada pregunta tiene: `id`, `prueba`, `enunciado`, `alternativas`, `correcta`
-(posición de la correcta, empezando en 0), `eje` (opcional), `explicacion` e `imagen` (opcional).
+(posición de la correcta, empezando en 0), `eje` (opcional), `area` (opcional, área temática), `explicacion`, `imagen` (opcional)
+y `texto` (opcional, texto de lectura).
 
 ### M1 generada con programa
 `tools/generar_m1.py` crea las 500 preguntas de M1 y sus 100 gráficos. Cada respuesta
@@ -39,9 +40,14 @@ python3 tools/generar_m1.py
 exponencial, logarítmica y trigonométricas, circunferencia, esfera, homotecia, rectas,
 dispersión, probabilidad condicional, combinatoria, binomial y normal).
 
-`tools/generar_ciencias.py` crea Ciencias (Biología, Física y Química): 239 preguntas de
-conceptos escritas a partir de listas de datos (`tools/ciencias_textos.py`), cálculos resueltos
-por el programa y 100 gráficos (`tools/ciencias_graficos.py`).
+`tools/generar_ciencias.py` crea Ciencias (Biología, Física y Química) siguiendo el temario
+oficial de la prueba de Ciencias: cada pregunta lleva su `eje` y su `area` (área temática
+oficial, por ejemplo «Mecánica» o «Herencia y evolución»). Incluye 231 preguntas de conceptos
+(`tools/ciencias2_conceptos_bio.py` y `tools/ciencias2_conceptos_fq.py`), 70 de habilidades
+científicas sobre experimentos (`tools/ciencias2_habilidades.py`), cálculos resueltos por el
+programa sin necesidad de calculadora (`tools/ciencias2_calculos.py`) y 100 gráficos
+(`tools/ciencias2_graficos.py`). El contenido común sirve para los módulos de Biología, Física,
+Química y Técnico Profesional, porque el temario oficial es el mismo para los cuatro.
 
 `tools/generar_historia.py` crea Historia y Ciencias Sociales (Historia, Formación ciudadana y
 Sistema económico) a partir de las tablas de `tools/historia_datos.py` (fechas, personajes,
