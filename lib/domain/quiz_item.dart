@@ -7,6 +7,12 @@ import 'question.dart';
 class QuizItem {
   QuizItem(this.question, this.order);
 
+  /// Crea la pregunta con sus alternativas mezcladas al azar.
+  factory QuizItem.shuffled(Question question, Random random) => QuizItem(
+    question,
+    List<int>.generate(question.alternativas.length, (i) => i)..shuffle(random),
+  );
+
   final Question question;
 
   /// Orden mezclado: `order[i]` es la posición original de la alternativa
@@ -35,11 +41,5 @@ List<QuizItem> buildSession(
   required Random random,
 }) {
   final chosen = List<Question>.of(pool)..shuffle(random);
-  return [
-    for (final q in chosen.take(count))
-      QuizItem(
-        q,
-        List<int>.generate(q.alternativas.length, (i) => i)..shuffle(random),
-      ),
-  ];
+  return [for (final q in chosen.take(count)) QuizItem.shuffled(q, random)];
 }

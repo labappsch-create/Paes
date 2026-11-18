@@ -31,7 +31,7 @@ class ResultsScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      '${attempt.prueba.label} · ${attempt.mode.label}',
+                      '${attempt.pruebaLabel} · ${attempt.mode.label}',
                       style: theme.textTheme.titleMedium,
                     ),
                     const SizedBox(height: 12),
@@ -39,10 +39,7 @@ class ResultsScreen extends StatelessWidget {
                       '${attempt.score}',
                       style: theme.textTheme.displayMedium,
                     ),
-                    Text(
-                      'Puntaje estimado',
-                      style: theme.textTheme.titleSmall,
-                    ),
+                    Text('Puntaje estimado', style: theme.textTheme.titleSmall),
                     const SizedBox(height: 12),
                     Text(
                       'Aciertos: ${attempt.correct} de ${attempt.total}',
@@ -90,8 +87,8 @@ class _ReviewTile extends StatelessWidget {
     final color = !answered
         ? theme.colorScheme.outline
         : ok
-            ? Colors.green
-            : theme.colorScheme.error;
+        ? Colors.green
+        : theme.colorScheme.error;
     final options = item.options;
 
     return Card(
@@ -106,8 +103,8 @@ class _ReviewTile extends StatelessWidget {
                   !answered
                       ? Icons.remove_circle_outline
                       : ok
-                          ? Icons.check_circle
-                          : Icons.cancel,
+                      ? Icons.check_circle
+                      : Icons.cancel,
                   color: color,
                 ),
                 const SizedBox(width: 8),

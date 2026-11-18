@@ -17,7 +17,9 @@ class QuestionImage extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: Theme.of(context).colorScheme.outlineVariant),
+            border: Border.all(
+              color: Theme.of(context).colorScheme.outlineVariant,
+            ),
           ),
           padding: const EdgeInsets.all(4),
           child: Image.asset(

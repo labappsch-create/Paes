@@ -3,7 +3,11 @@ import 'package:material_ui/material_ui.dart';
 /// Muestra el texto de lectura de una pregunta, en una tarjeta que se puede
 /// contraer para dejar más espacio a la pregunta.
 class ReadingText extends StatelessWidget {
-  const ReadingText({super.key, required this.text, this.initiallyExpanded = true});
+  const ReadingText({
+    super.key,
+    required this.text,
+    this.initiallyExpanded = true,
+  });
 
   final String? text;
   final bool initiallyExpanded;
@@ -20,7 +24,10 @@ class ReadingText extends StatelessWidget {
         title: const Text('Texto'),
         childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
         children: [
-          SelectableText(t, style: Theme.of(context).textTheme.bodyLarge?.copyWith(height: 1.5)),
+          SelectableText(
+            t,
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(height: 1.5),
+          ),
         ],
       ),
     );

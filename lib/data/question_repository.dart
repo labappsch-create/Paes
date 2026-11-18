@@ -16,7 +16,9 @@ class QuestionRepository {
     for (final prueba in Prueba.values) {
       final String raw;
       try {
-        raw = await rootBundle.loadString('$questionsAssetDir/${prueba.key}.json');
+        raw = await rootBundle.loadString(
+          '$questionsAssetDir/${prueba.key}.json',
+        );
       } on FlutterError {
         continue; // Esa prueba todavía no tiene preguntas.
       }

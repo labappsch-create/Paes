@@ -24,11 +24,20 @@ class QuizScreen extends ConsumerStatefulWidget {
     required this.prueba,
     required this.mode,
     required this.items,
+    this.modulo,
+    this.comunCount,
   });
 
   final Prueba prueba;
   final QuizMode mode;
   final List<QuizItem> items;
+
+  /// Módulo elegido en Ciencias (por ejemplo «Física»). Null en las demás pruebas.
+  final String? modulo;
+
+  /// En el simulacro de Ciencias, cuántas preguntas iniciales son del Módulo
+  /// Común. Las siguientes son del módulo elegido.
+  final int? comunCount;
 
   @override
   ConsumerState<QuizScreen> createState() => _QuizScreenState();
@@ -153,6 +162,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       total: scored.length,
       correct: correct,
       score: estimateScore(correct: correct, total: scored.length),
+      modulo: widget.modulo,
     );
     ref.read(attemptsProvider.notifier).add(attempt);
     Navigator.of(context).pushReplacement(
@@ -233,10 +243,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                   controller: _scroll,
                   padding: const EdgeInsets.all(16),
                   children: [
-                    Text(
-                      widget.prueba.label,
-                      style: theme.textTheme.labelLarge,
-                    ),
+                    Text(_sectionLabel(), style: theme.textTheme.labelLarge),
                     const SizedBox(height: 8),
                     ReadingText(
                       key: ValueKey(item.question.id),
@@ -304,6 +311,17 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
         ),
       ),
     );
+  }
+
+  /// Texto sobre la pregunta: prueba, y en Ciencias la parte de la prueba y el eje.
+  String _sectionLabel() {
+    final comun = widget.comunCount;
+    if (comun == null) return widget.prueba.label;
+    final parte = _index < comun ? 'Módulo Común' : 'Módulo ${widget.modulo}';
+    final eje = _item.question.eje;
+    return eje == null
+        ? '${widget.prueba.label} · $parte'
+        : '${widget.prueba.label} · $parte · $eje';
   }
 
   _OptionState _optionState(QuizItem item, int i) {

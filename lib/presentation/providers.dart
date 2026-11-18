@@ -75,6 +75,7 @@ class AttemptsController extends Notifier<List<ExamAttempt>> {
   }
 }
 
-final attemptsProvider = NotifierProvider<AttemptsController, List<ExamAttempt>>(
-  AttemptsController.new,
-);
+final attemptsProvider =
+    NotifierProvider<AttemptsController, List<ExamAttempt>>(
+      AttemptsController.new,
+    );

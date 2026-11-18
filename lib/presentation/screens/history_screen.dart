@@ -33,7 +33,7 @@ class HistoryScreen extends ConsumerWidget {
               itemBuilder: (context, i) {
                 final a = attempts[i];
                 return ListTile(
-                  title: Text('${a.prueba.label} · ${a.mode.label}'),
+                  title: Text('${a.pruebaLabel} · ${a.mode.label}'),
                   subtitle: Text(
                     '${_formatDate(a.date)}\nAciertos: ${a.correct} de ${a.total}',
                   ),

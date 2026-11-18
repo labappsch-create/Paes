@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../core/constants.dart';
+import '../../domain/ciencias_modulo.dart';
 import '../../domain/exam_attempt.dart';
 import '../../domain/prueba.dart';
 import '../../domain/question.dart';
@@ -159,16 +160,29 @@ class _PruebaCard extends StatelessWidget {
   }
 
   Future<void> _startSimulacro(BuildContext context, int count) async {
+    CienciasModulo? modulo;
+    if (prueba == Prueba.ciencias) {
+      modulo = await _askModulo(context);
+      if (modulo == null || !context.mounted) return;
+    }
     final minutes = prueba.minutes;
+    final detalle = modulo == null
+        ? 'La prueba oficial tiene ${prueba.simulacroQuestions} preguntas. '
+              'Este simulacro usa las que hay disponibles hoy.'
+        : 'Módulo ${modulo.label}: primero ${comunPorEje * cienciasEjes.length} '
+              'preguntas del Módulo Común ($comunPorEje de Biología, '
+              '$comunPorEje de Física y $comunPorEje de Química) y luego '
+              '$preguntasModulo preguntas del módulo ${modulo.label}.';
+    final total = modulo == null
+        ? count
+        : comunPorEje * cienciasEjes.length + preguntasModulo;
     final ok = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Simulacro'),
+        title: Text(modulo == null ? 'Simulacro' : 'Simulacro de Ciencias'),
         content: Text(
-          'Tendrás $minutes minutos (tiempo oficial) para $count '
-          '${count == 1 ? 'pregunta' : 'preguntas'}.\n\n'
-          'La prueba oficial tiene ${prueba.simulacroQuestions} preguntas. '
-          'Este simulacro usa las que hay disponibles hoy.',
+          'Tendrás $minutes minutos (tiempo oficial) para $total '
+          '${total == 1 ? 'pregunta' : 'preguntas'}.\n\n$detalle',
         ),
         actions: [
           TextButton(
@@ -183,7 +197,22 @@ class _PruebaCard extends StatelessWidget {
       ),
     );
     if (ok != true || !context.mounted) return;
-    _openQuiz(context, QuizMode.simulacro, count);
+    if (modulo == null) {
+      _openQuiz(context, QuizMode.simulacro, count);
+      return;
+    }
+    final items = buildCienciasSimulacro(pool, modulo, random: Random());
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => QuizScreen(
+          prueba: prueba,
+          mode: QuizMode.simulacro,
+          items: items,
+          modulo: modulo!.label,
+          comunCount: min(comunPorEje * cienciasEjes.length, items.length),
+        ),
+      ),
+    );
   }
 
   void _openQuiz(BuildContext context, QuizMode mode, int count) {
@@ -191,6 +220,36 @@ class _PruebaCard extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => QuizScreen(prueba: prueba, mode: mode, items: items),
+      ),
+    );
+  }
+
+  /// En Ciencias, pregunta qué módulo rendirá la persona, como en la prueba real.
+  Future<CienciasModulo?> _askModulo(BuildContext context) {
+    return showDialog<CienciasModulo>(
+      context: context,
+      builder: (context) => SimpleDialog(
+        title: const Text('¿Qué módulo vas a rendir?'),
+        children: [
+          const Padding(
+            padding: EdgeInsets.fromLTRB(24, 0, 24, 8),
+            child: Text(
+              'Todos rinden el Módulo Común. Además, eliges un módulo. '
+              'Técnico Profesional es para quienes egresaron de esa formación.',
+            ),
+          ),
+          for (final m in CienciasModulo.values)
+            SimpleDialogOption(
+              onPressed: () => Navigator.of(context).pop(m),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6),
+                child: Text(
+                  m.label,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }
@@ -207,8 +266,10 @@ class _PruebaCard extends StatelessWidget {
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('${value.round()}',
-                  style: Theme.of(context).textTheme.headlineMedium),
+              Text(
+                '${value.round()}',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
               Slider(
                 min: 1,
                 max: max.toDouble(),

@@ -18,8 +18,8 @@ class _ExplanationScreenState extends State<ExplanationScreen> {
   bool _hasError = false;
 
   Uri get _url => Uri.parse(
-        'https://www.google.com/search?q=${Uri.encodeComponent(widget.enunciado)}',
-      );
+    'https://www.google.com/search?q=${Uri.encodeComponent(widget.enunciado)}',
+  );
 
   @override
   void initState() {

@@ -69,7 +69,8 @@ class PaywallScreen extends ConsumerWidget {
                   ),
                 ),
               FilledButton(
-                onPressed: purchase.loading ||
+                onPressed:
+                    purchase.loading ||
                         !purchase.storeAvailable ||
                         purchase.product == null
                     ? null
@@ -112,7 +113,10 @@ class _Benefit extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          Icon(Icons.check_circle, color: Theme.of(context).colorScheme.primary),
+          Icon(
+            Icons.check_circle,
+            color: Theme.of(context).colorScheme.primary,
+          ),
           const SizedBox(width: 12),
           Expanded(child: Text(text)),
         ],
