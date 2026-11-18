@@ -13,6 +13,8 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
   preguntas se respondieron, el tiempo restante y los números de las que quedan sin responder
   (se puede tocar una para ir a ella). Luego se elige «Entregar» o «Seguir revisando».
   Si se acaba el tiempo, el ensayo se entrega solo.
+  Avisos de tiempo: un mensaje cuando quedan 30, 10 y 5 minutos, y el reloj en rojo en los
+  últimos 5 minutos.
   En Ciencias se elige el módulo (Biología, Física, Química o Técnico Profesional), como en la
   prueba real: 54 preguntas del Módulo Común (18 por eje) y luego 26 del módulo elegido
   (en Técnico Profesional: 9 de Biología, 9 de Física y 8 de Química).

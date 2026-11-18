@@ -61,10 +61,51 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       _timer = Timer.periodic(const Duration(seconds: 1), (_) {
         if (!mounted) return;
         setState(() => _remaining -= const Duration(seconds: 1));
-        if (_remaining <= Duration.zero) _finish();
+        if (_remaining <= Duration.zero) {
+          _finish();
+        } else {
+          _checkTimeWarning();
+        }
       });
     }
     WidgetsBinding.instance.addPostFrameCallback((_) => _checkAccessAtStart());
+  }
+
+  /// Minutos restantes en que se avisa, como lo hace el examinador en la prueba.
+  static const _warningMinutes = [30, 10, 5];
+
+  /// Avisos ya mostrados en este ensayo (cada uno se muestra una sola vez).
+  final Set<int> _warned = {};
+
+  /// Desde cuántos minutos restantes el reloj se pone rojo.
+  static const _redClockMinutes = 5;
+
+  void _checkTimeWarning() {
+    for (final m in _warningMinutes) {
+      if (_warned.contains(m) || _remaining > Duration(minutes: m)) continue;
+      _warned.add(m);
+      if (m >= widget.prueba.minutes) continue;
+      final messenger = ScaffoldMessenger.of(context);
+      messenger
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          SnackBar(
+            behavior: SnackBarBehavior.floating,
+            duration: const Duration(seconds: 6),
+            content: Row(
+              children: [
+                const Icon(Icons.timer_outlined, color: Colors.white),
+                const SizedBox(width: 12),
+                Expanded(child: Text('Quedan $m minutos.')),
+              ],
+            ),
+            action: SnackBarAction(
+              label: 'OK',
+              onPressed: messenger.hideCurrentSnackBar,
+            ),
+          ),
+        );
+    }
   }
 
   @override
@@ -274,7 +315,14 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                 child: Center(
                   child: Text(
                     _formatRemaining(),
-                    style: theme.textTheme.titleMedium,
+                    semanticsLabel: 'Tiempo restante ${_formatRemaining()}',
+                    style:
+                        _remaining <= const Duration(minutes: _redClockMinutes)
+                        ? theme.textTheme.titleMedium?.copyWith(
+                            color: theme.colorScheme.error,
+                            fontWeight: FontWeight.bold,
+                          )
+                        : theme.textTheme.titleMedium,
                   ),
                 ),
               ),
