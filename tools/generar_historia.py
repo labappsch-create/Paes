@@ -20,6 +20,8 @@ from fractions import Fraction
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generar_m1 as base  # noqa: E402
 from generar_m1 import MINUS, Skip, fint, fmt, numeric_options  # noqa: E402
+import historia_fuentes_a  # noqa: E402
+import historia_fuentes_b  # noqa: E402
 from historia_datos import (CIU, CIVIC, CIVIC_EXTRA, CONCEPTS, ECO, ECON, EVENTS, HIS, MARKET_SHOCKS, PEOPLE, PROCESSES)  # noqa: E402
 
 import matplotlib  # noqa: E402
@@ -208,6 +210,10 @@ def t_opportunity():
 
 def bank_items():
     items = []
+    # Análisis de fuentes: cada fuente original trae 2 o 3 preguntas.
+    for eje, intro, texto, preguntas in historia_fuentes_a.FUENTES + historia_fuentes_b.FUENTES:
+        for enun, c, w, ex in preguntas:
+            items.append((eje, f"{intro}\n\n{texto}\n\n{enun}", c, w, ex))
     names = [p for p, _ in PEOPLE]
     descs = [d for _, d in PEOPLE]
     for p, d in PEOPLE:
@@ -224,8 +230,9 @@ def bank_items():
     return items
 
 
-CALC = [t_year, t_first, t_order, t_century, t_between, t_same_century,
-        t_year, t_first, t_order, t_between, t_same_century,
+# Sin preguntas de «¿en qué año...?»: el temario evalúa pensamiento temporal
+# (orden, simultaneidad, períodos), no memorizar fechas exactas.
+CALC = [t_first, t_order, t_century, t_between, t_same_century,
         t_unemployment, t_inflation, t_market, t_opportunity, t_budget]
 
 

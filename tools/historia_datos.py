@@ -38,7 +38,6 @@ EVENTS = [
     ("el inicio del gobierno de Patricio Aylwin", 1990, "Chile"),
     ("la publicación del Informe Rettig", 1991, "Chile"),
     ("la publicación del Informe Valech", 2004, "Chile"),
-    ("la independencia de los Estados Unidos", 1776, "América"),
     ("la declaración de independencia de Argentina", 1816, "América"),
     ("la independencia de México", 1821, "América"),
     ("la independencia de Brasil", 1822, "América"),
@@ -46,7 +45,6 @@ EVENTS = [
     ("el inicio de la Revolución Mexicana", 1910, "América"),
     ("el triunfo de la Revolución Cubana", 1959, "América"),
     ("la Crisis de los misiles en Cuba", 1962, "América"),
-    ("el inicio de la Revolución Francesa", 1789, "Mundo"),
     ("el término del Congreso de Viena", 1815, "Mundo"),
     ("la publicación del Manifiesto Comunista", 1848, "Mundo"),
     ("la proclamación del Reino de Italia", 1861, "Mundo"),
@@ -190,8 +188,6 @@ MARKET_SHOCKS = [
 
 # Procesos históricos (causas, consecuencias, características): (pregunta, correcta, distractores, explicación)
 PROCESSES = [
-    ("¿Cuál fue una consecuencia de la Revolución Francesa en Europa y América?", "La difusión de las ideas de libertad, igualdad y soberanía popular", ["El fortalecimiento de las monarquías absolutas", "La eliminación de toda forma de gobierno republicano", "La expansión del feudalismo"], "Sus ideas inspiraron movimientos liberales y de independencia."),
-    ("¿Qué hecho ocurrido en Europa favoreció el inicio del proceso de independencia en Hispanoamérica?", "La invasión napoleónica a España y la captura del rey Fernando VII (1808)", ["La Revolución Rusa", "La Primera Guerra Mundial", "La unificación de Alemania"], "Sin rey, se formaron juntas de gobierno en América."),
     ("¿Qué caracterizó a la Constitución chilena de 1833?", "Un Poder Ejecutivo fuerte, con amplias atribuciones para el Presidente", ["La eliminación del cargo de Presidente", "El sufragio universal para hombres y mujeres", "La separación de la Iglesia y el Estado"], "Fue la base del régimen conservador y autoritario."),
     ("¿Qué recurso natural fue el principal producto de exportación de Chile entre fines del siglo XIX y comienzos del XX?", "El salitre", ["El cobre", "La celulosa", "El litio"], "Tras la Guerra del Pacífico, Chile controló los yacimientos salitreros de Tarapacá y Antofagasta."),
     ("¿Qué territorios incorporó Chile como resultado de la Guerra del Pacífico?", "Las regiones de Tarapacá y Antofagasta", ["La Araucanía y Chiloé", "La Patagonia y Tierra del Fuego", "Isla de Pascua y Juan Fernández"], "Por los tratados con Perú (1883) y Bolivia (1904)."),
