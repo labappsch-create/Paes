@@ -1,41 +1,7102 @@
 [
-  {
-    "id": "m2_001",
-    "prueba": "m2",
-    "enunciado": "La ecuación x² − 5x + 6 = 0 tiene raíces:",
-    "alternativas": [
-      "2 y 3",
-      "1 y 6",
-      "−2 y −3",
-      "5 y 6"
-    ],
-    "correcta": 0,
-    "explicacion": "Se factoriza como (x − 2)(x − 3) = 0, por lo que las raíces son 2 y 3."
-  },
-  {
-    "id": "m2_002",
-    "prueba": "m2",
-    "enunciado": "El vértice de la parábola y = 2x² − 8x + 5 es:",
-    "alternativas": [
-      "(2, −3)",
-      "(2, 3)",
-      "(−2, −3)",
-      "(4, −3)"
-    ],
-    "correcta": 0,
-    "explicacion": "x = −b / 2a = 8 / 4 = 2. Luego y = 2·4 − 16 + 5 = −3."
-  },
-  {
-    "id": "m2_003",
-    "prueba": "m2",
-    "enunciado": "En un triángulo rectángulo, sen(30°) = 1/2. Si el cateto opuesto a ese ángulo mide 6 cm, la hipotenusa mide:",
-    "alternativas": [
-      "12 cm",
-      "10 cm",
-      "8 cm",
-      "6√3 cm"
-    ],
-    "correcta": 0,
-    "explicacion": "sen = opuesto / hipotenusa, entonces 1/2 = 6 / h y h = 12 cm."
-  }
+ {
+  "id": "m2_001",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo inscrito x?",
+  "alternativas": [
+   "100°",
+   "80°",
+   "260°",
+   "50°"
+  ],
+  "correcta": 3,
+  "explicacion": "El ángulo inscrito ACB mide la mitad del ángulo del centro AOB: 100°/2 = 50°.",
+  "imagen": "assets/images/m2/m2_img_063.png"
+ },
+ {
+  "id": "m2_002",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₁₀(x), ¿cuál es el valor de f(1.000)?",
+  "alternativas": [
+   "1.000",
+   "3",
+   "2",
+   "4"
+  ],
+  "correcta": 1,
+  "explicacion": "log₁₀(1.000) = 3; luego f = 3 + 0 = 3."
+ },
+ {
+  "id": "m2_003",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/3, y cada disparo es independiente de los demás. Si realiza 2 disparos, ¿cuál es la probabilidad de que acierte exactamente 1?",
+  "alternativas": [
+   "1/3",
+   "2/3",
+   "4/9",
+   "2/9"
+  ],
+  "correcta": 2,
+  "explicacion": "P = C(2,1)·(1/3)¹·(2/3)¹ = 4/9."
+ },
+ {
+  "id": "m2_004",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo del centro mide 250°. ¿Cuánto mide un ángulo inscrito que subtiende el mismo arco?",
+  "alternativas": [
+   "55°",
+   "125°",
+   "110°",
+   "250°"
+  ],
+  "correcta": 1,
+  "explicacion": "El ángulo inscrito mide la mitad del ángulo del centro: 250°/2 = 125°."
+ },
+ {
+  "id": "m2_005",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de sen(α)?",
+  "alternativas": [
+   "7/25",
+   "7/24",
+   "24/25",
+   "25/7"
+  ],
+  "correcta": 0,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 7/25.",
+  "imagen": "assets/images/m2/m2_img_048.png"
+ },
+ {
+  "id": "m2_006",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el área de la superficie de una esfera de radio 11 cm?",
+  "alternativas": [
+   "484π cm²",
+   "242π cm²",
+   "121π cm²",
+   "88π cm²"
+  ],
+  "correcta": 0,
+  "explicacion": "A = 4·π·r² = 4·π·121 = 484π cm²."
+ },
+ {
+  "id": "m2_007",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál de las siguientes funciones corresponde al gráfico? (x en grados)",
+  "alternativas": [
+   "f(x) = cos(x) − 1",
+   "f(x) = 2·sen(x) − 1",
+   "f(x) = sen(2x) − 1",
+   "f(x) = sen(x) − 1"
+  ],
+  "correcta": 3,
+  "explicacion": "Amplitud 1, período 360°, desplazamiento vertical -1 y la curva parte en el centro y sube en x = 0: f(x) = sen(x) − 1.",
+  "imagen": "assets/images/m2/m2_img_017.png"
+ },
+ {
+  "id": "m2_008",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál de las siguientes funciones corresponde al gráfico? (x en grados)",
+  "alternativas": [
+   "f(x) = 4·cos(x) − 2",
+   "f(x) = 4·cos(2x) − 2",
+   "f(x) = 5·cos(x) − 2",
+   "f(x) = 4·sen(x) − 2"
+  ],
+  "correcta": 0,
+  "explicacion": "Amplitud 4, período 360°, desplazamiento vertical -2 y la curva parte en su máximo en x = 0: f(x) = 4·cos(x) − 2.",
+  "imagen": "assets/images/m2/m2_img_010.png"
+ },
+ {
+  "id": "m2_009",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₂(x − 6) = 4, ¿cuál es el valor de x?",
+  "alternativas": [
+   "22",
+   "10",
+   "14",
+   "24"
+  ],
+  "correcta": 0,
+  "explicacion": "Por definición de logaritmo: x − 6 = 2⁴ = 16, entonces x = 22."
+ },
+ {
+  "id": "m2_010",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo del centro mide 320°. ¿Cuánto mide un ángulo inscrito que subtiende el mismo arco?",
+  "alternativas": [
+   "20°",
+   "320°",
+   "160°",
+   "40°"
+  ],
+  "correcta": 2,
+  "explicacion": "El ángulo inscrito mide la mitad del ángulo del centro: 320°/2 = 160°."
+ },
+ {
+  "id": "m2_011",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Una sustancia radiactiva reduce su masa a la mitad cada 30 años. Si hoy hay 40 g, ¿cuántos gramos quedarán dentro de 90 años?",
+  "alternativas": [
+   "5 g",
+   "6 g",
+   "35 g",
+   "10 g"
+  ],
+  "correcta": 0,
+  "explicacion": "En 90 años hay 3 reducciones a la mitad: 40 / 2³ = 5 g."
+ },
+ {
+  "id": "m2_012",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la desviación estándar (poblacional) de los datos 30, 22?",
+  "alternativas": [
+   "26",
+   "16",
+   "8",
+   "4"
+  ],
+  "correcta": 3,
+  "explicacion": "Promedio 26; varianza = promedio de los cuadrados de las desviaciones = 16; desviación estándar = √16 = 4."
+ },
+ {
+  "id": "m2_013",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas −4x − y = −9 y −8x − 2y = −21?",
+  "alternativas": [
+   "Paralelas no coincidentes",
+   "Coincidentes",
+   "Perpendiculares",
+   "Secantes no perpendiculares"
+  ],
+  "correcta": 0,
+  "explicacion": "Tienen la misma pendiente pero distinto punto de corte con el eje y."
+ },
+ {
+  "id": "m2_014",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 6 bolitas rojas y 4 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "5/9",
+   "3/5",
+   "9/25",
+   "1/3"
+  ],
+  "correcta": 3,
+  "explicacion": "P = 6/10 · 5/9 = 1/3."
+ },
+ {
+  "id": "m2_015",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "La figura muestra una esfera y su radio. ¿Cuál es su volumen?",
+  "alternativas": [
+   "864π cm³",
+   "216π cm³",
+   "144π cm³",
+   "288π cm³"
+  ],
+  "correcta": 3,
+  "explicacion": "V = (4/3)·π·6³ = 288π cm³.",
+  "imagen": "assets/images/m2/m2_img_072.png"
+ },
+ {
+  "id": "m2_016",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas −4x − 2y = 8 y 5x + 2y = −8?",
+  "alternativas": [
+   "Paralelas no coincidentes",
+   "Secantes no perpendiculares",
+   "Coincidentes",
+   "Perpendiculares"
+  ],
+  "correcta": 1,
+  "explicacion": "Las pendientes son −2 y −5/2: distintas y su producto no es −1."
+ },
+ {
+  "id": "m2_017",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √32 se obtiene:",
+  "alternativas": [
+   "5√2",
+   "16√2",
+   "4√2",
+   "3√2"
+  ],
+  "correcta": 2,
+  "explicacion": "√32 = √(16 · 2) = 4√2."
+ },
+ {
+  "id": "m2_018",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 27^(1/3)?",
+  "alternativas": [
+   "7",
+   "6",
+   "3",
+   "9"
+  ],
+  "correcta": 2,
+  "explicacion": "27^(1/3) = ³√27 = 3."
+ },
+ {
+  "id": "m2_019",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 2^(x − 3) = 32?",
+  "alternativas": [
+   "2",
+   "5",
+   "8",
+   "9"
+  ],
+  "correcta": 2,
+  "explicacion": "32 = 2⁵; igualando exponentes: x − 3 = 5, entonces x = 8."
+ },
+ {
+  "id": "m2_020",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 8, 28, 13, 23, 18 y B: 22, 18, 14, 26, 10. Ambos tienen promedio 18. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "El grupo B",
+   "No se puede saber sin conocer la mediana",
+   "El grupo A",
+   "Ambos tienen la misma dispersión"
+  ],
+  "correcta": 2,
+  "explicacion": "Los datos de A están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_021",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Fernanda pide un crédito de consumo de $1.000.000 y lo paga en 36 cuotas mensuales de $31.000. ¿Cuánto paga en total por intereses y costos?",
+  "alternativas": [
+   "$116.000",
+   "$27.777",
+   "$1.116.000",
+   "$31.000"
+  ],
+  "correcta": 0,
+  "explicacion": "Total pagado = 36 · $31.000 = $1.116.000. Intereses = $1.116.000 − $1.000.000 = $116.000."
+ },
+ {
+  "id": "m2_022",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 81^(2/4)?",
+  "alternativas": [
+   "40",
+   "27",
+   "6",
+   "9"
+  ],
+  "correcta": 3,
+  "explicacion": "81^(2/4) = (⁴√81)² = 3² = 9."
+ },
+ {
+  "id": "m2_023",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Se aplica una homotecia de centro en el origen y razón 3 al punto (6, 3). ¿Cuáles son las coordenadas del punto imagen?",
+  "alternativas": [
+   "(9, 18)",
+   "(9, 6)",
+   "(18, 9)",
+   "(18, 3)"
+  ],
+  "correcta": 2,
+  "explicacion": "Se multiplican ambas coordenadas por 3: (18, 9)."
+ },
+ {
+  "id": "m2_024",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "En Chile, la cotización obligatoria para la AFP es el 10% del sueldo imponible. Si el sueldo imponible de Javiera es $1.170.000, ¿cuánto se cotiza al mes?",
+  "alternativas": [
+   "$117.000",
+   "$11.700",
+   "$1.404.000",
+   "$1.053.000"
+  ],
+  "correcta": 0,
+  "explicacion": "10% de $1.170.000 = $117.000."
+ },
+ {
+  "id": "m2_025",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₃(x − 3) = 4, ¿cuál es el valor de x?",
+  "alternativas": [
+   "78",
+   "15",
+   "67",
+   "84"
+  ],
+  "correcta": 3,
+  "explicacion": "Por definición de logaritmo: x − 3 = 3⁴ = 81, entonces x = 84."
+ },
+ {
+  "id": "m2_026",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por −3x + 2y = −12 y −9x + 6y = −36?",
+  "alternativas": [
+   "No tiene solución",
+   "Infinitas soluciones",
+   "Una única solución",
+   "Exactamente dos soluciones"
+  ],
+  "correcta": 1,
+  "explicacion": "La segunda ecuación es la primera multiplicada por 3: son la misma recta."
+ },
+ {
+  "id": "m2_027",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su valor mínimo?",
+  "alternativas": [
+   "0",
+   "−2",
+   "−3",
+   "−1"
+  ],
+  "correcta": 1,
+  "explicacion": "El punto más bajo del gráfico está en y = -2.",
+  "imagen": "assets/images/m2/m2_img_018.png"
+ },
+ {
+  "id": "m2_028",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a la función f(x) = a·bˣ que pasa por los puntos marcados. ¿Cuál es el valor de f(4)?",
+  "alternativas": [
+   "1/4",
+   "1/2",
+   "5/4",
+   "−1/4"
+  ],
+  "correcta": 0,
+  "explicacion": "Del gráfico: a = 4 y b = 1/2. Entonces f(4) = 4·(1/2)⁴ = 1/4.",
+  "imagen": "assets/images/m2/m2_img_025.png"
+ },
+ {
+  "id": "m2_029",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En una carrera participan 5 corredores. ¿De cuántas maneras distintas se pueden repartir el primer, segundo y tercer lugar?",
+  "alternativas": [
+   "60",
+   "15",
+   "125",
+   "10"
+  ],
+  "correcta": 0,
+  "explicacion": "Importa el orden: 5·4·3 = 60."
+ },
+ {
+  "id": "m2_030",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Una persona ahorra $240.000 con un interés compuesto de 50% anual. ¿Cuál es el monto total después de 2 años?",
+  "alternativas": [
+   "$540.000",
+   "$240.000",
+   "$300.000",
+   "$480.000"
+  ],
+  "correcta": 0,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $240.000 · (1,5)² = $540.000."
+ },
+ {
+  "id": "m2_031",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3ˣ, ¿cuál es el valor de f(2)?",
+  "alternativas": [
+   "9",
+   "6",
+   "8",
+   "10"
+  ],
+  "correcta": 0,
+  "explicacion": "f(2) = 3² = 9."
+ },
+ {
+  "id": "m2_032",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = 3x − 1?",
+  "alternativas": [
+   "f⁻¹(x) = (x − 1)/3",
+   "f⁻¹(x) = 3x + 1",
+   "f⁻¹(x) = x/3 + 1",
+   "f⁻¹(x) = (x + 1)/3"
+  ],
+  "correcta": 3,
+  "explicacion": "Se despeja x en y = 3x − 1: x = (y + 1)/3."
+ },
+ {
+  "id": "m2_033",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "La cotización obligatoria para la AFP es el 10% del sueldo imponible. Si una persona gana $2.210.000 imponibles todos los meses, ¿cuánto cotiza en un año?",
+  "alternativas": [
+   "$2.210.000",
+   "$2.652.000",
+   "$26.520.000",
+   "$221.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Al mes: $221.000. En 12 meses: $2.652.000."
+ },
+ {
+  "id": "m2_034",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 1 cm y PB = 196 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "195 cm",
+   "98 cm",
+   "14 cm",
+   "8 cm"
+  ],
+  "correcta": 2,
+  "explicacion": "PT² = PA·PB = 1·196 = 196, entonces PT = 14 cm."
+ },
+ {
+  "id": "m2_035",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál de las siguientes funciones corresponde al gráfico? (x en grados)",
+  "alternativas": [
+   "f(x) = 2·cos(x) + 1",
+   "f(x) = cos(x) + 2",
+   "f(x) = cos(2x) + 2",
+   "f(x) = sen(x) + 2"
+  ],
+  "correcta": 1,
+  "explicacion": "Amplitud 1, período 360°, desplazamiento vertical 2 y la curva parte en su máximo en x = 0: f(x) = cos(x) + 2.",
+  "imagen": "assets/images/m2/m2_img_009.png"
+ },
+ {
+  "id": "m2_036",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₅(25) + log₅(25)?",
+  "alternativas": [
+   "8",
+   "4",
+   "3",
+   "5"
+  ],
+  "correcta": 1,
+  "explicacion": "log₅(25) + log₅(25) = log₅(25·25) = log₅(625) = 4."
+ },
+ {
+  "id": "m2_037",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "En Chile, la cotización obligatoria para la AFP es el 10% del sueldo imponible. Si el sueldo imponible de Vicente es $1.930.000, ¿cuánto se cotiza al mes?",
+  "alternativas": [
+   "$193.000",
+   "$1.737.000",
+   "$19.300",
+   "$2.316.000"
+  ],
+  "correcta": 0,
+  "explicacion": "10% de $1.930.000 = $193.000."
+ },
+ {
+  "id": "m2_038",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = (1/3)x + 1?",
+  "alternativas": [
+   "−3",
+   "−1/3",
+   "3",
+   "1/3"
+  ],
+  "correcta": 0,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(1/3) = −3."
+ },
+ {
+  "id": "m2_039",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₂(56) − log₂(7)?",
+  "alternativas": [
+   "3",
+   "4",
+   "7",
+   "2"
+  ],
+  "correcta": 0,
+  "explicacion": "log₂(56) − log₂(7) = log₂(56/7) = log₂(8) = 3."
+ },
+ {
+  "id": "m2_040",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Una figura de área 15 cm² se transforma con una homotecia de razón 2. ¿Cuál es el área de la figura imagen?",
+  "alternativas": [
+   "30 cm²",
+   "120 cm²",
+   "60 cm²",
+   "19 cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "Las áreas se multiplican por el cuadrado de la razón: 15·(2)² = 60 cm²."
+ },
+ {
+  "id": "m2_041",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 8^(1/3)?",
+  "alternativas": [
+   "2",
+   "7",
+   "6",
+   "4"
+  ],
+  "correcta": 0,
+  "explicacion": "8^(1/3) = ³√8 = 2."
+ },
+ {
+  "id": "m2_042",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 25^(3/2)?",
+  "alternativas": [
+   "15",
+   "625",
+   "37",
+   "125"
+  ],
+  "correcta": 3,
+  "explicacion": "25^(3/2) = (√25)³ = 5³ = 125."
+ },
+ {
+  "id": "m2_043",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a la función f(x) = a·bˣ que pasa por los puntos marcados. ¿Cuál es el valor de f(4)?",
+  "alternativas": [
+   "16",
+   "64",
+   "10",
+   "32"
+  ],
+  "correcta": 3,
+  "explicacion": "Del gráfico: a = 2 y b = 2. Entonces f(4) = 2·(2)⁴ = 32.",
+  "imagen": "assets/images/m2/m2_img_026.png"
+ },
+ {
+  "id": "m2_044",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor mínimo de la función f(x) = 3·sen(3x) − 2?",
+  "alternativas": [
+   "−5",
+   "−3",
+   "−2",
+   "1"
+  ],
+  "correcta": 0,
+  "explicacion": "El mínimo es 3·(−1) + (−2) = −5."
+ },
+ {
+  "id": "m2_045",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 6 bolitas rojas y 6 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "5/22",
+   "5/11",
+   "1/2",
+   "1/4"
+  ],
+  "correcta": 0,
+  "explicacion": "P = 6/12 · 5/11 = 5/22."
+ },
+ {
+  "id": "m2_046",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "El gráfico muestra la distribución normal de los puntajes de una prueba, con media 500 puntos y desviación estándar 100 puntos. ¿Qué porcentaje aproximado de los datos corresponde a la zona sombreada?",
+  "alternativas": [
+   "34%",
+   "16%",
+   "13,5%",
+   "68%"
+  ],
+  "correcta": 1,
+  "explicacion": "Regla empírica: cerca del 68% está a menos de 1 desviación estándar de la media, cerca del 95% a menos de 2, y la curva es simétrica.",
+  "imagen": "assets/images/m2/m2_img_098.png"
+ },
+ {
+  "id": "m2_047",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "El gráfico muestra la distribución normal de los tiempos de un trayecto, con media 40 min y desviación estándar 5 min. ¿Qué porcentaje aproximado de los datos corresponde a la zona sombreada?",
+  "alternativas": [
+   "50%",
+   "34%",
+   "99,7%",
+   "2,5%"
+  ],
+  "correcta": 0,
+  "explicacion": "Regla empírica: cerca del 68% está a menos de 1 desviación estándar de la media, cerca del 95% a menos de 2, y la curva es simétrica.",
+  "imagen": "assets/images/m2/m2_img_094.png"
+ },
+ {
+  "id": "m2_048",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "La cotización obligatoria para la AFP es el 10% del sueldo imponible. Si una persona gana $670.000 imponibles todos los meses, ¿cuánto cotiza en un año?",
+  "alternativas": [
+   "$8.040.000",
+   "$670.000",
+   "$67.000",
+   "$804.000"
+  ],
+  "correcta": 3,
+  "explicacion": "Al mes: $67.000. En 12 meses: $804.000."
+ },
+ {
+  "id": "m2_049",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₂(2) + log₂(4)?",
+  "alternativas": [
+   "2",
+   "4",
+   "3",
+   "6"
+  ],
+  "correcta": 2,
+  "explicacion": "log₂(2) + log₂(4) = log₂(2·4) = log₂(8) = 3."
+ },
+ {
+  "id": "m2_050",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √150 se obtiene:",
+  "alternativas": [
+   "6√6",
+   "5√6",
+   "25√6",
+   "4√6"
+  ],
+  "correcta": 1,
+  "explicacion": "√150 = √(25 · 6) = 5√6."
+ },
+ {
+  "id": "m2_051",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el área de la superficie de una esfera de radio 2 cm?",
+  "alternativas": [
+   "32π cm²",
+   "4π cm²",
+   "16π cm²",
+   "8π cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "A = 4·π·r² = 4·π·4 = 16π cm²."
+ },
+ {
+  "id": "m2_052",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 40 cm, el cateto adyacente mide 42 cm y la hipotenusa mide 58 cm. ¿Cuál es el valor de tan(α)?",
+  "alternativas": [
+   "20/21",
+   "21/29",
+   "20/29",
+   "21/20"
+  ],
+  "correcta": 0,
+  "explicacion": "tan = cateto opuesto / cateto adyacente = 20/21."
+ },
+ {
+  "id": "m2_053",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 2·2ˣ, ¿cuál es el valor de f(4)?",
+  "alternativas": [
+   "18",
+   "16",
+   "256",
+   "32"
+  ],
+  "correcta": 3,
+  "explicacion": "f(4) = 2·2⁴ = 32."
+ },
+ {
+  "id": "m2_054",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = log₄(x)",
+   "f(x) = log₃(x)",
+   "f(x) = log₁₀(x)",
+   "f(x) = log₂(x)"
+  ],
+  "correcta": 1,
+  "explicacion": "Pasa por (3, 1): log₃(3) = 1.",
+  "imagen": "assets/images/m2/m2_img_036.png"
+ },
+ {
+  "id": "m2_055",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(−1, 4)",
+   "(4, 1)",
+   "(1, −4)",
+   "(1, 4)"
+  ],
+  "correcta": 3,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (1, 4). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_082.png"
+ },
+ {
+  "id": "m2_056",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 3^(3x − 1) = 9?",
+  "alternativas": [
+   "0",
+   "2",
+   "1",
+   "3"
+  ],
+  "correcta": 2,
+  "explicacion": "9 = 3²; igualando exponentes: 3x − 1 = 2, entonces x = 1."
+ },
+ {
+  "id": "m2_057",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 6 bolitas rojas y 2 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "3/4",
+   "9/16",
+   "5/7",
+   "15/28"
+  ],
+  "correcta": 3,
+  "explicacion": "P = 6/8 · 5/7 = 15/28."
+ },
+ {
+  "id": "m2_058",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo inscrito x?",
+  "alternativas": [
+   "25°",
+   "50°",
+   "130°",
+   "310°"
+  ],
+  "correcta": 0,
+  "explicacion": "El ángulo inscrito ACB mide la mitad del ángulo del centro AOB: 50°/2 = 25°.",
+  "imagen": "assets/images/m2/m2_img_058.png"
+ },
+ {
+  "id": "m2_059",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el período de la función f(x) = 2·cos(2x) + 2? (x en grados)",
+  "alternativas": [
+   "720°",
+   "90°",
+   "180°",
+   "360°"
+  ],
+  "correcta": 2,
+  "explicacion": "Período = 360°/2 = 180°."
+ },
+ {
+  "id": "m2_060",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de cos(α)?",
+  "alternativas": [
+   "21/29",
+   "20/21",
+   "29/21",
+   "20/29"
+  ],
+  "correcta": 0,
+  "explicacion": "cos = cateto adyacente / hipotenusa = 21/29.",
+  "imagen": "assets/images/m2/m2_img_056.png"
+ },
+ {
+  "id": "m2_061",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 25/√5 se obtiene:",
+  "alternativas": [
+   "5√5",
+   "25",
+   "6√5",
+   "25√5"
+  ],
+  "correcta": 0,
+  "explicacion": "25/√5 · √5/√5 = 25√5/5 = 5√5."
+ },
+ {
+  "id": "m2_062",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = −2x − 3?",
+  "alternativas": [
+   "1/2",
+   "2",
+   "−1/2",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(−2) = 1/2."
+ },
+ {
+  "id": "m2_063",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si 3x − y = −13 y 4x + 2y = −34, ¿cuál es el valor de y?",
+  "alternativas": [
+   "−1",
+   "5",
+   "−5",
+   "−6"
+  ],
+  "correcta": 2,
+  "explicacion": "Resolviendo el sistema se obtiene x = −6 e y = −5."
+ },
+ {
+  "id": "m2_064",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor mínimo de la función f(x) = 2·sen(3x) − 3?",
+  "alternativas": [
+   "−5",
+   "−3",
+   "−1",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "El mínimo es 2·(−1) + (−3) = −5."
+ },
+ {
+  "id": "m2_065",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la desviación estándar (poblacional) de los datos 8, 14?",
+  "alternativas": [
+   "9",
+   "3",
+   "6",
+   "11"
+  ],
+  "correcta": 1,
+  "explicacion": "Promedio 11; varianza = promedio de los cuadrados de las desviaciones = 9; desviación estándar = √9 = 3."
+ },
+ {
+  "id": "m2_066",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas −6x − 4y = 4 y −12x − 8y = 8?",
+  "alternativas": [
+   "Perpendiculares",
+   "Secantes no perpendiculares",
+   "Paralelas no coincidentes",
+   "Coincidentes"
+  ],
+  "correcta": 3,
+  "explicacion": "Una ecuación es múltiplo de la otra: representan la misma recta."
+ },
+ {
+  "id": "m2_067",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Una persona ahorra $94.000 con un interés compuesto de 20% anual. ¿Cuál es el monto total después de 2 años?",
+  "alternativas": [
+   "$41.360",
+   "$37.600",
+   "$131.600",
+   "$135.360"
+  ],
+  "correcta": 3,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $94.000 · (1,2)² = $135.360."
+ },
+ {
+  "id": "m2_068",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la varianza (poblacional) de los datos 23, 31?",
+  "alternativas": [
+   "4",
+   "32",
+   "16",
+   "27"
+  ],
+  "correcta": 2,
+  "explicacion": "Promedio 27; se promedian los cuadrados de las desviaciones: varianza = 16."
+ },
+ {
+  "id": "m2_069",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 3 cm, PB = 8 cm y CP = 8 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "3 cm",
+   "4 cm",
+   "24 cm",
+   "2 cm"
+  ],
+  "correcta": 0,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 3·8 = 8·PD → PD = 3 cm."
+ },
+ {
+  "id": "m2_070",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 4ˣ, ¿cuál es el valor de f(1)?",
+  "alternativas": [
+   "5",
+   "4",
+   "3",
+   "6"
+  ],
+  "correcta": 1,
+  "explicacion": "f(1) = 4¹ = 4."
+ },
+ {
+  "id": "m2_071",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda equilibrada 6 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras?",
+  "alternativas": [
+   "15/64",
+   "1/3",
+   "1/2",
+   "1/64"
+  ],
+  "correcta": 0,
+  "explicacion": "Modelo binomial: C(6,2)·(1/2)⁶ = 15/64."
+ },
+ {
+  "id": "m2_072",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de sen(α)?",
+  "alternativas": [
+   "25/7",
+   "7/25",
+   "24/25",
+   "7/24"
+  ],
+  "correcta": 1,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 7/25.",
+  "imagen": "assets/images/m2/m2_img_054.png"
+ },
+ {
+  "id": "m2_073",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "El gráfico muestra la distribución normal de las estaturas de un grupo de adultos, con media 165 cm y desviación estándar 8 cm. ¿Qué porcentaje aproximado de los datos corresponde a la zona sombreada?",
+  "alternativas": [
+   "34%",
+   "13,5%",
+   "16%",
+   "68%"
+  ],
+  "correcta": 2,
+  "explicacion": "Regla empírica: cerca del 68% está a menos de 1 desviación estándar de la media, cerca del 95% a menos de 2, y la curva es simétrica.",
+  "imagen": "assets/images/m2/m2_img_099.png"
+ },
+ {
+  "id": "m2_074",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₅(1/125)?",
+  "alternativas": [
+   "−2",
+   "−15",
+   "3",
+   "−3"
+  ],
+  "correcta": 3,
+  "explicacion": "1/125 = 5^(−3), entonces el logaritmo es −3."
+ },
+ {
+  "id": "m2_075",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 50 personas, 35 tienen mascota y, de ellas, 4 son menores de 18 años. Si se elige al azar una persona que tiene mascota, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "4/35",
+   "31/35",
+   "7/10",
+   "2/25"
+  ],
+  "correcta": 0,
+  "explicacion": "Se consideran solo las 35 personas que tienen mascota: P = 4/35."
+ },
+ {
+  "id": "m2_076",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₄(1/4)?",
+  "alternativas": [
+   "0",
+   "−4",
+   "−1",
+   "1"
+  ],
+  "correcta": 2,
+  "explicacion": "1/4 = 4^(−1), entonces el logaritmo es −1."
+ },
+ {
+  "id": "m2_077",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/5, y cada disparo es independiente de los demás. Si realiza 3 disparos, ¿cuál es la probabilidad de que acierte exactamente 3?",
+  "alternativas": [
+   "1/125",
+   "2/125",
+   "1/250",
+   "3/5"
+  ],
+  "correcta": 0,
+  "explicacion": "P = C(3,3)·(1/5)³ = 1/125."
+ },
+ {
+  "id": "m2_078",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo inscrito x?",
+  "alternativas": [
+   "240°",
+   "65°",
+   "120°",
+   "60°"
+  ],
+  "correcta": 3,
+  "explicacion": "El ángulo inscrito ACB mide la mitad del ángulo del centro AOB: 120°/2 = 60°.",
+  "imagen": "assets/images/m2/m2_img_066.png"
+ },
+ {
+  "id": "m2_079",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, la hipotenusa mide 4 cm y uno de sus ángulos agudos mide 60°. ¿Cuánto mide el cateto opuesto a ese ángulo?",
+  "alternativas": [
+   "2 cm",
+   "2√3 cm",
+   "2√2 cm",
+   "4√3 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "sen(60°) = √3/2, entonces el cateto opuesto mide 4·√3/2 = 2√3 cm."
+ },
+ {
+  "id": "m2_080",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Se aplica al triángulo ABC una homotecia de centro O (el origen) y razón 2. ¿Cuáles son las coordenadas de la imagen del vértice A?",
+  "alternativas": [
+   "(5, 4)",
+   "(6, 2)",
+   "(4, 6)",
+   "(6, 4)"
+  ],
+  "correcta": 3,
+  "explicacion": "A = (3, 2); se multiplican sus coordenadas por 2: (6, 4).",
+  "imagen": "assets/images/m2/m2_img_091.png"
+ },
+ {
+  "id": "m2_081",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas −4x + 5y = −7 y −10x − 8y = −8?",
+  "alternativas": [
+   "Secantes no perpendiculares",
+   "Coincidentes",
+   "Perpendiculares",
+   "Paralelas no coincidentes"
+  ],
+  "correcta": 2,
+  "explicacion": "Las pendientes son 4/5 y −5/4; su producto es −1."
+ },
+ {
+  "id": "m2_082",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₃(x) − 2, ¿cuál es el valor de f(81)?",
+  "alternativas": [
+   "4",
+   "6",
+   "2",
+   "79"
+  ],
+  "correcta": 2,
+  "explicacion": "log₃(81) = 4; luego f = 4 − 2 = 2."
+ },
+ {
+  "id": "m2_083",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Se depositan en una cuenta de ahorro $295.000 con un interés compuesto de 20% anual. ¿Cuál es el monto total después de 2 años?",
+  "alternativas": [
+   "$413.000",
+   "$424.800",
+   "$129.800",
+   "$118.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $295.000 · (1,2)² = $424.800."
+ },
+ {
+  "id": "m2_084",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(−1, −3)",
+   "(−1, 3)",
+   "(3, −1)",
+   "(1, 3)"
+  ],
+  "correcta": 1,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (−1, 3). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_083.png"
+ },
+ {
+  "id": "m2_085",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo del centro x?",
+  "alternativas": [
+   "100°",
+   "160°",
+   "200°",
+   "40°"
+  ],
+  "correcta": 1,
+  "explicacion": "El ángulo del centro AOB mide el doble del inscrito ACB: 2·80° = 160°.",
+  "imagen": "assets/images/m2/m2_img_064.png"
+ },
+ {
+  "id": "m2_086",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Un club de 9 personas debe elegir un presidente y un secretario (personas distintas). ¿De cuántas maneras puede hacerlo?",
+  "alternativas": [
+   "81",
+   "36",
+   "72",
+   "18"
+  ],
+  "correcta": 2,
+  "explicacion": "Importa el orden: 9·8 = 72."
+ },
+ {
+  "id": "m2_087",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √48 se obtiene:",
+  "alternativas": [
+   "3√3",
+   "16√3",
+   "5√3",
+   "4√3"
+  ],
+  "correcta": 3,
+  "explicacion": "√48 = √(16 · 3) = 4√3."
+ },
+ {
+  "id": "m2_088",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = 2x + 6?",
+  "alternativas": [
+   "f⁻¹(x) = x/2 − 6",
+   "f⁻¹(x) = (x − 6)/2",
+   "f⁻¹(x) = (x + 6)/2",
+   "f⁻¹(x) = 2x − 6"
+  ],
+  "correcta": 1,
+  "explicacion": "Se despeja x en y = 2x + 6: x = (y − 6)/2."
+ },
+ {
+  "id": "m2_089",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/5, y cada disparo es independiente de los demás. Si realiza 2 disparos, ¿cuál es la probabilidad de que acierte exactamente 2?",
+  "alternativas": [
+   "1/25",
+   "2/5",
+   "2/25",
+   "1/50"
+  ],
+  "correcta": 0,
+  "explicacion": "P = C(2,2)·(1/5)² = 1/25."
+ },
+ {
+  "id": "m2_090",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √50 + √32?",
+  "alternativas": [
+   "9√4",
+   "√82",
+   "20√2",
+   "9√2"
+  ],
+  "correcta": 3,
+  "explicacion": "√50 = 5√2 y √32 = 4√2; entonces 5√2 + 4√2 = 9√2."
+ },
+ {
+  "id": "m2_091",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Ignacio pide un crédito de consumo de $1.600.000 y lo paga en 6 cuotas mensuales de $332.000. ¿Cuánto paga en total por intereses y costos?",
+  "alternativas": [
+   "$392.000",
+   "$332.000",
+   "$266.666",
+   "$1.992.000"
+  ],
+  "correcta": 0,
+  "explicacion": "Total pagado = 6 · $332.000 = $1.992.000. Intereses = $1.992.000 − $1.600.000 = $392.000."
+ },
+ {
+  "id": "m2_092",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo del centro x?",
+  "alternativas": [
+   "105°",
+   "37°",
+   "150°",
+   "210°"
+  ],
+  "correcta": 2,
+  "explicacion": "El ángulo del centro AOB mide el doble del inscrito ACB: 2·75° = 150°.",
+  "imagen": "assets/images/m2/m2_img_065.png"
+ },
+ {
+  "id": "m2_093",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si 3x + 3y = 33 y −3x − y = −21, ¿cuál es el valor de y?",
+  "alternativas": [
+   "6",
+   "5",
+   "−1",
+   "−6"
+  ],
+  "correcta": 0,
+  "explicacion": "Resolviendo el sistema se obtiene x = 5 e y = 6."
+ },
+ {
+  "id": "m2_094",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(−1, −1)",
+   "(1, −1)",
+   "(−1, 1)",
+   "(1, 1)"
+  ],
+  "correcta": 2,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (−1, 1). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_075.png"
+ },
+ {
+  "id": "m2_095",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 8 cm, PB = 10 cm y CP = 5 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "16 cm",
+   "80 cm",
+   "13 cm",
+   "4 cm"
+  ],
+  "correcta": 0,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 8·10 = 5·PD → PD = 16 cm."
+ },
+ {
+  "id": "m2_096",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la desviación estándar (poblacional) de los datos 12, 14, 6, 20?",
+  "alternativas": [
+   "25",
+   "13",
+   "5",
+   "14"
+  ],
+  "correcta": 2,
+  "explicacion": "Promedio 13; varianza = promedio de los cuadrados de las desviaciones = 25; desviación estándar = √25 = 5."
+ },
+ {
+  "id": "m2_097",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Vicente pide un crédito de consumo de $1.000.000 y lo paga en 18 cuotas mensuales de $59.000. ¿Cuánto paga en total por intereses y costos?",
+  "alternativas": [
+   "$55.555",
+   "$1.062.000",
+   "$59.000",
+   "$62.000"
+  ],
+  "correcta": 3,
+  "explicacion": "Total pagado = 18 · $59.000 = $1.062.000. Intereses = $1.062.000 − $1.000.000 = $62.000."
+ },
+ {
+  "id": "m2_098",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 1 cm y PB = 81 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "5 cm",
+   "41 cm",
+   "9 cm",
+   "80 cm"
+  ],
+  "correcta": 2,
+  "explicacion": "PT² = PA·PB = 1·81 = 81, entonces PT = 9 cm."
+ },
+ {
+  "id": "m2_099",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Un crédito se paga en 24 cuotas mensuales iguales de $83.000. ¿Cuánto se paga en total al terminar el crédito?",
+  "alternativas": [
+   "$1.783.000",
+   "$1.992.000",
+   "$292.000",
+   "$1.909.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Total = 24 · $83.000 = $1.992.000."
+ },
+ {
+  "id": "m2_100",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √448 se obtiene:",
+  "alternativas": [
+   "9√7",
+   "64√7",
+   "8√7",
+   "7√7"
+  ],
+  "correcta": 2,
+  "explicacion": "√448 = √(64 · 7) = 8√7."
+ },
+ {
+  "id": "m2_101",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Los catetos de un triángulo rectángulo isósceles miden 8 cm cada uno. ¿Cuánto mide la hipotenusa?",
+  "alternativas": [
+   "16 cm",
+   "8√2 cm",
+   "8√3 cm",
+   "16√2 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "Los ángulos agudos miden 45°; h = 8·√2 = 8√2 cm."
+ },
+ {
+  "id": "m2_102",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de sen(α)?",
+  "alternativas": [
+   "21/29",
+   "20/29",
+   "20/21",
+   "29/20"
+  ],
+  "correcta": 1,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 20/29.",
+  "imagen": "assets/images/m2/m2_img_044.png"
+ },
+ {
+  "id": "m2_103",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a la función f(x) = a·bˣ que pasa por los puntos marcados. ¿Cuál es el valor de f(2)?",
+  "alternativas": [
+   "2",
+   "1",
+   "5",
+   "4"
+  ],
+  "correcta": 1,
+  "explicacion": "Del gráfico: a = 4 y b = 1/2. Entonces f(2) = 4·(1/2)² = 1.",
+  "imagen": "assets/images/m2/m2_img_032.png"
+ },
+ {
+  "id": "m2_104",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 39, 33, 30, 36, 42 y B: 31, 26, 36, 46, 41. Ambos tienen promedio 36. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "El grupo B",
+   "El grupo A",
+   "Ambos tienen la misma dispersión",
+   "No se puede saber sin conocer la mediana"
+  ],
+  "correcta": 0,
+  "explicacion": "Los datos de B están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_105",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₁₀(x + 2) = 2, ¿cuál es el valor de x?",
+  "alternativas": [
+   "1.022",
+   "98",
+   "102",
+   "18"
+  ],
+  "correcta": 1,
+  "explicacion": "Por definición de logaritmo: x + 2 = 10² = 100, entonces x = 98."
+ },
+ {
+  "id": "m2_106",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por −2x + 2y = −4 y 5x + 3y = 9?",
+  "alternativas": [
+   "No tiene solución",
+   "Infinitas soluciones",
+   "Exactamente dos soluciones",
+   "Una única solución"
+  ],
+  "correcta": 3,
+  "explicacion": "Los coeficientes de x e y no son proporcionales: las rectas se cortan en un solo punto."
+ },
+ {
+  "id": "m2_107",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de cos(α)?",
+  "alternativas": [
+   "3/4",
+   "3/5",
+   "5/4",
+   "4/5"
+  ],
+  "correcta": 3,
+  "explicacion": "cos = cateto adyacente / hipotenusa = 4/5.",
+  "imagen": "assets/images/m2/m2_img_055.png"
+ },
+ {
+  "id": "m2_108",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 9 cm, PB = 6 cm y CP = 2 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "13 cm",
+   "3 cm",
+   "27 cm",
+   "54 cm"
+  ],
+  "correcta": 2,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 9·6 = 2·PD → PD = 27 cm."
+ },
+ {
+  "id": "m2_109",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 30, 26, 22, 34, 38 y B: 36, 30, 24, 27, 33. Ambos tienen promedio 30. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "Ambos tienen la misma dispersión",
+   "El grupo B",
+   "El grupo A",
+   "No se puede saber sin conocer la mediana"
+  ],
+  "correcta": 2,
+  "explicacion": "Los datos de A están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_110",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 6/√3 se obtiene:",
+  "alternativas": [
+   "6",
+   "2√3",
+   "6√3",
+   "3√3"
+  ],
+  "correcta": 1,
+  "explicacion": "6/√3 · √3/√3 = 6√3/3 = 2√3."
+ },
+ {
+  "id": "m2_111",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 8 bolitas rojas y 2 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "28/45",
+   "7/9",
+   "16/25",
+   "4/5"
+  ],
+  "correcta": 0,
+  "explicacion": "P = 8/10 · 7/9 = 28/45."
+ },
+ {
+  "id": "m2_112",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 46, 36, 31, 41, 26 y B: 37, 36, 34, 38, 35. Ambos tienen promedio 36. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "El grupo B",
+   "El grupo A",
+   "No se puede saber sin conocer la mediana",
+   "Ambos tienen la misma dispersión"
+  ],
+  "correcta": 1,
+  "explicacion": "Los datos de A están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_113",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 5·2ˣ, ¿cuál es el valor de f(1)?",
+  "alternativas": [
+   "10",
+   "7",
+   "5",
+   "15"
+  ],
+  "correcta": 0,
+  "explicacion": "f(1) = 5·2¹ = 10."
+ },
+ {
+  "id": "m2_114",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 19, 4, 9, 14, 24 y B: 15, 14, 13, 16, 12. Ambos tienen promedio 14. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "El grupo B",
+   "Ambos tienen la misma dispersión",
+   "El grupo A",
+   "No se puede saber sin conocer la mediana"
+  ],
+  "correcta": 2,
+  "explicacion": "Los datos de A están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_115",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Se depositan en una cuenta de ahorro $126.000 con un interés compuesto de 10% anual. ¿Cuál es el monto total después de 3 años?",
+  "alternativas": [
+   "$41.706",
+   "$163.800",
+   "$37.800",
+   "$167.706"
+  ],
+  "correcta": 3,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $126.000 · (1,1)³ = $167.706."
+ },
+ {
+  "id": "m2_116",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo del centro mide 80°. ¿Cuánto mide un ángulo inscrito que subtiende el mismo arco?",
+  "alternativas": [
+   "280°",
+   "80°",
+   "40°",
+   "140°"
+  ],
+  "correcta": 2,
+  "explicacion": "El ángulo inscrito mide la mitad del ángulo del centro: 80°/2 = 40°."
+ },
+ {
+  "id": "m2_117",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene un lado de 29 cm. Si se le aplica una homotecia de razón 2, ¿cuánto mide el lado correspondiente en la imagen?",
+  "alternativas": [
+   "29 cm",
+   "58 cm",
+   "31 cm",
+   "116 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "Las longitudes se multiplican por la razón: 29·2 = 58 cm."
+ },
+ {
+  "id": "m2_118",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 3 bolitas rojas y 3 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "1/4",
+   "1/2",
+   "2/5",
+   "1/5"
+  ],
+  "correcta": 3,
+  "explicacion": "P = 3/6 · 2/5 = 1/5."
+ },
+ {
+  "id": "m2_119",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo inscrito mide 80°. ¿Cuánto mide el ángulo del centro que subtiende el mismo arco?",
+  "alternativas": [
+   "200°",
+   "160°",
+   "40°",
+   "100°"
+  ],
+  "correcta": 1,
+  "explicacion": "El ángulo del centro mide el doble: 2·80° = 160°."
+ },
+ {
+  "id": "m2_120",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Los catetos de un triángulo rectángulo isósceles miden 5 cm cada uno. ¿Cuánto mide la hipotenusa?",
+  "alternativas": [
+   "5√3 cm",
+   "5√2 cm",
+   "10 cm",
+   "10√2 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "Los ángulos agudos miden 45°; h = 5·√2 = 5√2 cm."
+ },
+ {
+  "id": "m2_121",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = 5x − 1?",
+  "alternativas": [
+   "f⁻¹(x) = (x + 1)/5",
+   "f⁻¹(x) = (x − 1)/5",
+   "f⁻¹(x) = x/5 + 1",
+   "f⁻¹(x) = 5x + 1"
+  ],
+  "correcta": 0,
+  "explicacion": "Se despeja x en y = 5x − 1: x = (y + 1)/5."
+ },
+ {
+  "id": "m2_122",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = (5/3)x + 1?",
+  "alternativas": [
+   "5/3",
+   "−5/3",
+   "−3/5",
+   "3/5"
+  ],
+  "correcta": 2,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(5/3) = −3/5."
+ },
+ {
+  "id": "m2_123",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₁₀(1/1.000)?",
+  "alternativas": [
+   "−3",
+   "−2",
+   "3",
+   "−30"
+  ],
+  "correcta": 0,
+  "explicacion": "1/1.000 = 10^(−3), entonces el logaritmo es −3."
+ },
+ {
+  "id": "m2_124",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 81^(3/4)?",
+  "alternativas": [
+   "81",
+   "27",
+   "60",
+   "9"
+  ],
+  "correcta": 1,
+  "explicacion": "81^(3/4) = (⁴√81)³ = 3³ = 27."
+ },
+ {
+  "id": "m2_125",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por 3x + y = −11 y 9x + 3y = −31?",
+  "alternativas": [
+   "Infinitas soluciones",
+   "No tiene solución",
+   "Exactamente dos soluciones",
+   "Una única solución"
+  ],
+  "correcta": 1,
+  "explicacion": "Los coeficientes de x e y son proporcionales pero el término libre no: son rectas paralelas distintas."
+ },
+ {
+  "id": "m2_126",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 9 cm, el cateto adyacente mide 12 cm y la hipotenusa mide 15 cm. ¿Cuál es el valor de cos(α)?",
+  "alternativas": [
+   "5/4",
+   "4/5",
+   "3/4",
+   "3/5"
+  ],
+  "correcta": 1,
+  "explicacion": "cos = cateto adyacente / hipotenusa = 4/5."
+ },
+ {
+  "id": "m2_127",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "En Chile, la cotización obligatoria para la AFP es el 10% del sueldo imponible. Si el sueldo imponible de Isidora es $1.670.000, ¿cuánto se cotiza al mes?",
+  "alternativas": [
+   "$1.503.000",
+   "$167.000",
+   "$16.700",
+   "$2.004.000"
+  ],
+  "correcta": 1,
+  "explicacion": "10% de $1.670.000 = $167.000."
+ },
+ {
+  "id": "m2_128",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un cultivo comienza con 1.000 bacterias y su cantidad se duplica cada 1 hora. ¿Cuántas bacterias habrá después de 3 horas?",
+  "alternativas": [
+   "6.000",
+   "4.000",
+   "16.000",
+   "8.000"
+  ],
+  "correcta": 3,
+  "explicacion": "En 3 horas hay 3 duplicaciones: 1.000 · 2³ = 8.000."
+ },
+ {
+  "id": "m2_129",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo inscrito x?",
+  "alternativas": [
+   "100°",
+   "80°",
+   "40°",
+   "280°"
+  ],
+  "correcta": 2,
+  "explicacion": "El ángulo inscrito ACB mide la mitad del ángulo del centro AOB: 80°/2 = 40°.",
+  "imagen": "assets/images/m2/m2_img_061.png"
+ },
+ {
+  "id": "m2_130",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 2·2ˣ, ¿cuál es el valor de f(1)?",
+  "alternativas": [
+   "4",
+   "2",
+   "8",
+   "6"
+  ],
+  "correcta": 0,
+  "explicacion": "f(1) = 2·2¹ = 4."
+ },
+ {
+  "id": "m2_131",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo inscrito mide 40°. ¿Cuánto mide el ángulo del centro que subtiende el mismo arco?",
+  "alternativas": [
+   "280°",
+   "20°",
+   "80°",
+   "140°"
+  ],
+  "correcta": 2,
+  "explicacion": "El ángulo del centro mide el doble: 2·40° = 80°."
+ },
+ {
+  "id": "m2_132",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,5 y P(A ∩ B) = 0,3. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,6",
+   "0,15",
+   "0,4",
+   "0,8"
+  ],
+  "correcta": 0,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,3/0,5 = 0,6."
+ },
+ {
+  "id": "m2_133",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo del centro mide 160°. ¿Cuánto mide un ángulo inscrito que subtiende el mismo arco?",
+  "alternativas": [
+   "80°",
+   "160°",
+   "200°",
+   "100°"
+  ],
+  "correcta": 0,
+  "explicacion": "El ángulo inscrito mide la mitad del ángulo del centro: 160°/2 = 80°."
+ },
+ {
+  "id": "m2_134",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si −3x − 5y = 30 y 5x + 4y = −37, ¿cuál es el valor de x?",
+  "alternativas": [
+   "−5",
+   "5",
+   "−3",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "Resolviendo el sistema se obtiene x = −5 e y = −3."
+ },
+ {
+  "id": "m2_135",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas 3x − y = 8 y −3x + y = −7?",
+  "alternativas": [
+   "Secantes no perpendiculares",
+   "Coincidentes",
+   "Paralelas no coincidentes",
+   "Perpendiculares"
+  ],
+  "correcta": 2,
+  "explicacion": "Tienen la misma pendiente pero distinto punto de corte con el eje y."
+ },
+ {
+  "id": "m2_136",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = x³, ¿cuál es el valor de f(2)?",
+  "alternativas": [
+   "8",
+   "−8",
+   "6",
+   "9"
+  ],
+  "correcta": 0,
+  "explicacion": "f(2) = 1·(2)³ = 8."
+ },
+ {
+  "id": "m2_137",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √75 − √48?",
+  "alternativas": [
+   "√3",
+   "√27",
+   "20√3",
+   "√6"
+  ],
+  "correcta": 0,
+  "explicacion": "√75 = 5√3 y √48 = 4√3; entonces 5√3 − 4√3 = √3."
+ },
+ {
+  "id": "m2_138",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda equilibrada 5 veces. ¿Cuál es la probabilidad de obtener exactamente 3 caras?",
+  "alternativas": [
+   "3/5",
+   "1/32",
+   "1",
+   "5/16"
+  ],
+  "correcta": 3,
+  "explicacion": "Modelo binomial: C(5,3)·(1/2)⁵ = 10/32 = 5/16."
+ },
+ {
+  "id": "m2_139",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(−3, 0)",
+   "(0, −3)",
+   "(3, 0)",
+   "(0, 3)"
+  ],
+  "correcta": 2,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (3, 0). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_076.png"
+ },
+ {
+  "id": "m2_140",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su valor mínimo?",
+  "alternativas": [
+   "2",
+   "−2",
+   "−4",
+   "−6"
+  ],
+  "correcta": 3,
+  "explicacion": "El punto más bajo del gráfico está en y = -6.",
+  "imagen": "assets/images/m2/m2_img_007.png"
+ },
+ {
+  "id": "m2_141",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la varianza (poblacional) de los datos 27, 11, 39, 23?",
+  "alternativas": [
+   "392",
+   "100",
+   "25",
+   "10"
+  ],
+  "correcta": 1,
+  "explicacion": "Promedio 25; se promedian los cuadrados de las desviaciones: varianza = 100."
+ },
+ {
+  "id": "m2_142",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Una rampa forma un ángulo de 30° con el suelo y mide 24 m de largo. ¿A qué altura llega?",
+  "alternativas": [
+   "24 m",
+   "48 m",
+   "12 m",
+   "12√3 m"
+  ],
+  "correcta": 2,
+  "explicacion": "altura = 24·sen(30°) = 24·1/2 = 12 m."
+ },
+ {
+  "id": "m2_143",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 70% habla inglés, el 60% habla francés y el 45% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "115%",
+   "45%",
+   "85%",
+   "130%"
+  ],
+  "correcta": 2,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 70% + 60% − 45% = 85%."
+ },
+ {
+  "id": "m2_144",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₂(48) − log₂(3)?",
+  "alternativas": [
+   "3",
+   "16",
+   "4",
+   "5"
+  ],
+  "correcta": 2,
+  "explicacion": "log₂(48) − log₂(3) = log₂(48/3) = log₂(16) = 4."
+ },
+ {
+  "id": "m2_145",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 5^(x + 3) = 625?",
+  "alternativas": [
+   "4",
+   "2",
+   "1",
+   "7"
+  ],
+  "correcta": 2,
+  "explicacion": "625 = 5⁴; igualando exponentes: x + 3 = 4, entonces x = 1."
+ },
+ {
+  "id": "m2_146",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 16 cm, el cateto adyacente mide 30 cm y la hipotenusa mide 34 cm. ¿Cuál es el valor de cos(α)?",
+  "alternativas": [
+   "8/15",
+   "15/17",
+   "8/17",
+   "17/15"
+  ],
+  "correcta": 1,
+  "explicacion": "cos = cateto adyacente / hipotenusa = 15/17."
+ },
+ {
+  "id": "m2_147",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "El triángulo A'B'C' (línea punteada) es la imagen del triángulo ABC por una homotecia de centro O. ¿Cuál es la razón de la homotecia?",
+  "alternativas": [
+   "4",
+   "−3",
+   "3",
+   "1/3"
+  ],
+  "correcta": 2,
+  "explicacion": "Cada vértice imagen está 3 veces más lejos de O: por ejemplo A = (1, 3) y A' = (3, 9). Razón 3.",
+  "imagen": "assets/images/m2/m2_img_092.png"
+ },
+ {
+  "id": "m2_148",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el volumen de una esfera de radio 3 cm?",
+  "alternativas": [
+   "27π cm³",
+   "72π cm³",
+   "108π cm³",
+   "36π cm³"
+  ],
+  "correcta": 3,
+  "explicacion": "V = (4/3)·π·r³ = (4/3)·π·27 = 36π cm³."
+ },
+ {
+  "id": "m2_149",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 3 cm, PB = 11 cm y CP = 3 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "33 cm",
+   "11 cm",
+   "12 cm",
+   "13 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 3·11 = 3·PD → PD = 11 cm."
+ },
+ {
+  "id": "m2_150",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo inscrito x?",
+  "alternativas": [
+   "260°",
+   "80°",
+   "100°",
+   "50°"
+  ],
+  "correcta": 3,
+  "explicacion": "El ángulo inscrito ACB mide la mitad del ángulo del centro AOB: 100°/2 = 50°.",
+  "imagen": "assets/images/m2/m2_img_060.png"
+ },
+ {
+  "id": "m2_151",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Una persona ahorra $105.000 con un interés compuesto de 50% anual. ¿Cuál es el monto total después de 2 años?",
+  "alternativas": [
+   "$236.250",
+   "$131.250",
+   "$210.000",
+   "$105.000"
+  ],
+  "correcta": 0,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $105.000 · (1,5)² = $236.250."
+ },
+ {
+  "id": "m2_152",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo inscrito mide 85°. ¿Cuánto mide el ángulo del centro que subtiende el mismo arco?",
+  "alternativas": [
+   "170°",
+   "95°",
+   "190°",
+   "42°"
+  ],
+  "correcta": 0,
+  "explicacion": "El ángulo del centro mide el doble: 2·85° = 170°."
+ },
+ {
+  "id": "m2_153",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₁₀(x) + 3, ¿cuál es el valor de f(100)?",
+  "alternativas": [
+   "2",
+   "103",
+   "5",
+   "−1"
+  ],
+  "correcta": 2,
+  "explicacion": "log₁₀(100) = 2; luego f = 2 + 3 = 5."
+ },
+ {
+  "id": "m2_154",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 25^(1/2)?",
+  "alternativas": [
+   "5",
+   "25",
+   "7",
+   "12"
+  ],
+  "correcta": 0,
+  "explicacion": "25^(1/2) = √25 = 5."
+ },
+ {
+  "id": "m2_155",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de cos(α)?",
+  "alternativas": [
+   "3/5",
+   "5/4",
+   "3/4",
+   "4/5"
+  ],
+  "correcta": 3,
+  "explicacion": "cos = cateto adyacente / hipotenusa = 4/5.",
+  "imagen": "assets/images/m2/m2_img_045.png"
+ },
+ {
+  "id": "m2_156",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En una carrera participan 8 corredores. ¿De cuántas maneras distintas se pueden repartir el primer, segundo y tercer lugar?",
+  "alternativas": [
+   "56",
+   "336",
+   "512",
+   "24"
+  ],
+  "correcta": 1,
+  "explicacion": "Importa el orden: 8·7·6 = 336."
+ },
+ {
+  "id": "m2_157",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "El triángulo A'B'C' (línea punteada) es la imagen del triángulo ABC por una homotecia de centro O. ¿Cuál es la razón de la homotecia?",
+  "alternativas": [
+   "2",
+   "1/2",
+   "3",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "Cada vértice imagen está 2 veces más lejos de O: por ejemplo A = (1, 2) y A' = (2, 4). Razón 2.",
+  "imagen": "assets/images/m2/m2_img_086.png"
+ },
+ {
+  "id": "m2_158",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Un crédito se paga en 18 cuotas mensuales iguales de $170.000. ¿Cuánto se paga en total al terminar el crédito?",
+  "alternativas": [
+   "$3.060.000",
+   "$2.670.000",
+   "$2.890.000",
+   "$560.000"
+  ],
+  "correcta": 0,
+  "explicacion": "Total = 18 · $170.000 = $3.060.000."
+ },
+ {
+  "id": "m2_159",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de tan(α)?",
+  "alternativas": [
+   "3/5",
+   "4/3",
+   "4/5",
+   "3/4"
+  ],
+  "correcta": 3,
+  "explicacion": "tan = cateto opuesto / cateto adyacente = 3/4.",
+  "imagen": "assets/images/m2/m2_img_052.png"
+ },
+ {
+  "id": "m2_160",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/4, y cada disparo es independiente de los demás. Si realiza 4 disparos, ¿cuál es la probabilidad de que acierte exactamente 2?",
+  "alternativas": [
+   "1/16",
+   "1/2",
+   "9/256",
+   "27/128"
+  ],
+  "correcta": 3,
+  "explicacion": "P = C(4,2)·(1/4)²·(3/4)² = 27/128."
+ },
+ {
+  "id": "m2_161",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₁₀(x − 4) = 1, ¿cuál es el valor de x?",
+  "alternativas": [
+   "6",
+   "5",
+   "24",
+   "14"
+  ],
+  "correcta": 3,
+  "explicacion": "Por definición de logaritmo: x − 4 = 10¹ = 10, entonces x = 14."
+ },
+ {
+  "id": "m2_162",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Un crédito se paga en 24 cuotas mensuales iguales de $126.000. ¿Cuánto se paga en total al terminar el crédito?",
+  "alternativas": [
+   "$2.898.000",
+   "$3.024.000",
+   "$424.000",
+   "$2.726.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Total = 24 · $126.000 = $3.024.000."
+ },
+ {
+  "id": "m2_163",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 100 personas, 20 usan transporte público y, de ellas, 4 son menores de 18 años. Si se elige al azar una persona que usa transporte público, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "1/20",
+   "1/25",
+   "1/5",
+   "4/5"
+  ],
+  "correcta": 2,
+  "explicacion": "Se consideran solo las 20 personas que usan transporte público: P = 4/20 = 1/5."
+ },
+ {
+  "id": "m2_164",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 2^(2x + 2) = 4?",
+  "alternativas": [
+   "2",
+   "0",
+   "1",
+   "−1"
+  ],
+  "correcta": 1,
+  "explicacion": "4 = 2²; igualando exponentes: 2x + 2 = 2, entonces x = 0."
+ },
+ {
+  "id": "m2_165",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Una figura de área 25 cm² se transforma con una homotecia de razón 3. ¿Cuál es el área de la figura imagen?",
+  "alternativas": [
+   "675 cm²",
+   "75 cm²",
+   "225 cm²",
+   "34 cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "Las áreas se multiplican por el cuadrado de la razón: 25·(3)² = 225 cm²."
+ },
+ {
+  "id": "m2_166",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "De un curso de 12 estudiantes se elegirá una comisión de 2 integrantes (sin cargos). ¿Cuántas comisiones distintas se pueden formar?",
+  "alternativas": [
+   "66",
+   "132",
+   "24",
+   "12"
+  ],
+  "correcta": 0,
+  "explicacion": "No importa el orden: C(12, 2) = 12!/(2!·10!) = 66."
+ },
+ {
+  "id": "m2_167",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Una sustancia radiactiva reduce su masa a la mitad cada 5 años. Si hoy hay 40 g, ¿cuántos gramos quedarán dentro de 10 años?",
+  "alternativas": [
+   "20 g",
+   "10 g",
+   "5 g",
+   "30 g"
+  ],
+  "correcta": 1,
+  "explicacion": "En 10 años hay 2 reducciones a la mitad: 40 / 2² = 10 g."
+ },
+ {
+  "id": "m2_168",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene un lado de 24 cm. Si se le aplica una homotecia de razón 1/3, ¿cuánto mide el lado correspondiente en la imagen?",
+  "alternativas": [
+   "24 cm",
+   "8 cm",
+   "25 cm",
+   "27 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "Las longitudes se multiplican por la razón: 24·1/3 = 8 cm."
+ },
+ {
+  "id": "m2_169",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/5, y cada disparo es independiente de los demás. Si realiza 3 disparos, ¿cuál es la probabilidad de que acierte exactamente 1?",
+  "alternativas": [
+   "48/125",
+   "1/5",
+   "3/5",
+   "16/125"
+  ],
+  "correcta": 0,
+  "explicacion": "P = C(3,1)·(1/5)¹·(4/5)² = 48/125."
+ },
+ {
+  "id": "m2_170",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál de las siguientes funciones corresponde al gráfico? (x en grados)",
+  "alternativas": [
+   "f(x) = cos(2x)",
+   "f(x) = cos(x)",
+   "f(x) = 2·cos(x)",
+   "f(x) = sen(x)"
+  ],
+  "correcta": 1,
+  "explicacion": "Amplitud 1, período 360°, desplazamiento vertical 0 y la curva parte en su máximo en x = 0: f(x) = cos(x).",
+  "imagen": "assets/images/m2/m2_img_004.png"
+ },
+ {
+  "id": "m2_171",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de sen(α)?",
+  "alternativas": [
+   "13/5",
+   "5/13",
+   "5/12",
+   "12/13"
+  ],
+  "correcta": 1,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 5/13.",
+  "imagen": "assets/images/m2/m2_img_049.png"
+ },
+ {
+  "id": "m2_172",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 15/√5 se obtiene:",
+  "alternativas": [
+   "15√5",
+   "4√5",
+   "15",
+   "3√5"
+  ],
+  "correcta": 3,
+  "explicacion": "15/√5 · √5/√5 = 15√5/5 = 3√5."
+ },
+ {
+  "id": "m2_173",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = 2x − 9?",
+  "alternativas": [
+   "f⁻¹(x) = (x + 9)/2",
+   "f⁻¹(x) = 2x + 9",
+   "f⁻¹(x) = (x − 9)/2",
+   "f⁻¹(x) = x/2 + 9"
+  ],
+  "correcta": 0,
+  "explicacion": "Se despeja x en y = 2x − 9: x = (y + 9)/2."
+ },
+ {
+  "id": "m2_174",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 24/√6 se obtiene:",
+  "alternativas": [
+   "24",
+   "24√6",
+   "5√6",
+   "4√6"
+  ],
+  "correcta": 3,
+  "explicacion": "24/√6 · √6/√6 = 24√6/6 = 4√6."
+ },
+ {
+  "id": "m2_175",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Se depositan en una cuenta de ahorro $31.000 con un interés compuesto de 10% anual. ¿Cuál es el monto total después de 3 años?",
+  "alternativas": [
+   "$40.300",
+   "$9.300",
+   "$10.261",
+   "$41.261"
+  ],
+  "correcta": 3,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $31.000 · (1,1)³ = $41.261."
+ },
+ {
+  "id": "m2_176",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = −3x − 5?",
+  "alternativas": [
+   "f⁻¹(x) = −3x + 5",
+   "f⁻¹(x) = (x − 5)/−3",
+   "f⁻¹(x) = (x + 5)/−3",
+   "f⁻¹(x) = x/−3 + 5"
+  ],
+  "correcta": 2,
+  "explicacion": "Se despeja x en y = -3x − 5: x = (y + 5)/−3."
+ },
+ {
+  "id": "m2_177",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función exponencial que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = 3ˣ",
+   "f(x) = 1 + 3ˣ",
+   "f(x) = 2ˣ",
+   "f(x) = 3·3ˣ"
+  ],
+  "correcta": 0,
+  "explicacion": "f(0) = 1 indica el coeficiente, y f(1)/f(0) = 3/1 = 3 indica la base.",
+  "imagen": "assets/images/m2/m2_img_023.png"
+ },
+ {
+  "id": "m2_178",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Para qué valor de x se cumple f(x) = 3?",
+  "alternativas": [
+   "27",
+   "9",
+   "18",
+   "12"
+  ],
+  "correcta": 0,
+  "explicacion": "La base es 3 (pasa por (3, 1)); f(x) = 3 cuando x = 3³ = 27.",
+  "imagen": "assets/images/m2/m2_img_037.png"
+ },
+ {
+  "id": "m2_179",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(1, −2)",
+   "(1, 2)",
+   "(−1, 2)",
+   "(2, 1)"
+  ],
+  "correcta": 1,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (1, 2). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_080.png"
+ },
+ {
+  "id": "m2_180",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si los pesos de un grupo de personas siguen una distribución normal de media 70 kg y desviación estándar 10 kg, ¿qué porcentaje aproximado de los datos está entre 50 y 90 kg?",
+  "alternativas": [
+   "2,5%",
+   "68%",
+   "99,7%",
+   "95%"
+  ],
+  "correcta": 3,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_181",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas −4x + 6y = 8 y −12x + 18y = 25?",
+  "alternativas": [
+   "Coincidentes",
+   "Paralelas no coincidentes",
+   "Secantes no perpendiculares",
+   "Perpendiculares"
+  ],
+  "correcta": 1,
+  "explicacion": "Tienen la misma pendiente pero distinto punto de corte con el eje y."
+ },
+ {
+  "id": "m2_182",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En una carrera participan 10 corredores. ¿De cuántas maneras distintas se pueden repartir el primer, segundo y tercer lugar?",
+  "alternativas": [
+   "1.000",
+   "30",
+   "720",
+   "120"
+  ],
+  "correcta": 2,
+  "explicacion": "Importa el orden: 10·9·8 = 720."
+ },
+ {
+  "id": "m2_183",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "El triángulo A'B'C' (línea punteada) es la imagen del triángulo ABC por una homotecia de centro O. ¿Cuál es la razón de la homotecia?",
+  "alternativas": [
+   "3",
+   "1/3",
+   "−3",
+   "4"
+  ],
+  "correcta": 0,
+  "explicacion": "Cada vértice imagen está 3 veces más lejos de O: por ejemplo A = (3, 2) y A' = (9, 6). Razón 3.",
+  "imagen": "assets/images/m2/m2_img_090.png"
+ },
+ {
+  "id": "m2_184",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 70% habla inglés, el 55% habla francés y el 40% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "85%",
+   "40%",
+   "110%",
+   "125%"
+  ],
+  "correcta": 0,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 70% + 55% − 40% = 85%."
+ },
+ {
+  "id": "m2_185",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "En Chile, la cotización obligatoria para la AFP es el 10% del sueldo imponible. Si el sueldo imponible de Martina es $590.000, ¿cuánto se cotiza al mes?",
+  "alternativas": [
+   "$531.000",
+   "$5.900",
+   "$59.000",
+   "$708.000"
+  ],
+  "correcta": 2,
+  "explicacion": "10% de $590.000 = $59.000."
+ },
+ {
+  "id": "m2_186",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda 5 veces. ¿Cuál es la probabilidad de obtener exactamente 1 cara?",
+  "alternativas": [
+   "1/2",
+   "1/32",
+   "1/5",
+   "5/32"
+  ],
+  "correcta": 3,
+  "explicacion": "Modelo binomial: C(5,1)·(1/2)⁵ = 5/32."
+ },
+ {
+  "id": "m2_187",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una heladería ofrece 5 sabores. ¿De cuántas maneras se puede elegir una copa con 4 sabores distintos, si el orden no importa?",
+  "alternativas": [
+   "20",
+   "120",
+   "10",
+   "5"
+  ],
+  "correcta": 3,
+  "explicacion": "No importa el orden: C(5, 4) = 5!/(4!·1!) = 5."
+ },
+ {
+  "id": "m2_188",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √175 se obtiene:",
+  "alternativas": [
+   "4√7",
+   "6√7",
+   "25√7",
+   "5√7"
+  ],
+  "correcta": 3,
+  "explicacion": "√175 = √(25 · 7) = 5√7."
+ },
+ {
+  "id": "m2_189",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₁₀(x + 4) = 1, ¿cuál es el valor de x?",
+  "alternativas": [
+   "16",
+   "6",
+   "14",
+   "−3"
+  ],
+  "correcta": 1,
+  "explicacion": "Por definición de logaritmo: x + 4 = 10¹ = 10, entonces x = 6."
+ },
+ {
+  "id": "m2_190",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = log₂(x)",
+   "f(x) = log₅(x)",
+   "f(x) = log₄(x)",
+   "f(x) = log₃(x)"
+  ],
+  "correcta": 0,
+  "explicacion": "Pasa por (2, 1): log₂(2) = 1.",
+  "imagen": "assets/images/m2/m2_img_040.png"
+ },
+ {
+  "id": "m2_191",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/3, y cada disparo es independiente de los demás. Si realiza 4 disparos, ¿cuál es la probabilidad de que acierte exactamente 2?",
+  "alternativas": [
+   "2/3",
+   "1/9",
+   "8/27",
+   "4/81"
+  ],
+  "correcta": 2,
+  "explicacion": "P = C(4,2)·(1/3)²·(2/3)² = 8/27."
+ },
+ {
+  "id": "m2_192",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo inscrito mide 60°. ¿Cuánto mide el ángulo del centro que subtiende el mismo arco?",
+  "alternativas": [
+   "60°",
+   "240°",
+   "120°",
+   "30°"
+  ],
+  "correcta": 2,
+  "explicacion": "El ángulo del centro mide el doble: 2·60° = 120°."
+ },
+ {
+  "id": "m2_193",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de cos(α)?",
+  "alternativas": [
+   "13/12",
+   "12/13",
+   "5/13",
+   "5/12"
+  ],
+  "correcta": 1,
+  "explicacion": "cos = cateto adyacente / hipotenusa = 12/13.",
+  "imagen": "assets/images/m2/m2_img_043.png"
+ },
+ {
+  "id": "m2_194",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3·4ˣ, ¿cuál es el valor de f(−2)?",
+  "alternativas": [
+   "3/16",
+   "3/4",
+   "−3/16",
+   "6"
+  ],
+  "correcta": 0,
+  "explicacion": "f(−2) = 3·4⁻² = 3/16."
+ },
+ {
+  "id": "m2_195",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₃(1/9)?",
+  "alternativas": [
+   "−6",
+   "−2",
+   "−1",
+   "2"
+  ],
+  "correcta": 1,
+  "explicacion": "1/9 = 3^(−2), entonces el logaritmo es −2."
+ },
+ {
+  "id": "m2_196",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 20 cm, el cateto adyacente mide 21 cm y la hipotenusa mide 29 cm. ¿Cuál es el valor de sen(α)?",
+  "alternativas": [
+   "20/21",
+   "20/29",
+   "29/20",
+   "21/29"
+  ],
+  "correcta": 1,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 20/29."
+ },
+ {
+  "id": "m2_197",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 2 bolitas rojas y 3 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "1/10",
+   "4/25",
+   "2/5",
+   "1/4"
+  ],
+  "correcta": 0,
+  "explicacion": "P = 2/5 · 1/4 = 1/10."
+ },
+ {
+  "id": "m2_198",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 30% habla inglés, el 50% habla francés y el 15% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "80%",
+   "65%",
+   "95%",
+   "15%"
+  ],
+  "correcta": 1,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 30% + 50% − 15% = 65%."
+ },
+ {
+  "id": "m2_199",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = 4x + 4?",
+  "alternativas": [
+   "1/4",
+   "−4",
+   "−1/4",
+   "4"
+  ],
+  "correcta": 2,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(4) = −1/4."
+ },
+ {
+  "id": "m2_200",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Los catetos de un triángulo rectángulo isósceles miden 7 cm cada uno. ¿Cuánto mide la hipotenusa?",
+  "alternativas": [
+   "14 cm",
+   "14√2 cm",
+   "7√2 cm",
+   "7√3 cm"
+  ],
+  "correcta": 2,
+  "explicacion": "Los ángulos agudos miden 45°; h = 7·√2 = 7√2 cm."
+ },
+ {
+  "id": "m2_201",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En una carrera participan 12 corredores. ¿De cuántas maneras distintas se pueden repartir el primer, segundo y tercer lugar?",
+  "alternativas": [
+   "1.320",
+   "36",
+   "220",
+   "1.728"
+  ],
+  "correcta": 0,
+  "explicacion": "Importa el orden: 12·11·10 = 1.320."
+ },
+ {
+  "id": "m2_202",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 8 bolitas rojas y 8 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "1/4",
+   "7/15",
+   "7/30",
+   "1/2"
+  ],
+  "correcta": 2,
+  "explicacion": "P = 8/16 · 7/15 = 7/30."
+ },
+ {
+  "id": "m2_203",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Un club de 5 personas debe elegir un presidente y un secretario (personas distintas). ¿De cuántas maneras puede hacerlo?",
+  "alternativas": [
+   "25",
+   "20",
+   "1",
+   "10"
+  ],
+  "correcta": 1,
+  "explicacion": "Importa el orden: 5·4 = 20."
+ },
+ {
+  "id": "m2_204",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda 5 veces. ¿Cuál es la probabilidad de obtener exactamente 3 caras?",
+  "alternativas": [
+   "1",
+   "1/32",
+   "3/5",
+   "5/16"
+  ],
+  "correcta": 3,
+  "explicacion": "Modelo binomial: C(5,3)·(1/2)⁵ = 10/32 = 5/16."
+ },
+ {
+  "id": "m2_205",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por 6x − 3y = −9 y −2x + 6y = 2?",
+  "alternativas": [
+   "Exactamente dos soluciones",
+   "Una única solución",
+   "No tiene solución",
+   "Infinitas soluciones"
+  ],
+  "correcta": 1,
+  "explicacion": "Los coeficientes de x e y no son proporcionales: las rectas se cortan en un solo punto."
+ },
+ {
+  "id": "m2_206",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Un club de 8 personas debe elegir un presidente y un secretario (personas distintas). ¿De cuántas maneras puede hacerlo?",
+  "alternativas": [
+   "28",
+   "56",
+   "64",
+   "16"
+  ],
+  "correcta": 1,
+  "explicacion": "Importa el orden: 8·7 = 56."
+ },
+ {
+  "id": "m2_207",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = log₄(x)",
+   "f(x) = log₂(x)",
+   "f(x) = log₃(x)",
+   "f(x) = log₁₀(x)"
+  ],
+  "correcta": 0,
+  "explicacion": "Pasa por (4, 1): log₄(4) = 1.",
+  "imagen": "assets/images/m2/m2_img_041.png"
+ },
+ {
+  "id": "m2_208",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Los catetos de un triángulo rectángulo isósceles miden 2 cm cada uno. ¿Cuánto mide la hipotenusa?",
+  "alternativas": [
+   "2√3 cm",
+   "2√2 cm",
+   "4 cm",
+   "4√2 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "Los ángulos agudos miden 45°; h = 2·√2 = 2√2 cm."
+ },
+ {
+  "id": "m2_209",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √44 se obtiene:",
+  "alternativas": [
+   "3√11",
+   "4√11",
+   "2√11",
+   "√11"
+  ],
+  "correcta": 2,
+  "explicacion": "√44 = √(4 · 11) = 2√11."
+ },
+ {
+  "id": "m2_210",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el área de la superficie de una esfera de radio 3 cm?",
+  "alternativas": [
+   "18π cm²",
+   "9π cm²",
+   "24π cm²",
+   "36π cm²"
+  ],
+  "correcta": 3,
+  "explicacion": "A = 4·π·r² = 4·π·9 = 36π cm²."
+ },
+ {
+  "id": "m2_211",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la varianza (poblacional) de los datos 33, 35, 33, 35?",
+  "alternativas": [
+   "2",
+   "34",
+   "3",
+   "1"
+  ],
+  "correcta": 3,
+  "explicacion": "Promedio 34; se promedian los cuadrados de las desviaciones: varianza = 1."
+ },
+ {
+  "id": "m2_212",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₁₀(600) − log₁₀(6)?",
+  "alternativas": [
+   "6",
+   "2",
+   "3",
+   "1"
+  ],
+  "correcta": 1,
+  "explicacion": "log₁₀(600) − log₁₀(6) = log₁₀(600/6) = log₁₀(100) = 2."
+ },
+ {
+  "id": "m2_213",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Un club de 12 personas debe elegir un presidente y un secretario (personas distintas). ¿De cuántas maneras puede hacerlo?",
+  "alternativas": [
+   "24",
+   "132",
+   "66",
+   "144"
+  ],
+  "correcta": 1,
+  "explicacion": "Importa el orden: 12·11 = 132."
+ },
+ {
+  "id": "m2_214",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si los tiempos de un trayecto siguen una distribución normal de media 40 minutos y desviación estándar 5 minutos, ¿qué porcentaje aproximado de los datos está entre 45 y 50 minutos?",
+  "alternativas": [
+   "13,5%",
+   "34%",
+   "2,5%",
+   "50%"
+  ],
+  "correcta": 0,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_215",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 6 bolitas rojas y 5 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "6/11",
+   "1/2",
+   "36/121",
+   "3/11"
+  ],
+  "correcta": 3,
+  "explicacion": "P = 6/11 · 5/10 = 3/11."
+ },
+ {
+  "id": "m2_216",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda equilibrada 5 veces. ¿Cuál es la probabilidad de obtener exactamente 4 caras?",
+  "alternativas": [
+   "1/32",
+   "4/5",
+   "1/2",
+   "5/32"
+  ],
+  "correcta": 3,
+  "explicacion": "Modelo binomial: C(5,4)·(1/2)⁵ = 5/32."
+ },
+ {
+  "id": "m2_217",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 1 cm y PB = 121 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "61 cm",
+   "11 cm",
+   "6 cm",
+   "120 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "PT² = PA·PB = 1·121 = 121, entonces PT = 11 cm."
+ },
+ {
+  "id": "m2_218",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Una persona ahorra $237.000 con un interés compuesto de 20% anual. ¿Cuál es el monto total después de 2 años?",
+  "alternativas": [
+   "$94.800",
+   "$331.800",
+   "$341.280",
+   "$104.280"
+  ],
+  "correcta": 2,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $237.000 · (1,2)² = $341.280."
+ },
+ {
+  "id": "m2_219",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = log₁₀(x)",
+   "f(x) = log₃(x)",
+   "f(x) = log₅(x)",
+   "f(x) = log₄(x)"
+  ],
+  "correcta": 1,
+  "explicacion": "Pasa por (3, 1): log₃(3) = 1.",
+  "imagen": "assets/images/m2/m2_img_042.png"
+ },
+ {
+  "id": "m2_220",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un cultivo comienza con 100 bacterias y su cantidad se duplica cada 3 horas. ¿Cuántas bacterias habrá después de 9 horas?",
+  "alternativas": [
+   "1.600",
+   "600",
+   "400",
+   "800"
+  ],
+  "correcta": 3,
+  "explicacion": "En 9 horas hay 3 duplicaciones: 100 · 2³ = 800."
+ },
+ {
+  "id": "m2_221",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si 2x + y = 0 y 4x − 3y = −20, ¿cuál es el valor de x + y?",
+  "alternativas": [
+   "−6",
+   "2",
+   "−2",
+   "0"
+  ],
+  "correcta": 1,
+  "explicacion": "Resolviendo el sistema se obtiene x = −2 e y = 4."
+ },
+ {
+  "id": "m2_222",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,6 y P(A ∩ B) = 0,18. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,78",
+   "0,7",
+   "0,3",
+   "0,11"
+  ],
+  "correcta": 2,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,18/0,6 = 0,3."
+ },
+ {
+  "id": "m2_223",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "La cotización obligatoria para la AFP es el 10% del sueldo imponible. Si una persona gana $1.330.000 imponibles todos los meses, ¿cuánto cotiza en un año?",
+  "alternativas": [
+   "$1.330.000",
+   "$1.596.000",
+   "$15.960.000",
+   "$133.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Al mes: $133.000. En 12 meses: $1.596.000."
+ },
+ {
+  "id": "m2_224",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda 6 veces. ¿Cuál es la probabilidad de obtener exactamente 3 caras?",
+  "alternativas": [
+   "5/16",
+   "1/64",
+   "5/8",
+   "1/2"
+  ],
+  "correcta": 0,
+  "explicacion": "Modelo binomial: C(6,3)·(1/2)⁶ = 20/64 = 5/16."
+ },
+ {
+  "id": "m2_225",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 81^(1/4)?",
+  "alternativas": [
+   "7",
+   "20",
+   "9",
+   "3"
+  ],
+  "correcta": 3,
+  "explicacion": "81^(1/4) = ⁴√81 = 3."
+ },
+ {
+  "id": "m2_226",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "La figura muestra una esfera y su radio. ¿Cuál es su volumen?",
+  "alternativas": [
+   "288π cm³",
+   "216π cm³",
+   "144π cm³",
+   "864π cm³"
+  ],
+  "correcta": 0,
+  "explicacion": "V = (4/3)·π·6³ = 288π cm³.",
+  "imagen": "assets/images/m2/m2_img_068.png"
+ },
+ {
+  "id": "m2_227",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 40 personas, 25 usan transporte público y, de ellas, 16 son menores de 18 años. Si se elige al azar una persona que usa transporte público, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "16/25",
+   "5/8",
+   "9/25",
+   "2/5"
+  ],
+  "correcta": 0,
+  "explicacion": "Se consideran solo las 25 personas que usan transporte público: P = 16/25."
+ },
+ {
+  "id": "m2_228",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 10 cm, el cateto adyacente mide 24 cm y la hipotenusa mide 26 cm. ¿Cuál es el valor de cos(α)?",
+  "alternativas": [
+   "12/13",
+   "5/13",
+   "13/12",
+   "5/12"
+  ],
+  "correcta": 0,
+  "explicacion": "cos = cateto adyacente / hipotenusa = 12/13."
+ },
+ {
+  "id": "m2_229",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si −3x − 4y = −22 y −5x + 5y = 45, ¿cuál es el valor de x?",
+  "alternativas": [
+   "−2",
+   "2",
+   "−9",
+   "7"
+  ],
+  "correcta": 0,
+  "explicacion": "Resolviendo el sistema se obtiene x = −2 e y = 7."
+ },
+ {
+  "id": "m2_230",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₂(1/4)?",
+  "alternativas": [
+   "−1",
+   "−2",
+   "−4",
+   "2"
+  ],
+  "correcta": 1,
+  "explicacion": "1/4 = 2^(−2), entonces el logaritmo es −2."
+ },
+ {
+  "id": "m2_231",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si los tiempos de un trayecto siguen una distribución normal de media 40 minutos y desviación estándar 5 minutos, ¿qué porcentaje aproximado de los datos está por sobre 45 minutos?",
+  "alternativas": [
+   "34%",
+   "2,5%",
+   "50%",
+   "16%"
+  ],
+  "correcta": 3,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_232",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 2/√2 se obtiene:",
+  "alternativas": [
+   "2/2",
+   "√2",
+   "2√2",
+   "2"
+  ],
+  "correcta": 1,
+  "explicacion": "2/√2 · √2/√2 = 2√2/2 = √2."
+ },
+ {
+  "id": "m2_233",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 19, 18, 20, 17, 16 y B: 28, 8, 18, 13, 23. Ambos tienen promedio 18. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "El grupo B",
+   "El grupo A",
+   "Ambos tienen la misma dispersión",
+   "No se puede saber sin conocer la mediana"
+  ],
+  "correcta": 0,
+  "explicacion": "Los datos de B están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_234",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "El gráfico muestra la distribución normal de los tiempos de un trayecto, con media 40 min y desviación estándar 5 min. ¿Qué porcentaje aproximado de los datos corresponde a la zona sombreada?",
+  "alternativas": [
+   "34%",
+   "50%",
+   "2,5%",
+   "13,5%"
+  ],
+  "correcta": 0,
+  "explicacion": "Regla empírica: cerca del 68% está a menos de 1 desviación estándar de la media, cerca del 95% a menos de 2, y la curva es simétrica.",
+  "imagen": "assets/images/m2/m2_img_095.png"
+ },
+ {
+  "id": "m2_235",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √128 se obtiene:",
+  "alternativas": [
+   "9√2",
+   "7√2",
+   "8√2",
+   "64√2"
+  ],
+  "correcta": 2,
+  "explicacion": "√128 = √(64 · 2) = 8√2."
+ },
+ {
+  "id": "m2_236",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 3/10, y cada disparo es independiente de los demás. Si realiza 4 disparos, ¿cuál es la probabilidad de que acierte exactamente 2?",
+  "alternativas": [
+   "3/5",
+   "1323/5000",
+   "9/100",
+   "441/10000"
+  ],
+  "correcta": 1,
+  "explicacion": "P = C(4,2)·(3/10)²·(7/10)² = 1323/5000."
+ },
+ {
+  "id": "m2_237",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Una figura de área 9 cm² se transforma con una homotecia de razón 1/3. ¿Cuál es el área de la figura imagen?",
+  "alternativas": [
+   "3 cm²",
+   "27 cm²",
+   "1 cm²",
+   "11 cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "Las áreas se multiplican por el cuadrado de la razón: 9·(1/3)² = 1 cm²."
+ },
+ {
+  "id": "m2_238",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por 3x − 6y = −4 y 12x − 24y = −16?",
+  "alternativas": [
+   "No tiene solución",
+   "Exactamente dos soluciones",
+   "Infinitas soluciones",
+   "Una única solución"
+  ],
+  "correcta": 2,
+  "explicacion": "La segunda ecuación es la primera multiplicada por 4: son la misma recta."
+ },
+ {
+  "id": "m2_239",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 2^(x) = 16?",
+  "alternativas": [
+   "6",
+   "4",
+   "3",
+   "5"
+  ],
+  "correcta": 1,
+  "explicacion": "16 = 2⁴; igualando exponentes: x = 4, entonces x = 4."
+ },
+ {
+  "id": "m2_240",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas −3x + 5y = −4 y −9x + 15y = −12?",
+  "alternativas": [
+   "Perpendiculares",
+   "Secantes no perpendiculares",
+   "Paralelas no coincidentes",
+   "Coincidentes"
+  ],
+  "correcta": 3,
+  "explicacion": "Una ecuación es múltiplo de la otra: representan la misma recta."
+ },
+ {
+  "id": "m2_241",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(4, −1)",
+   "(−4, −1)",
+   "(4, 1)",
+   "(−1, 4)"
+  ],
+  "correcta": 0,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (4, −1). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_077.png"
+ },
+ {
+  "id": "m2_242",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si las estaturas de un grupo de adultos siguen una distribución normal de media 165 cm y desviación estándar 8 cm, ¿qué porcentaje aproximado de los datos está entre 157 y 173 cm?",
+  "alternativas": [
+   "68%",
+   "50%",
+   "2,5%",
+   "34%"
+  ],
+  "correcta": 0,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_243",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Para qué valor de x se cumple f(x) = 3?",
+  "alternativas": [
+   "12",
+   "9",
+   "18",
+   "27"
+  ],
+  "correcta": 3,
+  "explicacion": "La base es 3 (pasa por (3, 1)); f(x) = 3 cuando x = 3³ = 27.",
+  "imagen": "assets/images/m2/m2_img_033.png"
+ },
+ {
+  "id": "m2_244",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₁₀(x) − 1, ¿cuál es el valor de f(100)?",
+  "alternativas": [
+   "2",
+   "99",
+   "1",
+   "3"
+  ],
+  "correcta": 2,
+  "explicacion": "log₁₀(100) = 2; luego f = 2 − 1 = 1."
+ },
+ {
+  "id": "m2_245",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 4/√2 se obtiene:",
+  "alternativas": [
+   "2√2",
+   "4√2",
+   "4",
+   "3√2"
+  ],
+  "correcta": 0,
+  "explicacion": "4/√2 · √2/√2 = 4√2/2 = 2√2."
+ },
+ {
+  "id": "m2_246",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₃(3) + log₃(3)?",
+  "alternativas": [
+   "4",
+   "1",
+   "3",
+   "2"
+  ],
+  "correcta": 3,
+  "explicacion": "log₃(3) + log₃(3) = log₃(3·3) = log₃(9) = 2."
+ },
+ {
+  "id": "m2_247",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 24 cm, el cateto adyacente mide 45 cm y la hipotenusa mide 51 cm. ¿Cuál es el valor de tan(α)?",
+  "alternativas": [
+   "8/15",
+   "15/17",
+   "15/8",
+   "8/17"
+  ],
+  "correcta": 0,
+  "explicacion": "tan = cateto opuesto / cateto adyacente = 8/15."
+ },
+ {
+  "id": "m2_248",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo inscrito x?",
+  "alternativas": [
+   "30°",
+   "150°",
+   "210°",
+   "75°"
+  ],
+  "correcta": 3,
+  "explicacion": "El ángulo inscrito ACB mide la mitad del ángulo del centro AOB: 150°/2 = 75°.",
+  "imagen": "assets/images/m2/m2_img_057.png"
+ },
+ {
+  "id": "m2_249",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "La cotización obligatoria para la AFP es el 10% del sueldo imponible. Si una persona gana $2.500.000 imponibles todos los meses, ¿cuánto cotiza en un año?",
+  "alternativas": [
+   "$2.500.000",
+   "$3.000.000",
+   "$30.000.000",
+   "$250.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Al mes: $250.000. En 12 meses: $3.000.000."
+ },
+ {
+  "id": "m2_250",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su período?",
+  "alternativas": [
+   "360°",
+   "270°",
+   "90°",
+   "180°"
+  ],
+  "correcta": 0,
+  "explicacion": "La forma de la curva se repite cada 360°.",
+  "imagen": "assets/images/m2/m2_img_006.png"
+ },
+ {
+  "id": "m2_251",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₄(x − 2) = 3, ¿cuál es el valor de x?",
+  "alternativas": [
+   "62",
+   "66",
+   "83",
+   "14"
+  ],
+  "correcta": 1,
+  "explicacion": "Por definición de logaritmo: x − 2 = 4³ = 64, entonces x = 66."
+ },
+ {
+  "id": "m2_252",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por −x − 4y = 0 y 2x + y = 6?",
+  "alternativas": [
+   "No tiene solución",
+   "Exactamente dos soluciones",
+   "Infinitas soluciones",
+   "Una única solución"
+  ],
+  "correcta": 3,
+  "explicacion": "Los coeficientes de x e y no son proporcionales: las rectas se cortan en un solo punto."
+ },
+ {
+  "id": "m2_253",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un cultivo comienza con 100 bacterias y su cantidad se duplica cada 2 horas. ¿Cuántas bacterias habrá después de 12 horas?",
+  "alternativas": [
+   "3.200",
+   "6.400",
+   "1.200",
+   "12.800"
+  ],
+  "correcta": 1,
+  "explicacion": "En 12 horas hay 6 duplicaciones: 100 · 2⁶ = 6.400."
+ },
+ {
+  "id": "m2_254",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Un crédito se paga en 12 cuotas mensuales iguales de $278.000. ¿Cuánto se paga en total al terminar el crédito?",
+  "alternativas": [
+   "$2.778.000",
+   "$3.058.000",
+   "$836.000",
+   "$3.336.000"
+  ],
+  "correcta": 3,
+  "explicacion": "Total = 12 · $278.000 = $3.336.000."
+ },
+ {
+  "id": "m2_255",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 4x³, ¿cuál es el valor de f(2)?",
+  "alternativas": [
+   "24",
+   "32",
+   "−32",
+   "512"
+  ],
+  "correcta": 1,
+  "explicacion": "f(2) = 4·(2)³ = 32."
+ },
+ {
+  "id": "m2_256",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 12/√2 se obtiene:",
+  "alternativas": [
+   "7√2",
+   "6√2",
+   "12",
+   "12√2"
+  ],
+  "correcta": 1,
+  "explicacion": "12/√2 · √2/√2 = 12√2/2 = 6√2."
+ },
+ {
+  "id": "m2_257",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₁₀(x) + 3, ¿cuál es el valor de f(1.000)?",
+  "alternativas": [
+   "6",
+   "1.003",
+   "0",
+   "3"
+  ],
+  "correcta": 0,
+  "explicacion": "log₁₀(1.000) = 3; luego f = 3 + 3 = 6."
+ },
+ {
+  "id": "m2_258",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₁₀(1/10.000)?",
+  "alternativas": [
+   "4",
+   "−4",
+   "−40",
+   "−3"
+  ],
+  "correcta": 1,
+  "explicacion": "1/10.000 = 10^(−4), entonces el logaritmo es −4."
+ },
+ {
+  "id": "m2_259",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 1 cm y PB = 16 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "8 cm",
+   "4 cm",
+   "3 cm",
+   "15 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "PT² = PA·PB = 1·16 = 16, entonces PT = 4 cm."
+ },
+ {
+  "id": "m2_260",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 3^(x + 3) = 27?",
+  "alternativas": [
+   "0",
+   "3",
+   "6",
+   "1"
+  ],
+  "correcta": 0,
+  "explicacion": "27 = 3³; igualando exponentes: x + 3 = 3, entonces x = 0."
+ },
+ {
+  "id": "m2_261",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3x³, ¿cuál es el valor de f(4)?",
+  "alternativas": [
+   "−192",
+   "192",
+   "36",
+   "1.728"
+  ],
+  "correcta": 1,
+  "explicacion": "f(4) = 3·(4)³ = 192."
+ },
+ {
+  "id": "m2_262",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función exponencial que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = 8 + (1/2)ˣ",
+   "f(x) = 8·(1/2)ˣ",
+   "f(x) = 8·2ˣ",
+   "f(x) = 4·(1/2)ˣ"
+  ],
+  "correcta": 1,
+  "explicacion": "f(0) = 8 indica el coeficiente, y f(1)/f(0) = 4/8 = 1/2 indica la base.",
+  "imagen": "assets/images/m2/m2_img_028.png"
+ },
+ {
+  "id": "m2_263",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 190 personas, 80 usan transporte público y, de ellas, 41 son menores de 18 años. Si se elige al azar una persona que usa transporte público, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "41/80",
+   "8/19",
+   "41/190",
+   "39/80"
+  ],
+  "correcta": 0,
+  "explicacion": "Se consideran solo las 80 personas que usan transporte público: P = 41/80."
+ },
+ {
+  "id": "m2_264",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el período de la función f(x) = 5·sen(2x) − 1? (x en grados)",
+  "alternativas": [
+   "180°",
+   "360°",
+   "720°",
+   "90°"
+  ],
+  "correcta": 0,
+  "explicacion": "Período = 360°/2 = 180°."
+ },
+ {
+  "id": "m2_265",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = −3x − 3?",
+  "alternativas": [
+   "f⁻¹(x) = −3x + 3",
+   "f⁻¹(x) = x/−3 + 3",
+   "f⁻¹(x) = (x + 3)/−3",
+   "f⁻¹(x) = (x − 3)/−3"
+  ],
+  "correcta": 2,
+  "explicacion": "Se despeja x en y = -3x − 3: x = (y + 3)/−3."
+ },
+ {
+  "id": "m2_266",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su valor máximo?",
+  "alternativas": [
+   "−2",
+   "1",
+   "−5",
+   "3"
+  ],
+  "correcta": 1,
+  "explicacion": "El punto más alto del gráfico está en y = 1.",
+  "imagen": "assets/images/m2/m2_img_001.png"
+ },
+ {
+  "id": "m2_267",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₃(√3)?",
+  "alternativas": [
+   "1/2",
+   "2",
+   "−1/2",
+   "1"
+  ],
+  "correcta": 0,
+  "explicacion": "√3 = 3^(1/2), entonces el logaritmo es 1/2."
+ },
+ {
+  "id": "m2_268",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 1 cm y PB = 225 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "113 cm",
+   "8 cm",
+   "224 cm",
+   "15 cm"
+  ],
+  "correcta": 3,
+  "explicacion": "PT² = PA·PB = 1·225 = 225, entonces PT = 15 cm."
+ },
+ {
+  "id": "m2_269",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 25% habla inglés, el 60% habla francés y el 10% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "10%",
+   "85%",
+   "75%",
+   "95%"
+  ],
+  "correcta": 2,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 25% + 60% − 10% = 75%."
+ },
+ {
+  "id": "m2_270",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda 4 veces. ¿Cuál es la probabilidad de obtener exactamente 1 cara?",
+  "alternativas": [
+   "1/2",
+   "1/16",
+   "1/4",
+   "1/8"
+  ],
+  "correcta": 2,
+  "explicacion": "Modelo binomial: C(4,1)·(1/2)⁴ = 4/16 = 1/4."
+ },
+ {
+  "id": "m2_271",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si las estaturas de un grupo de adultos siguen una distribución normal de media 165 cm y desviación estándar 8 cm, ¿qué porcentaje aproximado de los datos está por sobre 165 cm?",
+  "alternativas": [
+   "13,5%",
+   "50%",
+   "34%",
+   "16%"
+  ],
+  "correcta": 1,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_272",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,2 y P(A ∩ B) = 0,06. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,3",
+   "0,01",
+   "0,7",
+   "0,26"
+  ],
+  "correcta": 0,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,06/0,2 = 0,3."
+ },
+ {
+  "id": "m2_273",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la varianza (poblacional) de los datos 24, 36, 20, 8?",
+  "alternativas": [
+   "100",
+   "22",
+   "10",
+   "392"
+  ],
+  "correcta": 0,
+  "explicacion": "Promedio 22; se promedian los cuadrados de las desviaciones: varianza = 100."
+ },
+ {
+  "id": "m2_274",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Un triángulo tiene un lado de 9 cm. Si se le aplica una homotecia de razón 4, ¿cuánto mide el lado correspondiente en la imagen?",
+  "alternativas": [
+   "13 cm",
+   "144 cm",
+   "36 cm",
+   "9 cm"
+  ],
+  "correcta": 2,
+  "explicacion": "Las longitudes se multiplican por la razón: 9·4 = 36 cm."
+ },
+ {
+  "id": "m2_275",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "El gráfico muestra la distribución normal de los puntajes de una prueba, con media 500 puntos y desviación estándar 100 puntos. ¿Qué porcentaje aproximado de los datos corresponde a la zona sombreada?",
+  "alternativas": [
+   "34%",
+   "95%",
+   "68%",
+   "2,5%"
+  ],
+  "correcta": 3,
+  "explicacion": "Regla empírica: cerca del 68% está a menos de 1 desviación estándar de la media, cerca del 95% a menos de 2, y la curva es simétrica.",
+  "imagen": "assets/images/m2/m2_img_093.png"
+ },
+ {
+  "id": "m2_276",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₃(3) + log₃(9)?",
+  "alternativas": [
+   "2",
+   "4",
+   "3",
+   "6"
+  ],
+  "correcta": 2,
+  "explicacion": "log₃(3) + log₃(9) = log₃(3·9) = log₃(27) = 3."
+ },
+ {
+  "id": "m2_277",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₁₀(x + 5) = 1, ¿cuál es el valor de x?",
+  "alternativas": [
+   "5",
+   "−5",
+   "−4",
+   "15"
+  ],
+  "correcta": 0,
+  "explicacion": "Por definición de logaritmo: x + 5 = 10¹ = 10, entonces x = 5."
+ },
+ {
+  "id": "m2_278",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 120 personas, 60 leen todos los días y, de ellas, 32 son menores de 18 años. Si se elige al azar una persona que lee todos los días, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "8/15",
+   "7/15",
+   "1/2",
+   "4/15"
+  ],
+  "correcta": 0,
+  "explicacion": "Se consideran solo las 60 personas que leen todos los días: P = 32/60 = 8/15."
+ },
+ {
+  "id": "m2_279",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por −5x + 4y = −6 y −10x + 8y = −12?",
+  "alternativas": [
+   "Exactamente dos soluciones",
+   "No tiene solución",
+   "Infinitas soluciones",
+   "Una única solución"
+  ],
+  "correcta": 2,
+  "explicacion": "La segunda ecuación es la primera multiplicada por 2: son la misma recta."
+ },
+ {
+  "id": "m2_280",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = 2x + 9?",
+  "alternativas": [
+   "f⁻¹(x) = (x − 9)/2",
+   "f⁻¹(x) = 2x − 9",
+   "f⁻¹(x) = (x + 9)/2",
+   "f⁻¹(x) = x/2 − 9"
+  ],
+  "correcta": 0,
+  "explicacion": "Se despeja x en y = 2x + 9: x = (y − 9)/2."
+ },
+ {
+  "id": "m2_281",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si los tiempos de un trayecto siguen una distribución normal de media 40 minutos y desviación estándar 5 minutos, ¿qué porcentaje aproximado de los datos está entre 40 y 45 minutos?",
+  "alternativas": [
+   "34%",
+   "68%",
+   "50%",
+   "13,5%"
+  ],
+  "correcta": 0,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_282",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función exponencial que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = 3·3ˣ",
+   "f(x) = 1 + 3ˣ",
+   "f(x) = 2ˣ",
+   "f(x) = 3ˣ"
+  ],
+  "correcta": 3,
+  "explicacion": "f(0) = 1 indica el coeficiente, y f(1)/f(0) = 3/1 = 3 indica la base.",
+  "imagen": "assets/images/m2/m2_img_031.png"
+ },
+ {
+  "id": "m2_283",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √54 − √24?",
+  "alternativas": [
+   "√30",
+   "√6",
+   "6√6",
+   "√12"
+  ],
+  "correcta": 1,
+  "explicacion": "√54 = 3√6 y √24 = 2√6; entonces 3√6 − 2√6 = √6."
+ },
+ {
+  "id": "m2_284",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de sen(α)?",
+  "alternativas": [
+   "8/17",
+   "8/15",
+   "15/17",
+   "17/8"
+  ],
+  "correcta": 0,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 8/17.",
+  "imagen": "assets/images/m2/m2_img_050.png"
+ },
+ {
+  "id": "m2_285",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3ˣ, ¿cuál es el valor de f(−1)?",
+  "alternativas": [
+   "1/3",
+   "−1/3",
+   "1",
+   "3"
+  ],
+  "correcta": 0,
+  "explicacion": "f(−1) = 3⁻¹ = 1/3."
+ },
+ {
+  "id": "m2_286",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su valor máximo?",
+  "alternativas": [
+   "−2",
+   "−4",
+   "0",
+   "2"
+  ],
+  "correcta": 2,
+  "explicacion": "El punto más alto del gráfico está en y = 0.",
+  "imagen": "assets/images/m2/m2_img_011.png"
+ },
+ {
+  "id": "m2_287",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 190 personas, 105 leen todos los días y, de ellas, 13 son menores de 18 años. Si se elige al azar una persona que lee todos los días, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "21/38",
+   "13/105",
+   "13/190",
+   "92/105"
+  ],
+  "correcta": 1,
+  "explicacion": "Se consideran solo las 105 personas que leen todos los días: P = 13/105."
+ },
+ {
+  "id": "m2_288",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Una rampa forma un ángulo de 30° con el suelo y mide 18 m de largo. ¿A qué altura llega?",
+  "alternativas": [
+   "36 m",
+   "9√3 m",
+   "18 m",
+   "9 m"
+  ],
+  "correcta": 3,
+  "explicacion": "altura = 18·sen(30°) = 18·1/2 = 9 m."
+ },
+ {
+  "id": "m2_289",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "La figura muestra una esfera y su radio. ¿Cuál es su volumen?",
+  "alternativas": [
+   "2.304π cm³",
+   "576π cm³",
+   "1.728π cm³",
+   "6.912π cm³"
+  ],
+  "correcta": 0,
+  "explicacion": "V = (4/3)·π·12³ = 2.304π cm³.",
+  "imagen": "assets/images/m2/m2_img_074.png"
+ },
+ {
+  "id": "m2_290",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función exponencial que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = 2·2ˣ",
+   "f(x) = 2ˣ",
+   "f(x) = 1 + 2ˣ",
+   "f(x) = 3ˣ"
+  ],
+  "correcta": 1,
+  "explicacion": "f(0) = 1 indica el coeficiente, y f(1)/f(0) = 2/1 = 2 indica la base.",
+  "imagen": "assets/images/m2/m2_img_030.png"
+ },
+ {
+  "id": "m2_291",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál de las siguientes funciones corresponde al gráfico? (x en grados)",
+  "alternativas": [
+   "f(x) = 4·sen(2x) + 2",
+   "f(x) = 4·cos(2x) + 2",
+   "f(x) = 2·cos(2x) + 4",
+   "f(x) = 4·cos(x) + 2"
+  ],
+  "correcta": 1,
+  "explicacion": "Amplitud 4, período 180°, desplazamiento vertical 2 y la curva parte en su máximo en x = 0: f(x) = 4·cos(2x) + 2.",
+  "imagen": "assets/images/m2/m2_img_016.png"
+ },
+ {
+  "id": "m2_292",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 5^(x + 1) = 125?",
+  "alternativas": [
+   "1",
+   "3",
+   "4",
+   "2"
+  ],
+  "correcta": 3,
+  "explicacion": "125 = 5³; igualando exponentes: x + 1 = 3, entonces x = 2."
+ },
+ {
+  "id": "m2_293",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √384 se obtiene:",
+  "alternativas": [
+   "9√6",
+   "8√6",
+   "64√6",
+   "7√6"
+  ],
+  "correcta": 1,
+  "explicacion": "√384 = √(64 · 6) = 8√6."
+ },
+ {
+  "id": "m2_294",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 21 cm, el cateto adyacente mide 72 cm y la hipotenusa mide 75 cm. ¿Cuál es el valor de tan(α)?",
+  "alternativas": [
+   "24/7",
+   "24/25",
+   "7/24",
+   "7/25"
+  ],
+  "correcta": 2,
+  "explicacion": "tan = cateto opuesto / cateto adyacente = 7/24."
+ },
+ {
+  "id": "m2_295",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una heladería ofrece 8 sabores. ¿De cuántas maneras se puede elegir una copa con 2 sabores distintos, si el orden no importa?",
+  "alternativas": [
+   "28",
+   "8",
+   "56",
+   "16"
+  ],
+  "correcta": 0,
+  "explicacion": "No importa el orden: C(8, 2) = 8!/(2!·6!) = 28."
+ },
+ {
+  "id": "m2_296",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "La cotización obligatoria para la AFP es el 10% del sueldo imponible. Si una persona gana $1.710.000 imponibles todos los meses, ¿cuánto cotiza en un año?",
+  "alternativas": [
+   "$2.052.000",
+   "$171.000",
+   "$1.710.000",
+   "$20.520.000"
+  ],
+  "correcta": 0,
+  "explicacion": "Al mes: $171.000. En 12 meses: $2.052.000."
+ },
+ {
+  "id": "m2_297",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = 4x − 4?",
+  "alternativas": [
+   "−1/4",
+   "1/4",
+   "−4",
+   "4"
+  ],
+  "correcta": 0,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(4) = −1/4."
+ },
+ {
+  "id": "m2_298",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Un club de 6 personas debe elegir un presidente y un secretario (personas distintas). ¿De cuántas maneras puede hacerlo?",
+  "alternativas": [
+   "30",
+   "36",
+   "15",
+   "12"
+  ],
+  "correcta": 0,
+  "explicacion": "Importa el orden: 6·5 = 30."
+ },
+ {
+  "id": "m2_299",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función exponencial que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = 2·3ˣ",
+   "f(x) = 2 + 2ˣ",
+   "f(x) = 4·2ˣ",
+   "f(x) = 2·2ˣ"
+  ],
+  "correcta": 3,
+  "explicacion": "f(0) = 2 indica el coeficiente, y f(1)/f(0) = 4/2 = 2 indica la base.",
+  "imagen": "assets/images/m2/m2_img_021.png"
+ },
+ {
+  "id": "m2_300",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si los puntajes de una prueba siguen una distribución normal de media 500 puntos y desviación estándar 100 puntos, ¿qué porcentaje aproximado de los datos está entre 500 y 600 puntos?",
+  "alternativas": [
+   "16%",
+   "50%",
+   "2,5%",
+   "34%"
+  ],
+  "correcta": 3,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_301",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si −3x + 5y = −6 y −2x − 4y = 18, ¿cuál es el valor de x + y?",
+  "alternativas": [
+   "−3",
+   "6",
+   "0",
+   "−6"
+  ],
+  "correcta": 3,
+  "explicacion": "Resolviendo el sistema se obtiene x = −3 e y = −3."
+ },
+ {
+  "id": "m2_302",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = log₅(x)",
+   "f(x) = log₃(x)",
+   "f(x) = log₂(x)",
+   "f(x) = log₄(x)"
+  ],
+  "correcta": 2,
+  "explicacion": "Pasa por (2, 1): log₂(2) = 1.",
+  "imagen": "assets/images/m2/m2_img_034.png"
+ },
+ {
+  "id": "m2_303",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de sen(α)?",
+  "alternativas": [
+   "25/7",
+   "7/24",
+   "7/25",
+   "24/25"
+  ],
+  "correcta": 2,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 7/25.",
+  "imagen": "assets/images/m2/m2_img_046.png"
+ },
+ {
+  "id": "m2_304",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Se depositan en una cuenta de ahorro $73.000 con un interés compuesto de 10% anual. ¿Cuál es el monto total después de 2 años?",
+  "alternativas": [
+   "$14.600",
+   "$88.330",
+   "$15.330",
+   "$87.600"
+  ],
+  "correcta": 1,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $73.000 · (1,1)² = $88.330."
+ },
+ {
+  "id": "m2_305",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = (2/3)x + 1?",
+  "alternativas": [
+   "3/2",
+   "−3/2",
+   "−2/3",
+   "2/3"
+  ],
+  "correcta": 1,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(2/3) = −3/2."
+ },
+ {
+  "id": "m2_306",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₁₀(x) + 2, ¿cuál es el valor de f(10.000)?",
+  "alternativas": [
+   "6",
+   "10.002",
+   "4",
+   "2"
+  ],
+  "correcta": 0,
+  "explicacion": "log₁₀(10.000) = 4; luego f = 4 + 2 = 6."
+ },
+ {
+  "id": "m2_307",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √567 se obtiene:",
+  "alternativas": [
+   "10√7",
+   "8√7",
+   "9√7",
+   "81√7"
+  ],
+  "correcta": 2,
+  "explicacion": "√567 = √(81 · 7) = 9√7."
+ },
+ {
+  "id": "m2_308",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda 6 veces. ¿Cuál es la probabilidad de obtener exactamente 5 caras?",
+  "alternativas": [
+   "1/2",
+   "3/32",
+   "5/6",
+   "1/64"
+  ],
+  "correcta": 1,
+  "explicacion": "Modelo binomial: C(6,5)·(1/2)⁶ = 6/64 = 3/32."
+ },
+ {
+  "id": "m2_309",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = (2/3)x + 2?",
+  "alternativas": [
+   "−2/3",
+   "3/2",
+   "2/3",
+   "−3/2"
+  ],
+  "correcta": 3,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(2/3) = −3/2."
+ },
+ {
+  "id": "m2_310",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Matías pide un crédito de consumo de $800.000 y lo paga en 36 cuotas mensuales de $28.000. ¿Cuánto paga en total por intereses y costos?",
+  "alternativas": [
+   "$28.000",
+   "$208.000",
+   "$22.222",
+   "$1.008.000"
+  ],
+  "correcta": 1,
+  "explicacion": "Total pagado = 36 · $28.000 = $1.008.000. Intereses = $1.008.000 − $800.000 = $208.000."
+ },
+ {
+  "id": "m2_311",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 25, 33, 21, 17, 29 y B: 25, 29, 27, 23, 21. Ambos tienen promedio 25. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "El grupo B",
+   "Ambos tienen la misma dispersión",
+   "No se puede saber sin conocer la mediana",
+   "El grupo A"
+  ],
+  "correcta": 3,
+  "explicacion": "Los datos de A están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_312",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(2, −3)",
+   "(2, 3)",
+   "(3, 2)",
+   "(−2, 3)"
+  ],
+  "correcta": 1,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (2, 3). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_078.png"
+ },
+ {
+  "id": "m2_313",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 8^(5/3)?",
+  "alternativas": [
+   "13",
+   "32",
+   "10",
+   "64"
+  ],
+  "correcta": 1,
+  "explicacion": "8^(5/3) = (³√8)⁵ = 2⁵ = 32."
+ },
+ {
+  "id": "m2_314",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su período?",
+  "alternativas": [
+   "360°",
+   "270°",
+   "180°",
+   "90°"
+  ],
+  "correcta": 0,
+  "explicacion": "La forma de la curva se repite cada 360°.",
+  "imagen": "assets/images/m2/m2_img_015.png"
+ },
+ {
+  "id": "m2_315",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 3^(x + 1) = 27?",
+  "alternativas": [
+   "4",
+   "1",
+   "2",
+   "3"
+  ],
+  "correcta": 2,
+  "explicacion": "27 = 3³; igualando exponentes: x + 1 = 3, entonces x = 2."
+ },
+ {
+  "id": "m2_316",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un cultivo comienza con 1.000 bacterias y su cantidad se duplica cada 6 horas. ¿Cuántas bacterias habrá después de 12 horas?",
+  "alternativas": [
+   "2.000",
+   "8.000",
+   "4.000",
+   "1.004"
+  ],
+  "correcta": 2,
+  "explicacion": "En 12 horas hay 2 duplicaciones: 1.000 · 2² = 4.000."
+ },
+ {
+  "id": "m2_317",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 4^(5/2)?",
+  "alternativas": [
+   "10",
+   "5",
+   "64",
+   "32"
+  ],
+  "correcta": 3,
+  "explicacion": "4^(5/2) = (√4)⁵ = 2⁵ = 32."
+ },
+ {
+  "id": "m2_318",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el período de la función f(x) = 5·cos(2x) − 3? (x en grados)",
+  "alternativas": [
+   "180°",
+   "720°",
+   "90°",
+   "360°"
+  ],
+  "correcta": 0,
+  "explicacion": "Período = 360°/2 = 180°."
+ },
+ {
+  "id": "m2_319",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₆(1.728) − log₆(8)?",
+  "alternativas": [
+   "3",
+   "8",
+   "4",
+   "2"
+  ],
+  "correcta": 0,
+  "explicacion": "log₆(1.728) − log₆(8) = log₆(1.728/8) = log₆(216) = 3."
+ },
+ {
+  "id": "m2_320",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por −2x − 6y = 4 y 4x + 12y = −8?",
+  "alternativas": [
+   "No tiene solución",
+   "Una única solución",
+   "Infinitas soluciones",
+   "Exactamente dos soluciones"
+  ],
+  "correcta": 2,
+  "explicacion": "La segunda ecuación es la primera multiplicada por -2: son la misma recta."
+ },
+ {
+  "id": "m2_321",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una heladería ofrece 10 sabores. ¿De cuántas maneras se puede elegir una copa con 4 sabores distintos, si el orden no importa?",
+  "alternativas": [
+   "210",
+   "40",
+   "5.040",
+   "120"
+  ],
+  "correcta": 0,
+  "explicacion": "No importa el orden: C(10, 4) = 10!/(4!·6!) = 210."
+ },
+ {
+  "id": "m2_322",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si los pesos de un grupo de personas siguen una distribución normal de media 70 kg y desviación estándar 10 kg, ¿qué porcentaje aproximado de los datos está entre 60 y 80 kg?",
+  "alternativas": [
+   "95%",
+   "16%",
+   "50%",
+   "68%"
+  ],
+  "correcta": 3,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_323",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "La figura muestra una esfera y su radio. ¿Cuál es el área de su superficie?",
+  "alternativas": [
+   "128π cm²",
+   "64π cm²",
+   "256π cm²",
+   "32π cm²"
+  ],
+  "correcta": 2,
+  "explicacion": "A = 4·π·8² = 256π cm².",
+  "imagen": "assets/images/m2/m2_img_070.png"
+ },
+ {
+  "id": "m2_324",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el área de la superficie de una esfera de radio 7 cm?",
+  "alternativas": [
+   "196π cm²",
+   "49π cm²",
+   "56π cm²",
+   "98π cm²"
+  ],
+  "correcta": 0,
+  "explicacion": "A = 4·π·r² = 4·π·49 = 196π cm²."
+ },
+ {
+  "id": "m2_325",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si los puntajes de una prueba siguen una distribución normal de media 500 puntos y desviación estándar 100 puntos, ¿qué porcentaje aproximado de los datos está entre 600 y 700 puntos?",
+  "alternativas": [
+   "16%",
+   "2,5%",
+   "95%",
+   "13,5%"
+  ],
+  "correcta": 3,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_326",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 4^(3/2)?",
+  "alternativas": [
+   "6",
+   "16",
+   "8",
+   "7"
+  ],
+  "correcta": 2,
+  "explicacion": "4^(3/2) = (√4)³ = 2³ = 8."
+ },
+ {
+  "id": "m2_327",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "La figura muestra una esfera y su radio. ¿Cuál es su volumen?",
+  "alternativas": [
+   "27π cm³",
+   "18π cm³",
+   "108π cm³",
+   "36π cm³"
+  ],
+  "correcta": 3,
+  "explicacion": "V = (4/3)·π·3³ = 36π cm³.",
+  "imagen": "assets/images/m2/m2_img_067.png"
+ },
+ {
+  "id": "m2_328",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas −x + 4y = 3 y x + 4y = 7?",
+  "alternativas": [
+   "Paralelas no coincidentes",
+   "Perpendiculares",
+   "Secantes no perpendiculares",
+   "Coincidentes"
+  ],
+  "correcta": 2,
+  "explicacion": "Las pendientes son 1/4 y −1/4: distintas y su producto no es −1."
+ },
+ {
+  "id": "m2_329",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = 2x − 3?",
+  "alternativas": [
+   "f⁻¹(x) = (x − 3)/2",
+   "f⁻¹(x) = x/2 + 3",
+   "f⁻¹(x) = (x + 3)/2",
+   "f⁻¹(x) = 2x + 3"
+  ],
+  "correcta": 2,
+  "explicacion": "Se despeja x en y = 2x − 3: x = (y + 3)/2."
+ },
+ {
+  "id": "m2_330",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su valor mínimo?",
+  "alternativas": [
+   "−2",
+   "0",
+   "−3",
+   "2"
+  ],
+  "correcta": 0,
+  "explicacion": "El punto más bajo del gráfico está en y = -2.",
+  "imagen": "assets/images/m2/m2_img_005.png"
+ },
+ {
+  "id": "m2_331",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Para qué valor de x se cumple f(x) = 3?",
+  "alternativas": [
+   "50",
+   "125",
+   "30",
+   "15"
+  ],
+  "correcta": 1,
+  "explicacion": "La base es 5 (pasa por (5, 1)); f(x) = 3 cuando x = 5³ = 125.",
+  "imagen": "assets/images/m2/m2_img_039.png"
+ },
+ {
+  "id": "m2_332",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₂(x), ¿cuál es el valor de f(16)?",
+  "alternativas": [
+   "16",
+   "3",
+   "4",
+   "5"
+  ],
+  "correcta": 2,
+  "explicacion": "log₂(16) = 4; luego f = 4 + 0 = 4."
+ },
+ {
+  "id": "m2_333",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la amplitud de la función f(x) = 2·sen(3x) + 1?",
+  "alternativas": [
+   "4",
+   "1",
+   "2",
+   "3"
+  ],
+  "correcta": 2,
+  "explicacion": "La amplitud es el valor absoluto del número que multiplica a sen: 2."
+ },
+ {
+  "id": "m2_334",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Vicente pide un crédito de consumo de $4.600.000 y lo paga en 18 cuotas mensuales de $355.000. ¿Cuánto paga en total por intereses y costos?",
+  "alternativas": [
+   "$355.000",
+   "$255.555",
+   "$1.790.000",
+   "$6.390.000"
+  ],
+  "correcta": 2,
+  "explicacion": "Total pagado = 18 · $355.000 = $6.390.000. Intereses = $6.390.000 − $4.600.000 = $1.790.000."
+ },
+ {
+  "id": "m2_335",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, la hipotenusa mide 16 cm y uno de sus ángulos agudos mide 60°. ¿Cuánto mide el cateto opuesto a ese ángulo?",
+  "alternativas": [
+   "16√3 cm",
+   "8√2 cm",
+   "8 cm",
+   "8√3 cm"
+  ],
+  "correcta": 3,
+  "explicacion": "sen(60°) = √3/2, entonces el cateto opuesto mide 16·√3/2 = 8√3 cm."
+ },
+ {
+  "id": "m2_336",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₁₀(x + 4) = 2, ¿cuál es el valor de x?",
+  "alternativas": [
+   "16",
+   "104",
+   "96",
+   "1.020"
+  ],
+  "correcta": 2,
+  "explicacion": "Por definición de logaritmo: x + 4 = 10² = 100, entonces x = 96."
+ },
+ {
+  "id": "m2_337",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función exponencial que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = 8 + (1/2)ˣ",
+   "f(x) = 4·(1/2)ˣ",
+   "f(x) = 8·(1/2)ˣ",
+   "f(x) = 8·2ˣ"
+  ],
+  "correcta": 2,
+  "explicacion": "f(0) = 8 indica el coeficiente, y f(1)/f(0) = 4/8 = 1/2 indica la base.",
+  "imagen": "assets/images/m2/m2_img_022.png"
+ },
+ {
+  "id": "m2_338",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 30, 28, 32, 24, 26 y B: 30, 29, 26, 28, 27. Ambos tienen promedio 28. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "Ambos tienen la misma dispersión",
+   "No se puede saber sin conocer la mediana",
+   "El grupo A",
+   "El grupo B"
+  ],
+  "correcta": 2,
+  "explicacion": "Los datos de A están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_339",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas 3x + y = −3 y 9x + 3y = −12?",
+  "alternativas": [
+   "Perpendiculares",
+   "Secantes no perpendiculares",
+   "Coincidentes",
+   "Paralelas no coincidentes"
+  ],
+  "correcta": 3,
+  "explicacion": "Tienen la misma pendiente pero distinto punto de corte con el eje y."
+ },
+ {
+  "id": "m2_340",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de tan(α)?",
+  "alternativas": [
+   "4/3",
+   "3/4",
+   "4/5",
+   "3/5"
+  ],
+  "correcta": 1,
+  "explicacion": "tan = cateto opuesto / cateto adyacente = 3/4.",
+  "imagen": "assets/images/m2/m2_img_047.png"
+ },
+ {
+  "id": "m2_341",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 27, 23, 29, 31, 25 y B: 27, 35, 23, 19, 31. Ambos tienen promedio 27. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "El grupo B",
+   "El grupo A",
+   "No se puede saber sin conocer la mediana",
+   "Ambos tienen la misma dispersión"
+  ],
+  "correcta": 0,
+  "explicacion": "Los datos de B están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_342",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la desviación estándar (poblacional) de los datos 17, 21, 5, 33?",
+  "alternativas": [
+   "28",
+   "10",
+   "19",
+   "100"
+  ],
+  "correcta": 1,
+  "explicacion": "Promedio 19; varianza = promedio de los cuadrados de las desviaciones = 100; desviación estándar = √100 = 10."
+ },
+ {
+  "id": "m2_343",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = 4x + 7?",
+  "alternativas": [
+   "f⁻¹(x) = (x − 7)/4",
+   "f⁻¹(x) = (x + 7)/4",
+   "f⁻¹(x) = 4x − 7",
+   "f⁻¹(x) = x/4 − 7"
+  ],
+  "correcta": 0,
+  "explicacion": "Se despeja x en y = 4x + 7: x = (y − 7)/4."
+ },
+ {
+  "id": "m2_344",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Los catetos de un triángulo rectángulo isósceles miden 14 cm cada uno. ¿Cuánto mide la hipotenusa?",
+  "alternativas": [
+   "14√3 cm",
+   "28 cm",
+   "28√2 cm",
+   "14√2 cm"
+  ],
+  "correcta": 3,
+  "explicacion": "Los ángulos agudos miden 45°; h = 14·√2 = 14√2 cm."
+ },
+ {
+  "id": "m2_345",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál de las siguientes funciones corresponde al gráfico? (x en grados)",
+  "alternativas": [
+   "f(x) = 2·cos(x) − 1",
+   "f(x) = 3·cos(2x) − 1",
+   "f(x) = 2·cos(2x) − 1",
+   "f(x) = 2·sen(2x) − 1"
+  ],
+  "correcta": 2,
+  "explicacion": "Amplitud 2, período 180°, desplazamiento vertical -1 y la curva parte en su máximo en x = 0: f(x) = 2·cos(2x) − 1.",
+  "imagen": "assets/images/m2/m2_img_014.png"
+ },
+ {
+  "id": "m2_346",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 2 cm, PB = 8 cm y CP = 2 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "16 cm",
+   "9 cm",
+   "10 cm",
+   "8 cm"
+  ],
+  "correcta": 3,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 2·8 = 2·PD → PD = 8 cm."
+ },
+ {
+  "id": "m2_347",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su período?",
+  "alternativas": [
+   "90°",
+   "270°",
+   "180°",
+   "720°"
+  ],
+  "correcta": 2,
+  "explicacion": "La forma de la curva se repite cada 180°.",
+  "imagen": "assets/images/m2/m2_img_013.png"
+ },
+ {
+  "id": "m2_348",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "El gráfico muestra la distribución normal de la duración de unas baterías, con media 12 horas y desviación estándar 2 horas. ¿Qué porcentaje aproximado de los datos corresponde a la zona sombreada?",
+  "alternativas": [
+   "13,5%",
+   "95%",
+   "2,5%",
+   "68%"
+  ],
+  "correcta": 3,
+  "explicacion": "Regla empírica: cerca del 68% está a menos de 1 desviación estándar de la media, cerca del 95% a menos de 2, y la curva es simétrica.",
+  "imagen": "assets/images/m2/m2_img_097.png"
+ },
+ {
+  "id": "m2_349",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 10 cm, PB = 2 cm y CP = 2 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "10 cm",
+   "20 cm",
+   "9 cm",
+   "11 cm"
+  ],
+  "correcta": 0,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 10·2 = 2·PD → PD = 10 cm."
+ },
+ {
+  "id": "m2_350",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Una rampa forma un ángulo de 30° con el suelo y mide 28 m de largo. ¿A qué altura llega?",
+  "alternativas": [
+   "14 m",
+   "28 m",
+   "14√3 m",
+   "56 m"
+  ],
+  "correcta": 0,
+  "explicacion": "altura = 28·sen(30°) = 28·1/2 = 14 m."
+ },
+ {
+  "id": "m2_351",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 12/√6 se obtiene:",
+  "alternativas": [
+   "12√6",
+   "12",
+   "3√6",
+   "2√6"
+  ],
+  "correcta": 3,
+  "explicacion": "12/√6 · √6/√6 = 12√6/6 = 2√6."
+ },
+ {
+  "id": "m2_352",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "La figura muestra una esfera y su radio. ¿Cuál es el área de su superficie?",
+  "alternativas": [
+   "32π cm²",
+   "64π cm²",
+   "16π cm²",
+   "128π cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "A = 4·π·4² = 64π cm².",
+  "imagen": "assets/images/m2/m2_img_069.png"
+ },
+ {
+  "id": "m2_353",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 20% habla inglés, el 45% habla francés y el 10% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "10%",
+   "75%",
+   "55%",
+   "65%"
+  ],
+  "correcta": 2,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 20% + 45% − 10% = 55%."
+ },
+ {
+  "id": "m2_354",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = (5/2)x − 5?",
+  "alternativas": [
+   "−5/2",
+   "2/5",
+   "5/2",
+   "−2/5"
+  ],
+  "correcta": 3,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(5/2) = −2/5."
+ },
+ {
+  "id": "m2_355",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función exponencial que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = 1 + 3ˣ",
+   "f(x) = 2ˣ",
+   "f(x) = 3ˣ",
+   "f(x) = 3·3ˣ"
+  ],
+  "correcta": 2,
+  "explicacion": "f(0) = 1 indica el coeficiente, y f(1)/f(0) = 3/1 = 3 indica la base.",
+  "imagen": "assets/images/m2/m2_img_024.png"
+ },
+ {
+  "id": "m2_356",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 2·4ˣ, ¿cuál es el valor de f(0)?",
+  "alternativas": [
+   "6",
+   "4",
+   "3",
+   "2"
+  ],
+  "correcta": 3,
+  "explicacion": "f(0) = 2·4⁰ = 2."
+ },
+ {
+  "id": "m2_357",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₅(75) − log₅(3)?",
+  "alternativas": [
+   "2",
+   "1",
+   "25",
+   "3"
+  ],
+  "correcta": 0,
+  "explicacion": "log₅(75) − log₅(3) = log₅(75/3) = log₅(25) = 2."
+ },
+ {
+  "id": "m2_358",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el volumen de una esfera de radio 9 cm?",
+  "alternativas": [
+   "1.944π cm³",
+   "324π cm³",
+   "972π cm³",
+   "729π cm³"
+  ],
+  "correcta": 2,
+  "explicacion": "V = (4/3)·π·r³ = (4/3)·π·729 = 972π cm³."
+ },
+ {
+  "id": "m2_359",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una heladería ofrece 12 sabores. ¿De cuántas maneras se puede elegir una copa con 3 sabores distintos, si el orden no importa?",
+  "alternativas": [
+   "1.320",
+   "66",
+   "220",
+   "36"
+  ],
+  "correcta": 2,
+  "explicacion": "No importa el orden: C(12, 3) = 12!/(3!·9!) = 220."
+ },
+ {
+  "id": "m2_360",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 6 cm, el cateto adyacente mide 8 cm y la hipotenusa mide 10 cm. ¿Cuál es el valor de sen(α)?",
+  "alternativas": [
+   "5/3",
+   "3/5",
+   "3/4",
+   "4/5"
+  ],
+  "correcta": 1,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 3/5."
+ },
+ {
+  "id": "m2_361",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo del centro x?",
+  "alternativas": [
+   "100°",
+   "40°",
+   "160°",
+   "200°"
+  ],
+  "correcta": 2,
+  "explicacion": "El ángulo del centro AOB mide el doble del inscrito ACB: 2·80° = 160°.",
+  "imagen": "assets/images/m2/m2_img_062.png"
+ },
+ {
+  "id": "m2_362",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 2^(x + 3) = 8?",
+  "alternativas": [
+   "0",
+   "3",
+   "1",
+   "6"
+  ],
+  "correcta": 0,
+  "explicacion": "8 = 2³; igualando exponentes: x + 3 = 3, entonces x = 0."
+ },
+ {
+  "id": "m2_363",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,2 y P(A ∩ B) = 0,12. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,4",
+   "0,6",
+   "0,32",
+   "0,02"
+  ],
+  "correcta": 1,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,12/0,2 = 0,6."
+ },
+ {
+  "id": "m2_364",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una heladería ofrece 8 sabores. ¿De cuántas maneras se puede elegir una copa con 3 sabores distintos, si el orden no importa?",
+  "alternativas": [
+   "24",
+   "336",
+   "28",
+   "56"
+  ],
+  "correcta": 3,
+  "explicacion": "No importa el orden: C(8, 3) = 8!/(3!·5!) = 56."
+ },
+ {
+  "id": "m2_365",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En la circunferencia de centro O, ¿cuánto mide el ángulo del centro x?",
+  "alternativas": [
+   "125°",
+   "250°",
+   "27°",
+   "110°"
+  ],
+  "correcta": 3,
+  "explicacion": "El ángulo del centro AOB mide el doble del inscrito ACB: 2·55° = 110°.",
+  "imagen": "assets/images/m2/m2_img_059.png"
+ },
+ {
+  "id": "m2_366",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el área de la superficie de una esfera de radio 9 cm?",
+  "alternativas": [
+   "72π cm²",
+   "324π cm²",
+   "162π cm²",
+   "81π cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "A = 4·π·r² = 4·π·81 = 324π cm²."
+ },
+ {
+  "id": "m2_367",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la amplitud de la función f(x) = cos(3x) − 2?",
+  "alternativas": [
+   "4",
+   "3",
+   "2",
+   "1"
+  ],
+  "correcta": 3,
+  "explicacion": "La amplitud es el valor absoluto del número que multiplica a cos: 1."
+ },
+ {
+  "id": "m2_368",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el área de la superficie de una esfera de radio 12 cm?",
+  "alternativas": [
+   "288π cm²",
+   "576π cm²",
+   "144π cm²",
+   "96π cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "A = 4·π·r² = 4·π·144 = 576π cm²."
+ },
+ {
+  "id": "m2_369",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₃(729)?",
+  "alternativas": [
+   "7",
+   "6",
+   "−6",
+   "18"
+  ],
+  "correcta": 1,
+  "explicacion": "3⁶ = 729, entonces el logaritmo es 6."
+ },
+ {
+  "id": "m2_370",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₃(x) + 4, ¿cuál es el valor de f(3)?",
+  "alternativas": [
+   "−3",
+   "1",
+   "7",
+   "5"
+  ],
+  "correcta": 3,
+  "explicacion": "log₃(3) = 1; luego f = 1 + 4 = 5."
+ },
+ {
+  "id": "m2_371",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,4 y P(A ∩ B) = 0,04. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,44",
+   "0,9",
+   "0,02",
+   "0,1"
+  ],
+  "correcta": 3,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,04/0,4 = 0,1."
+ },
+ {
+  "id": "m2_372",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,25 y P(A ∩ B) = 0,15. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,15",
+   "0,04",
+   "0,6",
+   "0,4"
+  ],
+  "correcta": 2,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,15/0,25 = 0,6."
+ },
+ {
+  "id": "m2_373",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "De un curso de 5 estudiantes se elegirá una comisión de 2 integrantes (sin cargos). ¿Cuántas comisiones distintas se pueden formar?",
+  "alternativas": [
+   "5",
+   "20",
+   "15",
+   "10"
+  ],
+  "correcta": 3,
+  "explicacion": "No importa el orden: C(5, 2) = 5!/(2!·3!) = 10."
+ },
+ {
+  "id": "m2_374",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de tan(α)?",
+  "alternativas": [
+   "5/12",
+   "5/13",
+   "12/5",
+   "12/13"
+  ],
+  "correcta": 0,
+  "explicacion": "tan = cateto opuesto / cateto adyacente = 5/12.",
+  "imagen": "assets/images/m2/m2_img_053.png"
+ },
+ {
+  "id": "m2_375",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Las notas de dos grupos son A: 39, 43, 27, 31, 35 y B: 37, 33, 39, 31, 35. Ambos tienen promedio 35. ¿Qué grupo tiene mayor desviación estándar?",
+  "alternativas": [
+   "Ambos tienen la misma dispersión",
+   "No se puede saber sin conocer la mediana",
+   "El grupo B",
+   "El grupo A"
+  ],
+  "correcta": 3,
+  "explicacion": "Los datos de A están más alejados del promedio, por eso su desviación estándar es mayor."
+ },
+ {
+  "id": "m2_376",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la varianza (poblacional) de los datos 32, 38, 40, 46?",
+  "alternativas": [
+   "25",
+   "5",
+   "98",
+   "39"
+  ],
+  "correcta": 0,
+  "explicacion": "Promedio 39; se promedian los cuadrados de las desviaciones: varianza = 25."
+ },
+ {
+  "id": "m2_377",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 5 cm y PB = 20 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "20 cm",
+   "12 cm",
+   "15 cm",
+   "10 cm"
+  ],
+  "correcta": 3,
+  "explicacion": "PT² = PA·PB = 5·20 = 100, entonces PT = 10 cm."
+ },
+ {
+  "id": "m2_378",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √216 + √150?",
+  "alternativas": [
+   "11√6",
+   "30√6",
+   "11√12",
+   "√366"
+  ],
+  "correcta": 0,
+  "explicacion": "√216 = 6√6 y √150 = 5√6; entonces 6√6 + 5√6 = 11√6."
+ },
+ {
+  "id": "m2_379",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su valor máximo?",
+  "alternativas": [
+   "2",
+   "7",
+   "0",
+   "4"
+  ],
+  "correcta": 3,
+  "explicacion": "El punto más alto del gráfico está en y = 4.",
+  "imagen": "assets/images/m2/m2_img_003.png"
+ },
+ {
+  "id": "m2_380",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3x³, ¿cuál es el valor de f(−2)?",
+  "alternativas": [
+   "−18",
+   "−24",
+   "−216",
+   "24"
+  ],
+  "correcta": 1,
+  "explicacion": "f(−2) = 3·(−2)³ = −24."
+ },
+ {
+  "id": "m2_381",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el volumen de una esfera de radio 6 cm?",
+  "alternativas": [
+   "144π cm³",
+   "288π cm³",
+   "576π cm³",
+   "216π cm³"
+  ],
+  "correcta": 1,
+  "explicacion": "V = (4/3)·π·r³ = (4/3)·π·216 = 288π cm³."
+ },
+ {
+  "id": "m2_382",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "¿Cuál es la desviación estándar (poblacional) de los datos 19, 21, 27, 13?",
+  "alternativas": [
+   "20",
+   "25",
+   "14",
+   "5"
+  ],
+  "correcta": 3,
+  "explicacion": "Promedio 20; varianza = promedio de los cuadrados de las desviaciones = 25; desviación estándar = √25 = 5."
+ },
+ {
+  "id": "m2_383",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(−2, 0)",
+   "(2, 0)",
+   "(0, −6)",
+   "(0, −2)"
+  ],
+  "correcta": 0,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (−2, 0). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_084.png"
+ },
+ {
+  "id": "m2_384",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₆(144) + log₆(9)?",
+  "alternativas": [
+   "3",
+   "5",
+   "8",
+   "4"
+  ],
+  "correcta": 3,
+  "explicacion": "log₆(144) + log₆(9) = log₆(144·9) = log₆(1.296) = 4."
+ },
+ {
+  "id": "m2_385",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 120 personas, 60 leen todos los días y, de ellas, 5 son menores de 18 años. Si se elige al azar una persona que lee todos los días, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "1/24",
+   "1/2",
+   "11/12",
+   "1/12"
+  ],
+  "correcta": 3,
+  "explicacion": "Se consideran solo las 60 personas que leen todos los días: P = 5/60 = 1/12."
+ },
+ {
+  "id": "m2_386",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3x³ y f(x) = 24, ¿cuál es el valor de x?",
+  "alternativas": [
+   "4",
+   "3",
+   "2",
+   "−2"
+  ],
+  "correcta": 2,
+  "explicacion": "3x³ = 24 → x³ = 8 → x = 2."
+ },
+ {
+  "id": "m2_387",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un cultivo comienza con 50 bacterias y su cantidad se duplica cada 2 horas. ¿Cuántas bacterias habrá después de 4 horas?",
+  "alternativas": [
+   "400",
+   "200",
+   "100",
+   "54"
+  ],
+  "correcta": 1,
+  "explicacion": "En 4 horas hay 2 duplicaciones: 50 · 2² = 200."
+ },
+ {
+  "id": "m2_388",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a la función f(x) = a·bˣ que pasa por los puntos marcados. ¿Cuál es el valor de f(2)?",
+  "alternativas": [
+   "12",
+   "7",
+   "15",
+   "24"
+  ],
+  "correcta": 0,
+  "explicacion": "Del gráfico: a = 3 y b = 2. Entonces f(2) = 3·(2)² = 12.",
+  "imagen": "assets/images/m2/m2_img_027.png"
+ },
+ {
+  "id": "m2_389",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 80 personas, 10 practican deporte y, de ellas, 3 son menores de 18 años. Si se elige al azar una persona que practica deporte, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "7/10",
+   "3/80",
+   "3/10",
+   "1/8"
+  ],
+  "correcta": 2,
+  "explicacion": "Se consideran solo las 10 personas que practican deporte: P = 3/10."
+ },
+ {
+  "id": "m2_390",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "El triángulo A'B'C' (línea punteada) es la imagen del triángulo ABC por una homotecia de centro O. ¿Cuál es la razón de la homotecia?",
+  "alternativas": [
+   "1/2",
+   "2",
+   "−2",
+   "3"
+  ],
+  "correcta": 1,
+  "explicacion": "Cada vértice imagen está 2 veces más lejos de O: por ejemplo A = (3, 2) y A' = (6, 4). Razón 2.",
+  "imagen": "assets/images/m2/m2_img_087.png"
+ },
+ {
+  "id": "m2_391",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "El triángulo A'B'C' (línea punteada) es la imagen del triángulo ABC por una homotecia de centro O. ¿Cuál es la razón de la homotecia?",
+  "alternativas": [
+   "2",
+   "3",
+   "1/2",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "Cada vértice imagen está 2 veces más lejos de O: por ejemplo A = (1, 2) y A' = (2, 4). Razón 2.",
+  "imagen": "assets/images/m2/m2_img_088.png"
+ },
+ {
+  "id": "m2_392",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 8 bolitas rojas y 3 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "7/10",
+   "64/121",
+   "8/11",
+   "28/55"
+  ],
+  "correcta": 3,
+  "explicacion": "P = 8/11 · 7/10 = 28/55."
+ },
+ {
+  "id": "m2_393",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la posición relativa de las rectas −6x + y = 0 y 12x − 2y = −3?",
+  "alternativas": [
+   "Paralelas no coincidentes",
+   "Perpendiculares",
+   "Secantes no perpendiculares",
+   "Coincidentes"
+  ],
+  "correcta": 0,
+  "explicacion": "Tienen la misma pendiente pero distinto punto de corte con el eje y."
+ },
+ {
+  "id": "m2_394",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una heladería ofrece 6 sabores. ¿De cuántas maneras se puede elegir una copa con 4 sabores distintos, si el orden no importa?",
+  "alternativas": [
+   "360",
+   "20",
+   "24",
+   "15"
+  ],
+  "correcta": 3,
+  "explicacion": "No importa el orden: C(6, 4) = 6!/(4!·2!) = 15."
+ },
+ {
+  "id": "m2_395",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/3, y cada disparo es independiente de los demás. Si realiza 2 disparos, ¿cuál es la probabilidad de que acierte exactamente 2?",
+  "alternativas": [
+   "2/3",
+   "1/9",
+   "2/9",
+   "1/18"
+  ],
+  "correcta": 1,
+  "explicacion": "P = C(2,2)·(1/3)² = 1/9."
+ },
+ {
+  "id": "m2_396",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Se aplica al triángulo ABC una homotecia de centro O (el origen) y razón 2. ¿Cuáles son las coordenadas de la imagen del vértice B?",
+  "alternativas": [
+   "(4, 6)",
+   "(6, 4)",
+   "(4, 3)",
+   "(4, 5)"
+  ],
+  "correcta": 0,
+  "explicacion": "B = (2, 3); se multiplican sus coordenadas por 2: (4, 6).",
+  "imagen": "assets/images/m2/m2_img_089.png"
+ },
+ {
+  "id": "m2_397",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₃(x), ¿cuál es el valor de f(27)?",
+  "alternativas": [
+   "2",
+   "4",
+   "27",
+   "3"
+  ],
+  "correcta": 3,
+  "explicacion": "log₃(27) = 3; luego f = 3 + 0 = 3."
+ },
+ {
+  "id": "m2_398",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo del centro mide 300°. ¿Cuánto mide un ángulo inscrito que subtiende el mismo arco?",
+  "alternativas": [
+   "300°",
+   "60°",
+   "150°",
+   "30°"
+  ],
+  "correcta": 2,
+  "explicacion": "El ángulo inscrito mide la mitad del ángulo del centro: 300°/2 = 150°."
+ },
+ {
+  "id": "m2_399",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Si los tiempos de un trayecto siguen una distribución normal de media 40 minutos y desviación estándar 5 minutos, ¿qué porcentaje aproximado de los datos está entre 30 y 50 minutos?",
+  "alternativas": [
+   "95%",
+   "2,5%",
+   "13,5%",
+   "68%"
+  ],
+  "correcta": 0,
+  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+ },
+ {
+  "id": "m2_400",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₂(√2)?",
+  "alternativas": [
+   "1",
+   "−1/2",
+   "1/2",
+   "2"
+  ],
+  "correcta": 2,
+  "explicacion": "√2 = 2^(1/2), entonces el logaritmo es 1/2."
+ },
+ {
+  "id": "m2_401",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda equilibrada 3 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras?",
+  "alternativas": [
+   "3/8",
+   "2/3",
+   "1/8",
+   "1/2"
+  ],
+  "correcta": 0,
+  "explicacion": "Modelo binomial: C(3,2)·(1/2)³ = 3/8."
+ },
+ {
+  "id": "m2_402",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, un ángulo inscrito mide 55°. ¿Cuánto mide el ángulo del centro que subtiende el mismo arco?",
+  "alternativas": [
+   "27°",
+   "125°",
+   "250°",
+   "110°"
+  ],
+  "correcta": 3,
+  "explicacion": "El ángulo del centro mide el doble: 2·55° = 110°."
+ },
+ {
+  "id": "m2_403",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Una figura de área 18 cm² se transforma con una homotecia de razón 2. ¿Cuál es el área de la figura imagen?",
+  "alternativas": [
+   "36 cm²",
+   "72 cm²",
+   "22 cm²",
+   "144 cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "Las áreas se multiplican por el cuadrado de la razón: 18·(2)² = 72 cm²."
+ },
+ {
+  "id": "m2_404",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √50 − √18?",
+  "alternativas": [
+   "15√2",
+   "2√2",
+   "√32",
+   "2√4"
+  ],
+  "correcta": 1,
+  "explicacion": "√50 = 5√2 y √18 = 3√2; entonces 5√2 − 3√2 = 2√2."
+ },
+ {
+  "id": "m2_405",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 11 cm, PB = 12 cm y CP = 4 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "132 cm",
+   "35 cm",
+   "33 cm",
+   "19 cm"
+  ],
+  "correcta": 2,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 11·12 = 4·PD → PD = 33 cm."
+ },
+ {
+  "id": "m2_406",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 50% habla inglés, el 45% habla francés y el 15% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "65%",
+   "15%",
+   "80%",
+   "95%"
+  ],
+  "correcta": 2,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 50% + 45% − 15% = 80%."
+ },
+ {
+  "id": "m2_407",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 2x³, ¿cuál es el valor de f(−3)?",
+  "alternativas": [
+   "54",
+   "−216",
+   "−18",
+   "−54"
+  ],
+  "correcta": 3,
+  "explicacion": "f(−3) = 2·(−3)³ = −54."
+ },
+ {
+  "id": "m2_408",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3·2ˣ, ¿cuál es el valor de f(0)?",
+  "alternativas": [
+   "4",
+   "9",
+   "3",
+   "6"
+  ],
+  "correcta": 2,
+  "explicacion": "f(0) = 3·2⁰ = 3."
+ },
+ {
+  "id": "m2_409",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Una sustancia radiactiva reduce su masa a la mitad cada 8 años. Si hoy hay 160 g, ¿cuántos gramos quedarán dentro de 16 años?",
+  "alternativas": [
+   "120 g",
+   "40 g",
+   "80 g",
+   "20 g"
+  ],
+  "correcta": 1,
+  "explicacion": "En 16 años hay 2 reducciones a la mitad: 160 / 2² = 40 g."
+ },
+ {
+  "id": "m2_410",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 8/√2 se obtiene:",
+  "alternativas": [
+   "4√2",
+   "5√2",
+   "8",
+   "8√2"
+  ],
+  "correcta": 0,
+  "explicacion": "8/√2 · √2/√2 = 8√2/2 = 4√2."
+ },
+ {
+  "id": "m2_411",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = log₃(x)",
+   "f(x) = log₂(x)",
+   "f(x) = log₁₀(x)",
+   "f(x) = log₄(x)"
+  ],
+  "correcta": 1,
+  "explicacion": "Pasa por (2, 1): log₂(2) = 1.",
+  "imagen": "assets/images/m2/m2_img_038.png"
+ },
+ {
+  "id": "m2_412",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = log₂(x) − 1, ¿cuál es el valor de f(4)?",
+  "alternativas": [
+   "0",
+   "2",
+   "1",
+   "3"
+  ],
+  "correcta": 2,
+  "explicacion": "log₂(4) = 2; luego f = 2 − 1 = 1."
+ },
+ {
+  "id": "m2_413",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(0, 3)",
+   "(0, −3)",
+   "(1, −3)",
+   "(−3, 0)"
+  ],
+  "correcta": 1,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (0, −3). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_079.png"
+ },
+ {
+  "id": "m2_414",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 6 cm, PB = 11 cm y CP = 11 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "6 cm",
+   "5 cm",
+   "66 cm",
+   "7 cm"
+  ],
+  "correcta": 0,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 6·11 = 11·PD → PD = 6 cm."
+ },
+ {
+  "id": "m2_415",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 4x², ¿cuál es el valor de f(−3)?",
+  "alternativas": [
+   "−24",
+   "36",
+   "144",
+   "−36"
+  ],
+  "correcta": 1,
+  "explicacion": "f(−3) = 4·(−3)² = 36."
+ },
+ {
+  "id": "m2_416",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,6 y P(A ∩ B) = 0,24. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,84",
+   "0,4",
+   "0,14",
+   "0,6"
+  ],
+  "correcta": 1,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,24/0,6 = 0,4."
+ },
+ {
+  "id": "m2_417",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál de las siguientes funciones corresponde al gráfico? (x en grados)",
+  "alternativas": [
+   "f(x) = sen(2x) − 2",
+   "f(x) = 2·sen(x) − 2",
+   "f(x) = cos(x) − 2",
+   "f(x) = sen(x) − 2"
+  ],
+  "correcta": 3,
+  "explicacion": "Amplitud 1, período 360°, desplazamiento vertical -2 y la curva parte en el centro y sube en x = 0: f(x) = sen(x) − 2.",
+  "imagen": "assets/images/m2/m2_img_002.png"
+ },
+ {
+  "id": "m2_418",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su período?",
+  "alternativas": [
+   "180°",
+   "360°",
+   "270°",
+   "90°"
+  ],
+  "correcta": 1,
+  "explicacion": "La forma de la curva se repite cada 360°.",
+  "imagen": "assets/images/m2/m2_img_019.png"
+ },
+ {
+  "id": "m2_419",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = 2x − 6?",
+  "alternativas": [
+   "−1/2",
+   "2",
+   "1/2",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(2) = −1/2."
+ },
+ {
+  "id": "m2_420",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "En Chile, la cotización obligatoria para la AFP es el 10% del sueldo imponible. Si el sueldo imponible de Catalina es $2.180.000, ¿cuánto se cotiza al mes?",
+  "alternativas": [
+   "$2.616.000",
+   "$1.962.000",
+   "$218.000",
+   "$21.800"
+  ],
+  "correcta": 2,
+  "explicacion": "10% de $2.180.000 = $218.000."
+ },
+ {
+  "id": "m2_421",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "El gráfico muestra la distribución normal de los pesos de un grupo de personas, con media 70 kg y desviación estándar 10 kg. ¿Qué porcentaje aproximado de los datos corresponde a la zona sombreada?",
+  "alternativas": [
+   "50%",
+   "95%",
+   "99,7%",
+   "13,5%"
+  ],
+  "correcta": 3,
+  "explicacion": "Regla empírica: cerca del 68% está a menos de 1 desviación estándar de la media, cerca del 95% a menos de 2, y la curva es simétrica.",
+  "imagen": "assets/images/m2/m2_img_096.png"
+ },
+ {
+  "id": "m2_422",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 2^(x − 2) = 4?",
+  "alternativas": [
+   "0",
+   "5",
+   "2",
+   "4"
+  ],
+  "correcta": 3,
+  "explicacion": "4 = 2²; igualando exponentes: x − 2 = 2, entonces x = 4."
+ },
+ {
+  "id": "m2_423",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En una carrera participan 6 corredores. ¿De cuántas maneras distintas se pueden repartir el primer, segundo y tercer lugar?",
+  "alternativas": [
+   "18",
+   "20",
+   "216",
+   "120"
+  ],
+  "correcta": 3,
+  "explicacion": "Importa el orden: 6·5·4 = 120."
+ },
+ {
+  "id": "m2_424",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3·2ˣ, ¿cuál es el valor de f(2)?",
+  "alternativas": [
+   "7",
+   "36",
+   "12",
+   "15"
+  ],
+  "correcta": 2,
+  "explicacion": "f(2) = 3·2² = 12."
+ },
+ {
+  "id": "m2_425",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 60% habla inglés, el 35% habla francés y el 25% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "85%",
+   "25%",
+   "95%",
+   "70%"
+  ],
+  "correcta": 3,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 60% + 35% − 25% = 70%."
+ },
+ {
+  "id": "m2_426",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "El gráfico muestra la distribución normal de las estaturas de un grupo de adultos, con media 165 cm y desviación estándar 8 cm. ¿Qué porcentaje aproximado de los datos corresponde a la zona sombreada?",
+  "alternativas": [
+   "95%",
+   "50%",
+   "68%",
+   "13,5%"
+  ],
+  "correcta": 3,
+  "explicacion": "Regla empírica: cerca del 68% está a menos de 1 desviación estándar de la media, cerca del 95% a menos de 2, y la curva es simétrica.",
+  "imagen": "assets/images/m2/m2_img_100.png"
+ },
+ {
+  "id": "m2_427",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 2x³ y f(x) = −54, ¿cuál es el valor de x?",
+  "alternativas": [
+   "−3",
+   "3",
+   "−9",
+   "−2"
+  ],
+  "correcta": 0,
+  "explicacion": "2x³ = −54 → x³ = −27 → x = −3."
+ },
+ {
+  "id": "m2_428",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = (5/3)x − 6?",
+  "alternativas": [
+   "−5/3",
+   "3/5",
+   "5/3",
+   "−3/5"
+  ],
+  "correcta": 3,
+  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(5/3) = −3/5."
+ },
+ {
+  "id": "m2_429",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 2 cm y PB = 72 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "70 cm",
+   "12 cm",
+   "37 cm",
+   "8 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "PT² = PA·PB = 2·72 = 144, entonces PT = 12 cm."
+ },
+ {
+  "id": "m2_430",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 3/10, y cada disparo es independiente de los demás. Si realiza 2 disparos, ¿cuál es la probabilidad de que acierte exactamente 1?",
+  "alternativas": [
+   "21/100",
+   "3/10",
+   "21/50",
+   "3/5"
+  ],
+  "correcta": 2,
+  "explicacion": "P = C(2,1)·(3/10)¹·(7/10)¹ = 21/50."
+ },
+ {
+  "id": "m2_431",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su período?",
+  "alternativas": [
+   "270°",
+   "720°",
+   "90°",
+   "180°"
+  ],
+  "correcta": 3,
+  "explicacion": "La forma de la curva se repite cada 180°.",
+  "imagen": "assets/images/m2/m2_img_020.png"
+ },
+ {
+  "id": "m2_432",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "La figura muestra una esfera y su radio. ¿Cuál es su volumen?",
+  "alternativas": [
+   "18π cm³",
+   "36π cm³",
+   "27π cm³",
+   "108π cm³"
+  ],
+  "correcta": 1,
+  "explicacion": "V = (4/3)·π·3³ = 36π cm³.",
+  "imagen": "assets/images/m2/m2_img_073.png"
+ },
+ {
+  "id": "m2_433",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra las rectas L₁ y L₂. ¿Cuál es la solución del sistema formado por sus ecuaciones?",
+  "alternativas": [
+   "(4, −2)",
+   "(−2, 4)",
+   "(2, 4)",
+   "(−2, −4)"
+  ],
+  "correcta": 1,
+  "explicacion": "La solución es el punto donde se cortan las rectas: (−2, 4). Se comprueba en ambas ecuaciones.",
+  "imagen": "assets/images/m2/m2_img_081.png"
+ },
+ {
+  "id": "m2_434",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de 27^(2/3)?",
+  "alternativas": [
+   "18",
+   "6",
+   "27",
+   "9"
+  ],
+  "correcta": 3,
+  "explicacion": "27^(2/3) = (³√27)² = 3² = 9."
+ },
+ {
+  "id": "m2_435",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "El triángulo A'B'C' (línea punteada) es la imagen del triángulo ABC por una homotecia de centro O. ¿Cuál es la razón de la homotecia?",
+  "alternativas": [
+   "1/2",
+   "−2",
+   "2",
+   "3"
+  ],
+  "correcta": 2,
+  "explicacion": "Cada vértice imagen está 2 veces más lejos de O: por ejemplo A = (3, 3) y A' = (6, 6). Razón 2.",
+  "imagen": "assets/images/m2/m2_img_085.png"
+ },
+ {
+  "id": "m2_436",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una heladería ofrece 11 sabores. ¿De cuántas maneras se puede elegir una copa con 4 sabores distintos, si el orden no importa?",
+  "alternativas": [
+   "7.920",
+   "44",
+   "165",
+   "330"
+  ],
+  "correcta": 3,
+  "explicacion": "No importa el orden: C(11, 4) = 11!/(4!·7!) = 330."
+ },
+ {
+  "id": "m2_437",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor máximo de la función f(x) = 6·cos(4x) + 1?",
+  "alternativas": [
+   "−5",
+   "6",
+   "7",
+   "25"
+  ],
+  "correcta": 2,
+  "explicacion": "cos varía entre −1 y 1; el máximo es 6·1 + (1) = 7."
+ },
+ {
+  "id": "m2_438",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función exponencial que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = 2·3ˣ",
+   "f(x) = 2·2ˣ",
+   "f(x) = 2 + 3ˣ",
+   "f(x) = 6·3ˣ"
+  ],
+  "correcta": 0,
+  "explicacion": "f(0) = 2 indica el coeficiente, y f(1)/f(0) = 6/2 = 3 indica la base.",
+  "imagen": "assets/images/m2/m2_img_029.png"
+ },
+ {
+  "id": "m2_439",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 1 cm y PB = 25 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "3 cm",
+   "5 cm",
+   "24 cm",
+   "13 cm"
+  ],
+  "correcta": 1,
+  "explicacion": "PT² = PA·PB = 1·25 = 25, entonces PT = 5 cm."
+ },
+ {
+  "id": "m2_440",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su valor mínimo?",
+  "alternativas": [
+   "−4",
+   "3",
+   "−5",
+   "−1"
+  ],
+  "correcta": 2,
+  "explicacion": "El punto más bajo del gráfico está en y = -5.",
+  "imagen": "assets/images/m2/m2_img_012.png"
+ },
+ {
+  "id": "m2_441",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si x − y = −3 y 4x − 5y = −12, ¿cuál es el valor de x + y?",
+  "alternativas": [
+   "3",
+   "−3",
+   "−2",
+   "−4"
+  ],
+  "correcta": 1,
+  "explicacion": "Resolviendo el sistema se obtiene x = −3 e y = 0."
+ },
+ {
+  "id": "m2_442",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "¿Cuál es el volumen de una esfera de radio 12 cm?",
+  "alternativas": [
+   "1.728π cm³",
+   "576π cm³",
+   "4.608π cm³",
+   "2.304π cm³"
+  ],
+  "correcta": 3,
+  "explicacion": "V = (4/3)·π·r³ = (4/3)·π·1728 = 2.304π cm³."
+ },
+ {
+  "id": "m2_443",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 2 cm y PB = 32 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "6 cm",
+   "17 cm",
+   "8 cm",
+   "30 cm"
+  ],
+  "correcta": 2,
+  "explicacion": "PT² = PA·PB = 2·32 = 64, entonces PT = 8 cm."
+ },
+ {
+  "id": "m2_444",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 5x³ y f(x) = 625, ¿cuál es el valor de x?",
+  "alternativas": [
+   "−5",
+   "6",
+   "41",
+   "5"
+  ],
+  "correcta": 3,
+  "explicacion": "5x³ = 625 → x³ = 125 → x = 5."
+ },
+ {
+  "id": "m2_445",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Una persona ahorra $148.000 con un interés compuesto de 20% anual. ¿Cuál es el monto total después de 3 años?",
+  "alternativas": [
+   "$236.800",
+   "$255.744",
+   "$107.744",
+   "$88.800"
+  ],
+  "correcta": 1,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $148.000 · (1,2)³ = $255.744."
+ },
+ {
+  "id": "m2_446",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico corresponde a una función logarítmica que pasa por los puntos marcados. ¿Cuál es la función?",
+  "alternativas": [
+   "f(x) = log₁₀(x)",
+   "f(x) = log₂(x)",
+   "f(x) = log₅(x)",
+   "f(x) = log₃(x)"
+  ],
+  "correcta": 2,
+  "explicacion": "Pasa por (5, 1): log₅(5) = 1.",
+  "imagen": "assets/images/m2/m2_img_035.png"
+ },
+ {
+  "id": "m2_447",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Se lanza una moneda equilibrada 4 veces. ¿Cuál es la probabilidad de obtener exactamente 1 cara?",
+  "alternativas": [
+   "1/16",
+   "1/8",
+   "1/2",
+   "1/4"
+  ],
+  "correcta": 3,
+  "explicacion": "Modelo binomial: C(4,1)·(1/2)⁴ = 4/16 = 1/4."
+ },
+ {
+  "id": "m2_448",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si f(x) = 3x³, ¿cuál es el valor de f(−1)?",
+  "alternativas": [
+   "−9",
+   "3",
+   "−3",
+   "−27"
+  ],
+  "correcta": 2,
+  "explicacion": "f(−1) = 3·(−1)³ = −3."
+ },
+ {
+  "id": "m2_449",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √125 se obtiene:",
+  "alternativas": [
+   "6√5",
+   "4√5",
+   "25√5",
+   "5√5"
+  ],
+  "correcta": 3,
+  "explicacion": "√125 = √(25 · 5) = 5√5."
+ },
+ {
+  "id": "m2_450",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 25% habla inglés, el 60% habla francés y el 20% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "45%",
+   "85%",
+   "65%",
+   "20%"
+  ],
+  "correcta": 2,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 25% + 60% − 20% = 65%."
+ },
+ {
+  "id": "m2_451",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "La figura muestra una esfera y su radio. ¿Cuál es su volumen?",
+  "alternativas": [
+   "108π cm³",
+   "36π cm³",
+   "27π cm³",
+   "18π cm³"
+  ],
+  "correcta": 1,
+  "explicacion": "V = (4/3)·π·3³ = 36π cm³.",
+  "imagen": "assets/images/m2/m2_img_071.png"
+ },
+ {
+  "id": "m2_452",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₂(4)?",
+  "alternativas": [
+   "3",
+   "2",
+   "4",
+   "−2"
+  ],
+  "correcta": 1,
+  "explicacion": "2² = 4, entonces el logaritmo es 2."
+ },
+ {
+  "id": "m2_453",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √32 − √18?",
+  "alternativas": [
+   "12√2",
+   "√14",
+   "√2",
+   "√4"
+  ],
+  "correcta": 2,
+  "explicacion": "√32 = 4√2 y √18 = 3√2; entonces 4√2 − 3√2 = √2."
+ },
+ {
+  "id": "m2_454",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por −2x + 2y = −3 y −4x + 4y = −6?",
+  "alternativas": [
+   "Infinitas soluciones",
+   "Exactamente dos soluciones",
+   "Una única solución",
+   "No tiene solución"
+  ],
+  "correcta": 0,
+  "explicacion": "La segunda ecuación es la primera multiplicada por 2: son la misma recta."
+ },
+ {
+  "id": "m2_455",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Isidora pide un crédito de consumo de $1.500.000 y lo paga en 18 cuotas mensuales de $94.000. ¿Cuánto paga en total por intereses y costos?",
+  "alternativas": [
+   "$1.692.000",
+   "$83.333",
+   "$94.000",
+   "$192.000"
+  ],
+  "correcta": 3,
+  "explicacion": "Total pagado = 18 · $94.000 = $1.692.000. Intereses = $1.692.000 − $1.500.000 = $192.000."
+ },
+ {
+  "id": "m2_456",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₁₀(x + 8) = 1, ¿cuál es el valor de x?",
+  "alternativas": [
+   "2",
+   "−7",
+   "18",
+   "12"
+  ],
+  "correcta": 0,
+  "explicacion": "Por definición de logaritmo: x + 8 = 10¹ = 10, entonces x = 2."
+ },
+ {
+  "id": "m2_457",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,8 y P(A ∩ B) = 0,6. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "1,4",
+   "0,75",
+   "0,25",
+   "0,48"
+  ],
+  "correcta": 1,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,6/0,8 = 0,75."
+ },
+ {
+  "id": "m2_458",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 70 personas, 35 practican deporte y, de ellas, 28 son menores de 18 años. Si se elige al azar una persona que practica deporte, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "1/2",
+   "4/5",
+   "1/5",
+   "2/5"
+  ],
+  "correcta": 1,
+  "explicacion": "Se consideran solo las 35 personas que practican deporte: P = 28/35 = 4/5."
+ },
+ {
+  "id": "m2_459",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la función inversa de f(x) = 4x + 9?",
+  "alternativas": [
+   "f⁻¹(x) = (x − 9)/4",
+   "f⁻¹(x) = 4x − 9",
+   "f⁻¹(x) = x/4 − 9",
+   "f⁻¹(x) = (x + 9)/4"
+  ],
+  "correcta": 0,
+  "explicacion": "Se despeja x en y = 4x + 9: x = (y − 9)/4."
+ },
+ {
+  "id": "m2_460",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al simplificar √396 se obtiene:",
+  "alternativas": [
+   "5√11",
+   "36√11",
+   "7√11",
+   "6√11"
+  ],
+  "correcta": 3,
+  "explicacion": "√396 = √(36 · 11) = 6√11."
+ },
+ {
+  "id": "m2_461",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₃(45) − log₃(5)?",
+  "alternativas": [
+   "2",
+   "1",
+   "3",
+   "5"
+  ],
+  "correcta": 0,
+  "explicacion": "log₃(45) − log₃(5) = log₃(45/5) = log₃(9) = 2."
+ },
+ {
+  "id": "m2_462",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuántas soluciones tiene el sistema formado por −6x − 2y = 5 y 12x + 4y = −7?",
+  "alternativas": [
+   "Exactamente dos soluciones",
+   "Infinitas soluciones",
+   "Una única solución",
+   "No tiene solución"
+  ],
+  "correcta": 3,
+  "explicacion": "Los coeficientes de x e y son proporcionales pero el término libre no: son rectas paralelas distintas."
+ },
+ {
+  "id": "m2_463",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un cultivo comienza con 300 bacterias y su cantidad se duplica cada 3 horas. ¿Cuántas bacterias habrá después de 15 horas?",
+  "alternativas": [
+   "3.000",
+   "19.200",
+   "9.600",
+   "4.800"
+  ],
+  "correcta": 2,
+  "explicacion": "En 15 horas hay 5 duplicaciones: 300 · 2⁵ = 9.600."
+ },
+ {
+  "id": "m2_464",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 6 cm, PB = 10 cm y CP = 4 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "17 cm",
+   "60 cm",
+   "12 cm",
+   "15 cm"
+  ],
+  "correcta": 3,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 6·10 = 4·PD → PD = 15 cm."
+ },
+ {
+  "id": "m2_465",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 10/√2 se obtiene:",
+  "alternativas": [
+   "5√2",
+   "10",
+   "10√2",
+   "6√2"
+  ],
+  "correcta": 0,
+  "explicacion": "10/√2 · √2/√2 = 10√2/2 = 5√2."
+ },
+ {
+  "id": "m2_466",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Se depositan en una cuenta de ahorro $222.000 con un interés compuesto de 10% anual. ¿Cuál es el monto total después de 3 años?",
+  "alternativas": [
+   "$288.600",
+   "$295.482",
+   "$66.600",
+   "$73.482"
+  ],
+  "correcta": 1,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $222.000 · (1,1)³ = $295.482."
+ },
+ {
+  "id": "m2_467",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √8 + √32?",
+  "alternativas": [
+   "8√2",
+   "6√2",
+   "6√4",
+   "√40"
+  ],
+  "correcta": 1,
+  "explicacion": "√8 = 2√2 y √32 = 4√2; entonces 2√2 + 4√2 = 6√2."
+ },
+ {
+  "id": "m2_468",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √48 − √27?",
+  "alternativas": [
+   "√21",
+   "√3",
+   "12√3",
+   "√6"
+  ],
+  "correcta": 1,
+  "explicacion": "√48 = 4√3 y √27 = 3√3; entonces 4√3 − 3√3 = √3."
+ },
+ {
+  "id": "m2_469",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Según el triángulo rectángulo de la figura, ¿cuál es el valor de sen(α)?",
+  "alternativas": [
+   "13/5",
+   "12/13",
+   "5/12",
+   "5/13"
+  ],
+  "correcta": 3,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 5/13.",
+  "imagen": "assets/images/m2/m2_img_051.png"
+ },
+ {
+  "id": "m2_470",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es la amplitud de la función f(x) = 4·cos(3x) + 1?",
+  "alternativas": [
+   "4",
+   "3",
+   "5",
+   "8"
+  ],
+  "correcta": 0,
+  "explicacion": "La amplitud es el valor absoluto del número que multiplica a cos: 4."
+ },
+ {
+  "id": "m2_471",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₅(x + 2) = 2, ¿cuál es el valor de x?",
+  "alternativas": [
+   "30",
+   "27",
+   "8",
+   "23"
+  ],
+  "correcta": 3,
+  "explicacion": "Por definición de logaritmo: x + 2 = 5² = 25, entonces x = 23."
+ },
+ {
+  "id": "m2_472",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Si log₂(x + 6) = 2, ¿cuál es el valor de x?",
+  "alternativas": [
+   "0",
+   "−2",
+   "−4",
+   "10"
+  ],
+  "correcta": 1,
+  "explicacion": "Por definición de logaritmo: x + 6 = 2² = 4, entonces x = −2."
+ },
+ {
+  "id": "m2_473",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/3, y cada disparo es independiente de los demás. Si realiza 3 disparos, ¿cuál es la probabilidad de que acierte exactamente 1?",
+  "alternativas": [
+   "4/27",
+   "4/9",
+   "1",
+   "1/3"
+  ],
+  "correcta": 1,
+  "explicacion": "P = C(3,1)·(1/3)¹·(2/3)² = 4/9."
+ },
+ {
+  "id": "m2_474",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Se depositan en una cuenta de ahorro $243.000 con un interés compuesto de 10% anual. ¿Cuál es el monto total después de 3 años?",
+  "alternativas": [
+   "$323.433",
+   "$72.900",
+   "$80.433",
+   "$315.900"
+  ],
+  "correcta": 0,
+  "explicacion": "Monto = C·(1 + r)ᵗ = $243.000 · (1,1)³ = $323.433."
+ },
+ {
+  "id": "m2_475",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,6 y P(A ∩ B) = 0,15. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,09",
+   "0,15",
+   "0,75",
+   "0,25"
+  ],
+  "correcta": 3,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,15/0,6 = 0,25."
+ },
+ {
+  "id": "m2_476",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 40 cm, el cateto adyacente mide 42 cm y la hipotenusa mide 58 cm. ¿Cuál es el valor de cos(α)?",
+  "alternativas": [
+   "21/29",
+   "20/29",
+   "29/21",
+   "20/21"
+  ],
+  "correcta": 0,
+  "explicacion": "cos = cateto adyacente / hipotenusa = 21/29."
+ },
+ {
+  "id": "m2_477",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si 2x − 3y = 5 y −3x + 4y = −6, ¿cuál es el valor de y?",
+  "alternativas": [
+   "−3",
+   "−2",
+   "3",
+   "1"
+  ],
+  "correcta": 0,
+  "explicacion": "Resolviendo el sistema se obtiene x = −2 e y = −3."
+ },
+ {
+  "id": "m2_478",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 40% habla inglés, el 40% habla francés y el 35% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "75%",
+   "45%",
+   "80%",
+   "35%"
+  ],
+  "correcta": 1,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 40% + 40% − 35% = 45%."
+ },
+ {
+  "id": "m2_479",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Al racionalizar la expresión 18/√3 se obtiene:",
+  "alternativas": [
+   "18√3",
+   "18",
+   "7√3",
+   "6√3"
+  ],
+  "correcta": 3,
+  "explicacion": "18/√3 · √3/√3 = 18√3/3 = 6√3."
+ },
+ {
+  "id": "m2_480",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo, el 60% habla inglés, el 20% habla francés y el 15% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "alternativas": [
+   "80%",
+   "65%",
+   "15%",
+   "95%"
+  ],
+  "correcta": 1,
+  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 60% + 20% − 15% = 65%."
+ },
+ {
+  "id": "m2_481",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,2 y P(A ∩ B) = 0,1. ¿Cuál es el valor de P(A | B)?",
+  "alternativas": [
+   "0,1",
+   "0,02",
+   "0,3",
+   "0,5"
+  ],
+  "correcta": 3,
+  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,1/0,2 = 0,5."
+ },
+ {
+  "id": "m2_482",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √80 − √180?",
+  "alternativas": [
+   "√100",
+   "−2√5",
+   "24√5",
+   "2√10"
+  ],
+  "correcta": 1,
+  "explicacion": "√80 = 4√5 y √180 = 6√5; entonces 4√5 − 6√5 = −2√5."
+ },
+ {
+  "id": "m2_483",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "De un curso de 10 estudiantes se elegirá una comisión de 3 integrantes (sin cargos). ¿Cuántas comisiones distintas se pueden formar?",
+  "alternativas": [
+   "30",
+   "45",
+   "120",
+   "720"
+  ],
+  "correcta": 2,
+  "explicacion": "No importa el orden: C(10, 3) = 10!/(3!·7!) = 120."
+ },
+ {
+  "id": "m2_484",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 7 cm, PB = 8 cm y CP = 2 cm, ¿cuánto mide PD?",
+  "alternativas": [
+   "28 cm",
+   "56 cm",
+   "13 cm",
+   "30 cm"
+  ],
+  "correcta": 0,
+  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 7·8 = 2·PD → PD = 28 cm."
+ },
+ {
+  "id": "m2_485",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √125 − √45?",
+  "alternativas": [
+   "2√10",
+   "√80",
+   "2√5",
+   "15√5"
+  ],
+  "correcta": 2,
+  "explicacion": "√125 = 5√5 y √45 = 3√5; entonces 5√5 − 3√5 = 2√5."
+ },
+ {
+  "id": "m2_486",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "¿Cuál es el valor mínimo de la función f(x) = 4·sen(3x) + 4?",
+  "alternativas": [
+   "0",
+   "4",
+   "8",
+   "−4"
+  ],
+  "correcta": 0,
+  "explicacion": "El mínimo es 4·(−1) + (4) = 0."
+ },
+ {
+  "id": "m2_487",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de log₄(1.024)?",
+  "alternativas": [
+   "−5",
+   "6",
+   "20",
+   "5"
+  ],
+  "correcta": 3,
+  "explicacion": "4⁵ = 1.024, entonces el logaritmo es 5."
+ },
+ {
+  "id": "m2_488",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si −4x + 5y = 24 y −x − 5y = 6, ¿cuál es el valor de x + y?",
+  "alternativas": [
+   "24",
+   "−5",
+   "6",
+   "−6"
+  ],
+  "correcta": 3,
+  "explicacion": "Resolviendo el sistema se obtiene x = −6 e y = 0."
+ },
+ {
+  "id": "m2_489",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Un cultivo comienza con 100 bacterias y su cantidad se duplica cada 4 horas. ¿Cuántas bacterias habrá después de 20 horas?",
+  "alternativas": [
+   "1.000",
+   "3.200",
+   "6.400",
+   "1.600"
+  ],
+  "correcta": 1,
+  "explicacion": "En 20 horas hay 5 duplicaciones: 100 · 2⁵ = 3.200."
+ },
+ {
+  "id": "m2_490",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja tiene 5 bolitas rojas y 8 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "alternativas": [
+   "5/39",
+   "1/3",
+   "25/169",
+   "5/13"
+  ],
+  "correcta": 0,
+  "explicacion": "P = 5/13 · 4/12 = 5/39."
+ },
+ {
+  "id": "m2_491",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el valor de x en la ecuación 5^(x + 2) = 125?",
+  "alternativas": [
+   "1",
+   "3",
+   "2",
+   "5"
+  ],
+  "correcta": 0,
+  "explicacion": "125 = 5³; igualando exponentes: x + 2 = 3, entonces x = 1."
+ },
+ {
+  "id": "m2_492",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Si −4x + y = 27 y x + 3y = 3, ¿cuál es el valor de y?",
+  "alternativas": [
+   "−6",
+   "−9",
+   "−3",
+   "3"
+  ],
+  "correcta": 3,
+  "explicacion": "Resolviendo el sistema se obtiene x = −6 e y = 3."
+ },
+ {
+  "id": "m2_493",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Una figura de área 17 cm² se transforma con una homotecia de razón 2. ¿Cuál es el área de la figura imagen?",
+  "alternativas": [
+   "136 cm²",
+   "68 cm²",
+   "34 cm²",
+   "21 cm²"
+  ],
+  "correcta": 1,
+  "explicacion": "Las áreas se multiplican por el cuadrado de la razón: 17·(2)² = 68 cm²."
+ },
+ {
+  "id": "m2_494",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 1 cm y PB = 144 cm, ¿cuánto mide PT?",
+  "alternativas": [
+   "12 cm",
+   "7 cm",
+   "72 cm",
+   "143 cm"
+  ],
+  "correcta": 0,
+  "explicacion": "PT² = PA·PB = 1·144 = 144, entonces PT = 12 cm."
+ },
+ {
+  "id": "m2_495",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 21 cm, el cateto adyacente mide 72 cm y la hipotenusa mide 75 cm. ¿Cuál es el valor de sen(α)?",
+  "alternativas": [
+   "25/7",
+   "7/24",
+   "7/25",
+   "24/25"
+  ],
+  "correcta": 2,
+  "explicacion": "sen = cateto opuesto / hipotenusa = 7/25."
+ },
+ {
+  "id": "m2_496",
+  "prueba": "m2",
+  "eje": "Álgebra y funciones",
+  "enunciado": "El gráfico muestra una función trigonométrica. ¿Cuál es su valor máximo?",
+  "alternativas": [
+   "3",
+   "6",
+   "2",
+   "1"
+  ],
+  "correcta": 0,
+  "explicacion": "El punto más alto del gráfico está en y = 3.",
+  "imagen": "assets/images/m2/m2_img_008.png"
+ },
+ {
+  "id": "m2_497",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "¿Cuál es el resultado de √20 − √80?",
+  "alternativas": [
+   "√60",
+   "−2√5",
+   "8√5",
+   "2√10"
+  ],
+  "correcta": 1,
+  "explicacion": "√20 = 2√5 y √80 = 4√5; entonces 2√5 − 4√5 = −2√5."
+ },
+ {
+  "id": "m2_498",
+  "prueba": "m2",
+  "eje": "Números",
+  "enunciado": "Catalina pide un crédito de consumo de $1.300.000 y lo paga en 18 cuotas mensuales de $94.000. ¿Cuánto paga en total por intereses y costos?",
+  "alternativas": [
+   "$1.692.000",
+   "$94.000",
+   "$72.222",
+   "$392.000"
+  ],
+  "correcta": 3,
+  "explicacion": "Total pagado = 18 · $94.000 = $1.692.000. Intereses = $1.692.000 − $1.300.000 = $392.000."
+ },
+ {
+  "id": "m2_499",
+  "prueba": "m2",
+  "eje": "Geometría",
+  "enunciado": "Se aplica una homotecia de centro en el origen y razón 3 al punto (6, 1). ¿Cuáles son las coordenadas del punto imagen?",
+  "alternativas": [
+   "(18, 3)",
+   "(9, 4)",
+   "(18, 1)",
+   "(3, 18)"
+  ],
+  "correcta": 0,
+  "explicacion": "Se multiplican ambas coordenadas por 3: (18, 3)."
+ },
+ {
+  "id": "m2_500",
+  "prueba": "m2",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "En un grupo de 80 personas, 35 leen todos los días y, de ellas, 24 son menores de 18 años. Si se elige al azar una persona que lee todos los días, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "alternativas": [
+   "3/10",
+   "7/16",
+   "11/35",
+   "24/35"
+  ],
+  "correcta": 3,
+  "explicacion": "Se consideran solo las 35 personas que leen todos los días: P = 24/35."
+ }
 ]

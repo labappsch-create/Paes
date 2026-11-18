@@ -18,7 +18,7 @@ Meta: **500 preguntas por prueba, 100 de ellas con imagen o gráfico**. En cada 
 | Prueba | Preguntas | Con gráfico |
 |---|---|---|
 | Matemática M1 | 500 | 100 |
-| Matemática M2 | 3 | 0 |
+| Matemática M2 | 500 | 100 |
 | Ciencias | 3 | 0 |
 | Historia | 1 | 0 |
 | Competencia Lectora | 0 | 0 |
@@ -35,6 +35,10 @@ Para volver a generarlas (necesita Python y matplotlib):
 ```
 python3 tools/generar_m1.py
 ```
+`tools/generar_m2.py` hace lo mismo para M2 (logaritmos, matemática financiera, funciones
+exponencial, logarítmica y trigonométricas, circunferencia, esfera, homotecia, rectas,
+dispersión, probabilidad condicional, combinatoria, binomial y normal).
+
 Igual conviene que un profesor revise una muestra antes de publicar.
 
 **Importante:** no se debe usar contenido del DEMRE (sus documentos son "sin fines comerciales").
