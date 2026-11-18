@@ -6,6 +6,9 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
 - 5 pruebas: Competencia Lectora, Matemática M1, Matemática M2, Ciencias, Historia.
 - **Práctica**: eliges la prueba y cuántas preguntas; sin reloj; ves al instante si acertaste.
 - **Simulacro**: con el tiempo oficial de cada prueba; las respuestas se ven al final.
+  Como con el cuadernillo en papel, se puede saltar preguntas, volver atrás («Anterior»),
+  cambiar respuestas e ir a cualquier pregunta desde el mapa de preguntas (botón de cuadrícula),
+  que muestra cuáles están respondidas.
   En Ciencias se elige el módulo (Biología, Física, Química o Técnico Profesional), como en la
   prueba real: 54 preguntas del Módulo Común (18 por eje) y luego 26 del módulo elegido
   (en Técnico Profesional: 9 de Biología, 9 de Física y 8 de Química).

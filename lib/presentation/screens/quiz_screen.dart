@@ -98,16 +98,29 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     return bought == true || ref.read(accessProvider).canAnswer;
   }
 
-  void _select(int displayIndex) {
+  Future<void> _select(int displayIndex) async {
     if (_finished) return;
     final item = _item;
     if (_isPractice && item.isAnswered) return;
     final isFirstAnswer = !item.isAnswered;
+    if (isFirstAnswer && !await _accessOrFinish()) return;
+    if (!mounted || _finished) return;
     setState(() => item.selected = displayIndex);
     if (isFirstAnswer) {
       ref.read(accessProvider.notifier).registerAnswer();
     }
     if (_isPractice) _scrollToFeedback();
+  }
+
+  /// Revisa si se pueden responder más preguntas. Si se acabaron las gratis,
+  /// muestra la pantalla de pago; si no paga, se termina el ensayo con lo
+  /// respondido hasta ahora y devuelve false.
+  Future<bool> _accessOrFinish() async {
+    if (ref.read(accessProvider).canAnswer) return true;
+    final ok = await _ensureAccess();
+    if (!mounted) return false;
+    if (!ok) _finish();
+    return ok;
   }
 
   /// Baja la pantalla para que se vea si la respuesta fue correcta.
@@ -127,18 +140,29 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       _finish();
       return;
     }
-    final nextItem = widget.items[_index + 1];
-    if (!nextItem.isAnswered && !ref.read(accessProvider).canAnswer) {
-      final ok = await _ensureAccess();
-      if (!mounted) return;
-      if (!ok) {
-        // No pagó: se termina el ensayo con lo respondido hasta ahora.
-        _finish();
-        return;
-      }
-    }
-    setState(() => _index++);
+    await _goTo(_index + 1);
+  }
+
+  /// Va a la pregunta [target]. En el simulacro se puede ir a cualquiera,
+  /// adelante o atrás, como con el cuadernillo en papel.
+  Future<void> _goTo(int target) async {
+    if (target < 0 || target >= widget.items.length || target == _index) return;
+    // Para ver una pregunta nueva sin responder hay que tener acceso.
+    if (!widget.items[target].isAnswered && !await _accessOrFinish()) return;
+    if (!mounted || _finished) return;
+    setState(() => _index = target);
     if (_scroll.hasClients) _scroll.jumpTo(0);
+  }
+
+  /// Muestra todas las preguntas numeradas para saltar a cualquiera.
+  Future<void> _openMap() async {
+    final target = await showModalBottomSheet<int>(
+      context: context,
+      showDragHandle: true,
+      isScrollControlled: true,
+      builder: (context) => _QuestionMap(items: widget.items, current: _index),
+    );
+    if (target != null) await _goTo(target);
   }
 
   void _finish() {
@@ -297,14 +321,40 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(16),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: FilledButton(
-                    // En práctica, primero hay que responder.
-                    onPressed: (_isPractice && !item.isAnswered) ? null : _next,
-                    child: Text(isLast ? 'Terminar' : 'Siguiente'),
-                  ),
-                ),
+                child: _isPractice
+                    ? SizedBox(
+                        width: double.infinity,
+                        child: FilledButton(
+                          // En práctica, primero hay que responder.
+                          onPressed: item.isAnswered ? _next : null,
+                          child: Text(isLast ? 'Terminar' : 'Siguiente'),
+                        ),
+                      )
+                    : Row(
+                        children: [
+                          Expanded(
+                            child: OutlinedButton(
+                              onPressed: _index == 0
+                                  ? null
+                                  : () => _goTo(_index - 1),
+                              child: const Text('Anterior'),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          IconButton.outlined(
+                            tooltip: 'Ver todas las preguntas',
+                            icon: const Icon(Icons.grid_view),
+                            onPressed: _openMap,
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: FilledButton(
+                              onPressed: _next,
+                              child: Text(isLast ? 'Terminar' : 'Siguiente'),
+                            ),
+                          ),
+                        ],
+                      ),
               ),
             ],
           ),
@@ -396,4 +446,118 @@ class _OptionTile extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Mapa del simulacro: todas las preguntas numeradas. Las respondidas se ven
+/// pintadas y la actual tiene borde. Al tocar un número se va a esa pregunta.
+class _QuestionMap extends StatelessWidget {
+  const _QuestionMap({required this.items, required this.current});
+
+  final List<QuizItem> items;
+  final int current;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final answered = items.where((i) => i.isAnswered).length;
+    return SafeArea(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.sizeOf(context).height * 0.75,
+        ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Todas las preguntas', style: theme.textTheme.titleLarge),
+              const SizedBox(height: 4),
+              Text(
+                'Respondidas: $answered de ${items.length}. '
+                'Sin responder: ${items.length - answered}.',
+              ),
+              const SizedBox(height: 12),
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (var i = 0; i < items.length; i++)
+                    SizedBox(
+                      width: 48,
+                      height: 48,
+                      child: Material(
+                        color: items[i].isAnswered
+                            ? scheme.primary
+                            : scheme.surfaceContainerHighest,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          side: i == current
+                              ? BorderSide(color: scheme.tertiary, width: 3)
+                              : BorderSide.none,
+                        ),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(8),
+                          onTap: () => Navigator.of(context).pop(i),
+                          child: Center(
+                            child: Text(
+                              '${i + 1}',
+                              semanticsLabel:
+                                  'Pregunta ${i + 1}, '
+                                  '${items[i].isAnswered ? 'respondida' : 'sin responder'}',
+                              style: TextStyle(
+                                color: items[i].isAnswered
+                                    ? scheme.onPrimary
+                                    : scheme.onSurface,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Wrap(
+                spacing: 16,
+                runSpacing: 8,
+                children: [
+                  _Legend(color: scheme.primary, text: 'Respondida'),
+                  _Legend(
+                    color: scheme.surfaceContainerHighest,
+                    text: 'Sin responder',
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Legend extends StatelessWidget {
+  const _Legend({required this.color, required this.text});
+
+  final Color color;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Container(
+        width: 16,
+        height: 16,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(4),
+        ),
+      ),
+      const SizedBox(width: 6),
+      Text(text),
+    ],
+  );
 }
