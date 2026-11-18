@@ -305,20 +305,6 @@ def t_order_ops():
                 "Primero se resuelven los paréntesis, luego × y ÷, y al final + y −.")
 
 
-def t_mcm_mcd():
-    k = rnd.randint(2, 9)
-    x, y = rnd.choice([(2, 3), (3, 4), (2, 5), (3, 5), (4, 5), (3, 7), (5, 6)])
-    a, b = k * x, k * y
-    if rnd.random() < 0.5:
-        res, other, what = math.lcm(a, b), math.gcd(a, b), "mínimo común múltiplo"
-        expl = f"Descomponiendo {a} y {b}: m.c.m. = {res}."
-    else:
-        res, other, what = math.gcd(a, b), math.lcm(a, b), "máximo común divisor"
-        expl = f"Los divisores comunes de {a} y {b} llegan hasta {res}."
-    c, w = numeric_options(res, [other, a * b, a + b], step=k)
-    return make(NUMEROS, f"¿Cuál es el {what} de {a} y {b}?", c, w, expl)
-
-
 def t_neg_ops():
     a, b, c_ = rnd.randint(2, 9), rnd.randint(2, 9), rnd.randint(1, 20)
     form = rnd.randint(1, 2)
@@ -458,15 +444,6 @@ def t_age():
     return make(ALGEBRA, enun, c, w, f"x + {k}x = {S}, entonces {k + 1}x = {S} y x = {L}.")
 
 
-def t_arith_seq():
-    a1, d, n = rnd.randint(1, 12), rnd.randint(2, 9), rnd.randint(8, 20)
-    val = a1 + (n - 1) * d
-    seq = ", ".join(str(a1 + i * d) for i in range(4))
-    c, w = numeric_options(val, [a1 + n * d, a1 * n, n * d, val + d], step=d)
-    return make(ALGEBRA, f"En la secuencia {seq}, … ¿cuál es el término que ocupa la posición {n}?", c, w,
-                f"Término n = a₁ + (n−1)·d = {a1} + {n - 1}·{d} = {val}.")
-
-
 def t_prop_fn():
     k = rnd.randint(2, 9)
     x1, x2 = rnd.randint(2, 8), rnd.randint(9, 20)
@@ -548,30 +525,6 @@ def t_volume():
     return make(GEOMETRIA, f"Un cilindro tiene radio {r} cm y altura {h} cm. ¿Cuál es su volumen?", c, w, f"V = πr²h = π·{r * r}·{h} = {r * r * h}π cm³.")
 
 
-def t_tri_angles():
-    a, b = rnd.randrange(30, 90, 5), rnd.randrange(20, 80, 5)
-    third = 180 - a - b
-    if third <= 0:
-        raise Skip()
-    deg = lambda v: f"{fint(v)}°"
-    c, w = numeric_options(third, [a + b, 180 - a, 90 - a, 360 - a - b], step=5, fn=deg)
-    return make(GEOMETRIA, f"En un triángulo, dos ángulos interiores miden {a}° y {b}°. ¿Cuánto mide el tercer ángulo?", c, w,
-                f"Los ángulos interiores suman 180°: 180° {MINUS} {a}° {MINUS} {b}° = {third}°.")
-
-
-def t_supp():
-    m = rnd.randint(1, 3)
-    x = rnd.randint(10, 40)
-    k = 180 - (m + 1) * x
-    if k <= 0:
-        raise Skip()
-    mx = "x" if m == 1 else f"{m}x"
-    deg = lambda v: f"{fint(v)}°"
-    c, w = numeric_options(x, [k, 180 // (m + 1), x + 10], step=5, fn=deg)
-    return make(GEOMETRIA, f"Dos ángulos adyacentes forman un ángulo extendido (180°). Si miden x y ({mx} + {k})°, ¿cuánto mide x?", c, w,
-                f"x + {mx} + {k} = 180 → {m + 1}x = {180 - k} → x = {x}°.")
-
-
 def t_thales():
     h = rnd.choice([2, 3, 4, 5, 6])
     s = rnd.choice([1, 2, 3, 4])
@@ -602,19 +555,6 @@ def t_area_tri():
         raise Skip()
     c, w = numeric_options(b * h // 2, [b * h, b + h, b * h // 4], step=b, fn=lambda v: f"{fint(v)} cm²")
     return make(GEOMETRIA, f"Un triángulo tiene base {b} cm y altura {h} cm. ¿Cuál es su área?", c, w, f"A = base · altura / 2 = {b}·{h}/2 = {b * h // 2} cm².")
-
-
-def t_polygon():
-    n = rnd.choice([5, 6, 8, 9, 10, 12])
-    names = {5: "pentágono", 6: "hexágono", 8: "octágono", 9: "eneágono", 10: "decágono", 12: "dodecágono"}
-    deg = lambda v: f"{fint(v)}°"
-    if rnd.random() < 0.5:
-        v = (n - 2) * 180
-        c, w = numeric_options(v, [n * 180, (n - 1) * 180, 360], step=180, fn=deg)
-        return make(GEOMETRIA, f"¿Cuánto suman los ángulos interiores de un {names[n]}?", c, w, f"Suma = (n − 2)·180° = {n - 2}·180° = {v}°.")
-    v = (n - 2) * 180 // n
-    c, w = numeric_options(v, [360 // n, 180 - v, (n - 2) * 180 // (n - 1)], step=3, fn=deg)
-    return make(GEOMETRIA, f"¿Cuánto mide cada ángulo interior de un {names[n]} regular?", c, w, f"Cada ángulo = (n − 2)·180°/n = {(n - 2) * 180}°/{n} = {v}°.")
 
 
 def t_dist_points():
@@ -688,19 +628,6 @@ def t_median():
                 f"Ordenados: {', '.join(map(str, s))}. La mediana es {fmt(med)}.")
 
 
-def t_mode():
-    mode = rnd.randint(2, 20)
-    data = [mode] * 3 + [v for v in rnd.sample(range(1, 30), 5) if v != mode][:4]
-    if rnd.random() < 0.5:
-        data += [data[-1]]
-    if data.count(mode) <= max(data.count(v) for v in set(data) - {mode}):
-        raise Skip()
-    rnd.shuffle(data)
-    others = [v for v in set(data) if v != mode]
-    c, w = numeric_options(mode, others + [sum(data) // len(data)], step=1)
-    return make(PROBA, f"¿Cuál es la moda de los datos {', '.join(map(str, data))}?", c, w, f"La moda es el dato que más se repite: {mode}.")
-
-
 def t_prob_bag():
     r, a, v = rnd.randint(2, 9), rnd.randint(2, 9), rnd.randint(1, 8)
     T = r + a + v
@@ -721,20 +648,6 @@ def t_complement():
     return make(PROBA, f"La probabilidad de que {ev} es {p}%. ¿Cuál es la probabilidad de que {neg}?", c, w, f"Eventos complementarios suman 100%: 100% {MINUS} {p}% = {100 - p}%.")
 
 
-def t_counting():
-    a, b, c_ = rnd.randint(2, 6), rnd.randint(2, 6), rnd.randint(2, 5)
-    n = nm()
-    if rnd.random() < 0.5:
-        enun = f"{n} tiene {a} poleras, {b} pantalones y {c_} pares de zapatillas. ¿Cuántas combinaciones distintas de tenida puede armar con una de cada prenda?"
-        v = a * b * c_
-        c, w = numeric_options(v, [a + b + c_, a * b + c_, a * b], step=1)
-    else:
-        enun = f"Para llegar de A a B hay {a} caminos y para llegar de B a C hay {b} caminos. ¿De cuántas maneras distintas se puede ir de A a C pasando por B?"
-        v = a * b
-        c, w = numeric_options(v, [a + b, a ** b if b < 5 else a * b + a, a * b - 1], step=1)
-    return make(PROBA, enun, c, w, "Principio multiplicativo: se multiplican las opciones de cada etapa.")
-
-
 def t_independent():
     r, a = rnd.randint(2, 6), rnd.randint(2, 6)
     T = r + a + rnd.randint(1, 4)
@@ -743,22 +656,6 @@ def t_independent():
     w = [frac_str(x) for x in cands if x != res]
     return make(PROBA, f"Una urna tiene {T} bolitas: {r} rojas, {a} azules y el resto verdes. Se saca una bolita, se anota su color y se devuelve a la urna; luego se saca otra. ¿Cuál es la probabilidad de que la primera sea roja y la segunda azul?",
                 frac_str(res), w, f"Los eventos son independientes: {r}/{T} · {a}/{T} = {frac_str(res)}.")
-
-
-def t_permutations():
-    n = rnd.randint(4, 7)
-    v = math.factorial(n)
-    c, w = numeric_options(v, [n * n, n * (n - 1), math.factorial(n - 1), 2 * n], step=n)
-    return make(PROBA, f"¿De cuántas maneras distintas se pueden ordenar {n} personas en una fila?", c, w, f"Se calcula {n}! = {v}.")
-
-
-def t_range():
-    data = [rnd.randint(3, 60) for _ in range(rnd.randint(6, 9))]
-    r = max(data) - min(data)
-    if r == 0:
-        raise Skip()
-    c, w = numeric_options(r, [max(data), min(data), max(data) + min(data)], step=1)
-    return make(PROBA, f"Las edades de un grupo son {', '.join(map(str, data))}. ¿Cuál es el rango de los datos?", c, w, f"Rango = mayor {MINUS} menor = {max(data)} {MINUS} {min(data)} = {r}.")
 
 
 def t_stat_percent():
@@ -773,15 +670,258 @@ def t_stat_percent():
                 f"{p}% de {N} = {yes} practican; los demás son {N} {MINUS} {yes} = {N - yes}.")
 
 
+# ====================================================== PLANTILLAS NUEVAS (temario 2027)
+SUPERS = {2: "", 3: "∛", 4: "∜"}
+
+
+def root_str(n, x):
+    """√x, ∛x o ∜x."""
+    return f"{'√' if n == 2 else SUPERS[n]}{fint(x)}"
+
+
+def poly_str(a, b, c):
+    """Escribe ax² + bx + c de forma natural: x² − 5x + 6, −x² + 4x."""
+    def term(coef, var, first):
+        if coef == 0:
+            return ""
+        sign = ("" if coef > 0 else MINUS) if first else (" + " if coef > 0 else f" {MINUS} ")
+        mag = abs(coef)
+        body = (var if mag == 1 and var else f"{fint(mag)}{var}")
+        return sign + body
+    s = term(a, "x²", True)
+    s += term(b, "x", s == "")
+    s += term(c, "", s == "")
+    return s or "0"
+
+
+def t_root_simplify():
+    n = rnd.choice([2, 2, 3])
+    a = rnd.randint(2, 6 if n == 2 else 4)
+    b = rnd.choice([2, 3, 5, 6, 7] if n == 2 else [2, 3, 4, 5])
+    x = a ** n * b
+    c = f"{a}{root_str(n, b)}"
+    w = [f"{b}{root_str(n, a)}", f"{a * a}{root_str(n, b)}", f"{a}{root_str(n, b * a)}", f"{a + b}{root_str(n, b)}", f"{root_str(n, a * b)}"]
+    return make(NUMEROS, f"Al simplificar {root_str(n, x)} se obtiene:", c, w,
+                f"{root_str(n, x)} = {root_str(n, a ** n)}·{root_str(n, b)} = {a}{root_str(n, b)}, porque {a}{sup(n)} = {a ** n}.")
+
+
+def t_root_eval():
+    n = rnd.choice([2, 3, 3, 4])
+    r = rnd.randint(2, 10 if n == 2 else (6 if n == 3 else 4))
+    x = r ** n
+    if rnd.random() < 0.5:
+        c, w = numeric_options(r, [x // n if x % n == 0 else r + 2, r * n, r * r if n != 2 else r + 1], step=1)
+        return make(NUMEROS, f"¿Cuál es el valor de {root_str(n, x)}?", c, w, f"{r}{sup(n)} = {x}, por lo tanto {root_str(n, x)} = {r}.")
+    a, b = rnd.choice([(2, 8), (3, 12), (2, 18), (5, 20), (3, 27), (2, 32), (6, 24), (7, 28)])
+    p = int(math.isqrt(a * b))
+    c, w = numeric_options(p, [a * b, a + b, p * 2], step=1)
+    return make(NUMEROS, f"¿Cuál es el resultado de √{a} · √{b}?", c, w, f"√{a}·√{b} = √({a}·{b}) = √{a * b} = {p}.")
+
+
+def t_rational_power():
+    base, num, den = rnd.choice([(8, 2, 3), (27, 2, 3), (16, 3, 4), (4, 3, 2), (9, 3, 2), (25, 1, 2), (64, 2, 3), (81, 3, 4),
+                                 (32, 2, 5), (125, 1, 3), (16, 1, 4), (36, 1, 2), (8, 1, 3), (100, 3, 2)])
+    r = round(base ** (1 / den))
+    if r ** den != base:
+        raise Skip()
+    val = r ** num
+    c, w = numeric_options(val, [base * num // den if (base * num) % den == 0 else val + 1, r, base ** num // den if num == 1 else r * num], step=1)
+    return make(NUMEROS, f"¿Cuál es el valor de {base}^({num}/{den})?", c, w,
+                f"{base}^({num}/{den}) = ({root_str(den, base) if den in SUPERS else f'raíz {den} de {base}'})^{num} = {r}^{num} = {val}.")
+
+
+def t_quad_eq():
+    r1, r2 = rnd.sample([v for v in range(-7, 8) if v], 2)
+    b, c_ = -(r1 + r2), r1 * r2
+    s = lambda u, v: f"x = {fint(min(u, v))} y x = {fint(max(u, v))}"
+    corr = s(r1, r2)
+    w = [s(-r1, -r2), s(r1, -r2), s(-r1, r2), s(r1 + r2, r1 * r2)]
+    return make(ALGEBRA, f"¿Cuáles son las soluciones de la ecuación {poly_str(1, b, c_)} = 0?", corr, w,
+                f"Se factoriza: (x {MINUS if r1 > 0 else '+'} {abs(r1)})(x {MINUS if r2 > 0 else '+'} {abs(r2)}) = 0, entonces x = {fint(r1)} o x = {fint(r2)}.")
+
+
+def t_quad_vertex():
+    a = rnd.choice([1, 1, -1])
+    h, k = rnd.randint(-5, 5), rnd.randint(-6, 6)
+    b, c_ = -2 * a * h, a * h * h + k
+    if b == 0:
+        raise Skip()
+    corr = pt(h, k)
+    w = [pt(-h, k), pt(h, -k), pt(-h, -k), pt(k, h), pt(h, c_)]
+    return make(ALGEBRA, f"¿Cuáles son las coordenadas del vértice de la parábola f(x) = {poly_str(a, b, c_)}?", corr, w,
+                f"x del vértice = −b/(2a) = {fint(-b)}/{fint(2 * a) if a > 0 else '(' + fint(2 * a) + ')'} = {fint(h)}; f({fint(h)}) = {fint(k)}. Vértice {corr}.")
+
+
+def t_quad_points():
+    a = rnd.choice([1, 1, 2, -1])
+    r1, r2 = rnd.sample([v for v in range(-6, 7) if v], 2)
+    b, c_ = -a * (r1 + r2), a * r1 * r2
+    if rnd.random() < 0.5:
+        c, w = numeric_options(c_, [-c_, b, a, r1 + r2], step=1, positive=False, fn=lambda v: pt(0, v))
+        return make(ALGEBRA, f"¿En qué punto la gráfica de f(x) = {poly_str(a, b, c_)} intersecta al eje y?", c, w,
+                    f"Se reemplaza x = 0: f(0) = {fint(c_)}. El punto es {pt(0, c_)}.")
+    s = lambda u, v: f"{pt(min(u, v), 0)} y {pt(max(u, v), 0)}"
+    corr = s(r1, r2)
+    w = [s(-r1, -r2), f"{pt(0, r1)} y {pt(0, r2)}", s(r1, -r2), s(-r1, r2)]
+    return make(ALGEBRA, f"¿En qué puntos la gráfica de f(x) = {poly_str(a, b, c_)} intersecta al eje x?", corr, w,
+                f"Los ceros cumplen f(x) = 0: {poly_str(a, b, c_)} = 0 da x = {fint(r1)} y x = {fint(r2)}.")
+
+
+def t_quad_problem():
+    if rnd.random() < 0.5:
+        v = rnd.choice([10, 20, 30, 40])
+        t = v // 10
+        H = 5 * t * t
+        c, w = numeric_options(H, [v * t, 2 * H, v], step=5, fn=lambda x: f"{fint(x)} m")
+        return make(ALGEBRA, f"La altura (en metros) de una pelota lanzada hacia arriba está dada por h(t) = −5t² + {v}t, con t en segundos. ¿Cuál es la altura máxima que alcanza?", c, w,
+                    f"El máximo está en el vértice: t = −{v}/(2·(−5)) = {t} s; h({t}) = −5·{t * t} + {v}·{t} = {H} m.")
+    x = rnd.randint(3, 12)
+    d = rnd.randint(1, 6)
+    A = x * (x + d)
+    c, w = numeric_options(x, [x + d, A // 2 if A // 2 != x else x + 2, d], step=1, fn=lambda v: f"{fint(v)} cm")
+    return make(ALGEBRA, f"Un rectángulo tiene un largo {d} cm mayor que su ancho, y su área es {A} cm². ¿Cuánto mide el ancho?", c, w,
+                f"Si el ancho es x: x(x + {d}) = {A}, o sea x² + {d}x − {A} = 0. La solución positiva es x = {x} cm.")
+
+
+def t_trapezoid():
+    B, b, h = rnd.randint(8, 20), rnd.randint(3, 7), rnd.randint(3, 12)
+    if (B + b) * h % 2:
+        raise Skip()
+    A = (B + b) * h // 2
+    c, w = numeric_options(A, [(B + b) * h, B * h, b * h, B * b // 2], step=h, fn=lambda v: f"{fint(v)} cm²")
+    return make(GEOMETRIA, f"Un trapecio tiene bases de {B} cm y {b} cm, y una altura de {h} cm. ¿Cuál es su área?", c, w,
+                f"Área = (base mayor + base menor)·altura/2 = ({B} + {b})·{h}/2 = {A} cm².")
+
+
+def t_parallelogram():
+    b, h = rnd.randint(4, 18), rnd.randint(3, 10)
+    lado = h + rnd.randint(1, 4)
+    if rnd.random() < 0.6:
+        c, w = numeric_options(b * h, [b * lado, 2 * (b + lado), b * h // 2 if (b * h) % 2 == 0 else b * h + 2], step=b, fn=lambda v: f"{fint(v)} cm²")
+        return make(GEOMETRIA, f"Un paralelogramo tiene una base de {b} cm, su lado inclinado mide {lado} cm y su altura (perpendicular a la base) mide {h} cm. ¿Cuál es su área?", c, w,
+                    f"Área = base·altura = {b}·{h} = {b * h} cm². El lado inclinado no se usa para el área.")
+    c, w = numeric_options(2 * (b + lado), [b * h, b + lado, 2 * (b + h)], step=2, fn=lambda v: f"{fint(v)} cm")
+    return make(GEOMETRIA, f"Un paralelogramo tiene lados de {b} cm y {lado} cm. ¿Cuál es su perímetro?", c, w,
+                f"Los lados opuestos son iguales: 2·({b} + {lado}) = {2 * (b + lado)} cm.")
+
+
+def t_surface():
+    kind = rnd.randint(1, 3)
+    cm2 = lambda v: f"{fint(v)} cm²"
+    if kind == 1:
+        a = rnd.randint(2, 10)
+        c, w = numeric_options(6 * a * a, [a ** 3, 4 * a * a, a * a], step=a, fn=cm2)
+        return make(GEOMETRIA, f"¿Cuál es el área total de la superficie de un cubo de arista {a} cm?", c, w,
+                    f"Un cubo tiene 6 caras cuadradas: 6·{a}² = {6 * a * a} cm².")
+    if kind == 2:
+        a, b, h = rnd.randint(2, 10), rnd.randint(2, 8), rnd.randint(2, 9)
+        if len({a, b, h}) < 3:
+            raise Skip()
+        S = 2 * (a * b + a * h + b * h)
+        c, w = numeric_options(S, [a * b * h, a * b + a * h + b * h, 2 * a * b], step=2, fn=cm2)
+        return make(GEOMETRIA, f"Una caja con forma de paralelepípedo mide {a} cm de largo, {b} cm de ancho y {h} cm de alto. ¿Cuánto cartón se necesita para cubrir toda su superficie (área total)?", c, w,
+                    f"Área total = 2·({a}·{b} + {a}·{h} + {b}·{h}) = {S} cm².")
+    r, h = rnd.randint(2, 6), rnd.randint(3, 12)
+    tot = 2 * r * r + 2 * r * h
+    c = f"{tot}π cm²"
+    w = [f"{r * r * h}π cm²", f"{2 * r * h}π cm²", f"{r * r + 2 * r * h}π cm²", f"{2 * r * r + r * h}π cm²"]
+    return make(GEOMETRIA, f"Un cilindro cerrado tiene radio {r} cm y altura {h} cm. ¿Cuál es el área total de su superficie?", c, w,
+                f"Área total = 2 tapas + manto = 2π·{r}² + 2π·{r}·{h} = {2 * r * r}π + {2 * r * h}π = {tot}π cm².")
+
+
+def t_rotation():
+    a, b = rnd.choice([v for v in range(-7, 8) if v]), rnd.choice([v for v in range(-7, 8) if v])
+    if abs(a) == abs(b):
+        raise Skip()
+    kind, res, ex = rnd.choice([
+        ("90° en sentido antihorario", pt(-b, a), "Al rotar 90° antihorario respecto del origen, (x, y) pasa a (−y, x)."),
+        ("90° en sentido horario", pt(b, -a), "Al rotar 90° horario respecto del origen, (x, y) pasa a (y, −x)."),
+        ("180°", pt(-a, -b), "Al rotar 180° respecto del origen, (x, y) pasa a (−x, −y)."),
+    ])
+    pool = [pt(-b, a), pt(b, -a), pt(-a, -b), pt(b, a), pt(a, -b)]
+    return make(GEOMETRIA, f"El punto {pt(a, b)} se rota {kind} con centro en el origen. ¿Cuáles son las coordenadas del punto obtenido?", res,
+                [p for p in pool if p != res], ex)
+
+
+def quartile_data():
+    """8 datos ordenados en que todos los métodos de cálculo de cuartiles coinciden."""
+    while True:
+        d = sorted(rnd.sample(range(1, 40), 6))
+        data = [d[0], d[1], d[1], d[2], d[3], d[4], d[4], d[5]]
+        if len(set(data)) >= 6 and (data[3] + data[4]) % 2 == 0:
+            return data
+
+
+def t_quartiles():
+    data = quartile_data()
+    q1, q3, med = data[1], data[5], (data[3] + data[4]) // 2
+    shown = data[:]
+    rnd.shuffle(shown)
+    lst = ", ".join(map(str, shown))
+    k = rnd.randint(1, 3)
+    if k == 1:
+        c, w = numeric_options(q1, [med, q3, data[0], data[2] + 1], step=1)
+        return make(PROBA, f"¿Cuál es el primer cuartil (Q₁) de los datos {lst}?", c, w,
+                    f"Ordenados: {', '.join(map(str, data))}. Q₁ es la mediana de la primera mitad ({', '.join(map(str, data[:4]))}): {q1}.")
+    if k == 2:
+        c, w = numeric_options(q3, [med, q1, data[-1], data[5] - 1], step=1)
+        return make(PROBA, f"¿Cuál es el tercer cuartil (Q₃) de los datos {lst}?", c, w,
+                    f"Ordenados: {', '.join(map(str, data))}. Q₃ es la mediana de la segunda mitad ({', '.join(map(str, data[4:]))}): {q3}.")
+    c, w = numeric_options(q3 - q1, [data[-1] - data[0], q3, med - q1], step=1)
+    return make(PROBA, f"¿Cuál es el rango intercuartil (Q₃ − Q₁) de los datos {lst}?", c, w,
+                f"Ordenados: {', '.join(map(str, data))}. Q₁ = {q1} y Q₃ = {q3}; Q₃ − Q₁ = {q3 - q1}.")
+
+
+def t_percentile():
+    n = rnd.choice([40, 50, 80, 120, 200, 300, 400])
+    p = rnd.choice([10, 20, 25, 30, 40, 60, 75, 80, 90])
+    if (n * p) % 100:
+        raise Skip()
+    v = n * p // 100
+    if rnd.random() < 0.5:
+        c, w = numeric_options(v, [n - v, p, n // 2], step=max(1, n // 20))
+        return make(PROBA, f"En una prueba rendida por {n} estudiantes, el puntaje de Martina corresponde al percentil {p}. ¿Aproximadamente cuántos estudiantes obtuvieron un puntaje menor o igual que el de Martina?", c, w,
+                    f"El percentil {p} deja bajo él (o igual) al {p}% de los datos: {p}% de {n} = {v}.")
+    c, w = numeric_options(100 - p, [p, 50, 100 - p // 2], step=5, fn=lambda x: f"{fmt(x)}%")
+    return make(PROBA, f"El puntaje de un estudiante corresponde al percentil {p} de su curso. ¿Qué porcentaje aproximado del curso obtuvo un puntaje mayor que el suyo?", c, w,
+                f"Bajo el percentil {p} está el {p}% de los datos; por encima queda el {100 - p}%.")
+
+
+def t_additive():
+    if rnd.random() < 0.5:
+        r, a, v = rnd.randint(2, 8), rnd.randint(2, 8), rnd.randint(2, 8)
+        T = r + a + v
+        res = Fraction(r + a, T)
+        cands = [Fraction(r * a, T * T), Fraction(r, T), Fraction(a, T), Fraction(v, T), Fraction(r + a, T * 2)]
+        return make(PROBA, f"Una caja tiene {r} fichas rojas, {a} azules y {v} verdes. Si se saca una ficha al azar, ¿cuál es la probabilidad de que sea roja o azul?",
+                    frac_str(res), [frac_str(x) for x in cands if x != res],
+                    f"Son eventos excluyentes: P(roja o azul) = {r}/{T} + {a}/{T} = {frac_str(res)}.")
+    A_txt, A = rnd.choice([("un número par", {2, 4, 6}), ("un número impar", {1, 3, 5}), ("un número menor que 3", {1, 2})])
+    B_txt, B = rnd.choice([("un número mayor que 4", {5, 6}), ("un múltiplo de 3", {3, 6}), ("el número 1", {1})])
+    if not (A & B) and rnd.random() < 0.6:
+        raise Skip()
+    res = Fraction(len(A | B), 6)
+    cands = [Fraction(len(A) + len(B), 6), Fraction(len(A & B), 6), Fraction(len(A) * len(B), 36), Fraction(len(A), 6)]
+    ex = (f"P(A o B) = P(A) + P(B) − P(A y B) = {len(A)}/6 + {len(B)}/6 − {len(A & B)}/6 = {frac_str(res)}."
+          if A & B else f"No tienen resultados en común: {len(A)}/6 + {len(B)}/6 = {frac_str(res)}.")
+    return make(PROBA, f"Se lanza un dado común de seis caras. ¿Cuál es la probabilidad de obtener {A_txt} o {B_txt}?",
+                frac_str(res), [frac_str(x) for x in cands if x != res], ex)
+
+
 TEXT_TEMPLATES = [
+    # Números
     t_percent_of, t_inc_dec, t_discount, t_fraction_add, t_direct_prop, t_inverse_prop, t_power,
-    t_mean_add, t_simple_interest, t_ratio_share, t_order_ops, t_mcm_mcd, t_neg_ops, t_percent_what, t_speed,
-    t_linear_eq, t_eval_fn, t_slope, t_system, t_binomial, t_factor, t_inequality, t_age, t_arith_seq,
-    t_prop_fn, t_line_eq, t_perimeter_alg,
-    t_rect, t_pyth, t_circle, t_volume, t_tri_angles, t_supp, t_thales, t_scale, t_area_tri, t_polygon,
-    t_dist_points, t_midpoint, t_reflection, t_translation,
-    t_mean_list, t_median, t_mode, t_prob_bag, t_complement, t_counting, t_independent, t_permutations,
-    t_range, t_stat_percent,
+    t_mean_add, t_simple_interest, t_ratio_share, t_order_ops, t_neg_ops, t_percent_what, t_speed,
+    t_root_simplify, t_root_eval, t_rational_power,
+    # Álgebra y funciones
+    t_linear_eq, t_eval_fn, t_slope, t_system, t_binomial, t_factor, t_inequality, t_age,
+    t_prop_fn, t_line_eq, t_perimeter_alg, t_quad_eq, t_quad_vertex, t_quad_points, t_quad_problem,
+    # Geometría
+    t_rect, t_pyth, t_circle, t_volume, t_thales, t_scale, t_area_tri, t_trapezoid, t_parallelogram, t_surface,
+    t_dist_points, t_midpoint, t_reflection, t_translation, t_rotation,
+    # Probabilidad y estadística
+    t_mean_list, t_median, t_prob_bag, t_complement, t_independent, t_stat_percent,
+    t_quartiles, t_percentile, t_additive,
 ]
 
 
@@ -931,7 +1071,8 @@ def g_freq_table():
             break
     fig, ax = plt.subplots(figsize=(3.6, 2.6))
     ax.axis("off")
-    kind = rnd.choice(["mean", "mode", "median"])
+    # La moda no está en el temario de M1: solo promedio y mediana.
+    kind = rnd.choice(["mean", "median"])
     head = rnd.choice([("Nota", "Frecuencia"), ("Valor", "Frecuencia"), ("Puntos", "Cantidad de estudiantes")])
     tbl = ax.table(cellText=[[str(v), str(f)] for v, f in zip(vals, freqs)], colLabels=list(head), loc="center", cellLoc="center")
     tbl.auto_set_font_size(False)
@@ -1115,8 +1256,91 @@ def g_contingency():
     return make(PROBA, q, frac_str(res), [x for x in w if x != frac_str(res)], ex + f" P = {frac_str(res)}.", img)
 
 
-GRAPH_PLAN = [(g_bar, 16), (g_line, 14), (g_pie, 14), (g_freq_table, 12), (g_cartesian, 14),
-              (g_triangle, 8), (g_lshape, 6), (g_circle, 6), (g_contingency, 10)]
+def g_parabola():
+    a = rnd.choice([1, 1, -1])
+    r1, r2 = sorted(rnd.sample(range(-5, 6), 2))
+    if (r1 + r2) % 2:
+        raise Skip()
+    h = (r1 + r2) // 2
+    k = a * (h - r1) * (h - r2)
+    c0 = a * r1 * r2
+    if abs(k) > 9 or abs(c0) > 12:
+        raise Skip()
+    xs = [x / 20 for x in range(-140, 141)]
+    ys = [a * (x - r1) * (x - r2) for x in xs]
+    fig, ax = plt.subplots(figsize=(4.6, 4.6))
+    ax.plot(xs, ys, color="#1f77b4", lw=2)
+    ax.set_xlim(-7, 7)
+    ax.set_ylim(-10, 10)
+    ax.set_xticks(range(-6, 7, 1))
+    ax.set_yticks(range(-10, 11, 2))
+    ax.tick_params(labelsize=8)
+    ax.grid(alpha=0.4)
+    ax.axhline(0, color="black", lw=1)
+    ax.axvline(0, color="black", lw=1)
+    ax.text(7.1, 0.0, "x", fontsize=12, va="center")
+    ax.text(0.0, 10.4, "y", fontsize=12, ha="center")
+    for px, py in ((r1, 0), (r2, 0), (h, k), (0, c0)):
+        ax.plot(px, py, "o", color="#d62728", ms=5)
+    img = save_fig(fig)
+    kind = rnd.choice(["vertex", "zeros", "yint", "axis", "sign"])
+    if kind == "vertex":
+        corr = pt(h, k)
+        return make(ALGEBRA, "El gráfico muestra una parábola. ¿Cuáles son las coordenadas de su vértice?", corr,
+                    [pt(-h, k), pt(h, -k), pt(k, h), pt(0, c0) if (0, c0) != (h, k) else pt(h + 1, k)],
+                    f"El vértice es el punto más {'bajo' if a > 0 else 'alto'} de la parábola: {corr}.", img)
+    if kind == "zeros":
+        s_ = lambda u, v: f"x = {fint(u)} y x = {fint(v)}"
+        return make(ALGEBRA, "Según el gráfico, ¿cuáles son los ceros de la función cuadrática representada?", s_(r1, r2),
+                    [s_(-r2, -r1), s_(h, k), s_(0, c0), s_(r1 - 1, r2 + 1)],
+                    f"Los ceros son los valores de x donde la parábola corta al eje x: {fint(r1)} y {fint(r2)}.", img)
+    if kind == "yint":
+        c, w = numeric_options(c0, [k, -c0, r1 * r2 if a < 0 else -r1 * r2], step=1, positive=False, fn=lambda v: pt(0, v))
+        return make(ALGEBRA, "Según el gráfico, ¿en qué punto la parábola corta al eje y?", c, w,
+                    f"Se lee la intersección con el eje y: {pt(0, c0)}.", img)
+    if kind == "axis":
+        c, w = numeric_options(h, [k, r1, r2, -h], step=1, positive=False, fn=lambda v: f"x = {fint(v)}")
+        return make(ALGEBRA, "¿Cuál es la ecuación del eje de simetría de la parábola del gráfico?", c, w,
+                    f"El eje de simetría pasa por el vértice: x = {fint(h)} (el punto medio entre los ceros {fint(r1)} y {fint(r2)}).", img)
+    ans = "a es negativo, porque la parábola abre hacia abajo" if a < 0 else "a es positivo, porque la parábola abre hacia arriba"
+    w = ["a es negativo, porque la parábola abre hacia arriba", "a es positivo, porque la parábola abre hacia abajo",
+         "a es cero, porque la gráfica es una parábola", "a es negativo, porque abre hacia abajo" if a > 0 else "a es positivo, porque abre hacia arriba"]
+    return make(ALGEBRA, "Si la parábola del gráfico corresponde a f(x) = ax² + bx + c, ¿qué se puede afirmar del coeficiente a?", ans, w,
+                "Si a > 0 la parábola abre hacia arriba; si a < 0, abre hacia abajo.", img)
+
+
+def g_boxplot():
+    data = quartile_data()
+    mn, q1, med, q3, mx = data[0], data[1], (data[3] + data[4]) // 2, data[5], data[7]
+    fig, ax = plt.subplots(figsize=(6, 2.6))
+    ax.boxplot([data], orientation="horizontal", widths=0.5, whis=(0, 100), patch_artist=True,
+               boxprops=dict(facecolor="#cfe3f7", color="#1f4e9c"), medianprops=dict(color="#d62728", lw=2))
+    ticks = sorted({mn, q1, med, q3, mx})
+    ax.set_xticks(ticks)
+    ax.set_yticks([])
+    ax.grid(axis="x", alpha=0.4)
+    tema = rnd.choice(["Edades de los asistentes (años)", "Puntajes de una prueba", "Minutos de viaje al colegio", "Horas de uso del celular en una semana"])
+    ax.set_xlabel(tema)
+    img = save_fig(fig)
+    kind = rnd.randint(1, 4)
+    if kind == 1:
+        c, w = numeric_options(med, [q1, q3, (mn + mx) // 2 if (mn + mx) // 2 != med else mx], step=1)
+        return make(PROBA, "El diagrama de cajón resume un conjunto de datos. ¿Cuál es la mediana?", c, w,
+                    f"La mediana es la línea dentro de la caja: {med}.", img)
+    if kind == 2:
+        c, w = numeric_options(q3 - q1, [mx - mn, q3, med - q1 if med - q1 != q3 - q1 else q1], step=1)
+        return make(PROBA, "Según el diagrama de cajón, ¿cuál es el rango intercuartil (Q₃ − Q₁)?", c, w,
+                    f"La caja va de Q₁ = {q1} a Q₃ = {q3}: {q3} − {q1} = {q3 - q1}.", img)
+    if kind == 3:
+        return make(PROBA, f"Según el diagrama de cajón, ¿qué porcentaje aproximado de los datos es mayor que {q3}?", "25%",
+                    ["50%", "75%", "10%", "100%"], f"{q3} es el tercer cuartil: sobre él queda el 25% de los datos.", img)
+    c, w = numeric_options(q1, [mn, med, q3], step=1)
+    return make(PROBA, "Según el diagrama de cajón, ¿cuál es el primer cuartil (Q₁)?", c, w,
+                f"Q₁ es el borde izquierdo de la caja: {q1}.", img)
+
+
+GRAPH_PLAN = [(g_bar, 12), (g_line, 10), (g_pie, 10), (g_freq_table, 10), (g_cartesian, 12),
+              (g_triangle, 8), (g_lshape, 6), (g_circle, 6), (g_contingency, 8), (g_parabola, 10), (g_boxplot, 8)]
 
 
 # =================================================================== MAIN
