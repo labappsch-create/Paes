@@ -1,5 +1,12 @@
 // Valores fijos de la aplicación.
 
+/// Nombre de la app.
+const String appName = 'Retopaes';
+
+/// Logo completo (pantalla de bienvenida) e ícono (barra superior).
+const String logoAsset = 'assets/branding/logo_retopaes.png';
+const String iconAsset = 'assets/branding/icono_app.png';
+
 /// Preguntas gratis en Práctica (suma de todas las pruebas).
 const int freeQuestionLimit = 30;
 

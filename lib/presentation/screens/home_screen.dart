@@ -25,9 +25,25 @@ class HomeScreen extends ConsumerWidget {
     final questions = ref.watch(questionsProvider);
     final access = ref.watch(accessProvider);
 
+    // Mientras cargan las preguntas: bienvenida a pantalla completa, en blanco
+    // como la pantalla de inicio del teléfono, con el logo de la app.
+    if (questions.isLoading && !questions.hasValue) {
+      return const Scaffold(
+        backgroundColor: Colors.white,
+        body: _WelcomeView(),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PAES App'),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(iconAsset, height: 32, semanticLabel: 'Logo'),
+            const SizedBox(width: 10),
+            const Text(appName),
+          ],
+        ),
         actions: [
           IconButton(
             tooltip: 'Historial',
@@ -39,7 +55,7 @@ class HomeScreen extends ConsumerWidget {
         ],
       ),
       body: questions.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => const _WelcomeView(),
         error: (error, _) => Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -59,6 +75,30 @@ class HomeScreen extends ConsumerWidget {
                 prueba: prueba,
                 pool: all.where((q) => q.prueba == prueba).toList(),
               ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Bienvenida mientras se cargan las preguntas: logo completo de la app.
+class _WelcomeView extends StatelessWidget {
+  const _WelcomeView();
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(logoAsset, width: 240, semanticLabel: appName),
+            const SizedBox(height: 32),
+            const CircularProgressIndicator(),
+            const SizedBox(height: 12),
+            const Text('Cargando preguntas…'),
           ],
         ),
       ),

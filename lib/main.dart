@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'core/constants.dart';
 import 'presentation/providers.dart';
 import 'presentation/prueba_style.dart';
 import 'presentation/purchase_controller.dart';
@@ -27,7 +28,7 @@ class PaesApp extends ConsumerWidget {
     ref.watch(purchaseProvider);
 
     return MaterialApp(
-      title: 'PAES App',
+      title: appName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,

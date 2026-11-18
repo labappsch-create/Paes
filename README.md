@@ -1,6 +1,17 @@
-# PAES App
+# Retopaes
 
 App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
+
+## Marca
+- Nombre: **Retopaes** (`appName` en `lib/core/constants.dart`, `android:label` en
+  `AndroidManifest.xml` y `CFBundleDisplayName` en `ios/Runner/Info.plist`).
+- Logo original: `assets/branding/logo_retopaes_original.jpg`. Colores: azul marino `#022658` y
+  naranjo `#FC5D07`.
+- Ícono de la app: `assets/branding/icono_app.png` (generado con `dart run flutter_launcher_icons`).
+- Pantalla de bienvenida del teléfono: `assets/branding/splash_logo.png` y, en Android 12 o
+  superior, `assets/branding/splash_android12.png` (generada con
+  `dart run flutter_native_splash:create`). Luego, mientras cargan las preguntas, la app muestra
+  el logo completo en blanco.
 
 ## Qué hace
 - 5 pruebas: Competencia Lectora, Matemática M1, Matemática M2, Ciencias, Historia.
