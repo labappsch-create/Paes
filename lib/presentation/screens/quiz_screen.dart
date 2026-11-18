@@ -360,6 +360,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       key: ValueKey(item.question.id),
                       text: item.question.texto,
                     ),
+                    if (item.question.isSuficiencia) const _SuficienciaHelp(),
                     Text(
                       item.question.enunciado,
                       style: theme.textTheme.titleMedium,
@@ -772,6 +773,41 @@ class _SubmitReview extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Recordatorio de cómo responder una pregunta de suficiencia de datos.
+class _SuficienciaHelp extends StatelessWidget {
+  const _SuficienciaHelp();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Card(
+      color: theme.colorScheme.tertiaryContainer,
+      margin: const EdgeInsets.only(bottom: 12),
+      child: Theme(
+        data: theme.copyWith(dividerColor: Colors.transparent),
+        child: ExpansionTile(
+          leading: const Icon(Icons.help_outline),
+          title: const Text('Suficiencia de datos'),
+          subtitle: const Text('No hay que calcular el resultado.'),
+          childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          expandedCrossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text(
+              'Decide si la información (1) y (2) alcanza para responder la '
+              'pregunta. Marca:\n'
+              'A) si basta (1) y (2) no;\n'
+              'B) si basta (2) y (1) no;\n'
+              'C) si se necesitan las dos juntas;\n'
+              'D) si cada una basta por separado;\n'
+              'E) si ni juntas alcanzan.',
             ),
           ],
         ),

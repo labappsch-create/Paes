@@ -43,7 +43,8 @@ Hay un archivo por prueba en `assets/questions/` (`m1.json`, `m2.json`, `ciencia
 `historia.json`, `lectora.json`). Las imágenes van en `assets/images/<prueba>/`.
 Cada pregunta tiene: `id`, `prueba`, `enunciado`, `alternativas`, `correcta`
 (posición de la correcta, empezando en 0), `eje` (opcional), `area` (opcional, área temática), `explicacion`, `imagen` (opcional)
-y `texto` (opcional, texto de lectura).
+`texto` (opcional, texto de lectura) y `tipo` (opcional: `suficiencia` = suficiencia de datos,
+con sus opciones en orden fijo).
 
 ### M1 generada con programa
 `tools/generar_m1.py` crea las 500 preguntas de M1 y sus 100 gráficos. Cada respuesta
@@ -55,6 +56,10 @@ python3 tools/generar_m1.py
 `tools/generar_m2.py` hace lo mismo para M2 (logaritmos, matemática financiera, funciones
 exponencial, logarítmica y trigonométricas, circunferencia, esfera, homotecia, rectas,
 dispersión, probabilidad condicional, combinatoria, binomial y normal).
+Incluye 40 preguntas de **suficiencia de datos** (`tools/m2_suficiencia.py`): no se pide calcular,
+sino decidir si la información (1) y (2) alcanza. Tienen 5 opciones (A a E) siempre en el mismo
+orden, como en la prueba real, y las respuestas correctas se reparten por igual entre A, B, C, D y E.
+En la app aparece un recuadro de ayuda que explica qué significa cada opción.
 
 `tools/generar_ciencias.py` crea Ciencias (Biología, Física y Química) siguiendo el temario
 oficial de la prueba de Ciencias: cada pregunta lleva su `eje` y su `area` (área temática

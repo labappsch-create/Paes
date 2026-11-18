@@ -13,6 +13,7 @@ class Question {
     this.imagen,
     this.texto,
     this.area,
+    this.tipo,
   });
 
   final String id;
@@ -38,6 +39,13 @@ class Question {
   /// Área temática del temario oficial (por ejemplo «Mecánica»). Null si no tiene.
   final String? area;
 
+  /// Tipo especial de pregunta. Por ahora solo «suficiencia» (suficiencia de
+  /// datos de M2). Null en las preguntas normales.
+  final String? tipo;
+
+  /// Suficiencia de datos: siempre las mismas 5 opciones, en orden fijo.
+  bool get isSuficiencia => tipo == 'suficiencia';
+
   factory Question.fromJson(Map<String, dynamic> json) {
     final alternativas = List<String>.from(json['alternativas'] as List);
     final correcta = json['correcta'] as int;
@@ -57,6 +65,7 @@ class Question {
       imagen: json['imagen'] as String?,
       texto: json['texto'] as String?,
       area: json['area'] as String?,
+      tipo: json['tipo'] as String?,
     );
   }
 }

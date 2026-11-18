@@ -287,16 +287,18 @@
  {
   "id": "m2_021",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "Fernanda pide un crédito de consumo de $1.000.000 y lo paga en 36 cuotas mensuales de $31.000. ¿Cuánto paga en total por intereses y costos?",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Los 20 estudiantes de un curso rindieron una prueba. Se puede determinar el promedio de las notas del curso si:\n(1) la mediana de las notas es 6,2\n(2) la nota más alta es 7,0",
   "alternativas": [
-   "$116.000",
-   "$27.777",
-   "$1.116.000",
-   "$31.000"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "Total pagado = 36 · $31.000 = $1.116.000. Intereses = $1.116.000 − $1.000.000 = $116.000."
+  "correcta": 4,
+  "explicacion": "Ni siquiera juntas permiten responder: falta información. Ni la mediana ni la nota máxima determinan la suma de las notas.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_022",
@@ -357,16 +359,18 @@
  {
   "id": "m2_026",
   "prueba": "m2",
-  "eje": "Álgebra y funciones",
-  "enunciado": "¿Cuántas soluciones tiene el sistema formado por −3x + 2y = −12 y −9x + 6y = −36?",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja contiene solo bolitas rojas y azules. Se puede determinar la probabilidad de sacar al azar una bolita roja si:\n(1) hay 15 bolitas en total\n(2) hay 10 bolitas azules",
   "alternativas": [
-   "No tiene solución",
-   "Infinitas soluciones",
-   "Una única solución",
-   "Exactamente dos soluciones"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "La segunda ecuación es la primera multiplicada por 3: son la misma recta."
+  "correcta": 2,
+  "explicacion": "Ninguna basta por separado, pero juntas sí. Juntas: rojas = 15 − 10 = 5; P = 5/15 = 1/3.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_027",
@@ -471,16 +475,18 @@
  {
   "id": "m2_034",
   "prueba": "m2",
-  "eje": "Geometría",
-  "enunciado": "Desde un punto P exterior a una circunferencia se trazan una tangente PT y una secante que corta a la circunferencia en A y B (A entre P y B). Si PA = 1 cm y PB = 196 cm, ¿cuánto mide PT?",
+  "eje": "Números",
+  "enunciado": "Se deposita dinero en un banco a interés compuesto anual, sin retiros. Se puede determinar el monto que habrá en la cuenta después de 2 años si:\n(1) el capital inicial es $100.000\n(2) la tasa de interés anual es mayor que 1%",
   "alternativas": [
-   "195 cm",
-   "98 cm",
-   "14 cm",
-   "8 cm"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 2,
-  "explicacion": "PT² = PA·PB = 1·196 = 196, entonces PT = 14 cm."
+  "correcta": 4,
+  "explicacion": "Ni siquiera juntas permiten responder: falta información. Sin la tasa exacta no se puede calcular el monto.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_035",
@@ -500,16 +506,18 @@
  {
   "id": "m2_036",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "¿Cuál es el valor de log₅(25) + log₅(25)?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La función f es lineal afín, de la forma f(x) = mx + n. Se puede determinar el valor de f(10) si:\n(1) f(1) = 6 y f(2) = 5\n(2) f(0) = 7",
   "alternativas": [
-   "8",
-   "4",
-   "3",
-   "5"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "log₅(25) + log₅(25) = log₅(25·25) = log₅(625) = 4."
+  "correcta": 0,
+  "explicacion": "Con (1) basta, pero con (2) no. Con dos puntos se obtiene m = −1 y n = 7: f(10) = −3. Con f(0) solo se conoce n.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_037",
@@ -528,16 +536,18 @@
  {
   "id": "m2_038",
   "prueba": "m2",
-  "eje": "Geometría",
-  "enunciado": "¿Cuál es la pendiente de una recta perpendicular a y = (1/3)x + 1?",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja contiene solo bolitas rojas y azules. Se puede determinar la probabilidad de sacar al azar una bolita roja si:\n(1) hay el cuádruple de bolitas azules que de bolitas rojas\n(2) la probabilidad de sacar una bolita azul es 4/5",
   "alternativas": [
-   "−3",
-   "−1/3",
-   "3",
-   "1/3"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "Si dos rectas son perpendiculares, el producto de sus pendientes es −1: m = −1/(1/3) = −3."
+  "correcta": 3,
+  "explicacion": "Cada una, por separado, permite responder. Con (1), P = 1/5. Con (2), P = 1 − 4/5 = 1/5.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_039",
@@ -584,16 +594,18 @@
  {
   "id": "m2_042",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "¿Cuál es el valor de 25^(3/2)?",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene su largo mayor que su ancho. Se puede determinar su área si:\n(1) su largo mide 15 cm y su diagonal mide 17 cm\n(2) su ancho mide 8 cm y su diagonal mide 17 cm",
   "alternativas": [
-   "15",
-   "625",
-   "37",
-   "125"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 3,
-  "explicacion": "25^(3/2) = (√25)³ = 5³ = 125."
+  "explicacion": "Cada una, por separado, permite responder. En ambos casos el otro lado sale por Pitágoras: lados 8 y 15 cm, área 120 cm².",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_043",
@@ -799,16 +811,18 @@
  {
   "id": "m2_057",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "Una caja tiene 6 bolitas rojas y 2 azules. Se sacan dos bolitas al azar, una tras otra y sin devolverlas. ¿Cuál es la probabilidad de que ambas sean rojas?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Elena es mayor que Felipe. Se puede determinar la edad actual de Elena si:\n(1) la suma de sus edades es 29 años\n(2) dentro de 5 años Elena tendrá 21 años",
   "alternativas": [
-   "3/4",
-   "9/16",
-   "5/7",
-   "15/28"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 3,
-  "explicacion": "P = 6/8 · 5/7 = 15/28."
+  "correcta": 1,
+  "explicacion": "Con (2) basta, pero con (1) no. Del dato de los 5 años: 21 − 5 = 16. Con solo la suma no se pueden separar las edades.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_058",
@@ -969,16 +983,18 @@
  {
   "id": "m2_069",
   "prueba": "m2",
-  "eje": "Geometría",
-  "enunciado": "En una circunferencia, las cuerdas AB y CD se cortan en el punto P. Si AP = 3 cm, PB = 8 cm y CP = 8 cm, ¿cuánto mide PD?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Camila es mayor que Diego. Se puede determinar la edad actual de Camila si:\n(1) dentro de 5 años Camila tendrá 38 años\n(2) hace 3 años Camila tenía 30 años",
   "alternativas": [
-   "3 cm",
-   "4 cm",
-   "24 cm",
-   "2 cm"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "Por el teorema de las cuerdas: AP·PB = CP·PD → 3·8 = 8·PD → PD = 3 cm."
+  "correcta": 3,
+  "explicacion": "Cada una, por separado, permite responder. Con (1): 38 − 5 = 33. Con (2): 30 + 3 = 33.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_070",
@@ -1356,29 +1372,33 @@
   "id": "m2_096",
   "prueba": "m2",
   "eje": "Probabilidad y estadística",
-  "enunciado": "¿Cuál es la desviación estándar (poblacional) de los datos 12, 14, 6, 20?",
+  "enunciado": "Una caja contiene solo bolitas rojas y azules. Se puede determinar la probabilidad de sacar al azar una bolita roja si:\n(1) hay 7 bolitas rojas\n(2) hay el cuádruple de bolitas azules que de bolitas rojas",
   "alternativas": [
-   "25",
-   "13",
-   "5",
-   "14"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 2,
-  "explicacion": "Promedio 13; varianza = promedio de los cuadrados de las desviaciones = 25; desviación estándar = √25 = 5."
+  "correcta": 1,
+  "explicacion": "Con (2) basta, pero con (1) no. Si hay el cuádruple de azules, de cada 5 bolitas 1 es roja: P = 1/5. Saber solo cuántas rojas hay no basta.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_097",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "Vicente pide un crédito de consumo de $1.000.000 y lo paga en 18 cuotas mensuales de $59.000. ¿Cuánto paga en total por intereses y costos?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Sean x e y números reales. Se puede determinar el valor de x si:\n(1) 3x = 24\n(2) x + y = 20",
   "alternativas": [
-   "$55.555",
-   "$1.062.000",
-   "$59.000",
-   "$62.000"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 3,
-  "explicacion": "Total pagado = 18 · $59.000 = $1.062.000. Intereses = $1.062.000 − $1.000.000 = $62.000."
+  "correcta": 0,
+  "explicacion": "Con (1) basta, pero con (2) no. De (1), x = 8. De (2) hay infinitas parejas con suma 20.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_098",
@@ -1469,16 +1489,18 @@
  {
   "id": "m2_104",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "Las notas de dos grupos son A: 39, 33, 30, 36, 42 y B: 31, 26, 36, 46, 41. Ambos tienen promedio 36. ¿Qué grupo tiene mayor desviación estándar?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La función f es lineal afín, de la forma f(x) = mx + n. Se puede determinar el valor de f(3) si:\n(1) f(0) = 5\n(2) la pendiente de su gráfica es 5",
   "alternativas": [
-   "El grupo B",
-   "El grupo A",
-   "Ambos tienen la misma dispersión",
-   "No se puede saber sin conocer la mediana"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "Los datos de B están más alejados del promedio, por eso su desviación estándar es mayor."
+  "correcta": 2,
+  "explicacion": "Ninguna basta por separado, pero juntas sí. Juntas: f(x) = 5x + 5, f(3) = 20.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_105",
@@ -1554,16 +1576,18 @@
  {
   "id": "m2_110",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "Al racionalizar la expresión 6/√3 se obtiene:",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Sean x e y números reales. Se puede determinar el valor de x si:\n(1) x + y = 23\n(2) x − y = −5",
   "alternativas": [
-   "6",
-   "2√3",
-   "6√3",
-   "3√3"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "6/√3 · √3/√3 = 6√3/3 = 2√3."
+  "correcta": 2,
+  "explicacion": "Ninguna basta por separado, pero juntas sí. Sumando ambas ecuaciones: 2x = 18, x = 9.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_111",
@@ -1681,15 +1705,17 @@
   "id": "m2_119",
   "prueba": "m2",
   "eje": "Geometría",
-  "enunciado": "En una circunferencia, un ángulo inscrito mide 80°. ¿Cuánto mide el ángulo del centro que subtiende el mismo arco?",
+  "enunciado": "Una circunferencia está dibujada en el plano cartesiano. Se puede determinar el área del círculo que encierra si:\n(1) el punto (6, 8) pertenece a la circunferencia\n(2) su centro está en el origen",
   "alternativas": [
-   "200°",
-   "160°",
-   "40°",
-   "100°"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "El ángulo del centro mide el doble: 2·80° = 160°."
+  "correcta": 2,
+  "explicacion": "Ninguna basta por separado, pero juntas sí. Juntas: r = distancia del origen a (6, 8) = √(6² + 8²) = 10; área = 100π.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_120",
@@ -1792,16 +1818,18 @@
  {
   "id": "m2_127",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "En Chile, la cotización obligatoria para la AFP es el 10% del sueldo imponible. Si el sueldo imponible de Isidora es $1.670.000, ¿cuánto se cotiza al mes?",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene su largo mayor que su ancho. Se puede determinar su área si:\n(1) su perímetro es 28 cm\n(2) su largo mide 8 cm y su diagonal mide 10 cm",
   "alternativas": [
-   "$1.503.000",
-   "$167.000",
-   "$16.700",
-   "$2.004.000"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 1,
-  "explicacion": "10% de $1.670.000 = $167.000."
+  "explicacion": "Con (2) basta, pero con (1) no. Por Pitágoras, ancho = √(10² − 8²) = 6 cm y área = 48 cm². Con el perímetro solo se conoce la suma de los lados.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_128",
@@ -1933,16 +1961,18 @@
  {
   "id": "m2_137",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "¿Cuál es el resultado de √75 − √48?",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Los 35 estudiantes de un curso rindieron una prueba. Se puede determinar el promedio de las notas del curso si:\n(1) la mediana de las notas es 4,6\n(2) la suma de todas las notas es 171,5",
   "alternativas": [
-   "√3",
-   "√27",
-   "20√3",
-   "√6"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "√75 = 5√3 y √48 = 4√3; entonces 5√3 − 4√3 = √3."
+  "correcta": 1,
+  "explicacion": "Con (2) basta, pero con (1) no. Promedio = suma/35 = 4,9. La mediana no determina el promedio.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_138",
@@ -2005,16 +2035,18 @@
  {
   "id": "m2_142",
   "prueba": "m2",
-  "eje": "Geometría",
-  "enunciado": "Una rampa forma un ángulo de 30° con el suelo y mide 24 m de largo. ¿A qué altura llega?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La función f es lineal afín, de la forma f(x) = mx + n. Se puede determinar el valor de f(4) si:\n(1) f(0) = 3\n(2) f(1) = 6 y f(2) = 9",
   "alternativas": [
-   "24 m",
-   "48 m",
-   "12 m",
-   "12√3 m"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 2,
-  "explicacion": "altura = 24·sen(30°) = 24·1/2 = 12 m."
+  "correcta": 1,
+  "explicacion": "Con (2) basta, pero con (1) no. Con dos puntos se obtiene m = 3 y n = 3: f(4) = 15. Con f(0) solo se conoce n.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_143",
@@ -2262,16 +2294,18 @@
  {
   "id": "m2_160",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "La probabilidad de que un tirador acierte un disparo es 1/4, y cada disparo es independiente de los demás. Si realiza 4 disparos, ¿cuál es la probabilidad de que acierte exactamente 2?",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene su largo mayor que su ancho. Se puede determinar su área si:\n(1) su largo mide 16 cm y su diagonal mide 20 cm\n(2) su perímetro es 56 cm",
   "alternativas": [
-   "1/16",
-   "1/2",
-   "9/256",
-   "27/128"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 3,
-  "explicacion": "P = C(4,2)·(1/4)²·(3/4)² = 27/128."
+  "correcta": 0,
+  "explicacion": "Con (1) basta, pero con (2) no. Por Pitágoras, ancho = √(20² − 16²) = 12 cm y área = 192 cm². Con el perímetro solo se conoce la suma de los lados.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_161",
@@ -2475,15 +2509,17 @@
   "id": "m2_175",
   "prueba": "m2",
   "eje": "Números",
-  "enunciado": "Se depositan en una cuenta de ahorro $31.000 con un interés compuesto de 10% anual. ¿Cuál es el monto total después de 3 años?",
+  "enunciado": "Se deposita dinero en un banco a interés compuesto anual, sin retiros. Se puede determinar el monto que habrá en la cuenta después de 2 años si:\n(1) el capital inicial es $500.000 y la tasa es 2% anual\n(2) al cabo de 1 año el monto era $510.000 y la tasa es 2% anual",
   "alternativas": [
-   "$40.300",
-   "$9.300",
-   "$10.261",
-   "$41.261"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 3,
-  "explicacion": "Monto = C·(1 + r)ᵗ = $31.000 · (1,1)³ = $41.261."
+  "explicacion": "Cada una, por separado, permite responder. Cada dato permite calcularlo: el monto a los 2 años es $520.200.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_176",
@@ -2747,15 +2783,17 @@
   "id": "m2_194",
   "prueba": "m2",
   "eje": "Álgebra y funciones",
-  "enunciado": "Si f(x) = 3·4ˣ, ¿cuál es el valor de f(−2)?",
+  "enunciado": "Camila es mayor que Diego. Se puede determinar la edad actual de Camila si:\n(1) dentro de 5 años Camila tendrá 26 años\n(2) la suma de sus edades es 40 años",
   "alternativas": [
-   "3/16",
-   "3/4",
-   "−3/16",
-   "6"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 0,
-  "explicacion": "f(−2) = 3·4⁻² = 3/16."
+  "explicacion": "Con (1) basta, pero con (2) no. Del dato de los 5 años: 26 − 5 = 21. Con solo la suma no se pueden separar las edades.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_195",
@@ -2914,16 +2952,18 @@
  {
   "id": "m2_206",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "Un club de 8 personas debe elegir un presidente y un secretario (personas distintas). ¿De cuántas maneras puede hacerlo?",
+  "eje": "Geometría",
+  "enunciado": "Una circunferencia está dibujada en el plano cartesiano. Se puede determinar el área del círculo que encierra si:\n(1) su diámetro mide 16 cm\n(2) su centro está en el origen",
   "alternativas": [
-   "28",
-   "56",
-   "64",
-   "16"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "Importa el orden: 8·7 = 56."
+  "correcta": 0,
+  "explicacion": "Con (1) basta, pero con (2) no. Con el diámetro, r = 8 cm y área = π·8² = 64π cm². La posición del centro no da el tamaño.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_207",
@@ -3212,15 +3252,17 @@
   "id": "m2_227",
   "prueba": "m2",
   "eje": "Probabilidad y estadística",
-  "enunciado": "En un grupo de 40 personas, 25 usan transporte público y, de ellas, 16 son menores de 18 años. Si se elige al azar una persona que usa transporte público, ¿cuál es la probabilidad de que sea menor de 18 años?",
+  "enunciado": "Los 35 estudiantes de un curso rindieron una prueba. Se puede determinar el promedio de las notas del curso si:\n(1) la suma de todas las notas es 199,5\n(2) si a cada nota se le suma 0,5, el nuevo promedio es 6,2",
   "alternativas": [
-   "16/25",
-   "5/8",
-   "9/25",
-   "2/5"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "Se consideran solo las 25 personas que usan transporte público: P = 16/25."
+  "correcta": 3,
+  "explicacion": "Cada una, por separado, permite responder. Con (1): 199,5/35 = 5,7. Con (2): 6,2 − 0,5 = 5,7.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_228",
@@ -3267,16 +3309,18 @@
  {
   "id": "m2_231",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "Si los tiempos de un trayecto siguen una distribución normal de media 40 minutos y desviación estándar 5 minutos, ¿qué porcentaje aproximado de los datos está por sobre 45 minutos?",
+  "eje": "Geometría",
+  "enunciado": "Una circunferencia está dibujada en el plano cartesiano. Se puede determinar el área del círculo que encierra si:\n(1) su diámetro mide 10 cm\n(2) su perímetro mide 10π cm",
   "alternativas": [
-   "34%",
-   "2,5%",
-   "50%",
-   "16%"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 3,
-  "explicacion": "En una distribución normal, cerca del 68% de los datos está a menos de una desviación estándar de la media y cerca del 95% a menos de dos; la curva es simétrica."
+  "explicacion": "Cada una, por separado, permite responder. Con cualquiera de los dos, r = 5 cm y área = 25π cm².",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_232",
@@ -3848,16 +3892,18 @@
  {
   "id": "m2_272",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "Para dos eventos A y B se sabe que P(B) = 0,2 y P(A ∩ B) = 0,06. ¿Cuál es el valor de P(A | B)?",
+  "eje": "Números",
+  "enunciado": "Se deposita dinero en un banco a interés compuesto anual, sin retiros. Se puede determinar el monto que habrá en la cuenta después de 2 años si:\n(1) el capital inicial es $500.000\n(2) la tasa de interés es 4% anual",
   "alternativas": [
-   "0,3",
-   "0,01",
-   "0,7",
-   "0,26"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "P(A | B) = P(A ∩ B)/P(B) = 0,06/0,2 = 0,3."
+  "correcta": 2,
+  "explicacion": "Ninguna basta por separado, pero juntas sí. Juntas: M = 500.000·(1 + 4/100)² = $540.800.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_273",
@@ -4150,15 +4196,17 @@
   "id": "m2_293",
   "prueba": "m2",
   "eje": "Números",
-  "enunciado": "Al simplificar √384 se obtiene:",
+  "enunciado": "Se deposita dinero en un banco a interés compuesto anual, sin retiros. Se puede determinar el monto que habrá en la cuenta después de 2 años si:\n(1) al cabo de 1 año el monto era $1.030.000 y la tasa es 3% anual\n(2) el depósito se hizo en enero",
   "alternativas": [
-   "9√6",
-   "8√6",
-   "64√6",
-   "7√6"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "√384 = √(64 · 6) = 8√6."
+  "correcta": 0,
+  "explicacion": "Con (1) basta, pero con (2) no. Con el monto del primer año y la tasa: 1.030.000·(1 + 3/100) = $1.060.900. El mes del depósito no influye.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_294",
@@ -4362,16 +4410,18 @@
  {
   "id": "m2_308",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "Se lanza una moneda 6 veces. ¿Cuál es la probabilidad de obtener exactamente 5 caras?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Sean x e y números reales. Se puede determinar el valor de x si:\n(1) x + y = 20\n(2) 2x + 2y = 40",
   "alternativas": [
-   "1/2",
-   "3/32",
-   "5/6",
-   "1/64"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "Modelo binomial: C(6,5)·(1/2)⁶ = 6/64 = 3/32."
+  "correcta": 4,
+  "explicacion": "Ni siquiera juntas permiten responder: falta información. La ecuación (2) es la (1) multiplicada por 2: no entrega información nueva.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_309",
@@ -4546,16 +4596,18 @@
  {
   "id": "m2_321",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "Una heladería ofrece 10 sabores. ¿De cuántas maneras se puede elegir una copa con 4 sabores distintos, si el orden no importa?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "La función f es lineal afín, de la forma f(x) = mx + n. Se puede determinar el valor de f(10) si:\n(1) f(0) = −4\n(2) su gráfica corta al eje Y en el punto (0, −4)",
   "alternativas": [
-   "210",
-   "40",
-   "5.040",
-   "120"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "No importa el orden: C(10, 4) = 10!/(4!·6!) = 210."
+  "correcta": 4,
+  "explicacion": "Ni siquiera juntas permiten responder: falta información. Ambos datos dicen lo mismo (n); falta la pendiente m.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_322",
@@ -4589,16 +4641,18 @@
  {
   "id": "m2_324",
   "prueba": "m2",
-  "eje": "Geometría",
-  "enunciado": "¿Cuál es el área de la superficie de una esfera de radio 7 cm?",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Los 32 estudiantes de un curso rindieron una prueba. Se puede determinar el promedio de las notas del curso si:\n(1) la suma de todas las notas es 163,2\n(2) la mediana de las notas es 4,8",
   "alternativas": [
-   "196π cm²",
-   "49π cm²",
-   "56π cm²",
-   "98π cm²"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 0,
-  "explicacion": "A = 4·π·r² = 4·π·49 = 196π cm²."
+  "explicacion": "Con (1) basta, pero con (2) no. Promedio = suma/32 = 5,1. La mediana no determina el promedio.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_325",
@@ -4660,16 +4714,18 @@
  {
   "id": "m2_329",
   "prueba": "m2",
-  "eje": "Álgebra y funciones",
-  "enunciado": "¿Cuál es la función inversa de f(x) = 2x − 3?",
+  "eje": "Geometría",
+  "enunciado": "Un rectángulo tiene su largo mayor que su ancho. Se puede determinar su área si:\n(1) su perímetro es 42 cm\n(2) su largo mide más de 5 cm",
   "alternativas": [
-   "f⁻¹(x) = (x − 3)/2",
-   "f⁻¹(x) = x/2 + 3",
-   "f⁻¹(x) = (x + 3)/2",
-   "f⁻¹(x) = 2x + 3"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 2,
-  "explicacion": "Se despeja x en y = 2x − 3: x = (y + 3)/2."
+  "correcta": 4,
+  "explicacion": "Ni siquiera juntas permiten responder: falta información. Hay muchos rectángulos de perímetro 42 cm con largo mayor que 5 cm y distinta área.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_330",
@@ -4704,30 +4760,34 @@
  {
   "id": "m2_332",
   "prueba": "m2",
-  "eje": "Álgebra y funciones",
-  "enunciado": "Si f(x) = log₂(x), ¿cuál es el valor de f(16)?",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Un curso rindió una prueba. Se puede determinar el promedio de las notas del curso si:\n(1) la suma de todas las notas es 112\n(2) el curso tiene 20 estudiantes",
   "alternativas": [
-   "16",
-   "3",
-   "4",
-   "5"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 2,
-  "explicacion": "log₂(16) = 4; luego f = 4 + 0 = 4."
+  "explicacion": "Ninguna basta por separado, pero juntas sí. Juntas: promedio = 112/20 = 5,6.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_333",
   "prueba": "m2",
   "eje": "Álgebra y funciones",
-  "enunciado": "¿Cuál es la amplitud de la función f(x) = 2·sen(3x) + 1?",
+  "enunciado": "Sean x e y números reales. Se puede determinar el valor de x si:\n(1) 3x = 24\n(2) x − 5 = 3",
   "alternativas": [
-   "4",
-   "1",
-   "2",
-   "3"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 2,
-  "explicacion": "La amplitud es el valor absoluto del número que multiplica a sen: 2."
+  "correcta": 3,
+  "explicacion": "Cada una, por separado, permite responder. De (1), x = 8; de (2), x = 3 + 5 = 8.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_334",
@@ -4760,16 +4820,18 @@
  {
   "id": "m2_336",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "Si log₁₀(x + 4) = 2, ¿cuál es el valor de x?",
+  "eje": "Geometría",
+  "enunciado": "Una circunferencia está dibujada en el plano cartesiano. Se puede determinar el área del círculo que encierra si:\n(1) su centro está en el origen\n(2) su diámetro mide 6 cm",
   "alternativas": [
-   "16",
-   "104",
-   "96",
-   "1.020"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 2,
-  "explicacion": "Por definición de logaritmo: x + 4 = 10² = 100, entonces x = 96."
+  "correcta": 1,
+  "explicacion": "Con (2) basta, pero con (1) no. Con el diámetro, r = 3 cm y área = π·3² = 9π cm². La posición del centro no da el tamaño.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_337",
@@ -5231,16 +5293,18 @@
  {
   "id": "m2_369",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "¿Cuál es el valor de log₃(729)?",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja contiene solo bolitas rojas y azules. Se puede determinar la probabilidad de sacar al azar una bolita roja si:\n(1) hay 2 bolitas rojas\n(2) hay más bolitas azules que rojas",
   "alternativas": [
-   "7",
-   "6",
-   "−6",
-   "18"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "3⁶ = 729, entonces el logaritmo es 6."
+  "correcta": 4,
+  "explicacion": "Ni siquiera juntas permiten responder: falta información. No se sabe cuántas azules hay exactamente, así que no se conoce el total.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_370",
@@ -5574,15 +5638,17 @@
   "id": "m2_393",
   "prueba": "m2",
   "eje": "Geometría",
-  "enunciado": "¿Cuál es la posición relativa de las rectas −6x + y = 0 y 12x − 2y = −3?",
+  "enunciado": "Un rectángulo tiene su largo mayor que su ancho. Se puede determinar su área si:\n(1) su perímetro es 90 cm\n(2) su largo es el doble de su ancho",
   "alternativas": [
-   "Paralelas no coincidentes",
-   "Perpendiculares",
-   "Secantes no perpendiculares",
-   "Coincidentes"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "Tienen la misma pendiente pero distinto punto de corte con el eje y."
+  "correcta": 2,
+  "explicacion": "Ninguna basta por separado, pero juntas sí. Con ancho a y largo 2a: 6a = 90, a = 15; área = 15·30 = 450 cm².",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_394",
@@ -5714,16 +5780,18 @@
  {
   "id": "m2_403",
   "prueba": "m2",
-  "eje": "Geometría",
-  "enunciado": "Una figura de área 18 cm² se transforma con una homotecia de razón 2. ¿Cuál es el área de la figura imagen?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Sean x e y números reales. Se puede determinar el valor de x si:\n(1) x + y = 23\n(2) 2x + 4 = 36",
   "alternativas": [
-   "36 cm²",
-   "72 cm²",
-   "22 cm²",
-   "144 cm²"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 1,
-  "explicacion": "Las áreas se multiplican por el cuadrado de la razón: 18·(2)² = 72 cm²."
+  "explicacion": "Con (2) basta, pero con (1) no. De (2), 2x = 32 y x = 16. Con (1) solo se conoce la suma.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_404",
@@ -5884,16 +5952,18 @@
  {
   "id": "m2_415",
   "prueba": "m2",
-  "eje": "Álgebra y funciones",
-  "enunciado": "Si f(x) = 4x², ¿cuál es el valor de f(−3)?",
+  "eje": "Números",
+  "enunciado": "Se deposita dinero en un banco a interés compuesto anual, sin retiros. Se puede determinar el monto que habrá en la cuenta después de 2 años si:\n(1) el depósito se hizo en enero\n(2) al cabo de 1 año el monto era $220.000 y la tasa es 10% anual",
   "alternativas": [
-   "−24",
-   "36",
-   "144",
-   "−36"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 1,
-  "explicacion": "f(−3) = 4·(−3)² = 36."
+  "explicacion": "Con (2) basta, pero con (1) no. Con el monto del primer año y la tasa: 220.000·(1 + 10/100) = $242.000. El mes del depósito no influye.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_416",
@@ -6259,15 +6329,17 @@
   "id": "m2_441",
   "prueba": "m2",
   "eje": "Álgebra y funciones",
-  "enunciado": "Si x − y = −3 y 4x − 5y = −12, ¿cuál es el valor de x + y?",
+  "enunciado": "La función f es lineal afín, de la forma f(x) = mx + n. Se puede determinar el valor de f(10) si:\n(1) f(1) = 0 y f(2) = 2\n(2) su gráfica pasa por los puntos (0, −2) y (3, 4)",
   "alternativas": [
-   "3",
-   "−3",
-   "−2",
-   "−4"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "Resolviendo el sistema se obtiene x = −3 e y = 0."
+  "correcta": 3,
+  "explicacion": "Cada una, por separado, permite responder. Cada dato entrega dos puntos de la recta: f(x) = 2x − 2, f(10) = 18.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_442",
@@ -6568,16 +6640,18 @@
  {
   "id": "m2_463",
   "prueba": "m2",
-  "eje": "Álgebra y funciones",
-  "enunciado": "Un cultivo comienza con 300 bacterias y su cantidad se duplica cada 3 horas. ¿Cuántas bacterias habrá después de 15 horas?",
+  "eje": "Geometría",
+  "enunciado": "Una circunferencia está dibujada en el plano cartesiano. Se puede determinar el área del círculo que encierra si:\n(1) su centro está en el origen\n(2) la circunferencia corta al eje X",
   "alternativas": [
-   "3.000",
-   "19.200",
-   "9.600",
-   "4.800"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 2,
-  "explicacion": "En 15 horas hay 5 duplicaciones: 300 · 2⁵ = 9.600."
+  "correcta": 4,
+  "explicacion": "Ni siquiera juntas permiten responder: falta información. Toda circunferencia con centro en el origen corta al eje X; el radio sigue sin conocerse.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_464",
@@ -6751,16 +6825,18 @@
  {
   "id": "m2_476",
   "prueba": "m2",
-  "eje": "Geometría",
-  "enunciado": "En un triángulo rectángulo, el cateto opuesto al ángulo α mide 40 cm, el cateto adyacente mide 42 cm y la hipotenusa mide 58 cm. ¿Cuál es el valor de cos(α)?",
+  "eje": "Probabilidad y estadística",
+  "enunciado": "Una caja contiene solo bolitas rojas y azules. Se puede determinar la probabilidad de sacar al azar una bolita roja si:\n(1) hay el cuádruple de bolitas azules que de bolitas rojas\n(2) hay 3 bolitas rojas",
   "alternativas": [
-   "21/29",
-   "20/29",
-   "29/21",
-   "20/21"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
   "correcta": 0,
-  "explicacion": "cos = cateto adyacente / hipotenusa = 21/29."
+  "explicacion": "Con (1) basta, pero con (2) no. Si hay el cuádruple de azules, de cada 5 bolitas 1 es roja: P = 1/5. Saber solo cuántas rojas hay no basta.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_477",
@@ -6779,16 +6855,18 @@
  {
   "id": "m2_478",
   "prueba": "m2",
-  "eje": "Probabilidad y estadística",
-  "enunciado": "En un grupo, el 40% habla inglés, el 40% habla francés y el 35% habla ambos idiomas. ¿Qué porcentaje habla al menos uno de los dos idiomas?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Josefa es mayor que Martín. Se puede determinar la edad actual de Josefa si:\n(1) la suma de sus edades es 38 años\n(2) el doble de la suma de sus edades es 76 años",
   "alternativas": [
-   "75%",
-   "45%",
-   "80%",
-   "35%"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 1,
-  "explicacion": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 40% + 40% − 35% = 45%."
+  "correcta": 4,
+  "explicacion": "Ni siquiera juntas permiten responder: falta información. El dato (2) es el (1) multiplicado por 2: falta la diferencia de edades.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_479",
@@ -6961,16 +7039,18 @@
  {
   "id": "m2_491",
   "prueba": "m2",
-  "eje": "Números",
-  "enunciado": "¿Cuál es el valor de x en la ecuación 5^(x + 2) = 125?",
+  "eje": "Álgebra y funciones",
+  "enunciado": "Josefa es mayor que Martín. Se puede determinar la edad actual de Josefa si:\n(1) la suma de sus edades es 40 años\n(2) Josefa tiene 2 años más que Martín",
   "alternativas": [
-   "1",
-   "3",
-   "2",
-   "5"
+   "(1) por sí sola",
+   "(2) por sí sola",
+   "Ambas juntas, (1) y (2)",
+   "Cada una por sí sola, (1) o (2)",
+   "Se requiere información adicional"
   ],
-  "correcta": 0,
-  "explicacion": "125 = 5³; igualando exponentes: x + 2 = 3, entonces x = 1."
+  "correcta": 2,
+  "explicacion": "Ninguna basta por separado, pero juntas sí. Juntas: 2·(edad de Josefa) = 40 + 2 = 42, edad = 21.",
+  "tipo": "suficiencia"
  },
  {
   "id": "m2_492",

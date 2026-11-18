@@ -23,6 +23,7 @@ from fractions import Fraction
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generar_m1 as base  # noqa: E402  (reutiliza formato y armado de alternativas)
+import m2_suficiencia  # noqa: E402
 from generar_m1 import (  # noqa: E402
     MINUS, Skip, TRIPLES, fint, fmt, money, frac_str, sup, pt, line_str, numeric_options,
 )
@@ -35,6 +36,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG_DIR = os.path.join(ROOT, "assets", "images", "m2")
 OUT_JSON = os.path.join(ROOT, "assets", "questions", "m2.json")
 N_TEXT = 400
+# De las 400 de texto, estas son de suficiencia de datos (5 opciones en orden fijo).
+N_SUFICIENCIA = 40
 N_GRAPH = 100
 
 rnd = random.Random(20261118)
@@ -1043,11 +1046,18 @@ def build():
                 continue
             out.append(q)
             made += 1
+    # Se reemplazan las últimas preguntas de texto por las de suficiencia de datos.
+    # Así el resto del banco (y los gráficos) quedan iguales que antes.
+    texto = [q for q in out if "imagen" not in q]
+    graficos = [q for q in out if "imagen" in q]
+    out = texto[:N_TEXT - N_SUFICIENCIA] + m2_suficiencia.build(N_SUFICIENCIA) + graficos
     rnd.shuffle(out)
     ordered = []
     for n, q in enumerate(out, 1):
         item = {"id": f"m2_{n:03d}", "prueba": "m2", "eje": q["eje"], "enunciado": q["enunciado"],
                 "alternativas": q["alternativas"], "correcta": q["correcta"], "explicacion": q["explicacion"]}
+        if "tipo" in q:
+            item["tipo"] = q["tipo"]
         if "imagen" in q:
             item["imagen"] = q["imagen"]
         ordered.append(item)
@@ -1059,14 +1069,19 @@ def build():
 def validate(qs):
     assert len(qs) == N_TEXT + N_GRAPH, len(qs)
     for q in qs:
-        assert len(q["alternativas"]) == 4 and len(set(q["alternativas"])) == 4, q
-        assert 0 <= q["correcta"] < 4
+        n_opts = 5 if q.get("tipo") == "suficiencia" else 4
+        assert len(q["alternativas"]) == n_opts and len(set(q["alternativas"])) == n_opts, q
+        assert 0 <= q["correcta"] < n_opts
         if "imagen" in q:
             assert os.path.exists(os.path.join(ROOT, q["imagen"])), q["imagen"]
     n_img = sum(1 for q in qs if "imagen" in q)
     assert n_img == N_GRAPH, n_img
     assert len(os.listdir(IMG_DIR)) == N_GRAPH
-    print(f"OK: {len(qs)} preguntas, {n_img} con gráfico.")
+    suf = [q for q in qs if q.get("tipo") == "suficiencia"]
+    assert len(suf) == N_SUFICIENCIA, len(suf)
+    from collections import Counter
+    print(f"OK: {len(qs)} preguntas, {n_img} con gráfico, {len(suf)} de suficiencia de datos "
+          f"(respuestas: {dict(sorted(Counter('ABCDE'[q['correcta']] for q in suf).items()))}).")
 
 
 if __name__ == "__main__":

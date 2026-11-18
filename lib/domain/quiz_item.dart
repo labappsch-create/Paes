@@ -8,10 +8,13 @@ class QuizItem {
   QuizItem(this.question, this.order);
 
   /// Crea la pregunta con sus alternativas mezcladas al azar.
-  factory QuizItem.shuffled(Question question, Random random) => QuizItem(
-    question,
-    List<int>.generate(question.alternativas.length, (i) => i)..shuffle(random),
-  );
+  /// En suficiencia de datos no se mezclan: sus opciones van siempre en el
+  /// mismo orden, como en la prueba real.
+  factory QuizItem.shuffled(Question question, Random random) {
+    final order = List<int>.generate(question.alternativas.length, (i) => i);
+    if (!question.isSuficiencia) order.shuffle(random);
+    return QuizItem(question, order);
+  }
 
   final Question question;
 
