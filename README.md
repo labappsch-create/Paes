@@ -20,7 +20,7 @@ Meta: **500 preguntas por prueba, 100 de ellas con imagen o gráfico**. En cada 
 | Matemática M1 | 500 | 100 |
 | Matemática M2 | 500 | 100 |
 | Ciencias | 500 | 100 |
-| Historia | 1 | 0 |
+| Historia | 500 | 100 |
 | Competencia Lectora | 0 | 0 |
 
 Hay un archivo por prueba en `assets/questions/` (`m1.json`, `m2.json`, `ciencias.json`,
@@ -42,6 +42,11 @@ dispersión, probabilidad condicional, combinatoria, binomial y normal).
 `tools/generar_ciencias.py` crea Ciencias (Biología, Física y Química): 239 preguntas de
 conceptos escritas a partir de listas de datos (`tools/ciencias_textos.py`), cálculos resueltos
 por el programa y 100 gráficos (`tools/ciencias_graficos.py`).
+
+`tools/generar_historia.py` crea Historia y Ciencias Sociales (Historia, Formación ciudadana y
+Sistema económico) a partir de las tablas de `tools/historia_datos.py` (fechas, personajes,
+conceptos, institucionalidad, economía). Los gráficos usan hechos reales (líneas de tiempo) o
+datos de países ficticios, para practicar lectura de fuentes sin inventar cifras reales.
 
 Igual conviene que un profesor revise una muestra antes de publicar.
 
