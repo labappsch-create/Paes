@@ -22,15 +22,52 @@ class QuestionImage extends StatelessWidget {
             ),
           ),
           padding: const EdgeInsets.all(4),
-          child: Image.asset(
-            p,
-            fit: BoxFit.contain,
-            errorBuilder: (_, _, _) => const Padding(
-              padding: EdgeInsets.all(16),
-              child: Text('No se pudo cargar la imagen.'),
+          // Al tocar la imagen se abre en pantalla completa para hacer zoom.
+          child: GestureDetector(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                fullscreenDialog: true,
+                builder: (_) => _ZoomImage(path: p),
+              ),
+            ),
+            child: Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+                Image.asset(
+                  p,
+                  fit: BoxFit.contain,
+                  errorBuilder: (_, _, _) => const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Text('No se pudo cargar la imagen.'),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(4),
+                  child: Icon(Icons.zoom_in, semanticLabel: 'Ampliar imagen'),
+                ),
+              ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// Imagen en pantalla completa, con zoom de dos dedos.
+class _ZoomImage extends StatelessWidget {
+  const _ZoomImage({required this.path});
+
+  final String path;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Imagen')),
+      backgroundColor: Colors.white,
+      body: InteractiveViewer(
+        maxScale: 5,
+        child: Center(child: Image.asset(path, fit: BoxFit.contain)),
       ),
     );
   }

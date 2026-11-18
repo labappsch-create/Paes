@@ -19,9 +19,11 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
   En Ciencias se elige el módulo (Biología, Física, Química o Técnico Profesional), como en la
   prueba real: 54 preguntas del Módulo Común (18 por eje) y luego 26 del módulo elegido
   (en Técnico Profesional: 9 de Biología, 9 de Física y 8 de Química).
-- En **Competencia Lectora** (práctica y simulacro) las preguntas de un mismo texto van juntas,
-  en orden Localizar → Interpretar → Evaluar, con el aviso «Texto 2 · Preguntas 9 a 16». Cerca
-  de 1 de cada 7 preguntas es con imagen (en el simulacro de 65: 7 textos completos y 9 imágenes).
+- En **Competencia Lectora** (práctica y simulacro) las preguntas de un mismo texto o infografía
+  van juntas, en orden Localizar → Interpretar → Evaluar, con el aviso «Texto 2 · Preguntas 10 a 18».
+  El simulacro tiene, como la prueba real, **7 textos y 65 preguntas**: siempre al menos una
+  narración y una infografía; a 5 textos se les quita una pregunta para llegar a 65.
+  Las imágenes se pueden tocar para verlas en pantalla completa y hacer zoom.
 - **Puntaje estimado** de 100 a 1000, que imita la forma del puntaje real
   (`lib/domain/score_calculator.dart`): 0 correctas = 100 y solo todas correctas = 1000; las
   primeras y las últimas respuestas correctas valen más que las del medio (curva logística); las
@@ -55,11 +57,16 @@ Hay un archivo por prueba en `assets/questions/` (`m1.json`, `m2.json`, `ciencia
 `historia.json`, `lectora.json`). Las imágenes van en `assets/images/<prueba>/`.
 Cada pregunta tiene: `id`, `prueba`, `enunciado`, `alternativas`, `correcta`
 (posición de la correcta, empezando en 0), `eje` (opcional), `area` (opcional, área temática), `explicacion`, `imagen` (opcional)
-`texto` (opcional, texto de lectura) y `tipo` (opcional: `suficiencia` = suficiencia de datos,
-con sus opciones en orden fijo).
+`texto` (opcional, texto de lectura), `texto_tipo` (Lectora: `literario`, `no literario` o
+`discontinuo`) y `tipo` (opcional: `suficiencia` = suficiencia de datos, con sus opciones en orden fijo).
+
+Todos los bancos se revisaron contra los temarios oficiales de la PAES Regular 2026 (Admisión 2027).
 
 ### M1 generada con programa
-`tools/generar_m1.py` crea las 500 preguntas de M1 y sus 100 gráficos. Cada respuesta
+`tools/generar_m1.py` crea las 500 preguntas de M1 y sus 100 gráficos (incluye parábolas y
+diagramas de cajón), solo con temas del temario 2027: números, potencias y raíces enésimas,
+porcentaje, álgebra, función lineal y cuadrática, áreas y volúmenes, transformaciones isométricas,
+semejanza, datos, cuartiles y percentiles, y reglas de probabilidad. Cada respuesta
 correcta la calcula el programa y cada gráfico se dibuja con los mismos datos de la pregunta.
 Para volver a generarlas (necesita Python y matplotlib):
 ```
@@ -83,14 +90,19 @@ programa sin necesidad de calculadora (`tools/ciencias2_calculos.py`) y 100 grá
 Química y Técnico Profesional, porque el temario oficial es el mismo para los cuatro.
 
 `tools/generar_historia.py` crea Historia y Ciencias Sociales (Historia, Formación ciudadana y
-Sistema económico) a partir de las tablas de `tools/historia_datos.py` (fechas, personajes,
-conceptos, institucionalidad, economía). Los gráficos usan hechos reales (líneas de tiempo) o
-datos de países ficticios, para practicar lectura de fuentes sin inventar cifras reales.
+Sistema económico) a partir de las tablas de `tools/historia_datos.py` (hechos, personajes,
+conceptos, institucionalidad, economía) y de 46 fuentes originales con preguntas de análisis
+(`tools/historia_fuentes_a.py` y `_b.py`: testimonios y documentos ficticios verosímiles, e
+interpretaciones historiográficas contrastadas). No pregunta años exactos de memoria. Los gráficos
+usan hechos reales (líneas de tiempo) o datos de países ficticios.
 
-`tools/generar_lectora.py` arma Competencia Lectora: 50 textos originales escritos para la app
-(`tools/lectora_textos_a.py` a `_e.py`, 8 preguntas cada uno, en las habilidades Localizar,
-Interpretar y Evaluar) y 100 preguntas sobre afiches, infografías y programas ficticios.
-El texto de lectura se guarda en el campo `texto` y la app lo muestra sobre la pregunta.
+`tools/generar_lectora.py` arma Competencia Lectora según el temario 2027: 40 textos originales
+(narraciones y textos no literarios, de 226 a 336 palabras) con 10 preguntas cada uno, y 10
+infografías (textos discontinuos) con 10 preguntas cada una. Los textos base están en
+`tools/lectora_textos_a.py` a `_e.py` y se amplían con `tools/lectora2_amplia_*.py` y
+`tools/lectora2_amplia2.py` (oraciones agregadas dentro de los párrafos, sin cambiar su
+numeración); las infografías están en `tools/lectora2_infografias.py`. No hay poemas ni preguntas
+de clasificación («¿Qué tipo de texto es?»), que el temario no evalúa.
 
 Igual conviene que un profesor revise una muestra antes de publicar.
 

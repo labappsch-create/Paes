@@ -14,6 +14,7 @@ class Question {
     this.texto,
     this.area,
     this.tipo,
+    this.textoTipo,
   });
 
   final String id;
@@ -43,6 +44,10 @@ class Question {
   /// datos de M2). Null en las preguntas normales.
   final String? tipo;
 
+  /// Lectora: tipo de texto al que pertenece la pregunta: «literario»,
+  /// «no literario» o «discontinuo» (infografía). Null en las demás pruebas.
+  final String? textoTipo;
+
   /// Suficiencia de datos: siempre las mismas 5 opciones, en orden fijo.
   bool get isSuficiencia => tipo == 'suficiencia';
 
@@ -66,6 +71,7 @@ class Question {
       texto: json['texto'] as String?,
       area: json['area'] as String?,
       tipo: json['tipo'] as String?,
+      textoTipo: json['texto_tipo'] as String?,
     );
   }
 }

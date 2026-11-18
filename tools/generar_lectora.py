@@ -1,29 +1,38 @@
 #!/usr/bin/env python3
-"""Genera las 500 preguntas originales de Competencia Lectora.
+"""Genera las 500 preguntas originales de Competencia Lectora, según el temario oficial:
 
-- 400 preguntas de texto: 50 textos originales (lectora_textos_a..e.py), 8 preguntas cada uno.
-- 100 preguntas con imagen: afiches, infografías, programas y avisos inventados, dibujados
-  con el programa. La respuesta sale de los mismos datos con que se dibuja la imagen.
-Todos los textos, instituciones y personajes son ficticios. No usa contenido del DEMRE.
+- 40 textos continuos (literarios narrativos y no literarios), cada uno con 10 preguntas.
+  Los textos base están en lectora_textos_a..e.py y se amplían con lectora2_amplia_a..d.py
+  (oraciones agregadas al final de párrafos existentes, sin cambiar la numeración).
+- 10 textos discontinuos (infografías), cada uno con 10 preguntas (lectora2_infografias.py).
+  La imagen se dibuja con los mismos datos de las preguntas.
+No hay poemas (el temario solo considera narraciones como textos literarios) ni preguntas de
+clasificación como «¿Qué tipo de texto es?». Todos los textos, personas e instituciones son
+ficticios. No usa contenido del DEMRE.
 
-Uso: PYTHONPATH=<carpeta con matplotlib> python3 tools/generar_lectora.py
+Uso (desde la carpeta del proyecto):
+    PYTHONPATH=<carpeta con matplotlib> python3 tools/generar_lectora.py
+Escribe: assets/questions/lectora.json y assets/images/lectora/*.png
 """
 import json
 import os
 import random
+import re
 import sys
 import textwrap
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generar_m1 as base  # noqa: E402
-from generar_m1 import Skip, fint  # noqa: E402
 import lectora_textos_a, lectora_textos_b, lectora_textos_c, lectora_textos_d, lectora_textos_e  # noqa: E401,E402
+import lectora2_amplia_a, lectora2_amplia_b, lectora2_amplia_c, lectora2_amplia_d  # noqa: E401,E402
+import lectora2_amplia2  # noqa: E402
+import lectora2_infografias  # noqa: E402
 
 import matplotlib  # noqa: E402
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
-from matplotlib.patches import FancyBboxPatch  # noqa: E402
+from matplotlib.patches import FancyBboxPatch, Rectangle  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG_DIR = os.path.join(ROOT, "assets", "images", "lectora")
@@ -31,40 +40,64 @@ OUT_JSON = os.path.join(ROOT, "assets", "questions", "lectora.json")
 
 rnd = random.Random(20261121)
 base.rnd = rnd
-L, I, E = "Localizar", "Interpretar", "Evaluar"
-NO_NUMBER = {"Poema", "Texto instructivo", "Reglamento", "Aviso", "Entrevista", "Microcuento"}
+PREGUNTAS_POR_TEXTO = 10
+NO_NUMBER = {"Texto instructivo", "Reglamento", "Entrevista"}
+LITERARIOS = {"Cuento breve"}
+PATRON_FUERA = r"tipo de texto|formato de este texto|persona gramatical|De qué lengua proviene"
 
 
-def make(eje, enunciado, correct, wrongs, explicacion, imagen=None, texto=None):
+def make(eje, enunciado, correct, wrongs, explicacion, imagen=None, texto=None, texto_tipo=None):
     q = base.make(eje, enunciado, correct, wrongs, explicacion, imagen)
     q["prueba"] = "lectora"
     if texto:
         q["texto"] = texto
+    q["texto_tipo"] = texto_tipo
     return q
 
 
-def render_text(t):
-    head = f"{t['titulo']}\n({t['tipo']})\n\n"
-    if t["tipo"] in NO_NUMBER:
-        body = "\n\n".join(t["parrafos"])
+# ================================================================ TEXTOS CONTINUOS
+def textos_base():
+    return {t["titulo"]: t for m in (lectora_textos_a, lectora_textos_b, lectora_textos_c, lectora_textos_d, lectora_textos_e)
+            for t in m.TEXTS}
+
+
+def render_text(titulo, tipo, parrafos):
+    if tipo in NO_NUMBER:
+        body = "\n\n".join(parrafos)
     else:
-        body = "\n\n".join(f"({i}) {p}" for i, p in enumerate(t["parrafos"], 1))
-    return head + body
+        body = "\n\n".join(f"({i}) {p}" for i, p in enumerate(parrafos, 1))
+    return f"{titulo}\n\n{body}"
 
 
 def text_questions():
-    out = []
-    for mod in (lectora_textos_a, lectora_textos_b, lectora_textos_c, lectora_textos_d, lectora_textos_e):
-        for t in mod.TEXTS:
-            texto = render_text(t)
-            assert len(t["preguntas"]) == 8, t["titulo"]
-            for hab, enun, c, w, ex in t["preguntas"]:
+    base_txt = textos_base()
+    out, palabras = [], []
+    for mod in (lectora2_amplia_a, lectora2_amplia_b, lectora2_amplia_c, lectora2_amplia_d):
+        for amp in mod.AMPLIA:
+            t = base_txt[amp["titulo"]]
+            parrafos = list(t["parrafos"])
+            for n, extra in amp["amplia"].items():
+                parrafos[n - 1] = parrafos[n - 1].rstrip() + " " + extra
+            for n, extra in lectora2_amplia2.AMPLIA2.get(amp["titulo"], {}).items():
+                parrafos[n - 1] = parrafos[n - 1].rstrip() + " " + extra
+            preguntas = list(t["preguntas"])
+            for i, q in amp["reemplaza"].items():
+                preguntas[i] = q
+            preguntas += amp["nuevas"]
+            assert len(preguntas) == PREGUNTAS_POR_TEXTO, (amp["titulo"], len(preguntas))
+            texto = render_text(t["titulo"], t["tipo"], parrafos)
+            palabras.append(sum(len(p.split()) for p in parrafos))
+            tipo = "literario" if t["tipo"] in LITERARIOS else "no literario"
+            for hab, enun, c, w, ex in preguntas:
                 assert len(w) == 3 and c not in w and len(set(w)) == 3, (t["titulo"], enun)
-                out.append(make(hab, enun, c, w, ex, texto=texto))
-    return out
+                assert not re.search(PATRON_FUERA, enun), (t["titulo"], enun)
+                out.append(make(hab, enun, c, w, ex, texto=texto, texto_tipo=tipo))
+    return out, palabras
 
 
-# ================================================================ IMÁGENES
+# ================================================================ INFOGRAFÍAS
+W = 7.0  # ancho de la imagen en pulgadas
+FS = 13  # tamaño base de letra
 _img = [0]
 
 
@@ -72,223 +105,170 @@ def save_fig(fig):
     _img[0] += 1
     name = f"lectora_img_{_img[0]:03d}.png"
     os.makedirs(IMG_DIR, exist_ok=True)
-    fig.savefig(os.path.join(IMG_DIR, name), dpi=100, bbox_inches="tight", facecolor="white")
+    fig.savefig(os.path.join(IMG_DIR, name), dpi=110, facecolor="white")
     plt.close(fig)
     return f"assets/images/lectora/{name}"
 
 
-def canvas(w=6.0, h=7.6, bg="#fdf6e3"):
-    fig, ax = plt.subplots(figsize=(w, h))
+def wrap(t, n):
+    return "\n".join(textwrap.wrap(t, n)) or t
+
+
+def lineas_fila(fila, n_cols):
+    ancho = 30 if n_cols <= 2 else 22
+    return max(len(textwrap.wrap(str(c), ancho)) or 1 for c in fila)
+
+
+def alto_fila(fila, n_cols):
+    """Alto (pulgadas) de una fila de tabla según cuántas líneas tiene su celda más larga."""
+    return 0.42 * (1 + 0.55 * (lineas_fila(fila, n_cols) - 1))
+
+
+def alto_bloque(b):
+    k = b[0]
+    if k == "datos":
+        return 1.45
+    if k == "barras":
+        return 0.75 + 0.48 * len(b[2])
+    if k == "torta":
+        return 3.2
+    if k == "lista":
+        lineas = sum(len(textwrap.wrap(x, 58)) for x in b[2])
+        return 0.6 + 0.3 * lineas
+    if k == "tabla":
+        return 0.5 + sum(alto_fila(r, len(b[2])) for r in [b[2]] + b[3]) + 0.05
+    if k == "nota":
+        return 0.35 + 0.3 * len(textwrap.wrap(b[1], 62))
+    raise ValueError(k)
+
+
+def dibujar_bloque(fig, b, y0, h, color):
+    """Dibuja un bloque en la franja [y0 - h, y0] (coordenadas de figura en pulgadas)."""
+    H = fig.get_figheight()
+    k = b[0]
+    ax = fig.add_axes([0.05, (y0 - h) / H, 0.9, h / H])
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis("off")
-    ax.add_patch(FancyBboxPatch((0.02, 0.02), 0.96, 0.96, boxstyle="round,pad=0.01", facecolor=bg, edgecolor="#555", lw=1.5))
-    return fig, ax
+    if k == "datos":
+        n = len(b[1])
+        for i, (val, txt) in enumerate(b[1]):
+            x = i / n + 0.01
+            ax.add_patch(FancyBboxPatch((x, 0.06), 1 / n - 0.02, 0.88, boxstyle="round,pad=0.01,rounding_size=0.03",
+                                        facecolor=color, alpha=0.12, edgecolor=color))
+            ax.text(x + (1 / n - 0.02) / 2, 0.63, val, ha="center", va="center", fontsize=FS + 7, fontweight="bold", color=color)
+            ax.text(x + (1 / n - 0.02) / 2, 0.27, wrap(txt, 22 if n == 3 else 34), ha="center", va="center", fontsize=FS - 2)
+        return
+    titulo = b[1] if k != "nota" else None
+    if titulo:
+        ax.text(0, 1, titulo, ha="left", va="top", fontsize=FS + 1, fontweight="bold", color=color)
+    top = 1 - 0.42 / h
+    if k == "barras":
+        _, _, datos, unidad = b
+        sub = fig.add_axes([0.38, (y0 - h + 0.15) / H, 0.5, (h - 0.6) / H])
+        labels = [d[0] for d in datos][::-1]
+        vals = [d[1] for d in datos][::-1]
+        sub.barh(labels, vals, color=color, alpha=0.85)
+        for i, v in enumerate(vals):
+            sub.text(v + max(vals) * 0.02, i, f"{v:g} {unidad}" if unidad != "%" else f"{v:g}%", va="center", fontsize=FS - 2)
+        sub.set_xlim(0, max(vals) * 1.3)
+        sub.set_xticks([])
+        for s in ("top", "right", "bottom"):
+            sub.spines[s].set_visible(False)
+        sub.tick_params(axis="y", labelsize=FS - 1, length=0)
+        return
+    if k == "torta":
+        _, _, datos = b
+        sub = fig.add_axes([0.06, (y0 - h + 0.1) / H, 0.42, (h - 0.55) / H])
+        colores = [color] + ["#90a4ae", "#ffb74d", "#81c784", "#ba68c8", "#4dd0e1"]
+        sub.pie([d[1] for d in datos], colors=colores[:len(datos)], startangle=90, counterclock=False,
+                wedgeprops=dict(edgecolor="white", linewidth=2))
+        sub.set_aspect("equal")
+        for i, (lab, v) in enumerate(datos):
+            yy = top - 0.1 - i * min(0.15, 0.75 / len(datos))
+            ax.add_patch(Rectangle((0.53, yy - 0.025), 0.03, 0.05, color=colores[i]))
+            ax.text(0.58, yy, f"{lab}: {v}%", va="center", fontsize=FS - 1)
+        return
+    if k == "lista":
+        y = top
+        paso = 0.3 / h
+        for item in b[2]:
+            lineas = textwrap.wrap(item, 58)
+            ax.text(0.02, y, "•", fontsize=FS, va="top", color=color)
+            ax.text(0.06, y, "\n".join(lineas), fontsize=FS - 1, va="top", linespacing=1.25)
+            y -= paso * len(lineas) + 0.02 / h
+        return
+    if k == "tabla":
+        _, _, cols, filas = b
+        ancho = 30 if len(cols) <= 2 else 22
+        celdas = [[wrap(str(c), ancho) for c in r] for r in filas]
+        sub = fig.add_axes([0.05, (y0 - h) / H, 0.9, (h - 0.45) / H])
+        sub.axis("off")
+        tb = sub.table(cellText=celdas, colLabels=cols, loc="upper center", cellLoc="center")
+        tb.auto_set_font_size(False)
+        tb.set_fontsize(FS - 2)
+        tb.scale(1, 1.0)
+        for (r, c), cell in tb.get_celld().items():
+            cell.set_edgecolor("#bbbbbb")
+            cell.set_height(alto_fila(cols if r == 0 else filas[r - 1], len(cols)) / (h - 0.45))
+            if r == 0:
+                cell.set_facecolor(color)
+                cell.get_text().set_color("white")
+                cell.get_text().set_fontweight("bold")
+        return
+    if k == "nota":
+        ax.add_patch(FancyBboxPatch((0, 0.05), 1, 0.9, boxstyle="round,pad=0.01,rounding_size=0.02",
+                                    facecolor="#f5f5f5", edgecolor="#cccccc"))
+        ax.text(0.03, 0.5, wrap(b[1], 62), va="center", fontsize=FS - 1, linespacing=1.3)
+        return
 
 
-def wrap(t, n):
-    return "\n".join(textwrap.wrap(t, n))
-
-
-CAMPAIGNS = [
-    ("Cuidemos el agua", "Cada gota cuenta", ["Cierra la llave mientras te cepillas los dientes", "Toma duchas de menos de cinco minutos", "Riega las plantas al atardecer"], "las personas en sus hogares", "ahorrar agua", "#1f77b4"),
-    ("Recicla en tu colegio", "Lo que botas puede volver a ser útil", ["Separa papel, plástico y vidrio", "Lava los envases antes de reciclarlos", "Usa los contenedores del patio"], "los estudiantes", "reciclar los residuos", "#2ca02c"),
-    ("Adopta con responsabilidad", "Una mascota es para toda la vida", ["Esterilízala y vacúnala", "Ponle placa de identificación", "Nunca la abandones"], "quienes quieren tener una mascota", "practicar la tenencia responsable de mascotas", "#ff7f0e"),
-    ("Prevengamos los incendios forestales", "El bosque no se recupera en un día", ["No hagas fogatas en zonas prohibidas", "No botes colillas ni vidrios", "Llévate tu basura de vuelta"], "quienes visitan zonas rurales y bosques", "prevenir incendios forestales", "#d62728"),
-    ("Usa casco siempre", "Tu cabeza no tiene repuesto", ["Ajusta bien la correa", "Cámbialo después de un golpe fuerte", "Úsalo incluso en trayectos cortos"], "los ciclistas", "promover el uso del casco al andar en bicicleta", "#9467bd"),
-    ("Desconéctate para conectar", "La mejor conversación no tiene wifi", ["Deja el celular lejos durante la comida", "Propón un juego de mesa", "Pregunta cómo estuvo el día"], "las familias", "fomentar la conversación familiar sin pantallas", "#8c564b"),
-    ("Respeta el paso de cebra", "Un segundo de espera puede salvar una vida", ["Detente antes de la línea", "Mira a los peatones", "No uses el celular al conducir"], "los conductores", "proteger a los peatones", "#17becf"),
-]
-ORGS = ["Municipalidad de Río Claro", "Centro de Alumnos del Liceo Los Andes", "Fundación Horizonte Verde", "Junta de Vecinos Villa Sol", "Agrupación Ciudad Amable"]
-
-
-def g_campaign():
-    title, slogan, tips, aud, purpose, col = rnd.choice(CAMPAIGNS)
-    org = rnd.choice(ORGS)
-    fig, ax = canvas()
-    ax.add_patch(FancyBboxPatch((0.06, 0.78), 0.88, 0.16, boxstyle="round,pad=0.01", facecolor=col, edgecolor="none"))
-    ax.text(0.5, 0.86, wrap(title.upper(), 24), ha="center", va="center", fontsize=17, color="white", fontweight="bold")
-    ax.text(0.5, 0.70, f"«{slogan}»", ha="center", va="center", fontsize=13, style="italic", color=col)
-    for k, t in enumerate(tips):
-        ax.text(0.10, 0.56 - k * 0.12, "✔", fontsize=16, color=col, va="center")
-        ax.text(0.18, 0.56 - k * 0.12, wrap(t, 34), fontsize=11.5, va="center")
-    ax.text(0.5, 0.10, f"Una campaña de: {org}", ha="center", fontsize=10.5, color="#333")
-    img = save_fig(fig)
-    k = rnd.randint(1, 5)
-    if k == 1:
-        others = [c[4] for c in CAMPAIGNS if c[4] != purpose]
-        return make(E, "¿Cuál es el propósito principal del afiche?", f"Promover {purpose}" if not purpose.startswith("promover") else purpose[0].upper() + purpose[1:],
-                    [("Promover " + o) if not o.startswith("promover") else o[0].upper() + o[1:] for o in rnd.sample(others, 3)], "El título y los consejos apuntan a ese objetivo.", img)
-    if k == 2:
-        others = [c[3] for c in CAMPAIGNS if c[3] != aud]
-        return make(I, "¿A quiénes se dirige principalmente el afiche?", aud[0].upper() + aud[1:], [o[0].upper() + o[1:] for o in rnd.sample(others, 3)],
-                    "Los consejos están pensados para ese público.", img)
-    if k == 3:
-        return make(L, "Según el afiche, ¿quién organiza la campaña?", org, [o for o in ORGS if o != org][:3], "Aparece al pie del afiche.", img)
-    if k == 4:
-        tip = rnd.choice(tips)
-        other_tips = [t for c in CAMPAIGNS if c[0] != title for t in c[2]]
-        return make(L, "¿Cuál de los siguientes consejos aparece en el afiche?", tip, rnd.sample(other_tips, 3), "Está en la lista de consejos.", img)
-    return make(I, f"¿Qué función cumple la frase «{slogan}» en el afiche?", "Llamar la atención y resumir el mensaje de forma breve y fácil de recordar",
-                ["Entregar datos estadísticos", "Indicar la fecha de la campaña", "Presentar al organizador"], "Es el eslogan de la campaña.", img)
-
-
-SURVEY_TOPICS = [
-    ("¿Cómo llegan los estudiantes al colegio?", ["Caminando", "Bus", "Auto", "Bicicleta", "Metro"]),
-    ("¿Cuántas horas duermen los estudiantes en días de clases?", ["Menos de 6", "6 a 7", "7 a 8", "Más de 8"]),
-    ("¿Qué actividad prefieren en el recreo?", ["Conversar", "Jugar fútbol", "Usar el celular", "Leer", "Escuchar música"]),
-    ("¿Qué taller les gustaría tener?", ["Robótica", "Teatro", "Cocina", "Fotografía", "Ajedrez"]),
-]
-
-
-def g_survey():
-    q, cats = rnd.choice(SURVEY_TOPICS)
-    k = len(cats)
-    while True:
-        parts = [rnd.randrange(5, 45) for _ in range(k)]
-        tot = sum(parts)
-        pct = [round(p * 100 / tot) for p in parts]
-        pct[-1] = 100 - sum(pct[:-1])
-        if min(pct) > 1 and len(set(pct)) == k:
-            break
-    n = rnd.choice([120, 200, 250, 300, 400, 500])
-    school = rnd.choice(["Liceo Los Andes", "Colegio Bahía Azul", "Liceo Río Claro", "Colegio Valle Verde"])
-    fig, ax = plt.subplots(figsize=(6.6, 4.6))
-    bars = ax.barh(cats[::-1], pct[::-1], color="#4c9f70")
-    for b_, v in zip(bars, pct[::-1]):
-        ax.text(v + 0.8, b_.get_y() + b_.get_height() / 2, f"{v}%", va="center")
-    ax.set_xlim(0, max(pct) + 12)
-    ax.set_xlabel("% de estudiantes")
-    ax.set_title(f"{q}\nEncuesta a {n} estudiantes del {school} (datos ficticios)", fontsize=11)
-    img = save_fig(fig)
-    t = rnd.randint(1, 4)
-    best = cats[pct.index(max(pct))]
-    worst = cats[pct.index(min(pct))]
-    if t == 1:
-        return make(L, "Según la infografía, ¿cuál fue la respuesta más frecuente?", best, [c for c in cats if c != best], f"Es la barra más larga ({max(pct)}%).", img)
-    if t == 2:
-        return make(L, "Según la infografía, ¿cuál fue la respuesta menos frecuente?", worst, [c for c in cats if c != worst], f"Es la barra más corta ({min(pct)}%).", img)
-    if t == 3:
-        return make(L, "¿A cuántos estudiantes se encuestó?", fint(n), [fint(x) for x in (n * 2, n // 2, 100) if x != n] + [fint(n + 50)], "Lo indica el título del gráfico.", img)
-    return make(E, "¿Cuál de las siguientes conclusiones se puede sacar correctamente de la infografía?",
-                f"En ese colegio, «{best}» fue la respuesta más elegida por los estudiantes encuestados",
-                [f"Todos los estudiantes de Chile prefieren «{best}»", f"Nadie eligió «{worst}»", "La encuesta se hizo a profesores y apoderados"],
-                "Las conclusiones deben limitarse a los datos y a quienes respondieron la encuesta.", img)
-
-
-EVENTS_PROG = [
-    ("Semana de la Ciencia", ["Feria de experimentos", "Charla: el universo en tu bolsillo", "Taller de robótica", "Observación astronómica", "Premiación"]),
-    ("Fiesta Costumbrista", ["Desfile de huasos", "Competencia de cueca", "Muestra de artesanía", "Almuerzo típico", "Show folclórico"]),
-    ("Feria del Libro Juvenil", ["Inauguración", "Lectura de cuentos", "Taller de cómic", "Conversatorio con escritoras", "Firma de libros"]),
-    ("Jornada Deportiva", ["Calentamiento masivo", "Torneo de básquetbol", "Carrera de relevos", "Clase de zumba", "Entrega de medallas"]),
-]
-PLACES = ["Gimnasio", "Biblioteca", "Patio central", "Auditorio", "Sala 12", "Cancha techada"]
-
-
-def g_program():
-    name, acts = rnd.choice(EVENTS_PROG)
-    h0 = rnd.choice([9, 10, 15, 16])
-    times = [f"{h0 + i}:{rnd.choice(['00', '30'])}" for i in range(5)]
-    places = [rnd.choice(PLACES) for _ in acts]
-    day = rnd.choice(["sábado 12", "viernes 18", "sábado 26", "jueves 9"])
-    fig, ax = plt.subplots(figsize=(7.4, 4.2))
+def dibujar_infografia(spec):
+    cab, pie, sep = 1.35, 0.55, 0.25
+    altos = [alto_bloque(b) for b in spec["bloques"]]
+    H = cab + sum(altos) + sep * len(altos) + pie
+    fig = plt.figure(figsize=(W, H))
+    color = spec["color"]
+    ax = fig.add_axes([0, (H - cab) / H, 1, cab / H])
     ax.axis("off")
-    tbl = ax.table(cellText=[[t, a, p] for t, a, p in zip(times, acts, places)], colLabels=["Hora", "Actividad", "Lugar"], loc="center", cellLoc="center")
-    tbl.auto_set_font_size(False)
-    tbl.set_fontsize(14)
-    tbl.scale(1, 2.1)
-    tbl.auto_set_column_width([0, 1, 2])
-    for (r, c), cell in tbl.get_celld().items():
-        if r == 0:
-            cell.set_facecolor("#ffe08a")
-    ax.set_title(f"Programa: {name} — {day} (entrada liberada)", fontsize=12)
-    img = save_fig(fig)
-    i = rnd.randrange(5)
-    t = rnd.randint(1, 4)
-    if t == 1:
-        return make(L, f"Según el programa, ¿a qué hora comienza la actividad «{acts[i]}»?", times[i], [x for x in times if x != times[i]], "Se lee en la fila correspondiente.", img)
-    if t == 2:
-        if places.count(places[i]) > 1:
-            raise Skip()
-        return make(L, f"¿En qué lugar se realiza «{acts[i]}»?", places[i], [p for p in PLACES if p != places[i]], "Se lee en la columna «Lugar».", img)
-    if t == 3:
-        return make(I, "¿Qué actividad se realiza inmediatamente después de la primera?", acts[1], [acts[0], acts[3], acts[4]], "Es la segunda fila del programa.", img)
-    return make(I, "Según el programa, ¿cuánto hay que pagar para asistir?", "Nada, porque la entrada es liberada", ["Depende de la actividad", "Solo pagan los adultos", "El programa no entrega esa información"],
-                "«Entrada liberada» significa que es gratuita.", img)
+    ax.add_patch(Rectangle((0, 0), 1, 1, color=color, transform=ax.transAxes))
+    ax.text(0.05, 0.62, wrap(spec["titulo"], 38), color="white", fontsize=FS + 8, fontweight="bold", va="center", transform=ax.transAxes)
+    ax.text(0.05, 0.2, wrap(spec["subtitulo"], 70), color="white", fontsize=FS - 1, va="center", transform=ax.transAxes)
+    y = H - cab - sep
+    for b, h in zip(spec["bloques"], altos):
+        dibujar_bloque(fig, b, y, h, color)
+        y -= h + sep
+    fig.text(0.05, 0.25 / H, wrap("Fuente: " + spec["fuente"], 90), fontsize=FS - 4, style="italic", color="#555555")
+    return save_fig(fig)
 
 
-SHOWS = [("Concierto de la Orquesta Juvenil", "Teatro Municipal"), ("Obra de teatro «La casa de los vientos»", "Centro Cultural Estación"),
-         ("Muestra de cine chileno", "Sala Andes"), ("Festival de bandas escolares", "Anfiteatro del Parque")]
+def infographic_questions():
+    out = []
+    for spec in lectora2_infografias.INFOGRAFIAS:
+        assert len(spec["preguntas"]) == PREGUNTAS_POR_TEXTO, spec["titulo"]
+        img = dibujar_infografia(spec)
+        for hab, enun, c, w, ex in spec["preguntas"]:
+            assert len(w) == 3 and c not in w and len(set(w)) == 3, (spec["titulo"], enun)
+            out.append(make(hab, f"Observa la infografía «{spec['titulo']}». {enun}", c, w, ex, imagen=img, texto_tipo="discontinuo"))
+    return out
 
 
-def g_event_poster():
-    name, venue = rnd.choice(SHOWS)
-    day = rnd.choice(["Viernes 14 de marzo", "Sábado 5 de abril", "Domingo 20 de julio", "Sábado 9 de agosto"])
-    hour = rnd.choice(["18:00", "19:30", "20:00", "17:00"])
-    price = rnd.choice([0, 2000, 3000, 5000])
-    disc = rnd.choice(["Estudiantes y adultos mayores: 50% de descuento", "Niños menores de 10 años no pagan", "Cupos limitados: inscripción previa"])
-    fig, ax = canvas(bg="#eef3fb")
-    ax.text(0.5, 0.86, wrap(name, 24), ha="center", va="center", fontsize=17, fontweight="bold", color="#1a3d7c")
-    ax.text(0.5, 0.66, f"{day}\n{hour} horas", ha="center", va="center", fontsize=14)
-    ax.text(0.5, 0.50, venue, ha="center", fontsize=13, style="italic")
-    ax.text(0.5, 0.36, "Entrada liberada" if price == 0 else f"Entrada general: ${fint(price)}", ha="center", fontsize=14, fontweight="bold", color="#b03030")
-    ax.text(0.5, 0.24, wrap(disc, 36), ha="center", va="center", fontsize=11)
-    ax.text(0.5, 0.08, "Organiza: Corporación Cultural Río Claro (ficticia)", ha="center", fontsize=9.5, color="#444")
-    img = save_fig(fig)
-    t = rnd.randint(1, 4)
-    if t == 1:
-        return make(L, "Según el afiche, ¿dónde se realizará el evento?", venue, [v for _, v in SHOWS if v != venue], "Aparece bajo la fecha.", img)
-    if t == 2:
-        hours = ["18:00", "19:30", "20:00", "17:00"]
-        return make(L, "¿A qué hora comienza el evento?", f"{hour} horas", [f"{h} horas" for h in hours if h != hour], "Aparece bajo la fecha.", img)
-    if t == 3:
-        if price == 0 or not disc.startswith("Estudiantes"):
-            raise Skip()
-        half = price // 2
-        return make(I, "Según el afiche, ¿cuánto paga un estudiante por su entrada?", f"${fint(half)}", [f"${fint(price)}", "$0", f"${fint(price * 2)}"],
-                    f"Tiene 50% de descuento sobre ${fint(price)}.", img)
-    return make(E, "¿Cuál es el propósito principal del afiche?", "Informar e invitar a un evento cultural", ["Vender instrumentos musicales", "Narrar la historia del teatro", "Opinar sobre la cultura"],
-                "Entrega datos del evento para que el público asista.", img)
-
-
-GRAPH_PLAN = [(g_campaign, 30), (g_survey, 30), (g_program, 30), (g_event_poster, 10)]
-
-
+# ================================================================ PRINCIPAL
 def build():
     if os.path.isdir(IMG_DIR):
         for f in os.listdir(IMG_DIR):
             if f.endswith(".png"):
                 os.remove(os.path.join(IMG_DIR, f))
-    out = text_questions()
-    assert len(out) == 400, len(out)
-    seen = set()
-    for fn, n in GRAPH_PLAN:
-        made = tries = 0
-        while made < n:
-            tries += 1
-            if tries > 2000:
-                raise RuntimeError(fn.__name__)
-            before = _img[0]
-            try:
-                q = fn()
-                key = q["enunciado"] + "|" + q["alternativas"][q["correcta"]]
-                if key in seen:
-                    raise Skip()
-            except Skip:
-                if _img[0] > before:
-                    p = os.path.join(IMG_DIR, f"lectora_img_{_img[0]:03d}.png")
-                    if os.path.exists(p):
-                        os.remove(p)
-                    _img[0] -= 1
-                continue
-            seen.add(key)
-            out.append(q)
-            made += 1
-    rnd.shuffle(out)
+    textos, palabras = text_questions()
+    infos = infographic_questions()
+    # Se ordenan por texto (las preguntas de un mismo texto quedan juntas en el archivo);
+    # la app las agrupa y las mezcla por bloques.
+    out = textos + infos
     ordered = []
     for n, q in enumerate(out, 1):
         item = {"id": f"lectora_{n:03d}", "prueba": "lectora", "eje": q["eje"], "enunciado": q["enunciado"],
-                "alternativas": q["alternativas"], "correcta": q["correcta"], "explicacion": q["explicacion"]}
+                "alternativas": q["alternativas"], "correcta": q["correcta"], "explicacion": q["explicacion"],
+                "texto_tipo": q["texto_tipo"]}
         if "texto" in q:
             item["texto"] = q["texto"]
         if "imagen" in q:
@@ -296,13 +276,23 @@ def build():
         ordered.append(item)
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(ordered, f, ensure_ascii=False, indent=1)
-    return ordered
+    return ordered, palabras
+
+
+def validate(qs, palabras):
+    assert len(qs) == 500, len(qs)
+    assert sum(1 for q in qs if "imagen" in q) == 100
+    assert len({q["texto"] for q in qs if "texto" in q}) == 40
+    assert len(os.listdir(IMG_DIR)) == 10
+    for q in qs:
+        assert len(q["alternativas"]) == 4 and len(set(q["alternativas"])) == 4, q
+        assert 0 <= q["correcta"] < 4
+    print(f"OK: 500 preguntas: 40 textos x 10 y 10 infografías x 10 (100 con imagen).")
+    print(f"Palabras por texto: mín {min(palabras)}, máx {max(palabras)}, promedio {sum(palabras) // len(palabras)}.")
+    print("Por habilidad:", dict(Counter(q["eje"] for q in qs)))
+    print("Por tipo de texto:", dict(Counter(q["texto_tipo"] for q in qs)))
+    print("Correcta por posición:", dict(sorted(Counter(q["correcta"] for q in qs).items())))
 
 
 if __name__ == "__main__":
-    qs = build()
-    assert len(qs) == 500
-    for q in qs:
-        assert len(q["alternativas"]) == 4 and len(set(q["alternativas"])) == 4, q
-    assert sum(1 for q in qs if "imagen" in q) == 100 == len(os.listdir(IMG_DIR))
-    print(f"OK: 500 preguntas, 100 con imagen. Por habilidad: {dict(Counter(q['eje'] for q in qs))}. Correcta por posición: {dict(Counter(q['correcta'] for q in qs))}")
+    validate(*build())
