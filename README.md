@@ -19,7 +19,7 @@ Meta: **500 preguntas por prueba, 100 de ellas con imagen o gráfico**. En cada 
 |---|---|---|
 | Matemática M1 | 500 | 100 |
 | Matemática M2 | 500 | 100 |
-| Ciencias | 3 | 0 |
+| Ciencias | 500 | 100 |
 | Historia | 1 | 0 |
 | Competencia Lectora | 0 | 0 |
 
@@ -38,6 +38,10 @@ python3 tools/generar_m1.py
 `tools/generar_m2.py` hace lo mismo para M2 (logaritmos, matemática financiera, funciones
 exponencial, logarítmica y trigonométricas, circunferencia, esfera, homotecia, rectas,
 dispersión, probabilidad condicional, combinatoria, binomial y normal).
+
+`tools/generar_ciencias.py` crea Ciencias (Biología, Física y Química): 239 preguntas de
+conceptos escritas a partir de listas de datos (`tools/ciencias_textos.py`), cálculos resueltos
+por el programa y 100 gráficos (`tools/ciencias_graficos.py`).
 
 Igual conviene que un profesor revise una muestra antes de publicar.
 
