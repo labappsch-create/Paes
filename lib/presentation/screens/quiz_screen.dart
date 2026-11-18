@@ -137,7 +137,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
   Future<void> _next() async {
     if (_index >= widget.items.length - 1) {
-      _finish();
+      // En el simulacro, antes de terminar se muestra el resumen para entregar.
+      _isPractice ? _finish() : await _confirmSubmit();
       return;
     }
     await _goTo(_index + 1);
@@ -162,7 +163,29 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       isScrollControlled: true,
       builder: (context) => _QuestionMap(items: widget.items, current: _index),
     );
-    if (target != null) await _goTo(target);
+    if (target == _submit) {
+      await _confirmSubmit();
+    } else if (target != null) {
+      await _goTo(target);
+    }
+  }
+
+  /// Resumen antes de entregar: cuántas quedan sin responder y cuáles.
+  /// Desde ahí se puede ir a una pregunta, seguir revisando o entregar.
+  Future<void> _confirmSubmit() async {
+    final target = await showModalBottomSheet<int>(
+      context: context,
+      showDragHandle: true,
+      isScrollControlled: true,
+      builder: (context) =>
+          _SubmitReview(items: widget.items, remaining: _formatRemaining()),
+    );
+    if (!mounted || _finished) return;
+    if (target == _submit) {
+      _finish();
+    } else if (target != null) {
+      await _goTo(target);
+    }
   }
 
   void _finish() {
@@ -171,7 +194,9 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     _timer?.cancel();
 
     final answered = widget.items.where((i) => i.isAnswered).toList();
-    if (answered.isEmpty) {
+    // En práctica sin respuestas no hay nada que corregir. En el simulacro
+    // siempre se muestran resultados (lo no respondido cuenta como error).
+    if (_isPractice && answered.isEmpty) {
       Navigator.of(context).pop();
       return;
     }
@@ -350,7 +375,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                           Expanded(
                             child: FilledButton(
                               onPressed: _next,
-                              child: Text(isLast ? 'Terminar' : 'Siguiente'),
+                              child: Text(isLast ? 'Entregar' : 'Siguiente'),
                             ),
                           ),
                         ],
@@ -448,6 +473,9 @@ class _OptionTile extends StatelessWidget {
   }
 }
 
+/// Valor que devuelven el mapa y el resumen cuando la persona elige entregar.
+const _submit = -1;
+
 /// Mapa del simulacro: todas las preguntas numeradas. Las respondidas se ven
 /// pintadas y la actual tiene borde. Al tocar un número se va a esa pregunta.
 class _QuestionMap extends StatelessWidget {
@@ -466,72 +494,101 @@ class _QuestionMap extends StatelessWidget {
         constraints: BoxConstraints(
           maxHeight: MediaQuery.sizeOf(context).height * 0.75,
         ),
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Todas las preguntas', style: theme.textTheme.titleLarge),
-              const SizedBox(height: 4),
-              Text(
-                'Respondidas: $answered de ${items.length}. '
-                'Sin responder: ${items.length - answered}.',
-              ),
-              const SizedBox(height: 12),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  for (var i = 0; i < items.length; i++)
-                    SizedBox(
-                      width: 48,
-                      height: 48,
-                      child: Material(
-                        color: items[i].isAnswered
-                            ? scheme.primary
-                            : scheme.surfaceContainerHighest,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                          side: i == current
-                              ? BorderSide(color: scheme.tertiary, width: 3)
-                              : BorderSide.none,
-                        ),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(8),
-                          onTap: () => Navigator.of(context).pop(i),
-                          child: Center(
-                            child: Text(
-                              '${i + 1}',
-                              semanticsLabel:
-                                  'Pregunta ${i + 1}, '
-                                  '${items[i].isAnswered ? 'respondida' : 'sin responder'}',
-                              style: TextStyle(
-                                color: items[i].isAnswered
-                                    ? scheme.onPrimary
-                                    : scheme.onSurface,
-                                fontWeight: FontWeight.bold,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Flexible(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Todas las preguntas',
+                      style: theme.textTheme.titleLarge,
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      'Respondidas: $answered de ${items.length}. '
+                      'Sin responder: ${items.length - answered}.',
+                    ),
+                    const SizedBox(height: 12),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: [
+                        for (var i = 0; i < items.length; i++)
+                          SizedBox(
+                            width: 48,
+                            height: 48,
+                            child: Material(
+                              color: items[i].isAnswered
+                                  ? scheme.primary
+                                  : scheme.surfaceContainerHighest,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                                side: i == current
+                                    ? BorderSide(
+                                        color: scheme.tertiary,
+                                        width: 3,
+                                      )
+                                    : BorderSide.none,
+                              ),
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(8),
+                                onTap: () => Navigator.of(context).pop(i),
+                                child: Center(
+                                  child: Text(
+                                    '${i + 1}',
+                                    semanticsLabel:
+                                        'Pregunta ${i + 1}, '
+                                        '${items[i].isAnswered ? 'respondida' : 'sin responder'}',
+                                    style: TextStyle(
+                                      color: items[i].isAnswered
+                                          ? scheme.onPrimary
+                                          : scheme.onSurface,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ),
+                      ],
                     ),
-                ],
+                    const SizedBox(height: 12),
+                    Wrap(
+                      spacing: 16,
+                      runSpacing: 8,
+                      children: [
+                        _Legend(color: scheme.primary, text: 'Respondida'),
+                        _Legend(
+                          color: scheme.surfaceContainerHighest,
+                          text: 'Sin responder',
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              const SizedBox(height: 12),
-              Wrap(
-                spacing: 16,
-                runSpacing: 8,
+            ),
+            // Botones fijos abajo: siempre visibles aunque la lista sea larga.
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+              child: Column(
                 children: [
-                  _Legend(color: scheme.primary, text: 'Respondida'),
-                  _Legend(
-                    color: scheme.surfaceContainerHighest,
-                    text: 'Sin responder',
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton.icon(
+                      icon: const Icon(Icons.assignment_turned_in_outlined),
+                      label: const Text('Entregar ensayo'),
+                      onPressed: () => Navigator.of(context).pop(_submit),
+                    ),
                   ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -560,4 +617,103 @@ class _Legend extends StatelessWidget {
       Text(text),
     ],
   );
+}
+
+/// Resumen antes de entregar el simulacro.
+class _SubmitReview extends StatelessWidget {
+  const _SubmitReview({required this.items, required this.remaining});
+
+  final List<QuizItem> items;
+  final String remaining;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final blank = [
+      for (var i = 0; i < items.length; i++)
+        if (!items[i].isAnswered) i,
+    ];
+    final answered = items.length - blank.length;
+    return SafeArea(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.sizeOf(context).height * 0.8,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Flexible(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '¿Entregar el ensayo?',
+                      style: theme.textTheme.titleLarge,
+                    ),
+                    const SizedBox(height: 8),
+                    Text('Respondiste $answered de ${items.length} preguntas.'),
+                    Text('Tiempo restante: $remaining.'),
+                    const SizedBox(height: 12),
+                    if (blank.isEmpty)
+                      const Text('No te quedan preguntas sin responder.')
+                    else ...[
+                      Text(
+                        blank.length == 1
+                            ? 'Te queda 1 pregunta sin responder. '
+                                  'Si entregas, contará como incorrecta. '
+                                  'Tócala para ir a ella:'
+                            : 'Te quedan ${blank.length} preguntas sin responder. '
+                                  'Si entregas, contarán como incorrectas. '
+                                  'Toca una para ir a ella:',
+                        style: TextStyle(color: scheme.error),
+                      ),
+                      const SizedBox(height: 8),
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: [
+                          for (final i in blank)
+                            ActionChip(
+                              label: Text('${i + 1}'),
+                              tooltip: 'Ir a la pregunta ${i + 1}',
+                              onPressed: () => Navigator.of(context).pop(i),
+                            ),
+                        ],
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+            // Botones fijos abajo: siempre visibles aunque la lista sea larga.
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    child: FilledButton(
+                      onPressed: () => Navigator.of(context).pop(_submit),
+                      child: const Text('Entregar'),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      child: const Text('Seguir revisando'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
