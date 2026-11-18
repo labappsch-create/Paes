@@ -257,6 +257,27 @@ def t_credit():
                 f"Total = {n} · {money(Q)} = {money(tot)}.")
 
 
+def t_mortgage():
+    """Crédito hipotecario: pie y total pagado."""
+    V = rnd.randrange(60, 201, 5) * 1000000
+    pie_pct = rnd.choice([10, 20, 25, 30])
+    pie = V * pie_pct // 100
+    prestamo = V - pie
+    if rnd.random() < 0.5:
+        cs, ws = numeric_options(pie, [prestamo, V // 10 if pie_pct != 10 else V // 5, pie * 2], step=V // 20, fn=money)
+        return make(NUMEROS, f"Para comprar una vivienda de {money(V)}, un banco entrega un crédito hipotecario por el {100 - pie_pct}% del valor. "
+                    "El resto lo debe pagar el comprador al contado (el «pie»). ¿Cuánto es el pie?", cs, ws,
+                    f"El pie es el {pie_pct}% de {money(V)}: {money(pie)}.")
+    anos = rnd.choice([15, 20, 25, 30])
+    Q = rnd.randrange(int(prestamo / (anos * 12) * 1.4) // 10000 * 10000 + 10000,
+                      int(prestamo / (anos * 12) * 2.0) // 10000 * 10000 + 20000, 10000)
+    tot = Q * 12 * anos
+    cs, ws = numeric_options(tot - prestamo, [tot, Q * 12, prestamo], step=Q * 12, fn=money)
+    return make(NUMEROS, f"Una familia pide un crédito hipotecario de {money(prestamo)} y lo paga en {anos} años con cuotas mensuales fijas de {money(Q)}. "
+                "¿Cuánto paga en total por intereses y otros costos del crédito?", cs, ws,
+                f"Total pagado = {money(Q)}·12·{anos} = {money(tot)}. Intereses y costos = {money(tot)} {MINUS} {money(prestamo)} = {money(tot - prestamo)}.")
+
+
 def t_afp():
     S = rnd.randrange(500000, 2500001, 10000)
     if (S * 10) % 100:
@@ -388,20 +409,6 @@ def t_trig_fn():
     return make(ALGEBRA, f"¿Cuál es el período de la función {f}? (x en grados)", cs, ws, f"Período = 360°/{B} = {360 // B}°.")
 
 
-def t_inverse():
-    a = rnd.choice([2, 3, 4, 5, -2, -3])
-    b = rnd.choice([v for v in range(-9, 10) if v])
-    fx = f"f(x) = {term(a, 'x', True)}{term(b, '', False)}"
-    num_c = f"x {MINUS if b > 0 else '+'} {abs(b)}"
-    num_w = f"x {'+' if b > 0 else MINUS} {abs(b)}"
-    c = f"f⁻¹(x) = ({num_c})/{fint(a)}"
-    w = [f"f⁻¹(x) = ({num_w})/{fint(a)}", f"f⁻¹(x) = {term(a, 'x', True)}{term(-b, '', False)}",
-         f"f⁻¹(x) = x/{fint(a)} {MINUS if b > 0 else '+'} {abs(b)}", f"f⁻¹(x) = ({num_c})/{fint(-a)}"]
-    return make(ALGEBRA, f"¿Cuál es la función inversa de {fx}?", c, w,
-                f"Se despeja x en y = {a}x {'+' if b > 0 else MINUS} {abs(b)}: x = (y {MINUS if b > 0 else '+'} {abs(b)})/{fint(a)}.")
-
-
-# ===================================================== GEOMETRÍA
 def t_trig_ratio():
     a, b, h = rnd.choice(TRIPLES[:5])
     k = rnd.randint(1, 3)
@@ -436,7 +443,8 @@ def t_special_angle():
 
 
 def t_inscribed():
-    cen = rnd.randrange(40, 321, 10)
+    # Ángulos del centro menores que 180°, como en los problemas habituales.
+    cen = rnd.randrange(40, 171, 10)
     if rnd.random() < 0.5:
         cs, ws = numeric_options(cen // 2, [cen, 180 - cen // 2, 360 - cen, cen * 2], step=5, fn=deg)
         return make(GEOMETRIA, f"En una circunferencia, un ángulo del centro mide {cen}°. ¿Cuánto mide un ángulo inscrito que subtiende el mismo arco?", cs, ws,
@@ -696,8 +704,8 @@ def t_union():
 
 TEXT_TEMPLATES = [
     t_simplify_root, t_sum_roots, t_rationalize, t_rational_exp, t_log_eval, t_log_props, t_log_eq, t_exp_eq,
-    t_compound, t_credit, t_afp,
-    t_system_type, t_system_solve, t_exp_growth, t_exp_eval, t_power_fn, t_log_fn, t_trig_fn, t_inverse,
+    t_compound, t_credit, t_mortgage, t_afp,
+    t_system_type, t_system_solve, t_exp_growth, t_exp_eval, t_power_fn, t_log_fn, t_trig_fn,
     t_trig_ratio, t_special_angle, t_inscribed, t_chords, t_tangent_secant, t_sphere, t_homothety, t_lines_relative, t_perp_slope,
     t_combination, t_perm_k, t_no_replace, t_conditional, t_conditional_count, t_binomial, t_binomial_p, t_std,
     t_dispersion_compare, t_normal, t_union,
