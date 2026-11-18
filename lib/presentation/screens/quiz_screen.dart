@@ -9,6 +9,7 @@ import '../../domain/quiz_item.dart';
 import '../../domain/score_calculator.dart';
 import '../providers.dart';
 import '../widgets/question_image.dart';
+import '../widgets/reading_text.dart';
 import 'explanation_screen.dart';
 import 'paywall_screen.dart';
 import 'results_screen.dart';
@@ -237,6 +238,10 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       style: theme.textTheme.labelLarge,
                     ),
                     const SizedBox(height: 8),
+                    ReadingText(
+                      key: ValueKey(item.question.id),
+                      text: item.question.texto,
+                    ),
                     Text(
                       item.question.enunciado,
                       style: theme.textTheme.titleMedium,

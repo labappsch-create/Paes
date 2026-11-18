@@ -21,7 +21,7 @@ Meta: **500 preguntas por prueba, 100 de ellas con imagen o gráfico**. En cada 
 | Matemática M2 | 500 | 100 |
 | Ciencias | 500 | 100 |
 | Historia | 500 | 100 |
-| Competencia Lectora | 0 | 0 |
+| Competencia Lectora | 500 | 100 |
 
 Hay un archivo por prueba en `assets/questions/` (`m1.json`, `m2.json`, `ciencias.json`,
 `historia.json`, `lectora.json`). Las imágenes van en `assets/images/<prueba>/`.
@@ -47,6 +47,11 @@ por el programa y 100 gráficos (`tools/ciencias_graficos.py`).
 Sistema económico) a partir de las tablas de `tools/historia_datos.py` (fechas, personajes,
 conceptos, institucionalidad, economía). Los gráficos usan hechos reales (líneas de tiempo) o
 datos de países ficticios, para practicar lectura de fuentes sin inventar cifras reales.
+
+`tools/generar_lectora.py` arma Competencia Lectora: 50 textos originales escritos para la app
+(`tools/lectora_textos_a.py` a `_e.py`, 8 preguntas cada uno, en las habilidades Localizar,
+Interpretar y Evaluar) y 100 preguntas sobre afiches, infografías y programas ficticios.
+El texto de lectura se guarda en el campo `texto` y la app lo muestra sobre la pregunta.
 
 Igual conviene que un profesor revise una muestra antes de publicar.
 

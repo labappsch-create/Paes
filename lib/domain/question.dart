@@ -11,6 +11,7 @@ class Question {
     this.eje,
     this.explicacion = '',
     this.imagen,
+    this.texto,
   });
 
   final String id;
@@ -30,6 +31,9 @@ class Question {
   /// Ruta de la imagen o gráfico de la pregunta (en `assets`). Null si no tiene.
   final String? imagen;
 
+  /// Texto de lectura asociado (Competencia Lectora). Null si no tiene.
+  final String? texto;
+
   factory Question.fromJson(Map<String, dynamic> json) {
     final alternativas = List<String>.from(json['alternativas'] as List);
     final correcta = json['correcta'] as int;
@@ -47,6 +51,7 @@ class Question {
       eje: json['eje'] as String?,
       explicacion: (json['explicacion'] as String?) ?? '',
       imagen: json['imagen'] as String?,
+      texto: json['texto'] as String?,
     );
   }
 }

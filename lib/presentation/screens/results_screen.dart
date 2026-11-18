@@ -3,6 +3,7 @@ import 'package:material_ui/material_ui.dart';
 import '../../domain/exam_attempt.dart';
 import '../../domain/quiz_item.dart';
 import '../widgets/question_image.dart';
+import '../widgets/reading_text.dart';
 import 'explanation_screen.dart';
 
 /// Resultado de un ensayo: aciertos, puntaje estimado y revisión pregunta a pregunta.
@@ -114,6 +115,8 @@ class _ReviewTile extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 8),
+            if (item.question.texto != null)
+              ReadingText(text: item.question.texto, initiallyExpanded: false),
             Text(item.question.enunciado),
             QuestionImage(path: item.question.imagen),
             const SizedBox(height: 8),
