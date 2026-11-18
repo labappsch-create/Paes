@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:clock/clock.dart';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -48,6 +50,9 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   final ScrollController _scroll = ScrollController();
   Timer? _timer;
   late Duration _remaining;
+
+  /// Hora real en que se acaba el simulacro.
+  late DateTime _endAt;
   bool _finished = false;
 
   bool get _isPractice => widget.mode == QuizMode.practice;
@@ -58,9 +63,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     super.initState();
     _remaining = Duration(minutes: widget.prueba.minutes);
     if (!_isPractice) {
+      // Se guarda la hora real de término. Así el reloj sigue corriendo aunque
+      // la persona salga de la app, como en la prueba real.
+      _endAt = clock.now().add(_remaining);
       _timer = Timer.periodic(const Duration(seconds: 1), (_) {
         if (!mounted) return;
-        setState(() => _remaining -= const Duration(seconds: 1));
+        setState(() => _remaining = _endAt.difference(clock.now()));
         if (_remaining <= Duration.zero) {
           _finish();
         } else {
@@ -81,31 +89,35 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   static const _redClockMinutes = 5;
 
   void _checkTimeWarning() {
+    // Si la persona estuvo fuera de la app, pudieron pasar varios avisos a la
+    // vez: se marcan todos y se muestra solo el más reciente (el de menos minutos).
+    int? show;
     for (final m in _warningMinutes) {
       if (_warned.contains(m) || _remaining > Duration(minutes: m)) continue;
       _warned.add(m);
-      if (m >= widget.prueba.minutes) continue;
-      final messenger = ScaffoldMessenger.of(context);
-      messenger
-        ..hideCurrentSnackBar()
-        ..showSnackBar(
-          SnackBar(
-            behavior: SnackBarBehavior.floating,
-            duration: const Duration(seconds: 6),
-            content: Row(
-              children: [
-                const Icon(Icons.timer_outlined, color: Colors.white),
-                const SizedBox(width: 12),
-                Expanded(child: Text('Quedan $m minutos.')),
-              ],
-            ),
-            action: SnackBarAction(
-              label: 'OK',
-              onPressed: messenger.hideCurrentSnackBar,
-            ),
-          ),
-        );
+      if (m < widget.prueba.minutes) show = m;
     }
+    if (show == null) return;
+    final messenger = ScaffoldMessenger.of(context);
+    messenger
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          behavior: SnackBarBehavior.floating,
+          duration: const Duration(seconds: 6),
+          content: Row(
+            children: [
+              const Icon(Icons.timer_outlined, color: Colors.white),
+              const SizedBox(width: 12),
+              Expanded(child: Text('Quedan $show minutos.')),
+            ],
+          ),
+          action: SnackBarAction(
+            label: 'OK',
+            onPressed: messenger.hideCurrentSnackBar,
+          ),
+        ),
+      );
   }
 
   @override
@@ -287,7 +299,9 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   }
 
   String _formatRemaining() {
-    final d = _remaining.isNegative ? Duration.zero : _remaining;
+    final ms = _remaining.isNegative ? 0 : _remaining.inMilliseconds;
+    // Se redondea hacia arriba: al empezar se ve «2:20:00» y no «2:19:59».
+    final d = Duration(seconds: (ms + 999) ~/ 1000);
     String two(int n) => n.toString().padLeft(2, '0');
     return '${d.inHours}:${two(d.inMinutes % 60)}:${two(d.inSeconds % 60)}';
   }
