@@ -153,7 +153,7 @@ Igual conviene que un profesor revise una muestra antes de publicar.
    **no se suben a GitHub**. Para compilar firmado, copiar `key.properties` en `android/` (con la ruta
    correcta en `storeFile`). Sin ese archivo, la app se firma con la llave de prueba.
    Política de privacidad: `assets/legal/politica_privacidad.md` (se ve en Ajustes; su enlace de
-   GitHub sirve para las tiendas). Falta completar el correo de contacto.
+   GitHub sirve para las tiendas). Contacto: labappsch@gmail.com.
 3. Que un profesor de cada asignatura revise una muestra de preguntas.
 4. Probar la compra en un teléfono real con cuentas de prueba.
 

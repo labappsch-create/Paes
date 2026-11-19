@@ -40,4 +40,4 @@ Como no guardamos datos personales tuyos fuera de tu teléfono, no tenemos infor
 Si cambiamos esta política, publicaremos la nueva versión en la aplicación y en este mismo documento, con su fecha de actualización.
 
 ## Contacto
-Si tienes preguntas sobre esta política, escríbenos a: [correo de contacto]
+Si tienes preguntas sobre esta política, escríbenos a: labappsch@gmail.com
