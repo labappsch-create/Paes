@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:clock/clock.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 
 import '../core/constants.dart';
+import '../domain/access_period.dart';
 import 'providers.dart';
 
 /// Lo que la pantalla de pago necesita mostrar.
@@ -39,8 +41,10 @@ class PurchaseUiState {
   }
 }
 
-/// Maneja la compra única "Acceso Completo Retopaes" (producto no consumible):
-/// consulta el producto, compra, restaura y guarda el resultado.
+/// Maneja la compra "Acceso Completo Retopaes": un pago único que da 6 meses de
+/// acceso y no se renueva solo (en Google Play es un plan prepago; en App Store,
+/// una suscripción no renovable). Consulta el producto, compra, restaura y
+/// guarda hasta cuándo dura el acceso.
 class PurchaseController extends Notifier<PurchaseUiState> {
   final InAppPurchase _iap = InAppPurchase.instance;
   StreamSubscription<List<PurchaseDetails>>? _subscription;
@@ -116,10 +120,10 @@ class PurchaseController extends Notifier<PurchaseUiState> {
       await _iap.restorePurchases();
       // Si la tienda tiene una compra anterior, llega por _onPurchases.
       await Future<void>.delayed(const Duration(seconds: 5));
-      if (!ref.read(accessProvider).purchased) {
+      if (!ref.read(accessProvider).purchased && state.loading) {
         state = state.copyWith(
           loading: false,
-          message: 'No encontramos compras anteriores en esta cuenta.',
+          message: 'No encontramos un acceso vigente en esta cuenta.',
         );
       }
     } catch (_) {
@@ -138,10 +142,25 @@ class PurchaseController extends Notifier<PurchaseUiState> {
           state = state.copyWith(loading: true, clearMessage: true);
         case PurchaseStatus.purchased:
         case PurchaseStatus.restored:
-          await ref.read(accessProvider.notifier).markPurchased();
+          final ms = int.tryParse(purchase.transactionDate ?? '');
+          final date = ms == null
+              ? clock.now()
+              : DateTime.fromMillisecondsSinceEpoch(ms);
+          await ref
+              .read(accessProvider.notifier)
+              .grantAccess(
+                purchaseId: purchase.purchaseID ?? '${purchase.productID}-$ms',
+                purchaseDate: date,
+                isNewPurchase: purchase.status == PurchaseStatus.purchased,
+              );
+          final access = ref.read(accessProvider);
           state = state.copyWith(
             loading: false,
-            message: '¡Listo! Ya tienes acceso completo.',
+            message: access.purchased
+                ? '¡Listo! Tienes acceso completo hasta el '
+                      '${formatDate(access.expiresAt!)}.'
+                : 'Encontramos tu compra, pero sus $accessMonths meses de '
+                      'acceso ya terminaron.',
           );
         case PurchaseStatus.error:
           state = state.copyWith(

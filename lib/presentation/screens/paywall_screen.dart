@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../core/constants.dart';
+import '../../domain/access_period.dart';
 import '../providers.dart';
 import '../purchase_controller.dart';
 
@@ -21,6 +22,7 @@ class PaywallScreen extends ConsumerWidget {
     });
 
     final purchase = ref.watch(purchaseProvider);
+    final access = ref.watch(accessProvider);
     final controller = ref.read(purchaseProvider.notifier);
     final theme = Theme.of(context);
 
@@ -36,13 +38,17 @@ class PaywallScreen extends ConsumerWidget {
               const SizedBox(height: 16),
               Text(
                 message ??
-                    'Llegaste al límite de las $freeQuestionLimit preguntas gratis',
+                    (access.expired
+                        ? 'Tu acceso de $accessMonths meses terminó el '
+                              '${formatDate(access.expiresAt!)}'
+                        : 'Llegaste al límite de las $freeQuestionLimit preguntas gratis'),
                 style: theme.textTheme.headlineSmall,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 12),
               Text(
-                'Con un solo pago desbloqueas todas las preguntas, los simulacros y el historial.',
+                'Con un solo pago desbloqueas, por $accessMonths meses, todas '
+                'las preguntas y los simulacros.',
                 style: theme.textTheme.bodyLarge,
                 textAlign: TextAlign.center,
               ),
@@ -50,7 +56,9 @@ class PaywallScreen extends ConsumerWidget {
               const _Benefit('Preguntas sin límite en las 5 pruebas'),
               const _Benefit('Simulacros con el tiempo oficial'),
               const _Benefit('Historial de tus ensayos'),
-              const _Benefit('Pago único: sin suscripción'),
+              const _Benefit(
+                'Pago único por $accessMonths meses: no se renueva ni se cobra solo',
+              ),
               const SizedBox(height: 24),
               Text(
                 purchase.priceLabel,
@@ -58,7 +66,7 @@ class PaywallScreen extends ConsumerWidget {
                 textAlign: TextAlign.center,
               ),
               Text(
-                'Pago único',
+                'Pago único · $accessMonths meses de acceso',
                 style: theme.textTheme.bodyMedium,
                 textAlign: TextAlign.center,
               ),

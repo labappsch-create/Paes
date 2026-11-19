@@ -45,7 +45,9 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
 - **Gratis**: 30 preguntas de Práctica (en total, sumando todas las pruebas) y, además,
   **1 simulacro completo** de cualquier prueba. Las respuestas del simulacro no descuentan de
   las 30. El simulacro gratis se marca como usado al tocar «Comenzar» (aunque no se termine),
-  para que no se pueda repetir. Luego, pago único "Acceso Completo Retopaes" ($4.000 CLP).
+  para que no se pueda repetir. Luego, pago único "Acceso Completo Retopaes" ($4.000 CLP) que da
+  **6 meses** de acceso completo y no se renueva solo. En la pantalla de inicio se ve hasta qué
+  fecha dura; al terminar, la app vuelve a la versión gratis.
 - Historial de ensayos.
 - **Colores** (`lib/presentation/prueba_style.dart`): la app usa los colores del logo (azul marino
   en botones y textos destacados; naranjo como acento en bordes y avisos) y cada prueba tiene su color e ícono en su tarjeta, sus botones y la barra del ensayo: Lectora
@@ -125,10 +127,17 @@ Igual conviene que un profesor revise una muestra antes de publicar.
 - `lib/presentation`: pantallas y estado (Riverpod).
 
 ## Antes de publicar en las tiendas
-1. Crear el producto **no consumible** con ID `acceso_completo_retopaes` ("Acceso Completo Retopaes", $4.000 CLP)
-   en Google Play Console y en App Store Connect.
+1. Crear el producto "Acceso Completo Retopaes" ($4.000 CLP, **6 meses, sin renovación automática**),
+   con el ID `acceso_completo_retopaes` en ambas tiendas:
+   - Google Play Console: **Suscripción** con ID `acceso_completo_retopaes` y un plan básico de tipo
+     **prepago** (*prepaid*) de **6 meses**.
+   - App Store Connect: **Suscripción no renovable** (*Non-Renewing Subscription*) con ID
+     `acceso_completo_retopaes`.
+   La app guarda en el teléfono hasta cuándo dura el acceso (`lib/domain/access_period.dart`): una
+   compra nueva suma 6 meses desde el final del acceso vigente; una compra restaurada cuenta 6 meses
+   desde la fecha de pago. Atrasar el reloj del teléfono no alarga el acceso.
 2. Cambiar el identificador de la app (`cl.paesapp.paes_app`) por el definitivo.
-3. Agregar muchas más preguntas, revisadas por un profesor.
+3. Que un profesor de cada asignatura revise una muestra de preguntas.
 4. Probar la compra en un teléfono real con cuentas de prueba.
 
 ## Cómo correrla

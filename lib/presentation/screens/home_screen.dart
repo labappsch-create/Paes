@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../core/constants.dart';
+import '../../domain/access_period.dart';
 import '../../domain/ciencias_modulo.dart';
 import '../../domain/exam_attempt.dart';
 import '../../domain/lectora_session.dart';
@@ -117,9 +118,10 @@ class _AccessBanner extends StatelessWidget {
     if (access.purchased) {
       return Card(
         color: theme.colorScheme.primaryContainer,
-        child: const ListTile(
-          leading: Icon(Icons.verified),
-          title: Text('Acceso completo activado'),
+        child: ListTile(
+          leading: const Icon(Icons.verified),
+          title: const Text('Acceso completo activado'),
+          subtitle: Text('Vigente hasta el ${formatDate(access.expiresAt!)}'),
         ),
       );
     }
@@ -131,9 +133,14 @@ class _AccessBanner extends StatelessWidget {
           'Práctica gratis: te quedan ${access.freeLeft} de $freeQuestionLimit preguntas',
         ),
         subtitle: Text(
-          access.freeSimulacroUsed
-              ? 'Simulacro gratis: ya lo usaste'
-              : 'Simulacro gratis: tienes 1 disponible',
+          [
+            access.freeSimulacroUsed
+                ? 'Simulacro gratis: ya lo usaste'
+                : 'Simulacro gratis: tienes 1 disponible',
+            if (access.expired)
+              'Tu acceso de $accessMonths meses terminó el '
+                  '${formatDate(access.expiresAt!)}',
+          ].join('\n'),
         ),
         trailing: TextButton(
           onPressed: () => Navigator.of(context).push(
