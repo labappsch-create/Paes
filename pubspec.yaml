@@ -33,6 +33,7 @@ flutter:
     - assets/images/historia/
     - assets/images/lectora/
     - assets/branding/logo_retopaes.png
+    - assets/legal/politica_privacidad.md
     - assets/branding/icono_app.png
 
 # Ícono de la app (logo de Retopaes). Para regenerarlo: dart run flutter_launcher_icons

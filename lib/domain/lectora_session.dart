@@ -31,13 +31,22 @@ List<QuizItem> buildLectoraSession(
   List<Question> pool,
   int count, {
   required Random random,
+  Set<String> seen = const {},
 }) {
   final porTexto = <String, List<Question>>{};
   for (final q in pool) {
     final key = lectoraTextoKey(q);
     if (key != null) porTexto.putIfAbsent(key, () => []).add(q);
   }
+  // Primero los textos con más preguntas sin ver (así no se repiten textos
+  // hasta haberlos leído todos); entre iguales, al azar.
+  int nuevas(List<Question> g) => g.where((q) => !seen.contains(q.id)).length;
   final grupos = porTexto.values.toList()..shuffle(random);
+  final orden = {for (var i = 0; i < grupos.length; i++) grupos[i]: i};
+  grupos.sort((a, b) {
+    final c = nuevas(b).compareTo(nuevas(a));
+    return c != 0 ? c : orden[a]!.compareTo(orden[b]!);
+  });
   if (grupos.isEmpty || count <= 0) return [];
 
   final necesarios = min(
@@ -58,10 +67,11 @@ List<QuizItem> buildLectoraSession(
     elegidos.add(grupos.removeAt(0));
   }
 
-  // Cada texto con sus preguntas mezcladas y luego ordenadas por habilidad.
+  // Cada texto con sus preguntas mezcladas (las no vistas primero, por si hay
+  // que quitar alguna) y luego ordenadas por habilidad.
   final bloques = [
     for (final g in elegidos)
-      (List<Question>.of(g)..shuffle(random))..sort(
+      unseenFirst(g, seen, random)..sort(
         (a, b) => (_ordenHabilidad[a.eje] ?? 1).compareTo(
           _ordenHabilidad[b.eje] ?? 1,
         ),
@@ -70,12 +80,22 @@ List<QuizItem> buildLectoraSession(
 
   // Si sobran preguntas, se quita una de varios textos distintos.
   var sobran = bloques.fold<int>(0, (s, b) => s + b.length) - count;
-  final orden = List<int>.generate(bloques.length, (i) => i)..shuffle(random);
+  final ordenQuitar = List<int>.generate(bloques.length, (i) => i)
+    ..shuffle(random);
   var k = 0;
   while (sobran > 0) {
-    final b = bloques[orden[k % orden.length]];
+    final b = bloques[ordenQuitar[k % ordenQuitar.length]];
     if (b.length > 1) {
-      b.removeAt(random.nextInt(b.length));
+      // Se quita preferentemente una pregunta ya vista.
+      final vistas = [
+        for (var i = 0; i < b.length; i++)
+          if (seen.contains(b[i].id)) i,
+      ];
+      b.removeAt(
+        vistas.isNotEmpty
+            ? vistas[random.nextInt(vistas.length)]
+            : random.nextInt(b.length),
+      );
       sobran--;
     }
     k++;

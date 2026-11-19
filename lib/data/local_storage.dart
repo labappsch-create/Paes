@@ -53,6 +53,41 @@ class LocalStorage {
   Future<void> setFreeSimulacroUsed() =>
       _prefs.setBool(_freeSimulacroKey, true);
 
+  /// Preguntas ya vistas de una prueba (en el ciclo actual). Sirve para no
+  /// repetir preguntas hasta haberlas visto todas.
+  Set<String> seenQuestions(String prueba) =>
+      (_prefs.getStringList('seen_$prueba') ?? const []).toSet();
+
+  Future<void> markSeen(String prueba, String id) {
+    final seen = seenQuestions(prueba);
+    if (seen.contains(id)) return Future.value();
+    return _prefs.setStringList('seen_$prueba', [...seen, id]);
+  }
+
+  /// Comienza un ciclo nuevo: todas las preguntas vuelven a contar como nuevas.
+  Future<void> resetSeen(String prueba) => _prefs.remove('seen_$prueba');
+
+  /// Preguntas que la persona respondió mal la última vez que las vio.
+  Set<String> wrongQuestions(String prueba) =>
+      (_prefs.getStringList('wrong_$prueba') ?? const []).toSet();
+
+  /// Actualiza los errores: agrega las respondidas mal y quita las que ahora
+  /// respondió bien.
+  Future<void> updateWrong(
+    String prueba, {
+    required Iterable<String> wrong,
+    required Iterable<String> right,
+  }) {
+    final set = wrongQuestions(prueba)
+      ..addAll(wrong)
+      ..removeAll(right);
+    return _prefs.setStringList('wrong_$prueba', set.toList());
+  }
+
+  /// Tamaño de letra elegido en Ajustes (1.0 = normal).
+  double get textScale => _prefs.getDouble('text_scale') ?? 1.0;
+  Future<void> setTextScale(double v) => _prefs.setDouble('text_scale', v);
+
   List<ExamAttempt> get attempts {
     final raw = _prefs.getStringList(_attemptsKey) ?? const [];
     final result = <ExamAttempt>[];

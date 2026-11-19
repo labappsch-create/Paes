@@ -29,3 +29,20 @@ const String fallbackPriceLabel = r'$4.000 CLP';
 /// Carpeta con las preguntas: un archivo por prueba (por ejemplo `m1.json`).
 /// Se pueden reemplazar o ampliar sin tocar el código.
 const String questionsAssetDir = 'assets/questions';
+
+/// Política de privacidad (se muestra en Ajustes y se publica en las tiendas).
+const String privacyPolicyAsset = 'assets/legal/politica_privacidad.md';
+
+/// Fechas de la PAES para la cuenta regresiva de la pantalla de inicio:
+/// (nombre, primer día, último día). Hay que agregar las fechas nuevas cuando
+/// el DEMRE las publique; si no hay ninguna próxima, la cuenta no aparece.
+final List<(String, DateTime, DateTime)> paesDates = [
+  ('PAES Regular', DateTime(2026, 11, 30), DateTime(2026, 12, 2)),
+];
+
+/// Tamaños de letra que se pueden elegir en Ajustes.
+const Map<String, double> textScales = {
+  'Normal': 1.0,
+  'Grande': 1.15,
+  'Muy grande': 1.3,
+};

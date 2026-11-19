@@ -3,6 +3,7 @@ import 'package:material_ui/material_ui.dart';
 import '../../domain/exam_attempt.dart';
 import '../../domain/quiz_item.dart';
 import '../prueba_style.dart';
+import '../widgets/progress_widgets.dart';
 import '../widgets/question_image.dart';
 import '../widgets/reading_text.dart';
 import 'explanation_screen.dart';
@@ -76,6 +77,30 @@ class ResultsScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              if (attempt.porEje.length > 1) ...[
+                const SizedBox(height: 16),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          attempt.prueba.key == 'lectora'
+                              ? 'Aciertos por habilidad'
+                              : 'Aciertos por eje',
+                          style: theme.textTheme.titleMedium,
+                        ),
+                        const SizedBox(height: 8),
+                        EjeStats(
+                          stats: attempt.porEje,
+                          color: attempt.prueba.color,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
               const SizedBox(height: 16),
               Text('Revisión', style: theme.textTheme.titleLarge),
               const SizedBox(height: 8),

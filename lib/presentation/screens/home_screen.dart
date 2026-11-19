@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:clock/clock.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -16,6 +17,7 @@ import '../prueba_style.dart';
 import 'history_screen.dart';
 import 'paywall_screen.dart';
 import 'quiz_screen.dart';
+import 'settings_screen.dart';
 
 /// Pantalla de inicio: elegir prueba y modo.
 class HomeScreen extends ConsumerWidget {
@@ -47,6 +49,13 @@ class HomeScreen extends ConsumerWidget {
         ),
         actions: [
           IconButton(
+            tooltip: 'Ajustes',
+            icon: const Icon(Icons.settings_outlined),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const SettingsScreen()),
+            ),
+          ),
+          IconButton(
             tooltip: 'Historial',
             icon: const Icon(Icons.history),
             onPressed: () => Navigator.of(context).push(
@@ -69,6 +78,7 @@ class HomeScreen extends ConsumerWidget {
         data: (all) => ListView(
           padding: const EdgeInsets.all(16),
           children: [
+            const _Countdown(),
             _AccessBanner(access: access),
             const SizedBox(height: 8),
             for (final prueba in Prueba.values)
@@ -101,6 +111,61 @@ class _WelcomeView extends StatelessWidget {
             const SizedBox(height: 12),
             const Text('Cargando preguntas…'),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Cuenta regresiva para la próxima PAES (fechas en core/constants.dart).
+class _Countdown extends StatelessWidget {
+  const _Countdown();
+
+  static const _meses = [
+    'enero',
+    'febrero',
+    'marzo',
+    'abril',
+    'mayo',
+    'junio',
+    'julio',
+    'agosto',
+    'septiembre',
+    'octubre',
+    'noviembre',
+    'diciembre',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final now = clock.now();
+    final hoy = DateTime(now.year, now.month, now.day);
+    final proxima = paesDates
+        .where((p) => !p.$3.isBefore(hoy))
+        .fold<(String, DateTime, DateTime)?>(
+          null,
+          (a, p) => a == null || p.$2.isBefore(a.$2) ? p : a,
+        );
+    if (proxima == null) return const SizedBox.shrink();
+    final (nombre, inicio, _) = proxima;
+    final dias = inicio.difference(hoy).inDays;
+    final fecha = '${inicio.day} de ${_meses[inicio.month - 1]}';
+    final texto = dias > 1
+        ? 'Faltan $dias días para la $nombre ($fecha)'
+        : dias == 1
+        ? 'Mañana comienza la $nombre'
+        : 'La $nombre se rinde estos días. ¡Mucho éxito!';
+    final theme = Theme.of(context);
+    return Card(
+      color: theme.colorScheme.primary,
+      child: ListTile(
+        leading: Icon(Icons.event, color: theme.colorScheme.onPrimary),
+        title: Text(
+          texto,
+          style: TextStyle(
+            color: theme.colorScheme.onPrimary,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
@@ -157,14 +222,22 @@ class _AccessBanner extends StatelessWidget {
   }
 }
 
-class _PruebaCard extends StatelessWidget {
+class _PruebaCard extends ConsumerWidget {
   const _PruebaCard({required this.prueba, required this.pool});
 
   final Prueba prueba;
   final List<Question> pool;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    // Se vuelve a dibujar al terminar un ensayo (cambia el historial), para
+    // actualizar el número de errores por repasar.
+    ref.watch(attemptsProvider);
+    final errores = ref.read(storageProvider).wrongQuestions(prueba.key);
+    final poolErrores = [
+      for (final q in pool)
+        if (errores.contains(q.id)) q,
+    ];
     final theme = Theme.of(context);
     final available = pool.length;
     final simulacroCount = min(prueba.simulacroQuestions, available);
@@ -239,12 +312,39 @@ class _PruebaCard extends StatelessWidget {
                         ),
                       ],
                     ),
+                    if (poolErrores.isNotEmpty)
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: TextButton.icon(
+                          style: TextButton.styleFrom(foregroundColor: color),
+                          icon: const Icon(Icons.replay),
+                          label: Text(
+                            'Repasar mis errores (${poolErrores.length})',
+                          ),
+                          onPressed: () => _startReview(context, poolErrores),
+                        ),
+                      ),
                   ],
                 ),
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  /// Práctica solo con las preguntas que la persona respondió mal.
+  void _startReview(BuildContext context, List<Question> errores) {
+    final items = buildSession(
+      errores,
+      min(maxPracticeQuestions, errores.length),
+      random: Random(),
+    );
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) =>
+            QuizScreen(prueba: prueba, mode: QuizMode.practice, items: items),
       ),
     );
   }
@@ -326,7 +426,12 @@ class _PruebaCard extends StatelessWidget {
       return;
     }
     final random = Random();
-    final items = buildCienciasSimulacro(pool, modulo, random: random);
+    final items = buildCienciasSimulacro(
+      pool,
+      modulo,
+      random: random,
+      seen: _seenFor(context),
+    );
     markExperimental(items, Prueba.experimentalQuestions, random: random);
     Navigator.of(context).push(
       MaterialPageRoute<void>(
@@ -343,10 +448,11 @@ class _PruebaCard extends StatelessWidget {
 
   void _openQuiz(BuildContext context, QuizMode mode, int count) {
     final random = Random();
+    final seen = _seenFor(context);
     // En Lectora, las preguntas de un mismo texto van juntas, como en la prueba.
     final items = prueba == Prueba.lectora
-        ? buildLectoraSession(pool, count, random: random)
-        : buildSession(pool, count, random: random);
+        ? buildLectoraSession(pool, count, random: random, seen: seen)
+        : buildSession(pool, count, random: random, seen: seen);
     if (mode == QuizMode.simulacro) {
       markExperimental(items, Prueba.experimentalQuestions, random: random);
     }
@@ -355,6 +461,21 @@ class _PruebaCard extends StatelessWidget {
         builder: (_) => QuizScreen(prueba: prueba, mode: mode, items: items),
       ),
     );
+  }
+
+  /// Preguntas ya vistas de esta prueba. Si ya se vieron todas, comienza un
+  /// ciclo nuevo y vuelven a contar como nuevas.
+  Set<String> _seenFor(BuildContext context) {
+    final storage = ProviderScope.containerOf(
+      context,
+      listen: false,
+    ).read(storageProvider);
+    final seen = storage.seenQuestions(prueba.key);
+    if (pool.every((q) => seen.contains(q.id))) {
+      storage.resetSeen(prueba.key);
+      return const {};
+    }
+    return seen;
   }
 
   /// En Ciencias, pregunta qué módulo rendirá la persona, como en la prueba real.

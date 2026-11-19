@@ -42,10 +42,11 @@ List<QuizItem> buildCienciasSimulacro(
   List<Question> pool,
   CienciasModulo modulo, {
   required Random random,
+  Set<String> seen = const {},
 }) {
   final porEje = {
     for (final eje in cienciasEjes)
-      eje: (pool.where((q) => q.eje == eje).toList()..shuffle(random)),
+      eje: unseenFirst(pool.where((q) => q.eje == eje).toList(), seen, random),
   };
 
   List<Question> tomar(String eje, int n) {

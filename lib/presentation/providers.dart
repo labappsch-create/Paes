@@ -152,3 +152,18 @@ final attemptsProvider =
     NotifierProvider<AttemptsController, List<ExamAttempt>>(
       AttemptsController.new,
     );
+
+/// Tamaño de letra elegido por la persona (1.0 = normal).
+class TextScaleController extends Notifier<double> {
+  @override
+  double build() => ref.read(storageProvider).textScale;
+
+  Future<void> set(double value) async {
+    state = value;
+    await ref.read(storageProvider).setTextScale(value);
+  }
+}
+
+final textScaleProvider = NotifierProvider<TextScaleController, double>(
+  TextScaleController.new,
+);

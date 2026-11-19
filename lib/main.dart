@@ -26,12 +26,22 @@ class PaesApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // Se activa desde el inicio para recibir compras pendientes o restauradas.
     ref.watch(purchaseProvider);
+    final escala = ref.watch(textScaleProvider);
 
     return MaterialApp(
       title: appName,
       debugShowCheckedModeBanner: false,
       // Colores del logo de Retopaes (prueba_style.dart).
       theme: appTheme(),
+      // Tamaño de letra elegido en Ajustes, sobre el que ya tenga el teléfono.
+      builder: (context, child) {
+        final mq = MediaQuery.of(context);
+        final base = mq.textScaler.scale(14) / 14;
+        return MediaQuery(
+          data: mq.copyWith(textScaler: TextScaler.linear(base * escala)),
+          child: child!,
+        );
+      },
       home: const HomeScreen(),
     );
   }

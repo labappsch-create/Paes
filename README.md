@@ -49,7 +49,18 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
   para que no se pueda repetir. Luego, pago único "Acceso Completo Retopaes" ($4.000 CLP) que da
   **6 meses** de acceso completo y no se renueva solo. En la pantalla de inicio se ve hasta qué
   fecha dura; al terminar, la app vuelve a la versión gratis.
-- Historial de ensayos.
+- **Sin repetir preguntas**: cada ensayo usa primero las preguntas que la persona aún no ha visto;
+  cuando ya vio todas las de una prueba, comienza un ciclo nuevo.
+- **Repasar mis errores**: botón en cada prueba para practicar solo las preguntas respondidas mal
+  (una pregunta sale de la lista cuando se responde bien).
+- **Historial y avance**: gráfico con el puntaje de los simulacros de cada prueba y aciertos por eje
+  (o por habilidad, en Lectora), con el punto más débil destacado. Los resultados de cada ensayo
+  también muestran los aciertos por eje.
+- **Marcar para revisar** (simulacro): banderita para marcar preguntas dudosas; se ven en el mapa
+  y en el resumen antes de entregar.
+- **Ajustes**: tamaño de letra (Normal, Grande, Muy grande) y política de privacidad.
+- **Cuenta regresiva** para la próxima PAES. Las fechas están en `paesDates`
+  (`lib/core/constants.dart`) y hay que agregarlas cuando el DEMRE las publique.
 - **Colores** (`lib/presentation/prueba_style.dart`): la app usa los colores del logo (azul marino
   en botones y textos destacados; naranjo como acento en bordes y avisos) y cada prueba tiene su color e ícono en su tarjeta, sus botones y la barra del ensayo: Lectora
   granate, M1 azul, M2 azul oscuro, Ciencias verde (Biología verde, Física naranjo, Química morado)
@@ -137,7 +148,12 @@ Igual conviene que un profesor revise una muestra antes de publicar.
    La app guarda en el teléfono hasta cuándo dura el acceso (`lib/domain/access_period.dart`): una
    compra nueva suma 6 meses desde el final del acceso vigente; una compra restaurada cuenta 6 meses
    desde la fecha de pago. Atrasar el reloj del teléfono no alarga el acceso.
-2. Cambiar el identificador de la app (`cl.paesapp.paes_app`) por el definitivo.
+2. Identificador definitivo: `cl.retopaes.app` (Android e iOS). No se puede cambiar después de publicar.
+   Firma para Google Play: la llave de subida (`retopaes-upload.jks`) y sus claves (`key.properties`)
+   **no se suben a GitHub**. Para compilar firmado, copiar `key.properties` en `android/` (con la ruta
+   correcta en `storeFile`). Sin ese archivo, la app se firma con la llave de prueba.
+   Política de privacidad: `assets/legal/politica_privacidad.md` (se ve en Ajustes; su enlace de
+   GitHub sirve para las tiendas). Falta completar el correo de contacto.
 3. Que un profesor de cada asignatura revise una muestra de preguntas.
 4. Probar la compra en un teléfono real con cuentas de prueba.
 

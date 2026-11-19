@@ -29,6 +29,9 @@ class QuizItem {
   /// puntaje. Solo se revela en los resultados.
   bool experimental = false;
 
+  /// En el simulacro: la persona la marcó para revisarla antes de entregar.
+  bool flagged = false;
+
   /// Alternativas en el orden que se muestran.
   List<String> get options => [for (final i in order) question.alternativas[i]];
 
@@ -40,14 +43,33 @@ class QuizItem {
   bool get isCorrect => selected == correctDisplayIndex;
 }
 
+/// Mezcla [pool] dejando primero las preguntas que aún no se han visto. Así no
+/// se repiten preguntas hasta haberlas visto todas.
+List<Question> unseenFirst(
+  List<Question> pool,
+  Set<String> seen,
+  Random random,
+) {
+  final nuevas = [
+    for (final q in pool)
+      if (!seen.contains(q.id)) q,
+  ]..shuffle(random);
+  final vistas = [
+    for (final q in pool)
+      if (seen.contains(q.id)) q,
+  ]..shuffle(random);
+  return [...nuevas, ...vistas];
+}
+
 /// Elige [count] preguntas al azar de [pool] y mezcla sus alternativas.
 /// Así la respuesta correcta no queda siempre en la misma letra.
 List<QuizItem> buildSession(
   List<Question> pool,
   int count, {
   required Random random,
+  Set<String> seen = const {},
 }) {
-  final chosen = List<Question>.of(pool)..shuffle(random);
+  final chosen = unseenFirst(pool, seen, random);
   return [for (final q in chosen.take(count)) QuizItem.shuffled(q, random)];
 }
 

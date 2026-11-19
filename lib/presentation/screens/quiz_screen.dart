@@ -79,6 +79,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       });
     }
     WidgetsBinding.instance.addPostFrameCallback((_) => _checkAccessAtStart());
+    _markSeen();
   }
 
   /// Minutos restantes en que se avisa, como lo hace el examinador en la prueba.
@@ -120,6 +121,11 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
           ),
         ),
       );
+  }
+
+  /// Anota que la pregunta actual ya se vio, para no repetirla pronto.
+  void _markSeen() {
+    ref.read(storageProvider).markSeen(widget.prueba.key, _item.question.id);
   }
 
   @override
@@ -212,6 +218,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     if (!widget.items[target].isAnswered && !await _accessOrFinish()) return;
     if (!mounted || _finished) return;
     setState(() => _index = target);
+    _markSeen();
     if (_scroll.hasClients) _scroll.jumpTo(0);
   }
 
@@ -266,6 +273,29 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     final reviewed = _isPractice ? answered : widget.items;
     final scored = reviewed.where((i) => !i.experimental).toList();
     final correct = scored.where((i) => i.isCorrect).length;
+    // Aciertos por eje, para mostrar los puntos débiles.
+    final porEje = <String, List<int>>{};
+    for (final i in scored) {
+      final eje = i.question.eje;
+      if (eje == null) continue;
+      final acc = porEje.putIfAbsent(eje, () => [0, 0]);
+      if (i.isCorrect) acc[0]++;
+      acc[1]++;
+    }
+    // Errores para «Repasar mis errores» (solo preguntas respondidas).
+    ref
+        .read(storageProvider)
+        .updateWrong(
+          widget.prueba.key,
+          wrong: [
+            for (final i in answered)
+              if (!i.isCorrect) i.question.id,
+          ],
+          right: [
+            for (final i in answered)
+              if (i.isCorrect) i.question.id,
+          ],
+        );
     final attempt = ExamAttempt(
       date: DateTime.now(),
       prueba: widget.prueba,
@@ -274,6 +304,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       correct: correct,
       score: estimateScore(correct: correct, total: scored.length),
       modulo: widget.modulo,
+      porEje: porEje,
     );
     ref.read(attemptsProvider.notifier).add(attempt);
     Navigator.of(context).pushReplacement(
@@ -340,6 +371,16 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
           appBar: AppBar(
             title: Text('Pregunta ${_index + 1} de $total'),
             actions: [
+              if (!_isPractice)
+                IconButton(
+                  tooltip: item.flagged
+                      ? 'Quitar marca de revisión'
+                      : 'Marcar para revisar',
+                  isSelected: item.flagged,
+                  icon: const Icon(Icons.flag_outlined),
+                  selectedIcon: const Icon(Icons.flag),
+                  onPressed: () => setState(() => item.flagged = !item.flagged),
+                ),
               if (!_isPractice)
                 Padding(
                   padding: const EdgeInsets.only(right: 16),
@@ -667,19 +708,34 @@ class _QuestionMap extends StatelessWidget {
                               child: InkWell(
                                 borderRadius: BorderRadius.circular(8),
                                 onTap: () => Navigator.of(context).pop(i),
-                                child: Center(
-                                  child: Text(
-                                    '${i + 1}',
-                                    semanticsLabel:
-                                        'Pregunta ${i + 1}, '
-                                        '${items[i].isAnswered ? 'respondida' : 'sin responder'}',
-                                    style: TextStyle(
-                                      color: items[i].isAnswered
-                                          ? scheme.onPrimary
-                                          : scheme.onSurface,
-                                      fontWeight: FontWeight.bold,
+                                child: Stack(
+                                  children: [
+                                    if (items[i].flagged)
+                                      Positioned(
+                                        top: 2,
+                                        right: 2,
+                                        child: Icon(
+                                          Icons.flag,
+                                          size: 14,
+                                          color: scheme.tertiary,
+                                        ),
+                                      ),
+                                    Center(
+                                      child: Text(
+                                        '${i + 1}',
+                                        semanticsLabel:
+                                            'Pregunta ${i + 1}, '
+                                            '${items[i].isAnswered ? 'respondida' : 'sin responder'}'
+                                            '${items[i].flagged ? ', marcada para revisar' : ''}',
+                                        style: TextStyle(
+                                          color: items[i].isAnswered
+                                              ? scheme.onPrimary
+                                              : scheme.onSurface,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
                                     ),
-                                  ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -692,6 +748,14 @@ class _QuestionMap extends StatelessWidget {
                       runSpacing: 8,
                       children: [
                         _Legend(color: scheme.primary, text: 'Respondida'),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.flag, size: 16, color: scheme.tertiary),
+                            const SizedBox(width: 6),
+                            const Text('Marcada para revisar'),
+                          ],
+                        ),
                         _Legend(
                           color: scheme.surfaceContainerHighest,
                           text: 'Sin responder',
@@ -765,6 +829,10 @@ class _SubmitReview extends StatelessWidget {
         if (!items[i].isAnswered) i,
     ];
     final answered = items.length - blank.length;
+    final flagged = [
+      for (var i = 0; i < items.length; i++)
+        if (items[i].flagged) i,
+    ];
     return SafeArea(
       child: ConstrainedBox(
         constraints: BoxConstraints(
@@ -787,6 +855,32 @@ class _SubmitReview extends StatelessWidget {
                     Text('Respondiste $answered de ${items.length} preguntas.'),
                     Text('Tiempo restante: $remaining.'),
                     const SizedBox(height: 12),
+                    if (flagged.isNotEmpty) ...[
+                      Text(
+                        flagged.length == 1
+                            ? 'Marcaste 1 pregunta para revisar:'
+                            : 'Marcaste ${flagged.length} preguntas para revisar:',
+                      ),
+                      const SizedBox(height: 8),
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: [
+                          for (final i in flagged)
+                            ActionChip(
+                              avatar: Icon(
+                                Icons.flag,
+                                size: 16,
+                                color: scheme.tertiary,
+                              ),
+                              label: Text('${i + 1}'),
+                              tooltip: 'Ir a la pregunta marcada ${i + 1}',
+                              onPressed: () => Navigator.of(context).pop(i),
+                            ),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                    ],
                     if (blank.isEmpty)
                       const Text('No te quedan preguntas sin responder.')
                     else ...[
