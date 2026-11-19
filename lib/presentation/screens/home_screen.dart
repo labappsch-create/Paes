@@ -200,13 +200,14 @@ class _PruebaCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 4),
-                    Text(
-                      available == 0
-                          ? 'Próximamente: aún no hay preguntas.'
-                          : '$available ${available == 1 ? 'pregunta disponible' : 'preguntas disponibles'}',
-                      style: theme.textTheme.bodyMedium,
-                    ),
+                    // No se muestra cuántas preguntas tiene el banco.
+                    if (available == 0) ...[
+                      const SizedBox(height: 4),
+                      Text(
+                        'Próximamente: aún no hay preguntas.',
+                        style: theme.textTheme.bodyMedium,
+                      ),
+                    ],
                     const SizedBox(height: 12),
                     Row(
                       children: [
@@ -249,7 +250,10 @@ class _PruebaCard extends StatelessWidget {
   }
 
   Future<void> _startPractice(BuildContext context) async {
-    final count = await _askCount(context, pool.length);
+    final count = await _askCount(
+      context,
+      min(maxPracticeQuestions, pool.length),
+    );
     if (count == null || !context.mounted) return;
     _openQuiz(context, QuizMode.practice, count);
   }

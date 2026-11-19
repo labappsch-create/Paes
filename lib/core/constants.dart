@@ -7,6 +7,10 @@ const String appName = 'Retopaes';
 const String logoAsset = 'assets/branding/logo_retopaes.png';
 const String iconAsset = 'assets/branding/icono_app.png';
 
+/// Máximo de preguntas que se pueden elegir en una Práctica (el largo de un
+/// ensayo real). Así la app no deja ver cuántas preguntas tiene el banco.
+const int maxPracticeQuestions = 65;
+
 /// Preguntas gratis en Práctica (suma de todas las pruebas).
 const int freeQuestionLimit = 30;
 
