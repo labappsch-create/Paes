@@ -1,4 +1,4 @@
-package cl.paesapp.paes_app
+package cl.retopaes.app
 
 import io.flutter.embedding.android.FlutterActivity
 
