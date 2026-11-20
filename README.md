@@ -161,6 +161,12 @@ Igual conviene que un profesor revise una muestra antes de publicar.
 3. Que un profesor de cada asignatura revise una muestra de preguntas.
 4. Probar la compra en un teléfono real con cuentas de prueba.
 
+## APK de prueba
+Compilar **un solo APK universal** (sin `--split-per-abi`), para que funcione en cualquier celular:
+`flutter build apk --release`. El número de compilación (después del `+` en `version:` de
+`pubspec.yaml`) siempre debe subir: el último fue **3004**. Android no instala una versión con un
+número menor encima de otra con un número mayor.
+
 ## Cómo correrla
 ```
 flutter pub get
