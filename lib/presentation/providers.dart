@@ -7,6 +7,7 @@ import '../data/local_storage.dart';
 import '../data/question_repository.dart';
 import '../domain/access_period.dart';
 import '../domain/exam_attempt.dart';
+import '../domain/invitation_code.dart';
 import '../domain/question.dart';
 
 /// Se entrega real en `main.dart` antes de abrir la app.
@@ -82,6 +83,8 @@ class AccessState {
   );
 }
 
+enum CodigoResultado { activado, yaVigente, invalido }
+
 class AccessController extends Notifier<AccessState> {
   @override
   AccessState build() {
@@ -111,6 +114,21 @@ class AccessController extends Notifier<AccessState> {
     if (state.purchased || state.freeSimulacroUsed) return;
     state = state.copyWith(freeSimulacroUsed: true);
     await ref.read(storageProvider).setFreeSimulacroUsed();
+  }
+
+  /// Canjea un código de invitación: da 6 meses de acceso completo gratis,
+  /// contados desde hoy. Si el acceso ya está vigente, no cambia nada (el
+  /// código se puede volver a usar cuando termine).
+  Future<CodigoResultado> redeemCode(String codigo) async {
+    if (!esCodigoValido(codigo)) return CodigoResultado.invalido;
+    if (state.purchased) return CodigoResultado.yaVigente;
+    final now = clock.now();
+    final nb = state.notBefore;
+    final desde = nb != null && nb.isAfter(now) ? nb : now;
+    final expiry = addMonths(desde, accessMonths);
+    state = state.copyWith(expiresAt: expiry);
+    await ref.read(storageProvider).setAccessExpiresAt(expiry);
+    return CodigoResultado.activado;
   }
 
   /// Registra una compra de 6 meses. [purchaseId] evita contar dos veces la

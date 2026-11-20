@@ -4,6 +4,7 @@ import 'package:material_ui/material_ui.dart';
 
 import '../../core/constants.dart';
 import '../providers.dart';
+import '../widgets/invitation_dialog.dart';
 
 /// Ajustes: tamaño de letra, política de privacidad y datos de la app.
 class SettingsScreen extends ConsumerWidget {
@@ -42,6 +43,13 @@ class SettingsScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 24),
           const Divider(),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.card_giftcard),
+            title: const Text('Código de invitación'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => showInvitationDialog(context),
+          ),
           ListTile(
             contentPadding: EdgeInsets.zero,
             leading: const Icon(Icons.privacy_tip_outlined),

@@ -5,6 +5,7 @@ import '../../core/constants.dart';
 import '../../domain/access_period.dart';
 import '../providers.dart';
 import '../purchase_controller.dart';
+import '../widgets/invitation_dialog.dart';
 
 /// Pantalla de pago. Se cierra devolviendo `true` si la compra se completó.
 class PaywallScreen extends ConsumerWidget {
@@ -99,6 +100,13 @@ class PaywallScreen extends ConsumerWidget {
               OutlinedButton(
                 onPressed: purchase.loading ? null : controller.restore,
                 child: const Text('Restaurar compra'),
+              ),
+              TextButton.icon(
+                icon: const Icon(Icons.card_giftcard),
+                onPressed: purchase.loading
+                    ? null
+                    : () => showInvitationDialog(context),
+                label: const Text('Tengo un código de invitación'),
               ),
               TextButton(
                 onPressed: purchase.loading

@@ -58,7 +58,11 @@ App móvil (Flutter, Android e iOS) para practicar la PAES chilena.
   también muestran los aciertos por eje.
 - **Marcar para revisar** (simulacro): banderita para marcar preguntas dudosas; se ven en el mapa
   y en el resumen antes de entregar.
-- **Ajustes**: tamaño de letra (Normal, Grande, Muy grande) y política de privacidad.
+- **Ajustes**: tamaño de letra (Normal, Grande, Muy grande), código de invitación y política de privacidad.
+- **Código de invitación** (en Ajustes y en la pantalla de pago): libera 6 meses de acceso completo
+  sin pagar; al terminar, se puede volver a ingresar. No importan mayúsculas ni espacios. El código
+  no se guarda escrito: solo su huella SHA-256 (`lib/domain/invitation_code.dart`). Como la app no
+  tiene servidor, el código funciona en cualquier celular y no se puede limitar cuántas veces se usa.
 - **Cuenta regresiva** para la próxima PAES. Las fechas están en `paesDates`
   (`lib/core/constants.dart`) y hay que agregarlas cuando el DEMRE las publique.
 - **Colores** (`lib/presentation/prueba_style.dart`): la app usa los colores del logo (azul marino
